@@ -1,23 +1,22 @@
 # Informe de recuperación
 
-Artículos: **225**
+Artículos: **223**
 
 | Año | Artículos |
 |---|---|
-| 2008 | 55 |
+| 2008 | 53 |
 | 2009 | 47 |
 | 2010 | 40 |
 | 2011 | 41 |
 | 2012 | 32 |
 | 2013 | 10 |
 
-Palabras totales (aprox.): 1,519,568
+Palabras totales (aprox.): 1,517,348
 
 ## Artículos
 
 | Fecha | Título | Páginas |
 |---|---|---|
-| 2008-02-09 | Kernel Log: Linux 2.6.25 with Smack security framework, LCA08 online | 1 |
 | 2008-02-09 | Kernel Log: Linux 2.6.25 with Smack security framework, LCA08 online | 1 |
 | 2008-02-14 | Kernel Log: Linux-next to speed development work | 1 |
 | 2008-02-20 | Kernel log: New AMD, HP and SANE drivers; Linux Weather Forecast updated | 1 |
@@ -55,7 +54,6 @@ Palabras totales (aprox.): 1,519,568
 | 2008-10-18 | Kernel Log: new Catalyst drivers, 2.6.27.1 resolves cause of e1000e problem | 1 |
 | 2008-10-19 | Kernel Log: Coming in 2.6.28 - Part 1: ATA support and block layer | 1 |
 | 2008-10-20 | Kernel Log: Coming in 2.6.28 - Part 2: network infrastructure and network drivers | 1 |
-| 2008-10-21 | Kernel Log: More than 10 million lines of Linux source files | 1 |
 | 2008-10-21 | Kernel Log: More than 10 million lines of Linux source files | 1 |
 | 2008-10-22 | Kernel Log: What's coming in 2.6.28 - Part 3: Dodgy drivers | 1 |
 | 2008-10-24 | Kernel Log: New Atheros WLAN drivers and stable kernels, radeon vs. radeonhd | 1 |

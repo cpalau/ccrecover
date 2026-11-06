@@ -7,7 +7,7 @@ UK between February 2008 and June 2013.
 
 | Directory | Contents |
 |---|---|
-| `md/` | 225 articles in Markdown, one file per article, with YAML front matter |
+| `md/` | 223 articles in Markdown, one file per article, with YAML front matter |
 | `site/` | Browsable mirror: original HTML, CSS, JS and images under their original paths |
 | `data/records.jsonl` | 610 CDX records from three Common Crawl crawls |
 | `data/records-wayback.jsonl` | 173 pages filled from the Wayback Machine |
@@ -23,8 +23,8 @@ cd site && python3 -m http.server 8080
 
 ## Numbers
 
-- **225** articles, **398** pages including pagination.
-- **327,233** words, from **2008-02-09** to **2013-06-28**.
+- **223** articles, **396** pages including pagination.
+- **338,367** words, from **2008-02-09** to **2013-06-28**.
 - **114** articles by Thorsten Leemhuis, the main author of the column.
 - **100** articles span more than one page; the longest, *Linux 2.6.27
   Released*, has 9.
@@ -47,7 +47,7 @@ whole site.
 ## Method (short version)
 
 1. `cluster.idx` maps SURT keys to independently compressed CDX blocks.
-   The whole domain is 76 blocks, **8.1 MB** instead of the 494 MB shard.
+   The whole domain is 78 blocks, **8.5 MB** instead of the 494 MB shard.
 2. Each CDX record gives `(warc_filename, offset, length)`. A range request
    returns one WARC record, ~15 KB.
 3. Pagination pages missing from Common Crawl were fetched from the Wayback

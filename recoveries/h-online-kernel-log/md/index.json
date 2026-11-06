@@ -9,15 +9,6 @@
   "file": "2008-02-09-kernel-log-linux-2-6-25-with-smack-security-framework-lca08-online.md"
  },
  {
-  "date": "2008-02-09",
-  "title": "Kernel Log: Linux 2.6.25 with Smack security framework, LCA08 online",
-  "author": "Mike Barwise",
-  "pages": 1,
-  "url": "http://www.h-online.com/security/news/item/Kernel-Log-Linux-2-6-25-with-Smack-security-framework-LCA08-online-734151.html",
-  "chars": 5979,
-  "file": "2008-02-09-kernel-log-linux-2-6-25-with-smack-security-framework-lca08-online.md"
- },
- {
   "date": "2008-02-14",
   "title": "Kernel Log: Linux-next to speed development work",
   "author": "Jonathan Bennett",
@@ -340,15 +331,6 @@
   "url": "http://www.h-online.com/open/news/item/Kernel-Log-Coming-in-2-6-28-Part-2-network-infrastructure-and-network-drivers-737711.html",
   "chars": 16514,
   "file": "2008-10-20-kernel-log-coming-in-2-6-28-part-2-network-infrastructure-and-network-drivers.md"
- },
- {
-  "date": "2008-10-21",
-  "title": "Kernel Log: More than 10 million lines of Linux source files",
-  "author": "",
-  "pages": 1,
-  "url": "http://www.h-online.com/newsticker/news/item/Kernel-Log-More-than-10-million-lines-of-Linux-source-files-737731.html",
-  "chars": 7341,
-  "file": "2008-10-21-kernel-log-more-than-10-million-lines-of-linux-source-files.md"
  },
  {
   "date": "2008-10-21",

@@ -89,8 +89,8 @@ data.commoncrawl.org
 
 Common Crawl's CDX `.gz` shards are written as **concatenated gzip members**.
 Each entry in `cluster.idx` points to a compressed byte range that can be
-fetched on its own. For `h-online.com`, the whole domain fits in 76 blocks:
-**8.1 MB instead of the 494 MB shard**.
+fetched on its own. For `h-online.com`, the whole domain fits in 78 blocks:
+**8.5 MB instead of the 494 MB shard**.
 
 The same trick applies to WARC files: each record is its own gzip member, so
 `Range: bytes=offset-(offset+length-1)` returns exactly one record (~15 KB).
@@ -102,9 +102,9 @@ The H's *Kernel Log* column (2008–2013):
 
 | Metric | Value |
 |---|---|
-| Articles | 225 |
-| Pages (including pagination) | 398 |
-| Words | 327,233 |
+| Articles | 223 |
+| Pages (including pagination) | 396 |
+| Words | 338,367 |
 | Date range | 2008-02-09 → 2013-06-28 |
 | CDX records scanned | 610 |
 | CDX blocks downloaded | ~33 MB |

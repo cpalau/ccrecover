@@ -2,7 +2,7 @@
 title: "Kernel Log: Linux 2.6.25 with Smack security framework, LCA08 online"
 date: 2008-02-09
 author: "Mike Barwise"
-source: http://www.h-online.com/security/news/item/Kernel-Log-Linux-2-6-25-with-Smack-security-framework-LCA08-online-734151.html
+source: http://www.h-online.com/open/news/item/Kernel-Log-Linux-2-6-25-with-Smack-security-framework-LCA08-online-734151.html
 pages: 1
 ---
 
