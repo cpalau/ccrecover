@@ -1,0 +1,104 @@
+/* ****************************** colors ****************************** \*/
+a,
+#overview h3,
+#overview a,
+#overview div.more_features a,
+div.more_features a,
+#overview div.more_link a,
+div.more_link a,
+#newsletter .bg_box h3,
+div.teaser h5 a,
+div.teaser h5,
+div.teaser li p a {
+    color: #191970;
+}
+ul#right_navi li a.active,
+#newsletter .bg_box input {
+    background-color: #191970;
+}
+.feature_navi h4 a,
+#fora_list h4 a,
+#latest_posts h4,
+#latest_posts h4 a {
+    color: #2a67d8;
+}
+.heise-table-emph {
+    color: #2a67d8;
+}
+/* ****************************** layout ****************************** \*/
+#wrapper {
+    background: url(/web/20131209235837im_/http://www.h-online.com/open/icons/bg_645_355.gif) 64.5% 0 repeat-y;
+}
+#content_wrapper {
+    background: url(/web/20131209235837im_/http://www.h-online.com/open/icons/border_left.gif) left top repeat-y;	
+}
+#content {
+    background: #5b8907 url(/web/20131209235837im_/http://www.h-online.com/open/icons/frame.jpg) left top repeat-x;
+}
+#frame_bottom {
+    background: #5b8907;
+}
+/* ****************************** header ****************************** \*/
+#newsheader {
+    background: #5b8907 url(/web/20131209235837im_/http://www.h-online.com/open/icons/header_bg.png) left top repeat-x;
+}
+#newsheader_left {
+    background: url(/web/20131209235837im_/http://www.h-online.com/open/icons/header_bg_left.png) no-repeat top left;
+}
+#newsheader_right {
+    background: url(/web/20131209235837im_/http://www.h-online.com/open/icons/header_bg_right.png) no-repeat top right;
+}
+/* --------- png-bug IE6 ------------------------- */
+* html #newsheader_left {
+    background: url(/web/20131209235837im_/http://www.h-online.com/open/icons/header_bg_left.gif) no-repeat top left;
+}
+* html #newsheader_right {
+    background: url(/web/20131209235837im_/http://www.h-online.com/open/icons/header_bg_right.gif) no-repeat top right;
+}
+/* ----------------------------------------------- */
+ul#tab_navi li a {
+    background-color: #567420;
+}
+/* ****************************** login--search ****************************** \*/
+#search form input.submit {
+    background-color: #000;
+}
+#search form fieldset#inputs {
+	border: 1px solid #5b8907;
+}
+/* ****************************** right-col ****************************** \*/
+.split {
+    background: #5b8907;
+    color: #5b8907;
+}
+.price_insight_link {
+    background: #5b8907;
+}
+#right_col_navi {
+    background: #5b8907 url(/web/20131209235837im_/http://www.h-online.com/open/icons/frame.jpg) left top repeat-x;
+}
+/* ****************************** preview ****************************** \*/
+.preview {
+    background-color: #ebe8d4;
+}
+
+/*
+     FILE ARCHIVED ON 23:58:37 Dec 09, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:36:00 Nov 06, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.574
+  exclusion.robots: 0.063
+  exclusion.robots.policy: 0.048
+  esindex: 0.01
+  cdx.remote: 8.919
+  LoadShardBlock: 309.267 (3)
+  PetaboxLoader3.datanode: 247.41 (4)
+  PetaboxLoader3.resolve: 1015.896 (2)
+  load_resource: 1015.306
+*/

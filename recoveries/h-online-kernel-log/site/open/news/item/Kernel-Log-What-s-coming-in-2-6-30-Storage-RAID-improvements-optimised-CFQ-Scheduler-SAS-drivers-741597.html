@@ -1,0 +1,1262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+
+<head>
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="copyright" title="Copyright" href="/Contact-273335.html" />
+<link rel="author" title="Contact" href="mailto:editors%40h-online.com?subject=The%20H%20Open" />
+
+<link rel="alternate" type="application/atom+xml" title="All The H open news and features" href="http://www.h-online.com/open/atom.xml" />
+
+<link href="/favicon_open.ico" rel="shortcut icon" />
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css" />
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css" />
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+
+
+<script src="/js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/support/external_links.js" type="text/javascript"></script>
+<script src="/js/plugins/jquery-ui-1.8.18_cycle.custom.min.js" type="text/javascript"></script>
+
+<title>Kernel Log: What's coming in 2.6.30 - Storage: RAID improvements, optimised CFQ Scheduler, SAS drivers - The H Open: News and Features</title>
+
+<link rel="apple-touch-icon-precomposed" href="/open/icons/apple-touch-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/open/icons/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/open/icons/apple-touch-icon-72x72-precomposed.png" />
+
+
+<meta name="keywords" content="Kernel Log: What's coming in 2.6.30 - Storage: RAID improvements, optimised CFQ Scheduler, SAS drivers" />
+
+<meta name="description" content="The next kernel version is to provide conversion for, for example, a RAID 5 into a RAID 6 and vice versa. There are changes to the block layer designed to speed up the system, and new and improved drivers will offer better SAS support" />
+<meta name="date" content="2009-05-15T17:01:00+01:00" />
+<meta name="fulltitle" content="Kernel Log: What's coming in 2.6.30 - Storage: RAID improvements, optimised CFQ Scheduler, SAS drivers" />
+
+
+
+<meta name="kill_switch" content="" />
+
+
+
+
+<meta name="copyright" content="Heise Media UK Ltd." />
+<meta http-equiv="Content-Language" content="en" />
+
+
+
+
+<script type="text/javascript">var p="http",d="static";if(document.location.protocol=="https:"){p+="s";d="engine";}var z=document.createElement("script");z.type="text/javascript";z.async=true;z.src=p+"://"+d+".adzerk.net/ados.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(z,s);</script>
+<script type="text/javascript">
+var ados_keywords = ados_keywords || [];
+if( location.protocol=='https:' ) {
+    ados_keywords.push('T:SSL');
+} else {
+    ados_keywords.push('T:HTTP');
+}
+
+
+ados_keywords.push('S:Open');
+
+
+var ados = ados || {};
+ados.run = ados.run || [];
+ados.run.push(function() {
+    ados_add_placement(4669, 20980, "azk46801_leaderboard", 4).setZone(16028);
+    ados_add_placement(4669, 20980, "azk44180_rectangle", [5,10]).setZone(16029);
+    ados_add_placement(4669, 20980, "azk37883_skyscraper", 6).setZone(16030);
+    ados_add_placement(4669, 20980, "azk12698_bottom", 10).setZone(16031);
+    ados_add_placement(4669, 20980, "azk35222_tracking", 20).setZone(20909);
+    
+    ados_setKeywords(ados_keywords.join(', ')); 
+    ados_load();
+});
+</script>
+
+
+
+
+
+
+<meta name="generator" content="InterRed V13.0, http://www.interred.de/, InterRed GmbH" />
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img src="/open/icons/open_logo_theH.gif" alt="The H Open" width="110" height="70" /></a></div>
+
+            <ul id="navigation" class="no-touch">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form method="get" action="/open/search/" accept-charset="utf-8">
+        			<fieldset id="inputs">
+        				<input type="hidden" name="rm" value="search" />
+        				<input name="q" value="" size="10" type="text" class="searchfield" placeholder="Search The H Open" />&nbsp;<input name="search_submit" value="Search" size="4" type="submit" class="submit" />
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+
+	<div id="item">
+
+		<!--googleoff: index-->
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Azure-tool-kit-for-PHP-developers-741593.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/OWASP-LiveCD-switching-to-Ubuntu-741603.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="date">15 May 2009, 17:01</div>
+		<div class="clear"></div>
+		<!--googleon: index-->
+		<h1>Kernel Log: What's coming in 2.6.30 - Storage: RAID improvements, optimised CFQ Scheduler, SAS drivers</h1>
+						
+<script type="text/javascript" src="/js/plugins/jquery.socialshareprivacy.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    if($('#social_bookmarks_counters')){
+      $('#social_li_twitter').remove();
+      $('#social_li_facebook').remove();
+      $('ul.other_bookmarks').addClass('indented');
+      $('#social_bookmarks_counters').empty();
+      $('#social_bookmarks_counters').socialSharePrivacy({
+        services : {
+          facebook: {
+            'dummy_img' : '/js/plugins/socialshareprivacy/images/dummy_facebook_like.png',
+            'txt_info' : '2 clicks for more privacy: you need to click here to activate the button and send your recommendation to Facebook. An activated button will send information to third parties even without clicking it – see <em>i</em>. ',
+            'txt_fb_off' : 'not connected to Facebook',
+            'txt_fb_on' : 'connected to Facebook',
+            'referrer_track' : '/from/facebook',
+            'language' : 'en_US',
+            'action' : 'like'
+          },
+          twitter: {
+            'dummy_img' : '/js/plugins/socialshareprivacy/images/dummy_twitter.png',
+            'txt_info' : '2 clicks for more privacy: you need to click here to activate the button and send your recommendation to Twitter. An activated button will send information to third parties even without clicking it – see <em>i</em>. ',
+            'txt_fb_off' : 'not connected to Twitter',
+            'txt_fb_on' : 'connected to Twitter',
+            'referrer_track' : '/from/twitter',
+            'tweet_text' : 'Kernel Log Whats coming in 2.6.30 - Storage RAID improvements optimised CFQ Scheduler SAS d… #theh  #open',
+          },
+          gplus: {
+            'dummy_img' : '/js/plugins/socialshareprivacy/images/dummy_gplus.png',
+            'txt_info' : '2 clicks for more privacy: you need to click here to activate the button and send your recommendation to Google+. An activated button will send information to third parties even without clicking it – see <em>i</em>. ',
+            'txt_fb_off' : 'not connected to Google+',
+            'txt_fb_on' : 'connected to Google+',
+            'referrer_track' : '/from/gplus',
+            'language' : 'en',
+          }
+        },
+        'cookie_domain' : 'h-online.com',
+        'settings_perma' : 'Permanently enable and agree to transfer information:',
+        'css_path' : '',
+        'txt_help' : 'If you activate these buttons by clicking on them, information will get transfered to Facebook, Twitter or Google in the USA and potentially stored there. Find out more by clicking on the <em>i</em>',
+        'info_link' : 'http://www.h-online.com/features/Two-clicks-for-more-privacy-1783256.html'
+      }); 
+    }
+  });
+</script>
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20Whats%20coming%20in%202.6.30%20-%20Storage%20RAID%20improvements%20optimised%20CFQ%20Scheduler%20SAS%20d%E2%80%A6%20http%3A%2F%2Fh-online.com%2F-741597%20%23theh%20%23open"><img src="/icons/syndication/twitter16x14.gif" width="16" height="14" alt="Twitter" title="Twitter" /></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html"><img src="/icons/syndication/facebook16x14.gif" width="16" height="14" alt="Facebook" title="Facebook" /></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html&amp;title=Kernel%20Log%20Whats%20coming%20in%202.6.30%20-%20Storage%20RAID%20improvements%20optimised%20CFQ%20Scheduler%20SAS%20drivers&amp;tags=security&amp;notes=The%20next%20kernel%20version%20is%20to%20provide%20conversion%20for%20for%20example%20a%20RAID%205%20into%20a%20RAID%206%20and%20vice%20versa.%20There%20are%20changes%20to%20the%20block%20layer%20designed%20to%20speed%20up%20the%20system%20and%20new%20and%20improved%20drivers%20will%20offer%20better%20SAS%20support"><img src="/icons/syndication/slashdot16x14.gif" alt="submit to slashdot" title="submit to slashdot" width="16" height="14" /></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html&amp;title=Kernel%20Log%20Whats%20coming%20in%202.6.30%20-%20Storage%20RAID%20improvements%20optimised%20CFQ%20Scheduler%20SAS%20drivers"><img src="/icons/syndication/stumble16x14.gif" width="16" height="14" alt="StumbleUpon" title="StumbleUpon" /></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html&amp;title=Kernel%20Log%20Whats%20coming%20in%202.6.30%20-%20Storage%20RAID%20improvements%20optimised%20CFQ%20Scheduler%20SAS%20drivers"><img src="/icons/syndication/reddit16x14.gif" alt="submit to reddit" title="submit to reddit" width="16" height="14" /></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+		<div class="item_wrapper">
+			<p>	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:224px;">
+		<img src="/imgs/43/3/6/8/0/2/9/93e8ea3d0acdf147.jpg" width="224" height="297" alt="The Kernel Log Penguin"  />
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+ </p>
+
+<h4 class="author">by Thorsten Leemhuis</h4>
+
+<p><strong>The next kernel version is to provide all that's necessary to convert, for example, a RAID 5 into a RAID 6 and vice versa. There are changes to the block layer designed to speed up the system, and new and improved drivers will offer better SAS support.</strong></p>
+
+<p>With the <a href="http://thread.gmane.org/gmane.linux.kernel/834261" rel="external">fifth release candidate</a> of Linux 2.6.30 out a few days ago, the development of the next kernel version in the main development line continues to progress. As indicated by Linus Torvalds in his release email, the changes are slowly decreasing in number and size, which is what usually happens at this development stage.</p>
+
+<p>As every development cycle tends to have eight or nine pre-release versions which often appear on a weekly basis, it will be another few weeks before Torvalds releases Linux 2.6.30. Nevertheless, the Kernel Log will continue its review of the major changes in Linux 2.6.30 with the following overview of the new developments in the storage infrastructure and driver areas.</p>
+
+<p><strong>Flexible cooperation</strong></p>
+
+<p>The developers have made quite a few changes to the code for MD (Multiple Device) software RAIDs (see list at the end of this article), which now also allow the number of devices in a RAID 5 to be <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ec32a2bd35bd6b933a5db6542c48210ce069a376" rel="external">reduced</a>. As a result, a RAID-5 array can now be converted into a RAID 6 and back again; in addition, the kernel can convert a RAID 1 into a RAID 5. However, the current version of the mdadm userland tool is unable to handle these extensive conversions.</p>
+
+<p>The MD code <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3f9d99c12a533809342b475c95452e82761bcc1c" rel="external">now also offers</a> &quot;data integrity support&quot;, which was <a href="/open/Kernel-Log-Linux-2-6-27-Released--/features/111671/2" rel="external">first included</a> in 2.6.27, as long as all the devices in an MD array and their respective controllers are also capable of it. Due to <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9c47008d13add50ec4597a8b9eee200c515282c8" rel="external">various changes</a>, the same applies to the Device Mapper (DM), which now supports barriers better than it did before (<a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=692d0eb9e02cf81fb387ff891f53840db2f3110a" rel="external">1</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=af7e466a1acededbc10beaba9eec8531d561c566" rel="external">2</a>).</p>
+
+<p>Numerous changes have been made to the block layer and its CFQ I/O scheduler after the developers found some performance issues in this area while doing tests that related to the <a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-File-systems-New-and-revamped-file-systems-741319.html" title="Kernel Log: What&#39;s coming in 2.6.30 - File systems: New and revamped file systems – 27 April 2009, 16:11">lengthy discussions around Ext3 and Ext4</a> – some of the issues were so serious that Torvalds even threatened to replace the standard I/O scheduler. However, the developers were able to track down and eliminate the causes. In some cases this results not only in measurable, but also in noticeable performance improvements (see also the LWN.net article &quot;<a href="http://lwn.net/Articles/328363/" rel="external">Solving the ext3 latency problem</a>&quot;).</p>
+
+<p>
+	<div class="heisebox_right">
+		<h4>Storage</h4>
+<p>Relevant Git-Pull-Requests:</p>
+
+ <ul> <li>Block layer <a href="http://thread.gmane.org/gmane.linux.kernel/812808" rel="external">1</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/818716" rel="external">2</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/822773" rel="external">3</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/826504" rel="external">4</a></li> <li>Device Mapper (DM): <a href="http://thread.gmane.org/gmane.linux.kernel.device-mapper.devel/7766" rel="external">1</a>, <a href="http://thread.gmane.org/gmane.linux.kernel.device-mapper.devel/7870" rel="external">2</a></li> <li>IDE: <a href="http://thread.gmane.org/gmane.linux.ide/39290" rel="external">1</a>, <a href="http://thread.gmane.org/gmane.linux.ide/39355" rel="external">2</a>, <a href="http://thread.gmane.org/gmane.linux.ide/39423" rel="external">3</a>, <a href="http://thread.gmane.org/gmane.linux.ide/39649" rel="external">4</a></li> </ul> 
+
+ <ul> <li>Libata: <a href="http://thread.gmane.org/gmane.linux.ide/39301" rel="external">1</a>, <a href="http://news.gmane.org/find-root.php?message_id=20090407014232.GA5966@havoc.gtf.org" rel="external">2</a></li> <li><a href="http://thread.gmane.org/gmane.linux.raid/22043" rel="external">Multiple Device (MD)</a></li> <li><a href="http://thread.gmane.org/gmane.linux.kernel/817675" rel="external">MFD</a></li> </ul> 
+
+ <ul> <li>SCSI: <a href="http://thread.gmane.org/gmane.linux.scsi/49509" rel="external">1</a>, <a href="http://thread.gmane.org/gmane.linux.scsi/49736" rel="external">2</a></li> </ul>
+	</div>
+</p>
+
+<p><strong>Substructure</strong></p>
+
+<p>As we already mentioned in the <a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-File-systems-New-and-revamped-file-systems-741319.html" title="Kernel Log: What&#39;s coming in 2.6.30 - File systems: New and revamped file systems – 27 April 2009, 16:11">second part</a> of the &quot;What's coming in 2.6.30&quot; mini series of the Kernel Log, the SCSI subsystem now also supports the rather exotic OSDs (<a href="http://en.wikipedia.org/wiki/Object_storage_device" rel="external">Object-based Storage Devices</a>) (for example <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=02941a530ef736210b4cf8b24dd34c238d5d5a40" rel="external">1</a>, <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c6572c983726fe3f3bb5f07e9afe3a9b8e402d1b" rel="external">2</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=78e0c621deca08e5f802383dbe75fd20b258ea4e" rel="external">documentation</a>). For the first time, the <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=635374e7eb110e80d9918b8611198edd56a32975" rel="external">mpt2sas</a> SCSI driver for SAS2004, SAS2008, SAS2108 and SAS2116 SAS-2.0 controllers by LSI has been included in the kernel. The stex driver <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0f3f6ee68f771b61dc6bc5ae7c2e355cfc5884d1" rel="external">now also supports some of the SAS-6G controllers</a> by Promise. <a href="/news/item/Kernel-Log-What-s-new-in-2-6-29-Part-6-Storage-IDE-PATA-SCSI-740501.html" title="Kernel Log: What&#39;s new in 2.6.29 - Part 6: Storage, IDE/PATA, SCSI – 13 March 2009, 13:45">New in 2.6.29</a>, Fibre Channel over Ethernet <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=97c8389d54b9665c38105ea72a428a44b97ff2f6" rel="external">can now also handle</a> FIP (FCoE Initialization Protocol), which serves for detecting and integrating Fibre Channel Forwarders (FCFs). After they already placed the firmware code of numerous SCSI drivers in separate files in versions 2.6.27, .28 and .29, the kernel developers have continued this work in 2.6.30 and split up a further few drivers.</p>
+
+<p>Bartlomiej Zolnierkiewicz <a href="http://thread.gmane.org/gmane.linux.ide/39009" rel="external">announced</a> <a href="/news/item/Kernel-Log-Tasmanian-devil-to-be-Linux-s-temporary-mascot-new-Radeon-drivers-740667.html" title="Kernel Log: Tasmanian devil to be Linux&#39;s temporary mascot, new Radeon drivers – 19 March 2009, 15:43">a few weeks ago</a> that he completed all of the planned IDE subsystem restructuring tasks and will from now on focus mainly on the subsystem's maintenance and on minor extensions. This has already been noticeable during the development of 2.6.30, where we've seen considerably less activity compared to the sometimes comprehensive changes to the IDE code in the previous few kernel versions. Comparatively few major changes – among them the <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=da14265e776f35067045b8555b5f5f7521e50bc4" rel="external">support of ATAPI devices</a> in the sata_mvdriver, which handles Marvell ATA chips – were also made to the Libata subsystem, whose PATA drivers are used for the IDE adapters in most mainstream distributions.</p>
+
+<p>
+	<div class="heisebox_right">
+		<h4>Kernel Log – What's coming in 2.6.30</h4>
+<p><span style="font-size:smaller;"> Other parts of the &quot;What's coming in 2.6.30&quot; mini series of the Kernel Log: </span></p>
+
+<p><span style="font-size:smaller;"> 1. <a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-Network-New-Wi-Fi-drivers-and-other-network-novelties-741197.html" title="Kernel Log: What&#39;s coming in 2.6.30 - Network: New Wi-Fi drivers and other network novelties – 17 April 2009, 10:51">Network: New Wi-Fi drivers and other network novelties</a> </span></p>
+
+<p><span style="font-size:smaller;"> 2. <a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-File-systems-New-and-revamped-file-systems-741319.html" title="Kernel Log: What&#39;s coming in 2.6.30 - File systems: New and revamped file systems – 27 April 2009, 16:11">File systems: New and revamped file systems</a> </span></p>
+
+<p><span style="font-size:smaller;"> The article &quot;&quot;<a href="/open/features/Steady-growth-What-s-new-in-Linux-2-6-29-746553.html" title="Steady growth - What&#39;s new in Linux 2.6.29 – 24 March 2009, 15:26">Steady growth: What's new in Linux 2.6.29</a>&quot; describes the new features of the kernel version in the main development line, current at the article's time of writing. </span></p>
+
+<p><span style="font-size:smaller;"> Further background and information about developments in the Linux kernel and its environment can also be found in previous issues of the Kernel Log at The H Open Source. </span></p>
+	</div>
+</p>
+
+<p><strong>Minor gems</strong></p>
+
+<p>The kernel developers also <a href="http://thread.gmane.org/gmane.linux.ide/39461/" rel="external">discussed</a> extensions to incorporate ATA-TRIM, which allows the kernel to tell SSDs that support the relatively recent ATA command which areas no longer hold any data (&quot;discard&quot;). However, only a <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0c659b82d11eaf5e1bee1f2bcb9994b9d09d175c" rel="external">patch</a> has been included in the kernel to provide the basis for further changes likely to be integrated with 2.6.31.</p>
+
+<p>What we have mentioned so far only describes the most important and recent changes the kernel hackers have made to the storage-related code of Linux. Many further changes can be found in the following list containing the respective commits in the main development branch; the links directly display the changes in a <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary" rel="external">web frontend</a>, where the commit comment and the patch itself offer more information about the perhaps minor, but by no means unimportant changes.</p>
+
+<p><strong>Block Layer</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1d6bfbdf38f37bcc259e7c56c8c73664772651fb" rel="external">as-iosched: get rid of private REQ_SYNC/REQ_ASYNC defines</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=aeb6fafb8fa53266d70ca7474fcda2bdaf96524a" rel="external">block: Add flag for telling the IO schedulers NOT to anticipate more IO</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=329007ce25d56fc7113df7b4828d607806d8bc21" rel="external">block: update biodoc.txt on plugging</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=dfbc4752eab33e66f113f9daa2effbe241cd661d" rel="external">brd: support barriers</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a36e71f996e25d6213f57951f7ae1874086ec57e" rel="external">cfq-iosched: add close cooperator code</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2f5cb7381b737e24c8046fd4aeab571fb71315f5" rel="external">cfq-iosched: change dispatch logic to deal with single requests at the time</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d6ceb25e8d8bccf826848c2621a50d02c0a7f4ae" rel="external">cfq-iosched: don't delay queue kick for a merged request</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b029195dda0129b427c6e579a3bb3ae752da3a93" rel="external">cfq-iosched: don't let idling interfere with plugging</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2d870722965211de072bb36b446a4df99dae07e1" rel="external">cfq-iosched: tweak kick logic a bit more</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=48e70bc18ac81881dedd3aa327c55b924fc41ecf" rel="external">Document and move the various READ/WRITE types</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=53d6660836f233df66490707365ab177e5fb2bb4" rel="external">loop: add ioctl to resize a loop device</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=68db1961bbf4e16c220ccec4a780e966bc1fece3" rel="external">loop: support barrier writes</a></li> </ul> 
+
+<p><strong>Device Mapper (DM)</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7513c2a761d69d2a93f17146b3563527d3618ba0" rel="external">dm raid1: add is_remote_recovering hook for clusters</a></li> </ul> 
+
+<p><strong>IDE</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4465461ece2b9249d6c0cf57bc0002100823e361" rel="external">ide: merge ide_arm and ide_generic host drivers</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7eeaaaa52285d5e6cb79f515e99c591dcb9d04fe" rel="external">ide: move xfer mode tuning code to ide-xfer-mode.c</a></li> </ul> 
+
+<p><strong>Libata</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=aa431dd39d560586db22209b7f78c33455e1a786" rel="external">ahci: force CAP_NCQ for earlier NV MCPs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c611bed780a51222ece8eaf303c779ef82d9d253" rel="external">ata_piix: ICH7 does not support correct MWDMA timings</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e3cf95dd6d352954b663d2934110d6e30af2406d" rel="external">ata: Report 16/32bit PIO as best we can</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4c1e9aa41b2f9afe8f26e2efe5bb4695f6c40772" rel="external">libata: ahci enclosure management bios workaround</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=265b7215aed36941620b65ecfff516200fb190c1" rel="external">pata_hpt37x: fix HPT370 DMA timeouts</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=da14265e776f35067045b8555b5f5f7521e50bc4" rel="external">sata_mv: introduce support for ATAPI devices</a></li> </ul> 
+
+<p><strong>Mapper Device (DM)</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=11373542344bdc35be1e6e68b0baadd1b6f7acbb" rel="external">Documentation/md.txt update</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cea9c22800773cecb1d41f4a6139f9eb6a95368b" rel="external">md: add explicit method to signal the end of a reshape.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d562b0c4313e3ddea402a400371afa47ddf679f9" rel="external">md: add -&gt;takeover method for raid5 to be able to take over raid1</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=245f46c2c221ef09c7db892f0e3fc2149be42052" rel="external">md: add -&gt;takeover method to support changing the personality managing an array</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=fc9739c6d626ee79a148ec367d143b0601299a9d" rel="external">md: add takeover support for converting raid6 back into raid5</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e9d4758f6e93488dc719a1445ce54659a570938f" rel="external">md: add takeover support for raid4 -&gt; raid5 conversion.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ec32a2bd35bd6b933a5db6542c48210ce069a376" rel="external">md: allow number of drives in raid5 to be reduced</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=409c57f3801701dfee27a28103dda4831306cb20" rel="external">md: enable suspend/resume of md devices.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=97e4f42d62badb0f9fbc27c013e89bc1336a03bc" rel="external">md: occasionally checkpoint drive recovery to reduce duplicate effort after a crash</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=99c0fb5f92828ae96909d390f2df137b89093b37" rel="external">md/raid5: Add support for new layouts for raid5 and raid6.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=88ce4930e2b80378d45506ce2c3bb5820e156e85" rel="external">md/raid5: allow layout and chunksize to be changed on active array.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b3546035277847028df650b147469fc943cf5c71" rel="external">md/raid5: allow layout/chunksize to be changed on an active 2-drive raid5.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=67cc2b8165857ba019920d1f00d64bcc4140075d" rel="external">md/raid5: finish support for DDF/raid6</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f701d589aa34d7531183c9ac6f7713ba14212b02" rel="external">md/raid6: move raid6 data processing to raid6_pq.ko</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2cffc4a01dd90a502324e3453d7b245d6d16e1c2" rel="external">md: remove CONFIG_MD_RAID_RESHAPE config option.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1f59390339f263c0fe7908fbe54466dbf3a64b58" rel="external">md: support bitmaps on RAID10 arrays larger then 2 terabytes</a></li> </ul> 
+
+<p><strong>MMC</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6b0b62853b2553be375033776902640320970846" rel="external">mmc: add MODALIAS linkage for MMC/SD devices</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=236caa7cc351f885874a2776b7dd1b5667359dc8" rel="external">mmc: SDIO driver for Marvell SoCs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4e4141a526dd7f5ac3ce1458ae79ea6e5a515b06" rel="external">sdhci: Add support for bus-specific IO memory accessors</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=68d1fb7e229c6f95be4fbbe3eb46b24e41184924" rel="external">sdhci: Add support for card-detection polling</a></li> </ul> 
+
+<p><strong>MTD</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bd50a0ffca0bbb9baa60ab1ef2c09cf7561e1223" rel="external">MTD-CHIPS: Add JEDEC probe support for the SST 39VF3201 flash chip</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c451c7c4c9c4f59c7808a7d397d32bef160c14d9" rel="external">MTD-NAND: Add parent info for CAFÉ controller </a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=81ec5364a58c0545b694dee02fe65b9ae48f37b6" rel="external">MTD-NAND: Add support for 4KiB pages.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1b578193af3b94c3d55d9aaf6b53275b1cb59a41" rel="external">MTD-NAND: Add support for NAND on the Socrates board</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ff4569c752c577c7e71e03c9d59e6ef85ca763c0" rel="external">MTD-NAND: davinci_nand driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b6e0e8c07754c8aefd6ff3536463fed5f71405a0" rel="external">MTD-NAND: FSL-UPM: add multi chip support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ade92a636f15d7e5b92e2df22e8fcb6c7640cd4f" rel="external">MTD-NAND: FSL-UPM: Add wait flags to support board/chip specific delays</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f271049e2010b918f83dc1c7bbd5d75f4710506a" rel="external">MTD-NAND: pxa3xx_nand: add ability to keep controller settings defined by OBM/bootloader</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a591f5d35e89be90c04830d7de01c276af68aeb7" rel="external">MTD-NAND: TXx9: add NDFMC support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=db99a5523175ba15fef4719c722cea11b94911bb" rel="external">MTD-NOR: Add device parent info to physmap_of</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9ce969082e490d0a5a81862b364337c93dc3482a" rel="external">MTD-OneNAND: Add write-while-program support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cbf77c1bd9c79d1742976862d0b2bebaff1ea14d" rel="external">MTD: RBTX4939: add MTD support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=610f75e74b636f933bc3e379a88a10f883b91332" rel="external">MTD: RBTX4939 map driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=64fb65baffa5b8f6f2eb3f628dec43c22cd1031f" rel="external">MTD: TXx9 SoC NAND Flash Memory Controller driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=da4458bda237aa0cb1688f6c359477f203788f6a" rel="external">NOMMU: Make it possible for RomFS to use MTD devices directly</a></li> </ul> 
+
+<p><strong>SCSI</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7a252fe7bcf64f1174b55c5c696ef2506b849f80" rel="external">SCSI: 3w-9xxx: add power management support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d8e965076514dcb16410c0d18c6c8de4dcba19fc" rel="external">SCSI: aacraid driver update</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=989bb5f58c14b87f059755f4bbb4b72408c76d9a" rel="external">SCSI: advansys: use request_firmware</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9b34ecffd59d6ed66fdd6906e8a092a33e7c8564" rel="external">SCSI: fcoe, libfc: add libfcoe module</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4ef1a3d70d02663f6bfe901db629e8e608da15b1" rel="external">SCSI: libosd: attributes Support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=98f3aea2bd4b4f9cd7a6a6479ed9410787f756fd" rel="external">SCSI: libosd: SCSI/OSD Sense decoding support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=71969fd9e2c523d22bf1742eb31f1562247710eb" rel="external">SCSI: major.h: char-major number for OSD device driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f0f9cc1fb8a21f3ff90900505fc82a43d29d0975" rel="external">SCSI: mpt2sas : Identify Dell series-7 adapters at driver load time</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6864abd8b730435d6ae9cb061095229a5a85153f" rel="external">SCSI: osd: Kconfig file for in-tree builds</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=95b05a7db5865855c32e0bb8b244c3a7aac1cfeb" rel="external">SCSI: osd_uld: OSD scsi ULD</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1bfa11db712cbf4af1ae037cd25fd4f781f0c215" rel="external">SCSI: qla1280: use request_firmware</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1d2874de809a14e6780246b99a18bbc0fc0a8f2a" rel="external">SCSI: qla2xxx: Add Flash-Access-Control support for recent ISPs.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6e181be508cf81fda4407b4689befeb7e4149607" rel="external">SCSI: qla2xxx: Add reset capabilities for application support.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f894e74dc1983062d30d4e1b79bdb90b8a847f52" rel="external">SCSI: qlogicpti: use request_firmware</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=68274794c69991121eaf0a4a35b78aa7f088ec2c" rel="external">SCSI: scsi: Add osd library to build system</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=99946f8141f65a8bd5034ac5b1a53237aec8743e" rel="external">SCSI: stex: add MSI support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=62e5b3d850f76190633e5a3cc8d6cc611ef96cfc" rel="external">SCSI: stex: Add new device id</a></li> </ul> 
+
+<p><strong>Various</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3fbed4c61abd8458896e38633d10110cb5a589d4" rel="external">mflash: initial support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1b24bc3aaba899f4e7f681cbbc3b93cadcf4d770" rel="external">UBI: add fsync capability</a></li> </ul> 
+
+<p><em>Further background and information about developments in the Linux kernel and its environment can also be found in previous issues of the Kernel Log at The H Open Source:</em></p>
+
+ <ul> <li><a href="/news/item/Kernel-Log-X-org-7-5-coming-in-summer-re-write-for-Intel-s-graphics-driver-741405.html" title="Kernel Log: X.org 7.5 coming in summer, re-write for Intel&#39;s graphics driver – 04 May 2009, 07:09">Kernel Log: X.org 7.5 coming in summer, re-write for Intel's graphics driver</a></li> <li><a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-File-systems-New-and-revamped-file-systems-741319.html" title="Kernel Log: What&#39;s coming in 2.6.30 - File systems: New and revamped file systems – 27 April 2009, 16:11">Kernel Log: What's coming in 2.6.30 - File systems: New and revamped file systems</a></li> <li><a href="/news/item/Kernel-Log-3D-support-for-the-new-Radeon-driver-new-Intel-drivers-741271.html" title=" Kernel Log: 3D support for the new Radeon driver; new Intel drivers – 22 April 2009, 17:06">Kernel Log: 3D support for the new Radeon driver; new Intel drivers</a></li> <li><a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-Network-New-Wi-Fi-drivers-and-other-network-novelties-741197.html" title="Kernel Log: What&#39;s coming in 2.6.30 - Network: New Wi-Fi drivers and other network novelties – 17 April 2009, 10:51">Kernel Log: What's coming in 2.6.30 - Network: New Wi-Fi drivers and other network novelties</a></li> <li><a href="/news/item/Kernel-Log-Linux-2-6-30-is-taking-shape-741093.html" title="Kernel Log: Linux 2.6.30 is taking shape – 09 April 2009, 06:41">Kernel Log: Linux 2.6.30 is taking shape</a></li> <li><a href="/news/item/Kernel-Log-Development-of-2-6-30-is-under-way-740805.html" title="Kernel Log: Development of 2.6.30 is under way – 27 March 2009, 17:33">Kernel Log: Development of 2.6.30 is under way</a></li> </ul> 
+
+<p> <em>Older Kernel Logs can be found in <a href="/open/news/archive/" rel="external">the archives</a> or by using <a href="/search/?rm=search;perpage=5999;filter_t1=1;q=kernel-log" rel="external">the search function</a> at <a href="/open/" rel="external">The H Open Source</a>.</em></p>
+
+<p>(<a href="mailto:mailto%3Athl@ct.heise.de">thl</a>/c't)</p>
+			<p>(<!--googleoff: index--><a href="mailto:djwm@h-online.com" class="noline" title="Dj Walker-Morgan">djwm</a>)</p>		</div>
+
+		<div class="clear"></div>
+        
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Azure-tool-kit-for-PHP-developers-741593.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/OWASP-LiveCD-switching-to-Ubuntu-741603.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="news_option"><a href="/open/news/item/Kernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html?view=print" rel="nofollow">Print Version</a> | <a href="/open/news/item/Kernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html?view=mail" rel="nofollow">Send by email</a>
+		 | Permalink: <a href="http://h-online.com/-741597">http://h-online.com/-741597</a>
+		</div>
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Coming-in-3-9-part-1-Filesystems-and-storage-1831197.html/from/related" title="Kernel Log: Coming in 3.9 (part 1) – Filesystems and storage">Kernel Log: Coming in 3.9 (part 1) – Filesystems and storage</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/New-Linux-drivers-for-old-kernel-versions-1667811.html/from/related" title="New Linux drivers for old kernel versions ">New Linux drivers for old kernel versions </a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-3-Tracking-1440083.html/from/related" title="Linux Kernel 3.3 Tracking">Linux Kernel 3.3 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-1-Tracking-1319593.html/from/related" title="Linux Kernel 3.1 Tracking ">Linux Kernel 3.1 Tracking </a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Coming-in-2-6-35-Part-2-File-systems-and-storage-1037639.html/from/related" title="Kernel Log: Coming in 2.6.35 (Part 2) - File systems and storage">Kernel Log: Coming in 2.6.35 (Part 2) - File systems and storage</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Status-Report-The-Linux-Driver-Project-741919.html/from/related" title="Status Report: The Linux Driver Project">Status Report: The Linux Driver Project</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi">&nbsp;</div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196" height="24" alt="The H Open Headlines"  />
+        <ul>
+        
+            <li>
+            <a href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination" class="top">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H's Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power" >Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public" >GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla's Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers" >NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android's signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen" >Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics" >One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94" height="25" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple's infrared receiver <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" alt="Business Source artwork" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" alt="Whatever happened to Google?" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July's Community Calendar"><img src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" alt="July's Community Calendar" width="280" height="35" /></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116" height="24" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What's new in SUSE Linux Enterprise 11 SP3">What's new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What's new in SUSE Linux Enterprise 11 SP3"><img src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" alt="What's new in SUSE Linux Enterprise 11 SP3" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What's new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What's new in Fedora 19">What's new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What's new in Fedora 19"><img src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" alt="What's new in Fedora 19" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What's new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What's new in Linux 3.10">What's new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What's new in Linux 3.10"><img src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" alt="What's new in Linux 3.10" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What's new in Linux 3.10">A second SSD caching framework and support for the new Radeons' video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" alt="Free Software post-PRISM" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130" height="24" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" alt="Content Security Policy halts XSS in its tracks" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype's ominous link checking: Facts and speculation">Skype's ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype's ominous link checking: Facts and speculation"><img src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" alt="Skype Listening In graphic" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype's ominous link checking: Facts and speculation">Our associate's discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" alt="Password protection for everyone" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" alt="Two clicks for more privacy" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145" height="25" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" alt="Java EE 7 at a glance" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" alt="Continuous database migration with Liquibase and Flyway" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application's version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" alt="Unit testing with Node.js" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" alt="Ruby 2.0 at 20" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120" height="24" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" alt="Linux Mint 15" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What's new in Linux 3.9">What's new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What's new in Linux 3.9"><img src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" alt="What's new in Linux 3.8" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What's new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" alt="Replacing Google Reader" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H's Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" alt="Attacking TrueCrypt" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright © 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready( function($) {
+    var activation_function = function(e) {
+        if ($(e.target).is('#whereami, #navigation_selector')) {
+            $('#navigation').toggleClass('active');
+            e.preventDefault();
+        }
+    };
+    $('#navigation_selector').click( function (e) {
+        e.preventDefault();
+    });
+    if ("ontouchstart" in document) {
+        $('#navigation').removeClass('no-touch');
+        $('#whereami').on('touchstart', activation_function);
+    } else {
+        $('#whereami').click(activation_function);
+    }
+    $('body').click(function(e){ 
+        if ( ! $(e.target).is('#whereami, #navigation_selector')) {
+            $('#navigation').removeClass('active'); 
+        }
+    });
+});
+//--><!]]>
+</script>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready( function($) {
+    $('ul.cycleteaser').each(function(index, element) {
+        $(this).cycle({
+            fx: 'none',
+            pager: '#' + $(this).attr('id') + '_navi', 
+            activePagerClass: 'active',
+            pagerAnchorBuilder: function(idx, slide) {
+                return '<li>' + (idx+1) + '</li>';
+            },
+            pagerEvent: 'mouseover',
+            timeout: 10000,
+            pause: 1,
+            pauseOnPagerHover: 1,
+            delay: index * 2000,
+        });
+    });
+});
+//--><!]]>
+</script>
+
+
+
+<noscript>
+<div id="cookie_warning_small" class="cookie_warning">
+<p>This site makes use of cookies. Please refer to our <a href="/Cookie-information-1582679.html">cookie page</a> for more information.</p>
+</div>
+</noscript>
+<div id="cookie_warning" class="cookie_warning">
+<p>The H uses cookies to help provide services and information to its readers. For more information about the cookies used on this site, including ways to opt-out, please see our <a href="/Cookie-information-1582679.html">cookie information page</a>. If you continue using The H, we will assume that you agree to our use of cookies.</p>
+<p style="text-align: right"><button type="button" onclick="jQuery('#cookie_warning').hide()">Close</button></p>
+</div>
+<script type="text/javascript">
+jQuery(document).ready( function () {
+    if ( document.cookie.indexOf('seen_cookie_warning=') != -1 ) {
+        jQuery('#cookie_warning').show();
+    }
+});
+</script>
+
+
+
+
+<div style="display: inline;"><img id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/news/item/Kernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html" width="1" height="1" alt="" /></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+<script type="text/javascript">document.write(String.fromCharCode(60)+'script type="text/javascript" src="http'+("https:"==document.location.protocol?"s":"")+'://code.etracker.com/t.js?et=86m8Nm">'+String.fromCharCode(60)+'/script>');</script>
+
+<!-- etracker PARAMETER 3.0 -->
+<script type="text/javascript">
+var et_pagename = location.pathname == '/' ? "" : location.pathname;
+var et_areas    = "open%2Fnews";
+var et_ilevel   = 0;
+var et_se = 4;
+</script>
+<!-- etracker PARAMETER END -->
+
+<script type="text/javascript">_etc();</script>
+<noscript><p><a href="http://www.etracker.com"><img style="border:0px;" alt="" src="https://www.etracker.com/nscnt.php?et=86m8Nm" /></a></p></noscript>
+<!-- etracker CODE NOSCRIPT 3.0 -->
+<noscript>
+<p><a href='http://www.etracker.de/app?et=86m8Nm'>
+<img style='border:0px;' alt='' src='https://www.etracker.de/cnt.php?
+et=86m8Nm&amp;v=3.0&amp;java=n&amp;et_easy=0
+&amp;et_pagename=%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-coming-in-2-6-30-Storage-RAID-improvements-optimised-CFQ-Scheduler-SAS-drivers-741597.html
+&amp;et_areas=open%2Fnews&amp;et_ilevel=0&amp;et_target=,,,1
+&amp;et_lpage=0&amp;et_trig=0&amp;et_se=0&amp;et_cust=0
+&amp;et_basket=&amp;et_url=&amp;et_tag=
+&amp;et_organisation=&amp;et_demographic=' /></a></p>
+</noscript>
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 368029, iBID: 368030, CID: 741597, iCID: 741598 -->
+<!-- Link: $(LB368029:Linktext)$ $(LC741597:Linktext)$ -->
+<!-- Generiert: 2012-10-30 14:54:11 -->
+
+
+

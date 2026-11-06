@@ -1,0 +1,1187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head>
+
+
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type">
+<link href="/Contact-273335.html" rel="copyright" title="Copyright">
+<link href="mailto:editors%40h-online.com?subject=The%20H%20Open" rel="author" title="Contact">
+
+<link href="http://www.h-online.com/open/atom.xml" rel="alternate" title="All The H open news and features" type="application/atom+xml">
+
+<link href="/favicon_open.ico" rel="shortcut icon">
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css">
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css">
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+<title>Kernel Log: Coming in 2.6.31 - Part 5: CUSE, USB 3.0, FireWire networking and the rest - The H Open: News and Features</title>
+
+<link href="/open/icons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
+<link href="/open/icons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="/open/icons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+
+
+<meta content="Kernel Log: Coming in 2.6.31 - Part 5: CUSE, USB 3.0, FireWire networking and the rest" name="keywords">
+
+<meta content="New drivers for USB 3.0 and Acer&#39;s Aspire One netbook. Distributions to use the new FireWire stack that now offers LAN support. CUSE emulates Open Sound System via userspace program." name="description">
+<meta content="2009-08-31T08:02:00+01:00" name="date">
+<meta content="Kernel Log: Coming in 2.6.31 - Part 5: CUSE, USB 3.0, FireWire networking and the rest" name="fulltitle">
+
+
+
+<meta content="" name="kill_switch">
+
+
+
+
+<meta content="Heise Media UK Ltd." name="copyright">
+<meta content="en" http-equiv="Content-Language">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="InterRed V14.0, http://www.interred.de/, InterRed GmbH" name="generator">
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img alt="The H Open" height="70" src="/open/icons/open_logo_theH.gif" width="110"></a></div>
+
+            <ul class="no-touch" id="navigation">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form accept-charset="utf-8" action="/open/search/" method="get">
+        			<fieldset id="inputs">
+        				<input name="rm" type="hidden" value="search">
+        				<input class="searchfield" name="q" placeholder="Search The H Open" size="10" type="text" value=""> <input class="submit" name="search_submit" size="4" type="submit" value="Search">
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+
+	<div id="item">
+
+		<!--googleoff: index-->
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Multi-booting-over-the-internet-743175.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/Secure-integration-of-Ajax-widgets-into-websites-743177.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="date">31 August 2009, 08:02</div>
+		<div class="clear"></div>
+		<!--googleon: index-->
+		<h1>Kernel Log: Coming in 2.6.31 - Part 5: CUSE, USB 3.0, FireWire networking and the rest</h1>
+						
+
+
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20Coming%20in%202.6.31%20-%20Part%205%20CUSE%20USB%203.0%20FireWire%20networking%20and%20the%20rest%20http%3A%2F%2Fh-online.com%2F-743173%20%23theh%20%23open"><img alt="Twitter" height="14" src="/icons/syndication/twitter16x14.gif" title="Twitter" width="16"></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-31-Part-5-CUSE-USB-3-0-FireWire-networking-and-the-rest-743173.html"><img alt="Facebook" height="14" src="/icons/syndication/facebook16x14.gif" title="Facebook" width="16"></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-31-Part-5-CUSE-USB-3-0-FireWire-networking-and-the-rest-743173.html&amp;title=Kernel%20Log%20Coming%20in%202.6.31%20-%20Part%205%20CUSE%20USB%203.0%20FireWire%20networking%20and%20the%20rest&amp;tags=security&amp;notes=New%20drivers%20for%20USB%203.0%20and%20Acers%20Aspire%20One%20netbook.%20Distributions%20to%20use%20the%20new%20FireWire%20stack%20that%20now%20offers%20LAN%20support.%20CUSE%20emulates%20Open%20Sound%20System%20via%20userspace%20program."><img alt="submit to slashdot" height="14" src="/icons/syndication/slashdot16x14.gif" title="submit to slashdot" width="16"></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-31-Part-5-CUSE-USB-3-0-FireWire-networking-and-the-rest-743173.html&amp;title=Kernel%20Log%20Coming%20in%202.6.31%20-%20Part%205%20CUSE%20USB%203.0%20FireWire%20networking%20and%20the%20rest"><img alt="StumbleUpon" height="14" src="/icons/syndication/stumble16x14.gif" title="StumbleUpon" width="16"></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-31-Part-5-CUSE-USB-3-0-FireWire-networking-and-the-rest-743173.html&amp;title=Kernel%20Log%20Coming%20in%202.6.31%20-%20Part%205%20CUSE%20USB%203.0%20FireWire%20networking%20and%20the%20rest"><img alt="submit to reddit" height="14" src="/icons/syndication/reddit16x14.gif" title="submit to reddit" width="16"></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+		<div class="item_wrapper">
+			<p>	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:224px;">
+		<img alt="Kernel Log Penguin" height="297" src="/imgs/43/3/6/9/6/0/2/93e8ea3d0acdf147.jpg" width="224">
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+</p>
+
+<h4 class="author">by Thorsten Leemhuis</h4>
+
+<p><strong>Linux 2.6.31 will support USB 3.0, although the corresponding hardware is not yet available. Distributions are to use the new FireWire stack that now offers LAN support. CUSE emulates the Open Sound System via a userspace program. Another new addition is a driver for Acer&#39;s Aspire One netbook.</strong></p>
+
+<p>Last Friday, Linus Torvalds released the eigth pre-release version of Linux 2.6.31. As the lead developer stressed in the <a href="http://thread.gmane.org/gmane.linux.kernel/883177" rel="external">release announcement</a>, it will be the last pre-release version. He is on holiday diving for the next week and hopes to present the 2.6.31 release on the <a href="http://en.wikipedia.org/wiki/Labor_day" rel="external">Labor Day</a> US Holiday, which falls on September 7th this year.</p>
+
+<p>Because, until then, only bug fixes will be fed into the main development branch, we are presenting the fifth and final part of the Kernel Log mini series now, concluding the detailed overview of the new features in the forthcoming kernel version. This edition will discuss all the subsystems that were left unmentioned in the previous parts – mainly the drivers and driver-related infrastructures like the ACPI and PCI subsystems. In the &quot;Latecomers&quot; section of this article we also mention a few stragglers from the areas already covered in previous editions.</p>
+
+<p> 
+	</p><div class="heisebox_right">
+		<p>For other articles on 2.6.31 and links to the other four parts of the &quot;Coming in 2.6.31&quot; series, see The H&#39;s <a href="/open/features/Kernel-Log-2-6-31-Tracking-746446.html" title="Kernel Log - 2.6.31 Tracking – 02 July 2009, 11:21">Kernel Log - 2.6.31 Tracking</a> page.</p>
+	</div>
+
+
+<h3 class="subheading">Fast transmissions</h3>
+
+<p><a href="/news/item/First-Linux-USB-3-0-drivers-emerge-741965.html" title="First Linux USB 3.0 drivers emerge – 10 June 2009, 10:06">As expected</a>, <a href="http://thread.gmane.org/gmane.linux.usb.general/18805" rel="external">changes to the USB subsystem</a> include the code to support USB 3.0 controllers with their Extensible Host Controller Interface (xHCI) (for example <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=74c6874199af98e602bb7c5fb1beb9cffda98729" rel="external">1</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3ffbba9511b4148cbe1f6b6238686adaeaca8feb" rel="external">2</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d0e96f5a71a032ced0c35f521c1cbd67e816922a" rel="external">3</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0f2a79300a1471cf92ab43af165ea13555c8b0a5" rel="external">4</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c6515272b858742962c1de0f3bf497a048b9abd7" rel="external">5</a>). Although various vendors have already released details about USB 3.0 hardware, so far, no actual products have become available. The USB 3.0 support in Linux is, therefore, not particularly relevant for now – but this will probably change in the long run; after all, the previous two USB interface generations have been resoundingly successful.</p>
+
+<p>An overview of the changes to the FireWire code is available in the two main git-pull requests submitted by FireWire maintainer Stefan Richter (<a href="http://thread.gmane.org/gmane.linux.kernel/852983" rel="external">1</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/852983/focus%3D13296" rel="external">2</a>). Among other things, the maintainer highlights the <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c76acec6d55107b652a37c90b36c00bc8b04dabb" rel="external">added support</a> for &quot;IPv4 over IEEE 1394&quot; (networks via FireWire) in the more recent of the Linux kernel&#39;s two FireWire stacks. He also points out that the more recent &quot;firewire&quot; stack <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0c53decdd0a9f9c459ccabe0b5f79660bde5375b" rel="external">is no longer classified as experimental</a>, and that the distributions should, therefore, give it preference in the future. According to the maintainer, the new stack offers better performance, better compatibility, more features and improved security. However, he also points out that the old &quot;ieee1394&quot; stack is still the best choice for audio hardware and for the FireWire DVB devices supported by the firedtv driver.</p>
+
+<h3 class="subheading">Drawing devices</h3>
+
+<p>With 2.6.31, the FUSE (Filesystem in Userspace)-based CUSE (Character device in Userspace) feature will be integrated into Linux. It allows userspace programs to emulate virtual devices that are accessible to other programs via the usual character-oriented device files in the same way as &quot;proper&quot; character devices implemented via a kernel driver.</p>
+
+<p>This enables programmers to develop, for example, a userspace program that emulates the obsolete OSS (Open Sound System); it implements the devices expected by OSS programs via CUSE and then uses these devices to accept the data, process it and output it using the current ALSA sound system. The developer of CUSE, a Novell employee, has released such an <a href="http://userweb.kernel.org/~tj/ossp/" rel="external">OSS proxy</a> for testing. Find further background information about CUSE and its potential uses in an <a href="http://lwn.net/Articles/308445/" rel="external">article released on LWN.net</a> some time ago.</p>
+
+<h3 class="subheading">Specials corner</h3>
+
+<p>The staging area with its drivers that don&#39;t live up to the kernel hackers&#39; quality standards has reached quite a considerable size. However, in the current development cycle it has actually shrunk a bit, as Greg Kroah-Hartman pointed out in his <a href="http://thread.gmane.org/gmane.linux.kernel/854461" rel="external">git-pull request</a> for the changes to the staging area (&quot;<em>We are removing more crap than we are adding, looks like progress to me! :)</em>&quot;). This is mainly due to the reorganisation of several drivers for Ralink Wi-Fi chip-sets, as <a href="/news/item/Kernel-Log-Coming-in-2-6-31-Part-1-New-Wi-Fi-drivers-and-other-network-related-changes-742309.html" title="Kernel Log - Coming in 2.6.31 - Part 1: New Wi-Fi drivers and other network-related changes – 02 July 2009, 12:44">already discussed</a> in the Kernel Log.</p>
+
+<p>In addition to the rtl8192su and vt6655 Wi-Fi drivers mentioned there, the staging area now contains the new <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=80ff0fd3ab6451407a20c19b80c1643c4a6d6434" rel="external">octeon-ethernet</a> network driver for SoCs (Systems on a Chip) from Cavium&#39;s Octeon family. Further kernel additions at the tail end of the current development cycle are the cpc-usb CPC-CAN-USB driver and the rudimentary udlfb framebuffer driver (<a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=88e58b1a42f8c1e9ac8ecda23374cc241045d309" rel="external">1</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9a82e6df79f13a3489c50813c1edb4331a9400d3" rel="external">2</a>) for <a href="/news/item/DisplayLink-plugs-into-Linux-741607.html" title="DisplayLink plugs into Linux – 18 May 2009, 11:16">DisplayLink devices</a>.</p>
+
+<p>The developers <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ba49d59ac4b0748c8d7be9d7a9f637c50592e977" rel="external">removed</a> serqt_usb because a kernel hacker has developed a completely new alternative driver for the same hardware – it is not the first and probably won&#39;t be the last time the kernel developers have decided to replace a staging driver with a completely new driver instead of trying to improve a <a href="/news/item/Kernel-Log-What-s-coming-in-2-6-28-Part-3-Dodgy-drivers-737747.html" title="Kernel Log: What&#39;s coming in 2.6.28 - Part 3: Dodgy drivers – 22 October 2008, 09:29">&quot;dodgy&quot; one</a>.</p>
+
+<h3 class="subheading">In brief</h3>
+
+<p>The changes described above are only the most significant of those recently made by the kernel hackers. Here is a short overview of further changes:</p>
+
+<p><strong>Notebooks:</strong></p>
+
+ <ul> <li>The kernel hackers have <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e86435eb91b2bff114c5a02e46e16ce21b647ebe" rel="external">integrated</a> the <a href="http://piie.net/files/acerhdf_README.txt" rel="external">acerhdf</a> driver, which provides temperature read-outs and fan control options for Acer&#39;s Aspire One netbook.</li> </ul> 
+
+ <ul> <li>The asus_acpi driver has been <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6122af3743a48dddae19810626dd7c9c8e6c1df8" rel="external">marked as &quot;deprecated&quot;</a> – developers recommend using asus-laptop instead.</li> </ul> 
+
+<p><strong>USB:</strong></p>
+
+ <ul> <li>Several changes have been made to the USB code to <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=abb306416a7ec2386678de0da6b632a6cb068af0" rel="external">upgrade the way it supports</a> current power saving techniques.</li> </ul> 
+
+ <ul> <li>The kernel hackers have added a <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c6994e6f067cf0fc4c6cca3d164018b1150916f8" rel="external">generic USB audio gadget driver</a> and a <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5b7d70c6dbf2db786395cbd21750a1a4ce222f84" rel="external">USB gadget driver</a> for the HS/OtG block found in recent SoCs by Samsung.</li> </ul> 
+
+ <ul> <li>Another new Linux addition is <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5be19a9daa2df2507adf5b4676a7db8d131cf56e" rel="external">a driver</a> for the USB-OTG part in Intel&#39;s Langwell I/O component. This component is part of the Moorestown platform, which has been fully optimised for Linux use; while the driver for the corresponding transceiver was <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=453f77558810ffa669ed5a510a7173ec49def396" rel="external">added briefly</a>, it was later <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1a74826fa1cd6c2e382f927403b4440675f0f55a" rel="external">removed for the time being</a>.</li> </ul> 
+
+<p><strong>Miscellaneous:</strong></p>
+
+ <ul> <li>As Jesse Barnes writes in his <a href="http://thread.gmane.org/gmane.linux.kernel.pci/4822" rel="external">git-pull request</a>Changes to the PCI subsystem have been less substantial than in Linux 2.6.30. One of the reported major additions is <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c465def6bfe834b62623caa9b98f2d4f4739875a" rel="external">the improved support</a> of PCI Express Root Port Advanced Error Reporting (AER). The PCI subsystem is now compatible with Address Translation Service (ATS) 1.0. The IOMMU code, which now supports <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4ed0d3e6c64cfd9ba4ceb2099b10d1cf8ece4320" rel="external">IOMMU pass through</a>, contains a more flexible workaround for graphics card drivers which <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c7ab48d2acaf959e4d59c3f55d12fdb7ca9afd7c" rel="external">gets rid of</a> the CONFIG_DMAR_GFX_WA configuration option.</li> </ul> 
+
+ <ul> <li>The kernel hackers working with Rafael J. Wysocki in the power management area primarily did some <a href="http://thread.gmane.org/gmane.linux.power-management.general/14914" rel="external">clearing up</a>.</li> </ul> 
+
+ <ul> <li><a href="http://thread.gmane.org/gmane.linux.kernel.cryptoapi/2397/focus%3D3135" rel="external">Changes in the crypto area</a> include <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d1c8b0a7692e81b46550bcc493465ed10510cd33" rel="external">one addition</a> which now allows the padlock driver to work on x86-64 systems.</li> </ul> 
+
+ <ul> <li>A new addition to Linux 2.6.31 is the <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=eae9d2ba0cfc27a2ad9765f23efb98fb80d80234" rel="external">LinuxPPS</a> (Linux Pulse Per Second) device, which provides one signal per second and is accessible to userspace applications like NTPD; further details about its potential uses and additional background information can be found in the <a href="http://wiki.enneenne.com/index.php/LinuxPPS_support" rel="external">LinuxPPS wiki</a> and in the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/pps/pps.txt;hb=HEAD" rel="external">kernel documentation</a>.</li> </ul> 
+
+<h3 class="subheading">Minor gems</h3>
+
+<p>Many additional minor, but by no means insignificant, changes can be found in the list below. Like many of the references in the text above, the links lead to the relevant commits in the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=summary" rel="external">web front end</a> of the main Linux development branch, where the commit comments and the patches themselves provide extensive further information on the respective changes.</p>
+
+<p><strong>FireWire and USB</strong></p>
+
+<p><em>FireWire:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0210b66dd88a2a1e451901b00378a2068b6ccb35" rel="external">firewire: core: add sysfs attribute for easier udev rules</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b9530fd6c3f057bda258c8e2631ad1a25959f4a2" rel="external">firewire: net: add Kconfig item, rename driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=af2719415a5ceae06f2a6d33e78b555e64697fc8" rel="external">firewire: sbp2: add support for disks &gt;2 TB (and 16 bytes long CDBs)</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ebbb16bffa646f853899ef3fdc0ac7abab888703" rel="external">ieee1394: sbp2: add support for disks &gt;2 TB (and 16 bytes long CDBs)</a></li> </ul> 
+
+<p><em>USB:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a483d7068f661213e9586d4d132fc0e0287118b4" rel="external">musb: add high bandwidth ISO support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6b403b020c1f42180b14d28d832da61167cff822" rel="external">USB: Add SuperSpeed to the list of USB device speeds.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=97d7b7a41bd462abceee7dbb2b3afacfd52438ed" rel="external">USB: add the usbfs devices file to debugfs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d2e9b4d6734db2327af3149d8ca7555307e10828" rel="external">USB: Add USB 3.0 roothub support to USB core.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=00048b8bde5a6cbd9c3a76f272cc9ddb55705e37" rel="external">USB: add usb debugfs directory</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c47d7b09891abb4f8b222317c89c7469bed8db3a" rel="external">USB: audio: add USB audio class definitions</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8bf16ba7c8ea9d067914e270764c14020a26232f" rel="external">USB: CP210x Add new device IDs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e7b7717247f61e2cf18ec47f91999065c59d1607" rel="external">USB: Don&#39;t reset USB 3.0 devices on port change detection.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=fca4404c55ab44c7413769f1d9c66451103711a5" rel="external">USB: ftdi_sio: Add support for GN Otometrics Aurical USB Audiometer</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d46130ab3ed3716db22bdd9881a60ec7e4365b63" rel="external">USB: FTDI-SIO new device ids</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=54e4026b64a970303349b952866641a7804ef594" rel="external">USB: gadget: Add i.MX3x support to the fsl_usb2_udc driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=05cbc2d58224d01925bfb93a0c3f0ab1f11b1eea" rel="external">USB: gadget: audio: provide correct device id</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6ec4beb5c701f728548b587082c83ef62eb36035" rel="external">USB: new flag for resume-from-hibernation</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=71f9f6cc9eef47fddc05f34b3d32677ab2e0f1fa" rel="external">USB: option: add Novatel Ovation MC760</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f1469fc3ef1d5a8a67146c1c72021f012a59dea6" rel="external">USB: option: Add USB ID for Novatel MC727/U727/USB727 refresh</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c420befde6b2747ebc2b8f015687a5dbd6e167ca" rel="external">USB: option: add ZTE device ids and remove ONDA ids</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c3325eb16d36a49f9a5ae09241c418cfd1d3f4f5" rel="external">USB: option.c: add A-Link 3GU device id</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=83dfdaa362fd9f1ed8bfa0bba50fff08c063380b" rel="external">USB: option.c: add Qualcomm/Option iCON 210 modem</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=334f9b0f23c9bb90589213279c9cfe19ebe4c0c6" rel="external">USB: option.c: add Toshiba 3G HSDPA SM-Bus Minicard device id</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e3a3174519bae99fe3a3d3b9dfda68d820527b44" rel="external">USB: option.c to support Qisda H21/H20 usb modem</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8540d66615c39010168ab97eaafb476ec2851298" rel="external">USB: pl2303: New vendor and product id for the prolific driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=145114125cf07afc91e5b132ec41c353284cdb2a" rel="external">USB serial: Add ID for Turtelizer, an FT2232L-based JTAG/RS-232 adapter.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0601e116e30caf35520522cb621d05866663cab2" rel="external">USB: Serial: Add support for Arkham Technology adapters</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=183791588efd416fc35a71819683b32dee92615b" rel="external">USB: serial: option: Add ZTE AC8710 usb modem device.</a></li> </ul> 
+
+<p><strong>Input Devices</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=89f536ccfa8b370ff4d054f4061858ca9322c25a" rel="external">HID: add new multitouch and digitizer contants</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f0bca459829fd33d659c8cd0369ac86a3924a9bc" rel="external">HID: autocentering support for Logitech Force 3D Pro</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=92e0d896ce3087112602449efd87c6d7f4eae8d0" rel="external">HID: autocentering support for Logitech G25 Racing Wheel</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=fac733f029251a393c42a8313432f2d9fe43bb83" rel="external">HID: force feedback support for SmartJoy PLUS PS2/USB adapter</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=57fd637ad9ac6b13c1c47b9a0ced4ee99bb26e76" rel="external">HID: Multitouch support for the N-Trig touchscreen</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ca2dcd40f54c8928b3994712a6cadd2078a087fa" rel="external">HID: Wacom Graphire Bluetooth driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=eb990b5533cfbddfac6efe783a349525907d1c26" rel="external">Input: add dm355evm_keys driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=10494dce0b43ed3212abde64bf759705ee3c56ef" rel="external">Input: add driver for EETI touchpanels</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=eef3e4cab72eaf5345e3c73b2975c194a714f6cd" rel="external">Input: add driver for Synaptics I2C touchpad</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e06003af56c386018f0c209608ac6c6662228cc0" rel="external">Input: add matrix keypad driver for Cirrus EP93xx</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7e3f73754e489e8c7742eaba15b608757b5bbb28" rel="external">Input: add support for touchscreen on W90P910 ARM platform</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=68d8bf0436001980461483f2d753206447f27685" rel="external">Input: add twl4030-pwrbutton driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=864fe73c312ca8e177da01207ce86fb1b80b3e54" rel="external">Input: add wm97xx accelerated driver for Atmel microprocessors</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=af27a69aaba2feaeb0b9eebdde2f0b71350c4789" rel="external">Input: ALPS - Dell Latitude D630/D800 have DualPoint</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d7ed5d883c09c5474f842dcb148515dfaef2a567" rel="external">Input: ALPS - handle touchpoints buttons correctly</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=05e882f890038c702a4f15d385135d03cf74ad48" rel="external">Input: appletouch - improve finger detection</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f0a14de2f82dd6aa13e04816da2091c7ed0f77cf" rel="external">Input: atkbd - add forced release keys quirk for FSC Amilo Pi 3525</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=032e46cbf5fb1d768d7dec5631c224e22b4be46f" rel="external">Input: atkbd - add force relese key quirk for Soltech TA12</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=685aaca751271b2c5191901931a19ccaceeae1ce" rel="external">Input: i8042 - add Asus G1S to noloop exception list</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9230ccb1071d2d7e4ecb6314e67203b9f7f08140" rel="external">Input: i8042 - more reset quirks for MSI Wind-clone netbooks</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=68947b8f9a36f7f7f54ca95e0c6e169bb603e803" rel="external">Input: iforce - support new revision of ACT LABS Force RS</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a48b2d4a0091904b4cf57d667adc2faf689750d3" rel="external">Input: introduce lm8323 keypad driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=535650fd7008caffad29f001bcda43f56bafea8e" rel="external">Input: psmouse - ESD workaround fix for OLPC XO touchpad</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bd3ce6556072bdc8ea66dfd5448e184f189bdc7f" rel="external">Input: rotary_encoder - add support for REL_* axes</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c413ec446188ae53276eb60a60311b430448c6b0" rel="external">Input: wacom - add DTF720a support and fix rotation on Intuos3</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6f660f12d703fa23069317f0a64c6b75d08c15c2" rel="external">Input: wacom - add support for Intuos4 tablets</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e705cee427e319665969ef7ac664f3612dec8899" rel="external">Input: wistron_btns - recognize Maxdata Pro 7000 notebooks</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=194934785a846e0a7b1b674b7b475a9d0125d2f8" rel="external">Input: wistron_btns - support Prestigio Wifi RF kill button</a></li> </ul> 
+
+<p><strong>Notebook-Drivers</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=76593d6fb0a51cb0d666f37d91a990e36c068365" rel="external">acpi4asus: update MAINTAINER and KConfig links</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=21ab01e2fcbfcc0d1faba2b7336b3c0f7f3c1ac8" rel="external">asus-laptop: remove EXPERIMENTAL dependency</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5cab0098171712a9fd51399b06181c8dfdebe9c9" rel="external">dell-wmi: add additional keyboard events</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3cd530b5aaffd27b231f9717730f2f6684c00bda" rel="external">eeepc-laptop: add rfkill support for the 3G modem in Eee PC 901 Go</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b31d0fde89c905673ceed0404d5ae24f2261d7c7" rel="external">eeepc-laptop: cpufv updates</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cede2cb6ee9b0ddaa3dbc9939418ff177a831600" rel="external">eeepc-laptop: enable camera by default</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2b121bc262fa03c94e653b2d44356c2f86c1bcdc" rel="external">eeepc-laptop: Register as a pci-hotplug device</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7de39389d8f61aa517ce2a8b4d925acc62696ae5" rel="external">eeepc-laptop: rfkill refactoring</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b7b700d4a473d56103e87e341ad555e8a7cce06d" rel="external">eeepc-laptop: sync eeepc-laptop with asus_acpi</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=871043bc463e7d191e7b5b00436a8852921dd833" rel="external">hp-wmi: Add support for reporting tablet state</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7d95a3d564901e88ed42810f054e579874151999" rel="external">thinkpad-acpi: add quirklist engine</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=550e7fd8afb7664ae7cedb398c407694e2bf7d3c" rel="external">thinkpad-acpi: disable broken bay and dock subdrivers</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f21179a47ff8d1046a61c1cf5920244997a4a7bb" rel="external">thinkpad-acpi: enhance led support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d7880f10c5d42ba182a97c1fd41d41d0b8837097" rel="external">thinkpad-acpi: forbid the use of HBRV on Lenovo ThinkPads</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1f6fc2de9525e34ee93bd392fa046369a8cfbf1e" rel="external">thinkpad-acpi: remove dock and bay subdrivers</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d73772474f6ebbacbe820c31c0fa1cffa7160246" rel="external">thinkpad-acpi: support the second fan on the X61</a></li> </ul> 
+
+<p><strong>Edac, HW-Monitoring, I2C and Watchdog</strong></p>
+
+<p><em>Edac:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cfe40fdb4a46a68e45fa9a5ecbe588e94b89b4f3" rel="external">amd64_edac: add driver header</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2bc65418724a0ddbb20c9eeb9de8285af7748c16" rel="external">amd64_edac: add memory scrubber interface</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=eb919690be994386eac326f8c53c4540602de563" rel="external">amd64_edac: add DRAM error injection logic using sysfs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2a9036afffb3a174e980f90eb507c5aea6b540f6" rel="external">edac: add CPC925 Memory Controller driver</a></li> </ul> 
+
+<p><em>HW-Monitoring:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ec05a8d75d0777cd221f61a88437a31e4cfb83d8" rel="external">hwmon: (abituguru3) DMI probing for AB9, AB9 QuadQT and IX38 QuadGT</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=09475d32e652fe60901fe8c9cd50f3f6db0c4933" rel="external">hwmon: (f71882fg) Add support for the F71858F</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b6858bca8d7bf52e2564cba5a5ed87e1019d3fd9" rel="external">hwmon: (f71882fg) Add temp#_fault sysfs attr for f8000</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8070408b5446232ba6eb6e0809a329da58a6ae52" rel="external">hwmon: (ibmaem) Automatically load on HC10 blade</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=52b5226f481c09cc499cc28b1e9347d314b340f1" rel="external">hwmon: (max6650) Add support for alarms</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cd4e96c5dd4a72bdc54ea9981e02465708c204d3" rel="external">hwmon: (tmp401) Add documentation</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ab2b79d5e22d3cdd2b191e479c60e69df528369a" rel="external">hwmon: (tmp401) Add support for TI&#39;s TMP401 sensor chip</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=fce0758f5990b34af4ffba589b23f25c700beb2f" rel="external">hwmon: (tmp401) Add support for TI&#39;s TMP411 sensors chip</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c1e48dce05ff06266cdfd0cba55fc5367cd499a5" rel="external">hwmon: (w83627ehf) Add W83627DHG-P support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8f3128e714ded7cf1e8c786c204a4f253b5d8ff4" rel="external">lis3: add click function</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0093716e6dd18dad554bef81cc788a4c50d32a09" rel="external">lis3: add three new laptop models</a></li> </ul> 
+
+<p><em>I2C:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=99cd8e25875a109455b709b5a41d4891b8d8e58e" rel="external">i2c: Add a sysfs interface to instantiate devices</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1ab52cf910bbbee92861227e6ed77c56b1dc233c" rel="external">i2c: driver for the Synopsys DesignWare I2C controller</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=352da9820e5506e3b8496e6052a2ad9c488efae8" rel="external">i2c: Kill client_register and client_unregister methods</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=dd14be4c274fc484eccace03ae9726e516630331" rel="external">i2c-ocores: Can add I2C devices to the bus</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=18904c0ecdf2cf22347da2adc4b273e9570333d8" rel="external">i2c: ST DDC I2C U300 bus driver v3</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a231591f0427cfb91ae247be974a7fa0e6b37389" rel="external">i2c-viapro: Add new PCI device ID for VX855</a></li> </ul> 
+
+<p><em>Watchdog:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=90074dce5537e87b27125505bb89a373567a7ede" rel="external">WATCHDOG: add bcm47xx watchdog driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=33c050c586fec34dae36eb314bfc3a2c44654c05" rel="external">WATCHDOG: Add pnx833x_wdt</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=accde1684ff1ea607557fb7224d2dd57775117e1" rel="external">WATCHDOG: Freescale STMP: watchdog driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=44df75353bc8f32e26e049284053a61d4f1047d6" rel="external">WATCHDOG: hpwdt: Add NMI priority option</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=47bece87b14b866872b52ff04d469832e4936756" rel="external">WATCHDOG: hpwdt: Add NMI sourcing</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=80e45b1e9edbca746618724d5b0a31500bdb6f39" rel="external">WATCHDOG: twl4030 watchdog driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=01480701d5cef5b3b0f8406d2eab1eaff82f9d5c" rel="external">WATCHDOG: U300 COH 901 327 watchdog driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cf1eaab2525e8ae1d53eaf923981c96cb31e57c8" rel="external">WATCHDOG: w83627hf_wdt.c: add support for the W83627EHF support</a></li> </ul> 
+
+<p><strong>Staging Area</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1c6ccf62706688efa035acbd7705d00d46cf698c" rel="external">Staging: add mailing list address for staging tree</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ad41a8a58e15bf4dee13b78bb3b77f4e1f417506" rel="external">Staging: add pata_rdc driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d75662e164d5175c5e5f9339ff4d6f6980613d96" rel="external">Staging: Add serqt_usb2, a rewrite of serqt_usb for the usb-serial layer</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4d2da07bc876fc5bc455e0721df388a3db7e4ba5" rel="external">Staging: rt2870: Add USB ID for Linksys, Planex Communications, Belkin</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3faad67335e16863b2a143a61eedb5ac055c74c6" rel="external">Staging: comedi: add vmk80xx USB driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=985cafccbf9b7f862aa1c5ee566801e18b5161fb" rel="external">Staging: Comedi: vmk80xx: Add k8061 support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=936b6230530a3605e99563dfd3a6845dc0343b6e" rel="external">Staging: cpc-usb: add driver to the build</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=562bf4845fbd9240a1964734d769bb5f6973e759" rel="external">Staging: cpc-usb: add TODO file</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=89a2c2085bfddde2d4fe2264a3f040cb054ed145" rel="external">Staging: pata_rdc: add driver to the build system</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0bfc240575acb8769d0be78facedabd8e3d2c33a" rel="external">staging: remove aten2011 driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8dfb00571819ce491ce1760523d50e85bcd2185f" rel="external">Staging: rt2870: Add USB ID for Sitecom WL-608</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8ba911c793c526c394eeddbe66f675c58a922449" rel="external">Staging: serqt_usb2 add the driver to the build</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=76e3e7c4095237ceeb962e3bd8bdc0797fb943e1" rel="external">Staging: wlan-ng: Move firmware loading into driver</a></li> </ul> 
+
+<p><strong>Various Drivers</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c6f4a42de60b981dd210de01cd3e575835e3158e" rel="external">Add MAX17040 Fuel Gauge driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1e9c28599879040039f610c5b177e61ef65ff100" rel="external">gpio: driver for PrimeCell PL061 GPIO controller</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ed88bae6918fa990cbfe47316bd0f790121aaf00" rel="external">leds: Add options to have GPIO LEDs start on or keep their state</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2216c6e83ccbc9d34f541621ff23f510cd8a256f" rel="external">leds: alix-leds2 fixed for Award BIOS</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5054d39e327f76df022163a2ebd02e444c5d65f9" rel="external">leds: LED driver for National Semiconductor LP3944 Funlight Chip</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0cbdf7bce5b98807b946d1a96956f30dcae24a50" rel="external">LP3971 PMIC regulator driver (updated and combined version)</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=55f4fa4e33e90c6b25b4c8ed038392a73b654fef" rel="external">Maxim 1586 regulator driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=13a09f93d2bf3a20c748e1d6a30160a00fc58169" rel="external">mfd: add PCAP driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=14fa56917d73d823538151b0429d98211fa439c1" rel="external">mfd: add U300 AB3100 core support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=04896a77a97b87e1611dedd61be88264ef4ac96c" rel="external">msm_serial: serial driver for MSM7K onboard serial peripheral.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1d98cccf7f8b944ba4ea56d14bbb7c2eeee59bfe" rel="external">regulator: add userspace-consumer driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3c2b9075cbdb541dbe486bde45925c9610de6f35" rel="external">rtc: add stand-alone driver for RX8025 chip</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=335f8514f200e63d689113d29cb7253a5c282967" rel="external">tty: Bring the usb tty port structure into more use</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c65c9bc3efa5589f691276bb9db689119a711222" rel="external">tty: rewrite the ldisc locking</a></li> </ul> 
+
+<p><strong>Security and Crypto</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2cf4ac8beb9dc50a315a6155b7b70e754d511958" rel="external">crypto: aes-ni - Add support for more modes</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d1c8b0a7692e81b46550bcc493465ed10510cd33" rel="external">crypto: padlock - Enable on x86_64</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4de9d0b547b97e40c93a885ac6246c2c5fef05cb" rel="external">crypto: talitos - Add ablkcipher algorithms</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5789ba3bd0a3cd20df5980ebf03358f2eb44fd67" rel="external">IMA: Minimal IMA policy and boot param for TCB IMA policy</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=858576bdc5d65edf1fffd2e65b2165ec1dc68486" rel="external">hwrng: via_rng - Support VIA Nano hardware RNG</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e9736c16da9077728802f42393d18258e6685428" rel="external">hwrng: via_rng - Support VIA Nano hardware RNG on X86_64 builds</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=608d1cd5d375580a49d01b5ed1f9944f5141ae19" rel="external">hwrng: via_rng - The VIA Hardware RNG driver is for the CPU, not Chipset</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ecfcc53fef3c357574bb6143dce6631e6d56295c" rel="external">smack: implement logging V3</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=788084aba2ab7348257597496befcbccabdc98a3" rel="external">Security/SELinux: seperate lsm specific mmap_min_addr</a></li> </ul> 
+
+<p><strong>ACPI, PCI and Power Management</strong></p>
+
+<p><em>ACPI:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=113b3a2b901573961509e81a28e9546cf9defef0" rel="external">ACPI: delete acpi.power_nocheck from kernel-parameters.txt</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=35a7c64fbc77bab4ca8ae477e8ab278ccd679ce2" rel="external">ACPI: DMI to disable Vista compatibility on some Sony laptops</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2a908002c7b1b666616103e9df2419b38d7c6f1f" rel="external">ACPI processor: force throttling state when BIOS returns incorrect value</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=152a4e630f7ffdd7ff64427c4ba488dc0bce76af" rel="external">ACPI: video: DMI workaround broken Acer 7720 BIOS enabling display brightness</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8cb24c8fd70ea8431744de1ca0ca34ab45fbbdaa" rel="external">PNPACPI: parse Extended Address Space Descriptors</a></li> </ul> 
+
+<p><em>PCI:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1745de5e5639457513fe43440f2800e23c3cbc7d" rel="external">dma-debug: add dma_debug_driver kernel command line</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=016ea6874a6d58df85b54f56997d26df13c307b2" rel="external">dma-debug: add documentation for the driver filter</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3238c0c4d68d9a9022b411a11a4b933fbdb53a14" rel="external">intel-iommu: Make iommu=pt work on i386 too</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=62edf5dc4a524e4cb525e6020b955a1ad593d9ba" rel="external">intel-iommu: Restore DMAR_BROKEN_GFX_WA option for broken graphics drivers</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9d9b8fb0e5ebf4b0398e579f6061d4451fea3242" rel="external">irqs: add IRQF_SAMPLE_RANDOM to the feature-removal-schedule.txt (deprecated) list</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=00240c3839d843ccf07abd52806f421f7b87bbdc" rel="external">PCI: add power-state name strings</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=43c16408842b0eeb367c23a6fa540ce69f99e347" rel="external">PCI: Add support for turning PCIe ECRC on or off</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8e822df700694ca6850d1e0c122fd7004b2778d8" rel="external">PCI: disable ASPM on VIA root-port-under-bridge configurations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4096ed0fc7c6ed83da44ab27ab7d1c7cd6e8e175" rel="external">PCI: expose SMBus on Asus notebook A6L</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e277d2fc79d6abb86fafadb58dca0b9c498a9aa7" rel="external">PCI: handle Virtual Function ATS enabling</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c825bc94c8c1908750ab20413eb639c6be029e2d" rel="external">PCI hotplug: create symlink to hotplug driver module</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7a661c6f1082693a7e9627e9ad2d1546a9337fdc" rel="external">PCI: More PATA quirks for not entering D3</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bfe5a7401785f864a4f30b4f066bfa045a28b9f6" rel="external">PCI: PCIE AER: Document for PCIE AER software error injection</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=74c57428971d28863ec1804b1dd453930bbe1306" rel="external">PCI quirk: HP hides SMBus controller in Compaq nx9500 laptops</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=26c56dc0c4fbdf3af12ebc48278f09ef65ddb4dd" rel="external">PCI quirk: unhide &#39;Overflow&#39; device on i828{6,7}5P/PE chipsets</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bd3d99c17039fd05a29587db3f4a180c48da115a" rel="external">PCI: Remove untested Electromechanical Interlock (EMI) support in pciehp.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9e9f46c44e487af0a82eb61b624553e2f7118f5b" rel="external">PCI: use ACPI _CRS data by default</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6ba6c3a4cacfd68bf970e3e04e2ff0d66fa0f695" rel="external">VT-d: add device IOTLB invalidation support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=93a23a7271dfb811b3adb72779054c3a24433112" rel="external">VT-d: support the device IOTLB</a></li> </ul> 
+
+<p><em>Power Management:</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0de51088e6a82bc8413d3ca9e28bbca2788b5b53" rel="external">CPUFREQ: Enable acpi-cpufreq driver for VIA/Centaur CPUs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0fea615e526b4b7eff0363ee02d5753e5f924089" rel="external">CPUFREQ: Mark e_powersaver driver as EXPERIMENTAL and DANGEROUS</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cef9615a853ebc4972084f7e70b52892557420ac" rel="external">CPUFREQ: ondemand: Uncouple minimal sampling rate from HZ in NO_HZ case</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4f4d1ad6ee69027f51f9d137f7e7d3c863cbc53d" rel="external">CPUFREQ: Only set sampling_rate_max deprecated, sampling_rate_min is useful</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a2e1b4c31257c07f148a89eb7eea7ca959fd0642" rel="external">CPUFREQ: Powernow-k8: support family 0xf with 2 low p-states</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7f33d49a2ed546e01f7b1d0607661810f2421859" rel="external">mm, PM/Freezer: Disable OOM killer when tasks are frozen</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f2e21c9610991e95621a81407cdbab881226419b" rel="external">NOHZ: Properly feed cpufreq ondemand governor</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=d161630297a20802d01c55847bfcba85d2118a9f" rel="external">PM core: rename suspend and resume functions</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=fe419535d82724314bbf1244a0e740e4ea1bd3ae" rel="external">PM/Hibernate: Move memory shrinking to snapshot.c (rev. 2)</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a9d7052363a6e06bb623ed1876c56c7ca5b2c6d8" rel="external">PM: Separate suspend to RAM functionality from core</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c6f37f12197ac3bd2e5a35f2f0e195ae63d437de" rel="external">PM/Suspend: Do not shrink memory before suspend</a></li> </ul> 
+
+<p><strong>Various others infrastructure changes</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a3ca86aea507904148870946d599e07a340b39bf" rel="external">Add &#39;-fno-delete-null-pointer-checks&#39; to gcc CFLAGS</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=90a09c9cf78344d18e2438c3b87363b949629fa3" rel="external">Alan doesn&#39;t want to maintain tty code any more</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f324edc85e5c1137e49e3b36a58cf436ab5b1fb3" rel="external">console: make blank timeout value a boot option</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b37f2d4de6dfce4bfd6df311af80e4d61458ee1e" rel="external">cpusets: document adding/removing cpus to cpuset elaborately</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5d98932ab0acb699dc56d9e252f056b9b2cdab25" rel="external">docs: Encourage better changelogs in the development process document</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2ae19acaa50a09c1099956efb895c0aca74ab050" rel="external">Documentation: Add &quot;how to write a good patch summary&quot; to SubmittingPatches</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=082196242e24ff13354a2d376b275e01c08e6799" rel="external">Documentation/Changes: perl is needed to build the kernel</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bbb0a4247aaf1eabbd6d87750eafe99c577920f7" rel="external">Document Reported-by in SubmittingPatches</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f89d7eaf6c34828070f407d0e04b73127f176ec5" rel="external">Document the debugfs API</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7fcab099795812a8a08eb3b8c8ddb35c3685045f" rel="external">driver core: fix documentation of request_firmware_nowait</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f6ee649f4b191d316a463ce7e514f9d12fa31c01" rel="external">driver core: set default SYSFS_DEPRECATED=n</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=401097ea4b89846d66ac78f7f108d49c2e922d9c" rel="external">driver core: synchronize device shutdown</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b22813b373749d0878e7140e9a6eadf182298709" rel="external">Driver Core: Warn driver authors about adding device attributes</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=55e331cf7ebe20665253770589cd9eb06048bf25" rel="external">drivers: add support for the TI VLYNQ bus</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b1cfebc9231a69d46d66982a2c856ba41ef6d6b9" rel="external">edac: add DDR3 memory type for MPC85xx EDAC</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6e03a201bbe8137487f340d26aa662110e324b20" rel="external">firmware: speed up request_firmware(), v3</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b30505c81a9d4adea8b70ecff512b0216929b797" rel="external">futex: add requeue-pi documentation</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1f990cf94559e0a7363d56aade1d5dc6c515b60b" rel="external">kbuild: add generic --set-str option to scripts/config</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=112942353992d95099fb5b71c679ff1046fccfcf" rel="external">kbuild: finally remove the obsolete variable $TOPDIR</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=af6c159885537eb6582a61156ccfb73e83c0478d" rel="external">kconfig: handle comment entries within choice/endchoice</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f70f873b8ffa0bca4aeccd20a3e4641b7645018a" rel="external">MAINTAINERS: mention scripts/get_maintainer.pl in the preface</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b2503a9408e44eb0531adc3436c513ea70f91c42" rel="external">mmc: add the new linux-mmc mailing list to MAINTAINERS</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3d43321b7015387cfebbe26436d0e9d299162ea1" rel="external">modules: sysctl to block module loading</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b231125af7811a2f68c455d3bda95ac170ee4fa6" rel="external">printk: add KERN_DEFAULT loglevel to print_modules()</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e28d713704117bca0820c732210df6075b09f13b" rel="external">printk: Add KERN_DEFAULT printk log-level</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=31c9a24ec82926fcae49483e53566d231e705057" rel="external">RCU: make treercu be default</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=f6faac71d502be1c29c81b2f45657662c3b84470" rel="external">rcu: Mark Hierarchical RCU no longer experimental</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ad361c9884e809340f6daca80d56a9e9c871690a" rel="external">Remove multiple KERN_ prefixes from printk formats</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=60aa605dfce2976e54fa76e805ab0f221372d4d9" rel="external">sched: rt: document the risk of small values in the bandwidth settings</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=50fa610a3b6ba7cf91d7a92229177dfaff2b81a1" rel="external">sched: Document memory barriers implied by sleep/wake-up primitives</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=62ab4505e3efaf67784f84059e0fb9cedb1728ea" rel="external">signals: implement sys_rt_tgsigqueueinfo</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=57d7f282271a83fe4ca4bd15eee79be577210210" rel="external">TTY: Maintainer change</a></li> </ul> 
+
+<h3 class="subheading">Latecomers</h3>
+
+<p>The previous four parts of the Kernel Log mini series have already given a detailed overview of the many changes in of the Linux kernel. All of the major enhancements have already been mentioned there, as the usual first phase of the development cycle moved into the main development branch. Some small, usually not quite as important changes have slipped into the &quot;minor gems&quot; section after we had reported on the relevant areas. For completeness, we have included these changes in the following list.</p>
+
+<p><strong>Audio</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ae709440edb2d36f51f5ea51cfab931f45c03e02" rel="external">ALSA: hda: add model for Intel DG45ID/DG45FC boards</a></li> </ul> 
+
+<p><strong>Graphics</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=32f9d658aee5be09ebdd28fc730630e61d0b46db" rel="external">drm/i915: Add eDP support on IGDNG mobile chip</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0c2e39525b3b53a97a0202c5f35058147e53977e" rel="external">drm/i915: Add support for dual-channel LVDS on 8xx.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5e4d6fa72619aeea271d2ad704757717b06e291a" rel="external">drm/i915: Allow frame buffers up to 4096x4096 on 915/945 class hardware</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=5eb08b69f510fadaba77eb9a1bda0f7299c4ebcc" rel="external">drm/i915: enable DisplayPort support on IGDNG</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2ded9e2747d0a390d281bb5b16ff7f640ec85f78" rel="external">drm/i915: hdmi detection according by reading edid</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ed8c754b292f02d0550596481527b7bf2b52d024" rel="external">drm/i915: ignore lvds on AOpen Mini PC MP-915</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bcae2ca81c4a085e3e0e8941b7c64f9aeb6fc05c" rel="external">drm/i915: Set preferred mode for integrated TV according to TV format</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=616b8434688aa08bd6f019cc60c8dfe121e9e5ae" rel="external">drm/radeon/kms: Add specific rs690 authorized register table</a></li> </ul> 
+
+<p><strong>File Systems</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=0dc9aa845c20ed1f46c85f229591b811dffc4b3b" rel="external">AFS: Documentation updates</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=6d41807614151829ae17a3a58bff8572af5e407e" rel="external">ext3: Update Kconfig description of EXT3_DEFAULTS_TO_ORDERED</a></li> </ul> 
+
+<p><strong>Network</strong></p>
+
+<p>LAN:</p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b4adbb4ddf63091f48668e7ff1b9b0f6f84d4b40" rel="external">Add IDs for 3C905B-TX Fast Etherlink XL PCI</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a50a97d415d839e6db9df288ff0205528e52c03e" rel="external">Add mac driver for w90p910</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=92bd3bbfbe644ea0860cfe84cf175fffa5246423" rel="external">mlx4_core: Add new ConnectX EN PCI ID 0x6764</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3ba81f3ece3cfa4ffb06d21ac93b8cad7fbe6a73" rel="external">net: Micrel KS8851 SPI network driver</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=90cb665937a2aab16d9aa60f22908195c16dcffd" rel="external">New device ID for sc92031 [1088:2031</a>]</li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7c1d15d736687057f4dc6e51fbf44b6f6e4320cb" rel="external">pegasus: Add new device ID.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=87cf65601e1709e57f7e28f0f7b3eb0a992c1782" rel="external">USB host CDC Phonet network interface driver</a></li> </ul> 
+
+<p>WLAN:</p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=cff782cd94df7adea84af6aa9516c8088f7ea950" rel="external">b43: Add support for 4318E</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=872ed1902f511a8947021c562f5728a5bf0640b5" rel="external">iwlwifi: only show active power level via sysfs</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e2e414d92397c366396d13f627a98a20be92e509" rel="external">mac80211: disable mesh</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=2fbddeb5c409c90be4706ea2beb7f1fc02100c72" rel="external">ssb: Add support for 4318E</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=8b339d05805fb91cc0b5179af5b4d05d9f8b949c" rel="external">zd1211rw: adding SONY IFU-WLM2 (054c:0257) as a zd1211b device</a></li> </ul> 
+
+<p><strong>V4L/DVB</strong></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=296544e15a7126373851abd40acc526b79b91432" rel="external">V4L/DVB (12340): mtv9v011: Add a missing chip version to the driver</a></li> </ul> 
+
+<p>For other articles on 2.6.31 and links to the rest of the &quot;Coming in 2.6.31&quot; series, see The H&#39;s <a href="/open/features/Kernel-Log-2-6-31-Tracking-746446.html" title="Kernel Log - 2.6.31 Tracking – 02 July 2009, 11:21">Kernel Log - 2.6.31 Tracking</a> page. Older Kernel Logs can be found in <a href="/open/news/archive/" rel="external">the archives</a> or by using <a href="/search/?rm=search;perpage=5999;filter_t1=1;q=kernel-log" rel="external">the search function</a> at <a href="/open/" rel="external">The H Open Source</a>.</p>
+
+<p>(<a href="mailto:mailto%3Athl@ct.heise.de">thl</a>/c&#39;t)</p>
+			<p>(<!--googleoff: index--><a class="noline" href="mailto:djwm@h-online.com" title="Dj Walker-Morgan">djwm</a>)</p>		</div>
+
+		<div class="clear"></div>
+        
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Multi-booting-over-the-internet-743175.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/Secure-integration-of-Ajax-widgets-into-websites-743177.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="news_option">Print Version | Send by email
+		 | Permalink: http://h-online.com/-743173
+		</div>
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/W3C-publishes-draft-for-device-independent-input-handling-1790146.html/from/related" title="W3C publishes draft for device-independent input handling">W3C publishes draft for device-independent input handling</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-3-Tracking-1440083.html/from/related" title="Linux Kernel 3.3 Tracking">Linux Kernel 3.3 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/USB-driver-bug-exposed-as-Linux-plug-pwn-1203617.html/from/related" title="USB driver bug exposed as &quot;Linux plug&amp;pwn&quot; ">USB driver bug exposed as &quot;Linux plug&amp;pwn&quot; </a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Vulnerabilities-in-Linux-allow-root-privileges-741181.html/from/related" title="Vulnerabilities in Linux allow root privileges">Vulnerabilities in Linux allow root privileges</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/newsticker/news/item/HP-brings-iPhone-style-multitouch-to-tablet-PCs-738905.html/from/related" title="HP brings iPhone-style multitouch to tablet PCs">HP brings iPhone-style multitouch to tablet PCs</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/newsticker/news/item/Fix-for-Madwifi-WLAN-driver-732933.html/from/related" title="Fix for Madwifi WLAN driver">Fix for Madwifi WLAN driver</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi"> </div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img alt="The H Open Headlines" height="24" src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196">
+        <ul>
+        
+            <li>
+            <a class="top" href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H&#39;s Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power">Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public">GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla&#39;s Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers">NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android&#39;s signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen">Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics">One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94">
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple&#39;s infrared receiver <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img alt="Business Source artwork" height="80" src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img alt="Whatever happened to Google?" height="80" src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July&#39;s Community Calendar"><img alt="July&#39;s Community Calendar" height="35" src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" width="280"></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116">
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">What&#39;s new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3"><img alt="What&#39;s new in SUSE Linux Enterprise 11 SP3" height="80" src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">What&#39;s new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19"><img alt="What&#39;s new in Fedora 19" height="80" src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">What&#39;s new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10"><img alt="What&#39;s new in Linux 3.10" height="80" src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">A second SSD caching framework and support for the new Radeons&#39; video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img alt="Free Software post-PRISM" height="80" src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130">
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img alt="Content Security Policy halts XSS in its tracks" height="80" src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Skype&#39;s ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation"><img alt="Skype Listening In graphic" height="80" src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Our associate&#39;s discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img alt="Password protection for everyone" height="80" src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img alt="Two clicks for more privacy" height="80" src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145">
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img alt="Java EE 7 at a glance" height="80" src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img alt="Continuous database migration with Liquibase and Flyway" height="80" src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application&#39;s version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img alt="Unit testing with Node.js" height="80" src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img alt="Ruby 2.0 at 20" height="80" src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120">
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img alt="Linux Mint 15" height="80" src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">What&#39;s new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9"><img alt="What&#39;s new in Linux 3.8" height="80" src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img alt="Replacing Google Reader" height="80" src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H&#39;s Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img alt="Attacking TrueCrypt" height="80" src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright © 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: inline;"><img alt="" height="1" id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/news/item/Kernel-Log-Coming-in-2-6-31-Part-5-CUSE-USB-3-0-FireWire-networking-and-the-rest-743173.html" width="1"></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+
+
+<!-- etracker PARAMETER 3.0 -->
+
+<!-- etracker PARAMETER END -->
+
+
+
+<!-- etracker CODE NOSCRIPT 3.0 -->
+
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 369602, iBID: 369603, CID: 743173, iCID: 743174 -->
+<!-- Link: $(LB369602:Linktext)$ $(LC743173:Linktext)$ -->
+<!-- Generiert: 2012-10-30 14:54:11 -->
+
+
+

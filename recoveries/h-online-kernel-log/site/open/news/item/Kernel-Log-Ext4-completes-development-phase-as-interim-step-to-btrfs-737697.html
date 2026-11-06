@@ -1,0 +1,1191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+
+<head>
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="copyright" title="Copyright" href="/Contact-273335.html" />
+<link rel="author" title="Contact" href="mailto:editors%40h-online.com?subject=The%20H%20Open" />
+
+<link rel="alternate" type="application/atom+xml" title="All The H open news and features" href="http://www.h-online.com/open/atom.xml" />
+
+<link href="/favicon_open.ico" rel="shortcut icon" />
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css" />
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css" />
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/styles/print.css" rel="stylesheet" type="text/css" media="print" />
+
+
+<script src="/js/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/support/external_links.js" type="text/javascript"></script>
+<script src="/js/plugins/jquery-ui-1.8.18_cycle.custom.min.js" type="text/javascript"></script>
+
+<title>Kernel Log: Ext4 completes development phase as interim step to btrfs - The H Open: News and Features</title>
+
+<link rel="apple-touch-icon-precomposed" href="/open/icons/apple-touch-icon-57x57-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/open/icons/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/open/icons/apple-touch-icon-72x72-precomposed.png" />
+
+
+<meta name="keywords" content="Kernel Log: Ext4 completes development phase as interim step to btrfs" />
+
+<meta name="description" content="Linux 2.6.28 completes the main development phase of Ext4; numerous well-known filesystem developers advocate btrfs as the &quot;next generation filesystem&quot; for Linux. A new version of NTFS-3G removes previous limitations" />
+<meta name="date" content="2008-10-17T09:52:00+01:00" />
+<meta name="fulltitle" content="Kernel Log: Ext4 completes development phase as interim step to btrfs" />
+
+
+
+<meta name="kill_switch" content="" />
+
+
+
+
+<meta name="copyright" content="Heise Media UK Ltd." />
+<meta http-equiv="Content-Language" content="en" />
+
+
+
+
+<script type="text/javascript">var p="http",d="static";if(document.location.protocol=="https:"){p+="s";d="engine";}var z=document.createElement("script");z.type="text/javascript";z.async=true;z.src=p+"://"+d+".adzerk.net/ados.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(z,s);</script>
+<script type="text/javascript">
+var ados_keywords = ados_keywords || [];
+if( location.protocol=='https:' ) {
+    ados_keywords.push('T:SSL');
+} else {
+    ados_keywords.push('T:HTTP');
+}
+
+
+ados_keywords.push('S:Open');
+
+
+var ados = ados || {};
+ados.run = ados.run || [];
+ados.run.push(function() {
+    ados_add_placement(4669, 20980, "azk46801_leaderboard", 4).setZone(16028);
+    ados_add_placement(4669, 20980, "azk44180_rectangle", [5,10]).setZone(16029);
+    ados_add_placement(4669, 20980, "azk37883_skyscraper", 6).setZone(16030);
+    ados_add_placement(4669, 20980, "azk12698_bottom", 10).setZone(16031);
+    ados_add_placement(4669, 20980, "azk35222_tracking", 20).setZone(20909);
+    
+    ados_setKeywords(ados_keywords.join(', ')); 
+    ados_load();
+});
+</script>
+
+
+
+
+
+
+<meta name="generator" content="InterRed V14.0, http://www.interred.de/, InterRed GmbH" />
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img src="/open/icons/open_logo_theH.gif" alt="The H Open" width="110" height="70" /></a></div>
+
+            <ul id="navigation" class="no-touch">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form method="get" action="/open/search/" accept-charset="utf-8">
+        			<fieldset id="inputs">
+        				<input type="hidden" name="rm" value="search" />
+        				<input name="q" value="" size="10" type="text" class="searchfield" placeholder="Search The H Open" />&nbsp;<input name="search_submit" value="Search" size="4" type="submit" class="submit" />
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+
+	<div id="item">
+
+		<!--googleoff: index-->
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Slimmer-Java-for-the-desktop-737691.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/Re-Versions-CentOS-4-7-Server-CD-and-MooTools-1-2-1-737707.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="date">17 October 2008, 09:52</div>
+		<div class="clear"></div>
+		<!--googleon: index-->
+		<h1>Kernel Log: Ext4 completes development phase as interim step to btrfs</h1>
+						
+<script type="text/javascript" src="/js/plugins/jquery.socialshareprivacy.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    if($('#social_bookmarks_counters')){
+      $('#social_li_twitter').remove();
+      $('#social_li_facebook').remove();
+      $('ul.other_bookmarks').addClass('indented');
+      $('#social_bookmarks_counters').empty();
+      $('#social_bookmarks_counters').socialSharePrivacy({
+        services : {
+          facebook: {
+            'dummy_img' : '/js/plugins/socialshareprivacy/images/dummy_facebook_like.png',
+            'txt_info' : '2 clicks for more privacy: you need to click here to activate the button and send your recommendation to Facebook. An activated button will send information to third parties even without clicking it – see <em>i</em>. ',
+            'txt_fb_off' : 'not connected to Facebook',
+            'txt_fb_on' : 'connected to Facebook',
+            'referrer_track' : '/from/facebook',
+            'language' : 'en_US',
+            'action' : 'like'
+          },
+          twitter: {
+            'dummy_img' : '/js/plugins/socialshareprivacy/images/dummy_twitter.png',
+            'txt_info' : '2 clicks for more privacy: you need to click here to activate the button and send your recommendation to Twitter. An activated button will send information to third parties even without clicking it – see <em>i</em>. ',
+            'txt_fb_off' : 'not connected to Twitter',
+            'txt_fb_on' : 'connected to Twitter',
+            'referrer_track' : '/from/twitter',
+            'tweet_text' : 'Kernel Log Ext4 completes development phase as interim step to btrfs #theh  #open',
+          },
+          gplus: {
+            'dummy_img' : '/js/plugins/socialshareprivacy/images/dummy_gplus.png',
+            'txt_info' : '2 clicks for more privacy: you need to click here to activate the button and send your recommendation to Google+. An activated button will send information to third parties even without clicking it – see <em>i</em>. ',
+            'txt_fb_off' : 'not connected to Google+',
+            'txt_fb_on' : 'connected to Google+',
+            'referrer_track' : '/from/gplus',
+            'language' : 'en',
+          }
+        },
+        'cookie_domain' : 'h-online.com',
+        'settings_perma' : 'Permanently enable and agree to transfer information:',
+        'css_path' : '',
+        'txt_help' : 'If you activate these buttons by clicking on them, information will get transfered to Facebook, Twitter or Google in the USA and potentially stored there. Find out more by clicking on the <em>i</em>',
+        'info_link' : 'http://www.h-online.com/features/Two-clicks-for-more-privacy-1783256.html'
+      }); 
+    }
+  });
+</script>
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20Ext4%20completes%20development%20phase%20as%20interim%20step%20to%20btrfs%20http%3A%2F%2Fh-online.com%2F-737697%20%23theh%20%23open"><img src="/icons/syndication/twitter16x14.gif" width="16" height="14" alt="Twitter" title="Twitter" /></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html"><img src="/icons/syndication/facebook16x14.gif" width="16" height="14" alt="Facebook" title="Facebook" /></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html&amp;title=Kernel%20Log%20Ext4%20completes%20development%20phase%20as%20interim%20step%20to%20btrfs&amp;tags=security&amp;notes=Linux%202.6.28%20completes%20the%20main%20development%20phase%20of%20Ext4%20numerous%20well-known%20filesystem%20developers%20advocate%20btrfs%20as%20the%20next%20generation%20filesystem%20for%20Linux.%20A%20new%20version%20of%20NTFS-3G%20removes%20previous%20limitations"><img src="/icons/syndication/slashdot16x14.gif" alt="submit to slashdot" title="submit to slashdot" width="16" height="14" /></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html&amp;title=Kernel%20Log%20Ext4%20completes%20development%20phase%20as%20interim%20step%20to%20btrfs"><img src="/icons/syndication/stumble16x14.gif" width="16" height="14" alt="StumbleUpon" title="StumbleUpon" /></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html&amp;title=Kernel%20Log%20Ext4%20completes%20development%20phase%20as%20interim%20step%20to%20btrfs"><img src="/icons/syndication/reddit16x14.gif" alt="submit to reddit" title="submit to reddit" width="16" height="14" /></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+		<div class="item_wrapper">
+			<p>	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:224px;">
+		<img src="/imgs/43/3/6/4/4/6/8/93e8ea3d0acdf147.jpg" width="224" height="297" alt=""  />
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+ Linus Torvalds has integrated a large <a href="http://thread.gmane.org/gmane.comp.file-systems.ext4/9283" rel="external">collection of patches</a> prepared by (Ext) filesystem developer Theodore Ts'o (tytso) into the main development branch of Linux. It contains <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=03010a3350301baac2154fa66de925ae2981b7e3" rel="external">a patch for Ext4</a> which allows it to present itself as ext4 instead of ext4dev. This signals that with the next kernel version 2.6.28, the successor to ext3 will finally leave behind its &quot;hot&quot; development phase. The kernel developers integrated an early version of Ext4 in the main development branch of Linux 2.6.19 in order to jointly develop it to maturity there.</p>
+
+<p>This by no means concludes the development of Ext4 and it is expected that the developers will steadily continue to develop the filesystem in the same way they developed Ext3, not only fixing bugs but also adding the occasional function. The filesystem structures used on storage media are no longer going to be affected by these changes – therefore, the file backup and media reformatting tasks required during the development of Ext4 within the official Linux kernel should no longer be necessary. Users will also no longer be required to ensure that their kernel version, Ext4 utilities (e2fsprogs) and storage media formats match up.</p>
+
+<p>It is a matter of opinion whether this makes Ext4 ready for production use – administrators in corporate environments and the developers of the Enterprise distributions of Novell and Red Hat will probably wait a little longer and observe how the filesystem functions on an everyday basis for Fedora and OpenSuse users. A Red Hat developer has already <a href="https://www.redhat.com/archives/fedora-devel-list/2008-October/msg00562.html" rel="external">integrated</a> the patches intended for 2.6.28 into the kernel of Fedora Rawhide. Rawhide is going to be basis of Fedora 10, which is due out at the end of November. The installer will only be able to set up Ext4 file systems if the system is booted <a href="https://www.redhat.com/archives/fedora-devel-list/2008-October/msg00575.html" rel="external">particular parameter set</a>. A separate boot partition containing one of the current filesystems is also required because boot loaders like Grub are still incapable of loading the kernel from a partition in Ext4 format.</p>
+
+<p>Probably as important as the completion of Ext4's development phase may be is the information posted by Theodore Ts'o to the <a href="http://www.kernel.org/pub/linux/docs/lkml/" rel="external">Linux Kernel Mailing List</a> (LKML) <a href="http://thread.gmane.org/gmane.linux.file-systems/26246/focus%3D26492" rel="external">in a long email</a> a few days ago. In his contribution to the discussions around a possible inclusion of the btrfs filesystem, usually pronounced &quot;butter FS&quot;, recently mentioned in the kernel log (<a href="/news/item/Kernel-Log-2-6-27-nearing-completion-Btrfs-to-be-added-to-the-kernel-737489.html" title="Kernel Log: 2.6.27 nearing completion; Btrfs to be added to the kernel? – 01 October 2008, 09:23">1</a>, <a href="/news/item/Kernel-Log-problem-with-e1000e-bypassed-Morton-praises-Btrfs-737561.html" title="Kernel Log: problem with e1000e bypassed, Morton praises Btrfs – 07 October 2008, 08:47">2</a>), Theodore Ts'o mentioned that he and several other well-known filesystem developers met for a &quot;Next Generation Filesystem&quot; workshop (NGFS) a little less than a year ago. According to Ts'o, participants agreed that Linux needs a &quot;next generation filesystem&quot;:&quot;<em>At the end of the that workshop, there was unanimous agreement (including from yours truly) that (a) Linux needed a next generation filesystem to be competitive, (b) Chris Mason's btrfs (with some changes/enhancements discussed during the workshop) was the best long-term solution for NGFS, and (c) because creating a new enterprise filesystem always takes longer than people expect, and even then, it takes a while for enterprise users to trust a new filesystem for their most critical data, ext4 in the next generation of filesystems was needed as the bridge to the NGFS.</em>&quot;.</p>
+
+<p>With these hardly publicised recommendations, the workshop participants hoped to inspire various companies and their developers to contribute to the development of btrfs. The participants also hoped to get the distributions to back up their plans. This seems to have worked to some degree, because according to Theodore Ts'o, &quot;But I think it is fair to say that btrfs isn't just a private a project of a single Linux kernel developer, but rather the design has been discussed and reviewed by a large number of experienced filesystem architects.&quot;</p>
+
+<p>The Ext4 developer also praised btrfs developer Chris Mason who used to be responsible for Reiserfs at Suse and now works for Oracle. He said that Mason is a respected and trustworthy kernel developer who can write good code and also maintain it. Theodore Ts'o, like <a href="/news/item/Kernel-Log-problem-with-e1000e-bypassed-Morton-praises-Btrfs-737561.html" title="Kernel Log: problem with e1000e bypassed, Morton praises Btrfs – 07 October 2008, 08:47">Andrew Morton recently</a>, advocates the inclusion of btrfs into the main development branch of Linux in the near future. There, it can continue to be developed and mature in the coming months and years – similar to how the kernel developers handled Ext4 in the last few months and years.</p>
+
+<p><strong>In Brief</strong></p>
+
+ <ul> <li>It's not just the developers of ext4 and btrfs who have been busy. The programmers of <a href="http://www.ntfs-3g.org/" rel="external">ntfs-3g</a>, which was developed using <a href="http://fuse.sourceforge.net/" rel="external">FUSE</a> (Filesystem in Userspace), have had some success. <a href="http://article.gmane.org/gmane.comp.file-systems.ntfs-3g.devel/638" rel="external">Version 1.5012</a> is the first version to be able to create or delete any number of files and directories within the maximum limits defined by NTFS. The developers successfully used a predecessor of the new version to create 54 million files on a parition formatted with NTFS.</li> </ul> 
+
+ <ul> <li>The developers of the <a href="http://gutenprint.sourceforge.net/" rel="external">Gutenprint</a> collection of printer drivers have <a href="http://sourceforge.net/project/shownotes.php?group_id=1537&amp;release_id=630990" rel="external">released the first release candidate of Gutenprint 5.2</a>.</li> </ul> 
+
+ <ul> <li><a href="http://who-t.blogspot.com/2008/10/device-properties-have-landed.html" rel="external">Peter Hutterer has given an overview of the &quot;device properties&quot;</a>, in his blog. Device Properties are intended for X Input Extension 1.5 which will allow users to adjust, the parameters of input devices such as Synaptics touchpads during operation.</li> </ul> 
+
+ <ul> <li>The developers of the <a href="http://wiki.x.org/wiki/radeonhd" rel="external">radeonhd</a> graphics driver have released versions <a href="http://lists.freedesktop.org/archives/xorg/2008-October/039353.html" rel="external">1.2.2</a> and <a href="http://lists.freedesktop.org/archives/xorg/2008-October/039357.htm" rel="external">1.2.3</a>. Amongst the changes, these versions offer Xvideo support and, if used with current versions of X Server, Mesa 3D support for graphics hardware incorporating the R5<em>xx</em> (Radeon X1000 series) and RS6<em>xx</em> (for example the 690G mainboard chipset) Radeon GPUs.</li> </ul> 
+
+ <ul> <li>First results of the <a href="http://thread.gmane.org/gmane.comp.version-control.git/94511/focus%3D98169" rel="external">survey about the Git source code management system</a> used in Linux development and started by Linus Torvalds have <a href="http://git.or.cz/gitwiki/GitSurvey2008" rel="external">recently gone online</a>.</li> </ul> 
+
+<p><em>Further background and information about developments in the Linux kernel and its environment can also be found in previous issues of the kernel log at heise open:</em></p>
+
+ <ul> <li><a href="/open/features/Kernel-Log-Linux-2-6-27-Released-746496.html" title="Kernel Log: Linux 2.6.27 Released – 10 October 2008, 08:38">Kernel Log: Linux 2.6.27 Released</a></li> <li><a href="/news/item/Kernel-Log-problem-with-e1000e-bypassed-Morton-praises-Btrfs-737561.html" title="Kernel Log: problem with e1000e bypassed, Morton praises Btrfs – 07 October 2008, 08:47">Kernel Log: problem with e1000e bypassed, Morton praises Btrfs</a></li> <li><a href="/news/item/Kernel-Log-2-6-27-nearing-completion-Btrfs-to-be-added-to-the-kernel-737489.html" title="Kernel Log: 2.6.27 nearing completion; Btrfs to be added to the kernel? – 01 October 2008, 09:23">Kernel Log: 2.6.27 nearing completion; Btrfs to be added to the kernel?</a></li> <li><a href="/news/item/Kernel-Log-Kernel-Summit-info-Plumbers-keynote-online-the-latest-on-the-e1000e-problem-737443.html" title="Kernel Log: Kernel Summit info; Plumbers keynote online; the latest on the e1000e problem – 26 September 2008, 10:59">Kernel Log: Kernel Summit info; Plumbers keynote online; the latest on the e1000e problem</a></li> <li><a href="/news/item/Kernel-Log-The-second-day-of-Kernel-Summit-2008-criticism-of-Ubuntu-at-the-opening-of-the-Linux-Plumbers-Conference-737379.html" title="Kernel Log: The second day of Kernel Summit 2008; criticism of Ubuntu at the opening of the Linux Plumbers Conference – 19 September 2008, 15:58">Kernel Log: The second day of Kernel Summit 2008; criticism of Ubuntu at the opening of the Linux Plumbers Conference</a></li> <li><a href="/news/item/Kernel-Log-Hard-core-Linux-developers-discuss-the-future-of-Linux-at-the-Kernel-Summit-737327.html" title="Kernel-Log: Hard core Linux developers discuss the future of Linux at the Kernel Summit – 17 September 2008, 11:48">Kernel Log: Hard core Linux developers discuss the future of Linux at the Kernel Summit</a></li> </ul> 
+
+<p><em>Older Kernel logs can be found in <a href="http://www.heise-online.co.uk/open/news/archive/" rel="external">the archives</a> or by using <a href="http://www.heise-online.co.uk/search/?rm=search;perpage=5999;filter_t1=1;q=kernel-log" rel="external">the search function</a> at <a href="http://www.heise-online.co.uk/open/" rel="external">heise open</a>.</em> (<a href="mailto:mailto%3Athl@ct.heise.de">thl</a>/c't)
+</p>
+			<p>(<!--googleoff: index--><a href="mailto:djwm@h-online.com" class="noline" title="Dj Walker-Morgan">djwm</a>)</p>		</div>
+
+		<div class="clear"></div>
+        
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Slimmer-Java-for-the-desktop-737691.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/Re-Versions-CentOS-4-7-Server-CD-and-MooTools-1-2-1-737707.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="news_option"><a href="/open/news/item/Kernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html?view=print" rel="nofollow">Print Version</a> | <a href="/open/news/item/Kernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html?view=mail" rel="nofollow">Send by email</a>
+		 | Permalink: <a href="http://h-online.com/-737697">http://h-online.com/-737697</a>
+		</div>
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-8-Tracking-1788657.html/from/related" title="Linux Kernel 3.8 Tracking">Linux Kernel 3.8 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Comment-Ext4-bug-No-need-to-panic-1738995.html/from/related" title="Comment: Ext4 bug - No need to panic!">Comment: Ext4 bug - No need to panic!</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Btrfs-inventor-Chris-Mason-leaves-Oracle-1612793.html/from/related" title="Btrfs inventor Chris Mason leaves Oracle">Btrfs inventor Chris Mason leaves Oracle</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Comment-Btrfs-too-fast-1473538.html/from/related" title="Kernel Comment: Btrfs too fast?">Kernel Comment: Btrfs too fast?</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-3-Tracking-1440083.html/from/related" title="Linux Kernel 3.3 Tracking">Linux Kernel 3.3 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Btrfs-and-Squashfs-merged-into-Linux-kernel-739613.html/from/related" title="Btrfs and Squashfs merged into Linux kernel">Btrfs and Squashfs merged into Linux kernel</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi">&nbsp;</div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196" height="24" alt="The H Open Headlines"  />
+        <ul>
+        
+            <li>
+            <a href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination" class="top">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H's Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power" >Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public" >GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla's Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers" >NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android's signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen" >Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics" >One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94" height="25" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple's infrared receiver <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" alt="Business Source artwork" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" alt="Whatever happened to Google?" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July's Community Calendar"><img src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" alt="July's Community Calendar" width="280" height="35" /></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116" height="24" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What's new in SUSE Linux Enterprise 11 SP3">What's new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What's new in SUSE Linux Enterprise 11 SP3"><img src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" alt="What's new in SUSE Linux Enterprise 11 SP3" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What's new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What's new in Fedora 19">What's new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What's new in Fedora 19"><img src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" alt="What's new in Fedora 19" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What's new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What's new in Linux 3.10">What's new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What's new in Linux 3.10"><img src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" alt="What's new in Linux 3.10" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What's new in Linux 3.10">A second SSD caching framework and support for the new Radeons' video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" alt="Free Software post-PRISM" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130" height="24" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" alt="Content Security Policy halts XSS in its tracks" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype's ominous link checking: Facts and speculation">Skype's ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype's ominous link checking: Facts and speculation"><img src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" alt="Skype Listening In graphic" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype's ominous link checking: Facts and speculation">Our associate's discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" alt="Password protection for everyone" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" alt="Two clicks for more privacy" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145" height="25" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" alt="Java EE 7 at a glance" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" alt="Continuous database migration with Liquibase and Flyway" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application's version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" alt="Unit testing with Node.js" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" alt="Ruby 2.0 at 20" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+	<div class="teaser">
+		<img src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120" height="24" alt=""  />
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" alt="Linux Mint 15" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What's new in Linux 3.9">What's new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What's new in Linux 3.9"><img src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" alt="What's new in Linux 3.8" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What's new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" alt="Replacing Google Reader" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H's Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" alt="Attacking TrueCrypt" width="220" height="80" /></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more&nbsp;»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split" />
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright © 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready( function($) {
+    var activation_function = function(e) {
+        if ($(e.target).is('#whereami, #navigation_selector')) {
+            $('#navigation').toggleClass('active');
+            e.preventDefault();
+        }
+    };
+    $('#navigation_selector').click( function (e) {
+        e.preventDefault();
+    });
+    if ("ontouchstart" in document) {
+        $('#navigation').removeClass('no-touch');
+        $('#whereami').on('touchstart', activation_function);
+    } else {
+        $('#whereami').click(activation_function);
+    }
+    $('body').click(function(e){ 
+        if ( ! $(e.target).is('#whereami, #navigation_selector')) {
+            $('#navigation').removeClass('active'); 
+        }
+    });
+});
+//--><!]]>
+</script>
+
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready( function($) {
+    $('ul.cycleteaser').each(function(index, element) {
+        $(this).cycle({
+            fx: 'none',
+            pager: '#' + $(this).attr('id') + '_navi', 
+            activePagerClass: 'active',
+            pagerAnchorBuilder: function(idx, slide) {
+                return '<li>' + (idx+1) + '</li>';
+            },
+            pagerEvent: 'mouseover',
+            timeout: 10000,
+            pause: 1,
+            pauseOnPagerHover: 1,
+            delay: index * 2000,
+        });
+    });
+});
+//--><!]]>
+</script>
+
+
+
+<noscript>
+<div id="cookie_warning_small" class="cookie_warning">
+<p>This site makes use of cookies. Please refer to our <a href="/Cookie-information-1582679.html">cookie page</a> for more information.</p>
+</div>
+</noscript>
+<div id="cookie_warning" class="cookie_warning">
+<p>The H uses cookies to help provide services and information to its readers. For more information about the cookies used on this site, including ways to opt-out, please see our <a href="/Cookie-information-1582679.html">cookie information page</a>. If you continue using The H, we will assume that you agree to our use of cookies.</p>
+<p style="text-align: right"><button type="button" onclick="jQuery('#cookie_warning').hide()">Close</button></p>
+</div>
+<script type="text/javascript">
+jQuery(document).ready( function () {
+    if ( document.cookie.indexOf('seen_cookie_warning=') != -1 ) {
+        jQuery('#cookie_warning').show();
+    }
+});
+</script>
+
+
+
+
+<div style="display: inline;"><img id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/news/item/Kernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html" width="1" height="1" alt="" /></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+<script type="text/javascript">document.write(String.fromCharCode(60)+'script type="text/javascript" src="http'+("https:"==document.location.protocol?"s":"")+'://code.etracker.com/t.js?et=86m8Nm">'+String.fromCharCode(60)+'/script>');</script>
+
+<!-- etracker PARAMETER 3.0 -->
+<script type="text/javascript">
+var et_pagename = location.pathname == '/' ? "" : location.pathname;
+var et_areas    = "open%2Fnews";
+var et_ilevel   = 0;
+var et_se = 4;
+</script>
+<!-- etracker PARAMETER END -->
+
+<script type="text/javascript">_etc();</script>
+<noscript><p><a href="http://www.etracker.com"><img style="border:0px;" alt="" src="https://www.etracker.com/nscnt.php?et=86m8Nm" /></a></p></noscript>
+<!-- etracker CODE NOSCRIPT 3.0 -->
+<noscript>
+<p><a href='http://www.etracker.de/app?et=86m8Nm'>
+<img style='border:0px;' alt='' src='https://www.etracker.de/cnt.php?
+et=86m8Nm&amp;v=3.0&amp;java=n&amp;et_easy=0
+&amp;et_pagename=%2Fopen%2Fnews%2Fitem%2FKernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html
+&amp;et_areas=open%2Fnews&amp;et_ilevel=0&amp;et_target=,,,1
+&amp;et_lpage=0&amp;et_trig=0&amp;et_se=0&amp;et_cust=0
+&amp;et_basket=&amp;et_url=&amp;et_tag=
+&amp;et_organisation=&amp;et_demographic=' /></a></p>
+</noscript>
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 364468, iBID: 364469, CID: 737697, iCID: 737698 -->
+<!-- Link: $(LB364468:Linktext)$ $(LC737697:Linktext)$ -->
+<!-- Generiert: 2012-10-30 14:54:11 -->
+
+
+

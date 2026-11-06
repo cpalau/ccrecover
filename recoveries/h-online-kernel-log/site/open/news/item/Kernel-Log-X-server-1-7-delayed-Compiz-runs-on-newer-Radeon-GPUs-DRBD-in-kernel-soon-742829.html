@@ -1,0 +1,1094 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head>
+
+
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type">
+<link href="/Contact-273335.html" rel="copyright" title="Copyright">
+<link href="mailto:editors%40h-online.com?subject=The%20H%20Open" rel="author" title="Contact">
+
+<link href="http://www.h-online.com/open/atom.xml" rel="alternate" title="All The H open news and features" type="application/atom+xml">
+
+<link href="/favicon_open.ico" rel="shortcut icon">
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css">
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css">
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+<title>Kernel Log: X server 1.7 delayed; Compiz runs on newer Radeon GPUs; DRBD in kernel soon - The H Open: News and Features</title>
+
+<link href="/open/icons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
+<link href="/open/icons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="/open/icons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+
+
+<meta content="Kernel Log: X server 1.7 delayed; Compiz runs on newer Radeon GPUs; DRBD in kernel soon" name="keywords">
+
+<meta content="New drivers from AMD, Intel and NVIDIA and new kernels mean a number of fixes and enhancements in the graphics system. With X.org drivers Compiz runs on newer Radeon GPUs. DRBD should be in Linux 2.6.32" name="description">
+<meta content="2009-08-05T16:55:00+01:00" name="date">
+<meta content="Kernel Log: X server 1.7 delayed; Compiz runs on newer Radeon GPUs; DRBD in kernel soon" name="fulltitle">
+
+
+
+<meta content="" name="kill_switch">
+
+
+
+
+<meta content="Heise Media UK Ltd." name="copyright">
+<meta content="en" http-equiv="Content-Language">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="InterRed V14.0, http://www.interred.de/, InterRed GmbH" name="generator">
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img alt="The H Open" height="70" src="/open/icons/open_logo_theH.gif" width="110"></a></div>
+
+            <ul class="no-touch" id="navigation">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form accept-charset="utf-8" action="/open/search/" method="get">
+        			<fieldset id="inputs">
+        				<input name="rm" type="hidden" value="search">
+        				<input class="searchfield" name="q" placeholder="Search The H Open" size="10" type="text" value=""> <input class="submit" name="search_submit" size="4" type="submit" value="Search">
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+
+	<div id="item">
+
+		<!--googleoff: index-->
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Google-to-acquire-On2-for-106M-742827.html"><span class="laquo">Â«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/MIPS-port-of-Android-open-sourced-742831.html">next <span class="laquo">Â»</span></a>
+		
+		</div>
+	
+
+		<div class="date">05 August 2009, 16:55</div>
+		<div class="clear"></div>
+		<!--googleon: index-->
+		<h1>Kernel Log: X server 1.7 delayed; Compiz runs on newer Radeon GPUs; DRBD in kernel soon</h1>
+						
+
+
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20X%20server%201.7%20delayed%20Compiz%20runs%20on%20newer%20Radeon%20GPUs%20DRBD%20in%20kernel%20soon%20http%3A%2F%2Fh-online.com%2F-742829%20%23theh%20%23open"><img alt="Twitter" height="14" src="/icons/syndication/twitter16x14.gif" title="Twitter" width="16"></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-X-server-1-7-delayed-Compiz-runs-on-newer-Radeon-GPUs-DRBD-in-kernel-soon-742829.html"><img alt="Facebook" height="14" src="/icons/syndication/facebook16x14.gif" title="Facebook" width="16"></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-X-server-1-7-delayed-Compiz-runs-on-newer-Radeon-GPUs-DRBD-in-kernel-soon-742829.html&amp;title=Kernel%20Log%20X%20server%201.7%20delayed%20Compiz%20runs%20on%20newer%20Radeon%20GPUs%20DRBD%20in%20kernel%20soon&amp;tags=security&amp;notes=New%20drivers%20from%20AMD%20Intel%20and%20NVIDIA%20and%20new%20kernels%20mean%20a%20number%20of%20fixes%20and%20enhancements%20in%20the%20graphics%20system.%20With%20X.org%20drivers%20Compiz%20runs%20on%20newer%20Radeon%20GPUs.%20DRBD%20should%20be%20in%20Linux%202.6.32"><img alt="submit to slashdot" height="14" src="/icons/syndication/slashdot16x14.gif" title="submit to slashdot" width="16"></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-X-server-1-7-delayed-Compiz-runs-on-newer-Radeon-GPUs-DRBD-in-kernel-soon-742829.html&amp;title=Kernel%20Log%20X%20server%201.7%20delayed%20Compiz%20runs%20on%20newer%20Radeon%20GPUs%20DRBD%20in%20kernel%20soon"><img alt="StumbleUpon" height="14" src="/icons/syndication/stumble16x14.gif" title="StumbleUpon" width="16"></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-X-server-1-7-delayed-Compiz-runs-on-newer-Radeon-GPUs-DRBD-in-kernel-soon-742829.html&amp;title=Kernel%20Log%20X%20server%201.7%20delayed%20Compiz%20runs%20on%20newer%20Radeon%20GPUs%20DRBD%20in%20kernel%20soon"><img alt="submit to reddit" height="14" src="/icons/syndication/reddit16x14.gif" title="submit to reddit" width="16"></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+		<div class="item_wrapper">
+			<p>	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:224px;">
+		<img alt="Kernel Log Penguin" height="297" src="/imgs/43/3/6/9/2/6/0/93e8ea3d0acdf147.jpg" width="224">
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+</p>
+
+<h4 class="author">by Thorsten Leemhuis</h4>
+
+<p><strong>Although some X.org drivers have been updated for X server 1.7, development work is running behind schedule. New drivers from AMD, Intel and Nvidia and new Linux versions mean a number of corrections and enhancements in the graphics system. 3D support for newer Radeon GPUs is now adequate for Compiz. DRBD should make it into the main Linux kernel development tree in 2.6.32.</strong></p>
+
+<p>It seems like many of the Northern hemisphere&#39;s finest open source developers must be away enjoying their summer holidays at the moment â apart from the <a href="/news/item/Microsoft-GPLs-Linux-virtualisation-drivers-742565.html" title="Microsoft GPLs Linux virtualisation drivers â 20 July 2009, 17:22">release of Microsoft&#39;s Hyper-V driver for Linux</a> under the GPL and <a href="/news/item/Dispute-between-Linux-gurus-Alan-Cox-and-Linus-Torvalds-742717.html">a disagreement between Linux gurus Alan Cox and Linus Torvalds</a>, things have been pretty quiet. Not that the open source community is in complete hibernation and there are plenty of newsworthy events for the Kernel Log to report.</p>
+
+<p><strong>All about graphics hardware</strong></p>
+
+<p>NVIDIA last week released version 185.18.29 of its proprietary Linux graphics drivers (<a href="http://www.nvidia.com/object/linux_display_ia32_185.18.29.html" rel="external">x86-32</a>, <a href="http://www.nvidia.com/object/linux_display_amd64_185.18.29.html" rel="external">x86-64</a>). They contain a number of bug fixes and a few minor enhancements, in particular for the Video Decode and Presentation API for Unix (VDPAU), <a href="/news/item/Linux-API-harnesses-GeForce-GPU-s-HD-video-capabilities-738137.html" title="Linux API harnesses GeForce GPU&#39;s HD video capabilities â 17 November 2008, 08:54">released last November</a>. The graphics chip vendor is now working on major changes and OpenGL 3.2 support in its 190 series drivers â the current pre-release version number is <a href="http://www.nvnews.net/vbulletin/showthread.php?t=136819" rel="external">190.18.03</a>.</p>
+
+<p>AMD had previously released version 9.7 of its proprietary Catalyst, aka Fglrx, graphics driver for Linux. Like its predecessors, it is not compatible with the no-longer-quite-so-new Linux <a href="/open/features/Steady-growth-What-s-new-in-Linux-2-6-29-746553.html">2.6.29</a> and <a href="/open/features/Fine-tuning-What-s-new-in-Linux-2-6-30-746581.html">2.6.30</a> kernels, despite 2.6.29 being over more than four and a half months old. Both kernels also include a range of drivers and functions which are missing in earlier versions â users wanting to use the proprietary AMD driver, but also requiring drivers for other hardware components found only in 2.6.29 or 2.6.30 find themselves in something of a bind.</p>
+
+<p>The open source developers at X.org have also been keeping busy â Intel developer Keith Packard, for example, has <a href="http://thread.gmane.org/gmane.comp.freedesktop.xorg.announce/701" rel="external">released</a> version 1.6.3 of X.org&#39;s X server which should fix a number of bugs in the previous version. New versions of various X.org graphics drivers have also been released to ensure that they are compatible with the API and ABI for X server 1.7, which is currently under development. X server 1.7 was originally scheduled for a July release, but this has now been <a href="http://thread.gmane.org/gmane.comp.freedesktop.xorg/31957/focus%3D883" rel="external">put back to mid August</a>. This deadline also looks likely to be missed, with the branching in the source code control system initially planned for 6thÂ July <a href="http://cgit.freedesktop.org/xorg/xserver/refs/heads" rel="external">still not having taken place</a>, meaning that the development team is around a month behind the current, revised schedule.</p>
+
+<p>Intel developers have now <a href="http://thread.gmane.org/gmane.comp.freedesktop.xorg.announce/688" rel="external">released</a> version 2.8 of the company&#39;s graphics driver, which forms part of the <a href="http://thread.gmane.org/gmane.comp.freedesktop.xorg/39882" rel="external">2009Q2 graphics driver package</a>. <a href="/news/item/Kernel-Log-X-org-7-5-coming-in-summer-re-write-for-Intel-s-graphics-driver-741405.html" title="Kernel Log: X.org 7.5 coming in summer, re-write for Intel&#39;s graphics driver â 04 May 2009, 07:09">As expected</a>, it requires at least version 1.6 of X server, due to the removal of code providing support for DRI1, EXA, XXA and NoAccel in order to facilitate driver maintenance. The driver should work best with Linux version 2.6.31, scheduled for release in late August or early September, as it will contain a number of enhancements for GEM (Graphics Execution Manager) and kernel-based mode setting (KMS); use of the latter is recommended by the programming team in their release emails. Intel developer Eric Anholt gives a detailed overview of some of the changes in version 2.8 and background information on ongoing work on versionÂ 2.9 <a href="http://anholt.livejournal.com/41306.html" rel="external">on his blog</a>.</p>
+
+<p>Other news on Linux drivers for graphics hardware:</p>
+
+ <ul> <li>Last weekend, Alex Deucher followed up his announcement that he has been making <a href="/news/item/Kernel-Log-progress-with-free-graphics-drivers-three-new-stable-kernels-742411.html" title="Kernel Log: progress with free graphics drivers, three new stable kernels â 09 July 2009, 09:42">good progress</a> on 3D drivers for the R6xx and R7xx GPUs used on 2000, 3000 and 4000 series Radeon graphics cards by announcing <a href="http://www.botchco.com/agd5f/?p=47" rel="external">on his blog</a> that he has now also got Compiz running, albeit slowly. He is confident though that this will soon be fixed.</li> </ul> 
+
+ <ul> <li>X developer Peter Hutterer has added parts <a href="http://who-t.blogspot.com/2009/07/xi2-recipes-part-4.html" rel="external">4</a>, <a href="http://who-t.blogspot.com/2009/07/xi2-recipes-part-5.html" rel="external">5</a> and <a href="http://who-t.blogspot.com/2009/07/xi2-recipes-part-6.html" rel="external">6</a> of his &#39;XI2 recipes&#39; series. He has also now <a href="http://lists.freedesktop.org/archives/xorg-devel/2009-July/001529.html" rel="external">completed</a> the main development phase of the XÂ InputÂ 2 subsystem planned for inclusion in X server 1.7.</li> </ul> 
+
+ <ul> <li>A number of developers are once again toiling away on a &#39;VGA arbiter&#39; for coordinating access to certain graphics hardware resources kernel-side to ensure that multiple X servers running in parallel don&#39;t trip over each other. One thing this should achieve is to make it easier to deploy multi-seat environments. Details can be found in blog entries by <a href="http://airlied.livejournal.com/67628.html" rel="external">Dave Airlie</a> and <a href="http://vignatti.wordpress.com/2009/07/24/multiseat-with-multiple-x-servers-or-the-right-way/" rel="external">Tiago Vignatti</a>.</li> </ul> 
+
+<p><strong>Kernel status</strong></p>
+
+<p>The Linux stable series maintainers released versions <a href="http://thread.gmane.org/gmane.linux.kernel/871616" rel="external">2.6.27.29</a> and <a href="http://thread.gmane.org/gmane.linux.kernel/871613" rel="external">2.6.30.4</a> in advance of the weekend. These fix a number of bugs and include minor enhancements. As usual, the stable series maintainers are recommending all users of earlier versions to switch to the new versions, without explicitly stating whether these updates fix security-related bugs.</p>
+
+<p>Linux 2.6.31 development has reached the <a href="http://thread.gmane.org/gmane.linux.kernel/871932" rel="external">fifth pre-release version</a> stage. At the weekend the list of known bugs which were not present in 2.6.30 was down to <a href="http://thread.gmane.org/gmane.linux.power-management.general/15319" rel="external">28Â unresolved problems</a>. The list of bugs known to have slipped in between 2.6.29 and 2.6.30 ran to <a href="http://thread.gmane.org/gmane.linux.power-management.general/15320" rel="external">39Â items</a>.</p>
+
+<p>The 2.4 series has not been forgotten â maintainer Willy Tarreau recently released versions <a href="http://thread.gmane.org/gmane.linux.kernel/866988" rel="external">2.4.37.3</a> and <a href="http://thread.gmane.org/gmane.linux.kernel/869530" rel="external">2.4.37.4</a>.</p>
+
+<p>Some Real-Time tree developers have meanwhile ported the Real-Time patches to version 2.6.31-rc4. Thomas Gleixner provides some information on the changes and enhancements in his <a href="http://thread.gmane.org/gmane.linux.kernel/869530" rel="external">2.6.31-rc4-rt1 release email</a>.</p>
+
+<p><strong>In Brief</strong></p>
+
+ <ul> <li>Andrew Morton has recently expressed <a href="http://thread.gmane.org/gmane.linux.kernel/862072/focus%3D867540" rel="external">strong support</a> for merging <a href="http://www.drbd.org/" rel="external">DRBD</a> (Distributed Replicated Block Device) on the LKML. As things stand at present, the replication solution, which is primarily used in high availability (HA) environments, will be merged into the main development tree in Linux 2.6.32. linux-next already contains DRBD.</li> </ul> 
+
+ <ul> <li>Frederic Weisbecker continues to <a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-File-systems-New-and-revamped-file-systems-741319.html" title="Kernel Log: What&#39;s coming in 2.6.30 - File systems: New and revamped file systems â 27 April 2009, 16:11">work</a> on <a href="http://thread.gmane.org/gmane.comp.file-systems.reiserfs.general/22501" rel="external">patches for ReiserFS</a> to reduce the use of the Big Kernel Lock. This has improved performance in some cases, but the developers <a href="http://thread.gmane.org/gmane.comp.file-systems.reiserfs.general/22501/focus%3D22503" rel="external">admit</a> that they have not yet carried out any major stress testing.</li> </ul> 
+
+ <ul> <li>File system developer Valerie Aurora (formerly Henson) has summarised the history of Btrfs â Linux&#39; next generation file system-elect â in the LWN.net article &quot;<a href="http://lwn.net/Articles/342892/" rel="external">A short history of btrfs</a>&quot;. She goes into how it differs from ZFS, on which she also worked. The H has also recently taken a closer look at Btrfs in its article &quot;<a href="/open/features/The-Btrfs-file-system-746597.html">The Btrfs file system</a>&quot;.</li> </ul> 
+
+ <ul> <li>Development work on the Tux3 file system has temporarily ground to a halt because the main programmer <a href="http://article.gmane.org/gmane.comp.file-systems.tux3/840" rel="external">has his hands full</a> with other work. Ext file system developer Theodore Tso weighed in with <a href="http://article.gmane.org/gmane.comp.file-systems.tux3/864" rel="external">some nuggets of advice</a> on how to take things forward but also wondered what Tux3 has to offer that Btrfs does not. </li> </ul> 
+
+ <ul> <li>Mark Lord has been working on support for the ATA Trim command in hdparm. Details can be found in the release postings for hdparm <a href="http://thread.gmane.org/gmane.linux.ide/42050" rel="external">9.17</a>, <a href="http://thread.gmane.org/gmane.linux.ide/42065" rel="external">9.18</a> and <a href="http://thread.gmane.org/gmane.linux.ide/42084" rel="external">9.20</a>.</li> </ul> 
+
+ <ul> <li>Kernel developer Matthew Garrett, who specialises in power management, attempted to clear up some of the myths surrounding power saving technologies in a presentation at the Gran Canaria Desktop Summit. The presentation is <a href="http://www.geeksoc.org/gcds/Matthew%20Garrett,%20Power%20management.ogv" rel="external">available as a video</a>.</li> </ul> 
+
+ <ul> <li>ACPI maintainer Len Brown has just <a href="http://thread.gmane.org/gmane.linux.acpi.devel/39326/focus%3D40677" rel="external">published</a> an outline summary of the issues discussed at the Power Management mini-summit held at the Montreal Linux Symposium.</li> </ul> 
+
+ <ul> <li>Wi-Fi developer Johannes Berg has released the first version, <a href="http://thread.gmane.org/gmane.linux.kernel.wireless.general/36285" rel="external">designated version 0.1</a>, of the <a href="http://wireless.kernel.org/en/users/Documentation/rfkill" rel="external">rfkill application</a>. In combination with the Rfkill framework present in more recent kernel versions, this makes it possible to query and monitor slide switches or keyboard short cuts for switching Wi-Fi and Bluetooth on and off.</li> </ul> 
+
+ <ul> <li>Novell developer Gregory Haskins has <a href="http://thread.gmane.org/gmane.linux.kernel/872604" rel="external">announced</a> the launch of the AlacrityVM project and AlacrityVM version 0.1. AlacrityVM is a KVM-based hypervisor specifically optimised for HPC (high performance computing) and real time environments.</li> </ul> 
+
+ <ul> <li>Upstart developer Scott James Remnant has <a href="http://thread.gmane.org/gmane.comp.sysutils.upstart.devel/924" rel="external">released</a> version 0.6.3 of Upstart.</li> </ul> 
+
+ <ul> <li>Greg Kroah-Hartman has announced on <a href="http://www.kroah.com/log/linux/vme-drivers.html" rel="external">his blog</a> and on <a href="http://thread.gmane.org/gmane.linux.kernel/872821" rel="external">the LKML</a> that Linux drivers for the <a href="http://en.wikipedia.org/wiki/VMEbus" rel="external">VME Bus</a> will be merged into the staging area. He also expressed his appreciation of the work done by Martyn Welch, who has brought together five different branches for supporting the VME bus, some of which are several years old, and has persuaded the copyright holders to agree to a release under the GPL.</li> </ul> 
+
+ <ul> <li>The <a href="http://gutenprint.sourceforge.net/" rel="external">Gutenprint development team</a> has released <a href="http://sourceforge.net/project/showfiles.php?group_id=1537" rel="external">version 5.2.4</a> of their printer driver collection. It supports a number of printers which were not supported by the previous version.</li> </ul> 
+
+ <ul> <li>In his &quot;<a href="http://thread.gmane.org/gmane.comp.file-systems.xfs.general/29978" rel="external">XFS status update for July 2009</a>&quot;, Christoph Hellwig provides an overview of the latest developments relating to the XFS file system.</li> </ul> 
+
+ <ul> <li>The Linux Foundation is continuing its &quot;Kernel Newbie Corner&quot; series, with the latest article (<a href="http://cli.gs/WG6WYX" rel="external">the sixth in the series</a>) entitled &quot;<a href="http://ldn.linuxfoundation.org/article/kernel-symbols-whats-available-your-module-what-isnt" rel="external">Kernel Symbols: What&#39;s Available to Your Module, What Isn&#39;t</a>&quot;.</li> </ul> 
+
+<p><em>Further background and information about developments in the Linux kernel and its environment can also be found in previous issues of the Kernel Log at The H Open Source:</em></p>
+
+ <ul> <li><a href="/news/item/Kernel-Log-progress-with-free-graphics-drivers-three-new-stable-kernels-742411.html" title="Kernel Log: progress with free graphics drivers, three new stable kernels â 09 July 2009, 09:42">Kernel Log: progress with free graphics drivers, three new stable kernels</a></li> <li><a href="/news/item/Kernel-Log-Coming-in-2-6-31-Part-1-New-Wi-Fi-drivers-and-other-network-related-changes-742309.html" title="Kernel Log - Coming in 2.6.31 - Part 1: New Wi-Fi drivers and other network-related changes â 02 July 2009, 12:44">Kernel Log: Coming in 2.6.31 - Part 1: New Wi-Fi drivers and other network-related changes</a></li> <li><a href="/news/item/Kernel-Log-Main-development-phase-of-Linux-2-6-31-completed-742199.html" title="Kernel Log: Main development phase of Linux 2.6.31 completed â 25 June 2009, 11:15">Kernel Log: Main development phase of Linux 2.6.31 completed</a></li> <li><a href="/news/item/Kernel-Log-Winding-down-the-IDE-subsystem-LinuxTag-Kernel-presentations-742159.html" title="Kernel Log : Winding down the IDE subsystem, LinuxTag Kernel presentations â 23 June 2009, 17:04">Kernel Log: Winding down the IDE subsystem, LinuxTag Kernel presentations</a></li> <li><a href="/open/features/Fine-tuning-What-s-new-in-Linux-2-6-30-746581.html">Fine Tuning - What&#39;s new in Linux 2.6.30</a></li> <li><a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-Architecture-and-infrastructure-741921.html" title="Kernel Log: What&#39;s coming in 2.6.30 - Architecture and infrastructure â 06 June 2009, 07:47">Kernel Log: What&#39;s coming in 2.6.30 - Architecture and infrastructure</a></li> <li><a href="/news/item/Kernel-Log-What-s-coming-in-2-6-30-Drivers-New-drivers-for-audio-video-USB-hardware-netbooks-and-notebooks-741837.html" title="Kernel Log: What&#39;s coming in 2.6.30 – Drivers: New drivers for audio, video, USB hardware, netbooks and notebooks â 01 June 2009, 18:52">Kernel Log: What&#39;s coming in 2.6.30 â Drivers: New drivers for audio, video, USB hardware, netbooks and notebooks</a></li> </ul> 
+
+<p> <em>Older Kernel Logs can be found in <a href="/open/news/archive/" rel="external">the archives</a> or by using <a href="/search/?rm=search;perpage=5999;filter_t1=1;q=kernel-log" rel="external">the search function</a> at <a href="/open/" rel="external">The H Open Source</a>.</em> </p>
+
+<p>(<a href="mailto:mailto%3Athl@ct.heise.de">thl</a>/c&#39;t)
+</p>
+			<p>(<!--googleoff: index--><a class="noline" href="mailto:djwm@h-online.com" title="Dj Walker-Morgan">djwm</a>)</p>		</div>
+
+		<div class="clear"></div>
+        
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Google-to-acquire-On2-for-106M-742827.html"><span class="laquo">Â«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/MIPS-port-of-Android-open-sourced-742831.html">next <span class="laquo">Â»</span></a>
+		
+		</div>
+	
+
+		<div class="news_option">Print Version | Send by email
+		 | Permalink: http://h-online.com/-742829
+		</div>
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/AMD-s-Linux-drivers-offer-improved-gaming-performance-1788404.html/from/related" title="AMD&#39;s Linux drivers offer improved gaming performance ">AMD&#39;s Linux drivers offer improved gaming performance </a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/NVIDIA-to-maintain-Linux-drivers-for-GeForce-6-and-7-until-2017-1704721.html/from/related" title="NVIDIA to maintain Linux drivers for GeForce 6 and 7 until 2017">NVIDIA to maintain Linux drivers for GeForce 6 and 7 until 2017</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Linux-3-2-main-development-phase-complete-1375016.html/from/related" title="Kernel Log: Linux 3.2 main development phase complete">Kernel Log: Linux 3.2 main development phase complete</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Linux-kernel-2-6-39-released-1245668.html/from/related" title="Linux kernel 2.6.39 released">Linux kernel 2.6.39 released</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Linux-kernel-2-6-33-released-935427.html/from/related" title="Linux kernel 2.6.33 released">Linux kernel 2.6.33 released</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Kernel-log-Linux-2-6-24-4-released-motion-compensation-in-Intel-graphics-driver-734669.html/from/related" title="Kernel log: Linux 2.6.24.4 released, motion compensation in Intel graphics driver">Kernel log: Linux 2.6.24.4 released, motion compensation in Intel graphics driver</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi"> </div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img alt="The H Open Headlines" height="24" src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196">
+        <ul>
+        
+            <li>
+            <a class="top" href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H&#39;s Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power">Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public">GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla&#39;s Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers">NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android&#39;s signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen">Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics">One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94">
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple&#39;s infrared receiver <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img alt="Business Source artwork" height="80" src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img alt="Whatever happened to Google?" height="80" src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July&#39;s Community Calendar"><img alt="July&#39;s Community Calendar" height="35" src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" width="280"></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116">
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">What&#39;s new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3"><img alt="What&#39;s new in SUSE Linux Enterprise 11 SP3" height="80" src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">What&#39;s new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19"><img alt="What&#39;s new in Fedora 19" height="80" src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">What&#39;s new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10"><img alt="What&#39;s new in Linux 3.10" height="80" src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">A second SSD caching framework and support for the new Radeons&#39; video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img alt="Free Software post-PRISM" height="80" src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130">
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img alt="Content Security Policy halts XSS in its tracks" height="80" src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Skype&#39;s ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation"><img alt="Skype Listening In graphic" height="80" src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Our associate&#39;s discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img alt="Password protection for everyone" height="80" src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img alt="Two clicks for more privacy" height="80" src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145">
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img alt="Java EE 7 at a glance" height="80" src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img alt="Continuous database migration with Liquibase and Flyway" height="80" src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application&#39;s version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img alt="Unit testing with Node.js" height="80" src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img alt="Ruby 2.0 at 20" height="80" src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120">
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img alt="Linux Mint 15" height="80" src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">What&#39;s new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9"><img alt="What&#39;s new in Linux 3.8" height="80" src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img alt="Replacing Google Reader" height="80" src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H&#39;s Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img alt="Attacking TrueCrypt" height="80" src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright Â© 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: inline;"><img alt="" height="1" id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/news/item/Kernel-Log-X-server-1-7-delayed-Compiz-runs-on-newer-Radeon-GPUs-DRBD-in-kernel-soon-742829.html" width="1"></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+
+
+<!-- etracker PARAMETER 3.0 -->
+
+<!-- etracker PARAMETER END -->
+
+
+
+<!-- etracker CODE NOSCRIPT 3.0 -->
+
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 369260, iBID: 369261, CID: 742829, iCID: 742830 -->
+<!-- Link: $(LB369260:Linktext)$ $(LC742829:Linktext)$ -->
+<!-- Generiert: 2012-10-30 15:14:10 -->
+
+
+

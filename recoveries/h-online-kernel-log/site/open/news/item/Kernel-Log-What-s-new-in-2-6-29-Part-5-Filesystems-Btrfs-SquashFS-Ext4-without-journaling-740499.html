@@ -1,0 +1,1101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head>
+
+
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type">
+<link href="/Contact-273335.html" rel="copyright" title="Copyright">
+<link href="mailto:editors%40h-online.com?subject=The%20H%20Open" rel="author" title="Contact">
+
+<link href="http://www.h-online.com/open/atom.xml" rel="alternate" title="All The H open news and features" type="application/atom+xml">
+
+<link href="/favicon_open.ico" rel="shortcut icon">
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css">
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css">
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+<title>Kernel Log: What&#39;s new in 2.6.29 - Part 5: Filesystems Btrfs, SquashFS, Ext4 without journaling - The H Open: News and Features</title>
+
+<link href="/open/icons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
+<link href="/open/icons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="/open/icons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+
+
+<meta content="Kernel Log: What&#39;s new in 2.6.29 - Part 5: Filesystems Btrfs, SquashFS, Ext4 without journaling" name="keywords">
+
+<meta content="The kernel developers not only added the two new Btrfs and SquashFS file systems, they also improved Ext4, OCFS2 and XFS" name="description">
+<meta content="2009-03-12T15:13:00+00:00" name="date">
+<meta content="Kernel Log: What&#39;s new in 2.6.29 - Part 5: Filesystems Btrfs, SquashFS, Ext4 without journaling" name="fulltitle">
+
+
+
+<meta content="" name="kill_switch">
+
+
+
+
+<meta content="Heise Media UK Ltd." name="copyright">
+<meta content="en" http-equiv="Content-Language">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="InterRed V14.0, http://www.interred.de/, InterRed GmbH" name="generator">
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img alt="The H Open" height="70" src="/open/icons/open_logo_theH.gif" width="110"></a></div>
+
+            <ul class="no-touch" id="navigation">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form accept-charset="utf-8" action="/open/search/" method="get">
+        			<fieldset id="inputs">
+        				<input name="rm" type="hidden" value="search">
+        				<input class="searchfield" name="q" placeholder="Search The H Open" size="10" type="text" value=""> <input class="submit" name="search_submit" size="4" type="submit" value="Search">
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+
+	<div id="item">
+
+		<!--googleoff: index-->
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Debian-Project-updates-Package-Policy-740511.html"><span class="laquo">Â«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/OLPC-XO-2-may-use-ARM-based-processors-740513.html">next <span class="laquo">Â»</span></a>
+		
+		</div>
+	
+
+		<div class="date">12 March 2009, 15:13</div>
+		<div class="clear"></div>
+		<!--googleon: index-->
+		<h1>Kernel Log: What&#39;s new in 2.6.29 - Part 5: Filesystems Btrfs, SquashFS, Ext4 without journaling</h1>
+						
+
+
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20Whats%20new%20in%202.6.29%20-%20Part%205%20Filesystems%20Btrfs%20SquashFS%20Ext4%20without%20journaling%20http%3A%2F%2Fh-online.com%2F-740499%20%23theh%20%23open"><img alt="Twitter" height="14" src="/icons/syndication/twitter16x14.gif" title="Twitter" width="16"></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-new-in-2-6-29-Part-5-Filesystems-Btrfs-SquashFS-Ext4-without-journaling-740499.html"><img alt="Facebook" height="14" src="/icons/syndication/facebook16x14.gif" title="Facebook" width="16"></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-new-in-2-6-29-Part-5-Filesystems-Btrfs-SquashFS-Ext4-without-journaling-740499.html&amp;title=Kernel%20Log%20Whats%20new%20in%202.6.29%20-%20Part%205%20Filesystems%20Btrfs%20SquashFS%20Ext4%20without%20journaling&amp;tags=security&amp;notes=The%20kernel%20developers%20not%20only%20added%20the%20two%20new%20Btrfs%20and%20SquashFS%20file%20systems%20they%20also%20improved%20Ext4%20OCFS2%20and%20XFS"><img alt="submit to slashdot" height="14" src="/icons/syndication/slashdot16x14.gif" title="submit to slashdot" width="16"></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-new-in-2-6-29-Part-5-Filesystems-Btrfs-SquashFS-Ext4-without-journaling-740499.html&amp;title=Kernel%20Log%20Whats%20new%20in%202.6.29%20-%20Part%205%20Filesystems%20Btrfs%20SquashFS%20Ext4%20without%20journaling"><img alt="StumbleUpon" height="14" src="/icons/syndication/stumble16x14.gif" title="StumbleUpon" width="16"></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-What-s-new-in-2-6-29-Part-5-Filesystems-Btrfs-SquashFS-Ext4-without-journaling-740499.html&amp;title=Kernel%20Log%20Whats%20new%20in%202.6.29%20-%20Part%205%20Filesystems%20Btrfs%20SquashFS%20Ext4%20without%20journaling"><img alt="submit to reddit" height="14" src="/icons/syndication/reddit16x14.gif" title="submit to reddit" width="16"></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+		<div class="item_wrapper">
+			<p>	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:224px;">
+		<img alt="" height="297" src="/imgs/43/3/6/6/9/3/1/93e8ea3d0acdf147.jpg" width="224">
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+ If we are to believe the <a href="http://thread.gmane.org/gmane.linux.kernel/802158" rel="external">statements made</a> by Linus Torvalds when presenting the seventh release candidate of 2.6.29, and assuming release candidates come weekly, it will be at least another week or two before Linux kernel 2.6.29 becomes available. The Kernel Log will, therefore, continue its report about the new features scheduled for 2.6.29 with what&#39;s new in terms of file systems.</p>
+
+<h3 class="subheading">Butter file system</h3>
+
+<p>As already <a href="/news/item/Btrfs-and-Squashfs-merged-into-Linux-kernel-739613.html" title="Btrfs and Squashfs merged into Linux kernel â 10 January 2009, 15:44">mentioned</a> during the merge window of 2.6.29, the kernel developers have integrated the experimental <a href="/news/item/Kernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html" title="Kernel Log: Ext4 completes development phase as interim step to btrfs â 17 October 2008, 09:52">Btrfs</a> file system. This doesn&#39;t imply that Btrfs is now complete â it rather means that the kernel hackers intend to further develop and mature it within the Linux kernel framework as they did Ext4. Ext4 was integrated into Linux 2.6.19 in autumn 2006 and recently completed its main development phase in Linux 2.6.28.</p>
+
+<p>Btrfs â short for B-tree FS, but generally referred to as butterÂ FS â is a &quot;copy-on-write&quot; file system originally created by kernel developer Chris Mason, who works at Oracle and had previously spent some time handling ReiserFS for Suse. After the first announcement of Btrfs on the Linux Kernel Mailing List (LKML) <a href="http://thread.gmane.org/gmane.linux.kernel/541837" rel="external">in July 2007</a>, Mason quickly found support from other developers â the comments to the commit were authored by developers employed, for example, by HP, Intel, Novell/Suse and Red Hat. </p>
+
+<p>As Theodore Ts&#39;o (also called Ted Tso or Tytso) the developer of Ext4 (and Ext2&amp;3) revealed <a href="http://thread.gmane.org/gmane.linux.file-systems/26246/focus%3D26492" rel="external">in an email</a>, several months ago at a meeting in autumn 2007, a number of key Linux file system developers already agreed that Btrfs should become the &quot;next generation file system for Linux,&quot; . Ts&#39;o says that he and other developers will still continue to develop Ext4, as its tried and tested Ext3 basis and its more advanced development, make it suitable as a bridge, until Btrfs has matured enough to earn the trust of enterprise users.</p>
+
+<p>The <a href="http://btrfs.wiki.kernel.org" rel="external">Btrfs wiki</a> offers an overview of the most important features of this file system, which was specifically designed for Linux from scratch:</p>
+
+ <ul> <li>Extent-based file storage (maximum file size 2^64 bytes)</li> <li>Space efficient packing of small files and indexed directories to minimise storage requirements</li> <li>Dynamic inode allocation</li> <li>Writable snapshots</li> <li>Subvolumes</li> <li>Checksums on data and metadata</li> <li>Compression</li> <li>Integrated multiple device support for combining several devices into one volume with several RAID algorithms</li> <li>On line file system check and defragmentation</li> <li>Very fast off line file system check</li> <li>Efficient incremental backup and file system mirroring</li> <li>Optional SSD optimisation</li> </ul> 
+
+<p>The <a href="http://btrfs.wiki.kernel.org/index.php/Development_timeline" rel="external">development time line</a> explains a few things that are still on the developers&#39; to-do list, while the <a href="http://btrfs.wiki.kernel.org/index.php/Changelog" rel="external">changelog</a> offers a good overview of their achievements so far. The file system&#39;s structure and operation are explained in <a href="http://btrfs.wiki.kernel.org/index.php/Btrfs_design" rel="external">another wiki document</a>, and frequently asked questions are answered in the <a href="http://btrfs.wiki.kernel.org/index.php/FAQ" rel="external">FAQ</a>. While the &quot;on disk&quot; layout of the file system underwent several modifications during the development of Ext4, making it necessary to reformat when switching to a new kernel, the developers of Btrfs plan to spare users this hassle from now on â although further changes to the on disk format of Btrfs can&#39;t be ruled out completely, of course.</p>
+
+<p>Btrfs was integrated with its entire development history, which adds up to a total of more than 900 minor and major commits in the Linux source code management system. After its integration in early January this year, the kernel hackers extended the file system to include new features like the <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=0279b4cd86685b5eea467c1b74ce94f0add2c0a3" rel="external">support of SELinux</a>. Further changes for 2.6.30 are already being prepared â some of them designed to further improve performance.</p>
+
+<p>While some of the Linux distributions are now considering Ext4 as their standard file system, it will probably be quite some time before the same is true for Btrfs. The Fedora developers, however, have already extended their development branch <a href="/news/item/Ext4-to-be-standard-for-Fedora-11-Btrfs-also-included-739769.html" title="Ext4 to be standard for Fedora 11, Btrfs also included â 22 January 2009, 10:44">installer and kernel</a> to include Btrfs support.</p>
+
+<h3 class="subheading">Squash file system</h3>
+
+<p>While the integration of the experimental Btrfs is initially unlikely to affect the majority of users and distribution developers, the addition of <a href="http://squashfs.sourceforge.net/" rel="external">SquashFS</a> should have a more immediate impact. SquashFS is a compressed read-only file system that various Linux distributions already use on their installation and live media (USB, CD or DVD) to minimise storage requirements. For the same reason, SqaushFS is often used in the embedded area as an alternative to Cramfs. The <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/filesystems/squashfs.txt;hb=HEAD" rel="external">kernel documentation for Squashfs</a> offers detailed explanations of the differences between Cramfs and Squashfs and discusses the new file system&#39;s operation.</p>
+
+<p>Several times in the past few years, the developers of SquashFS have tried to get their file system integrated into the Linux kernel, but they didn&#39;t manage to comply with the kernel hacker&#39;s high quality standards. Although they have worked to improve the criticised code segments in the now integrated version 4.0, the integration of SquashFS still came as quite a surprise â following a long <a href="http://thread.gmane.org/gmane.linux.file-systems/28733/" rel="external">discussion</a> about the pros and cons, as well as several problems in the current code, <a href="http://thread.gmane.org/gmane.linux.file-systems/28733/focus%3D28877" rel="external">Linus Torvalds said</a> that it wouldn&#39;t make sense not to integrate it if everyone uses it anyway (&quot;<em>if this is really in use by everybody, then not merging it is kind of pointless. </em>&quot;); shortly afterwards, he merged the SquashFS patches into the main development branch.</p>
+
+<h3 class="subheading">Even more about file systems</h3>
+
+<p>There are also a considerable number of changes to the kernel&#39;s long standing file systems. The kernel is now capable of a temporary file system freeze (<a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=c4be0c1dc4cdc37b175579be1460f15ac6495e9a" rel="external">1</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=fcccf502540e3d752d33b2d8e976034dee81f9f7" rel="external">2</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8e961870bb9804110d5c8211d5d9d500451c4518" rel="external">3</a>, <a href="http://lwn.net/Articles/287435/" rel="external">LWN article</a>) â this is, for example, relevant for container virtualisation and for backup solutions. eCryptfs can now encrypt file names (for example <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=9c79f34f7ee71cd28272332b424ca64b2be006ab" rel="external">1</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=51ca58dcc9f0d6b1e78954d08bd4954fb6a1421c" rel="external">2</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=51ca58dcc9f0d6b1e78954d08bd4954fb6a1421c" rel="external">3</a>, <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=87c94c4df0149786ad91d8a03c738a03369ee9c8" rel="external">4</a>); the developers incorporated numerous major changes to the Btree algorithm in XFS. They also made <a href="http://thread.gmane.org/gmane.linux.kernel/775637" rel="external">major changes</a> to the OCFS2 cluster file system, which now supports ACLs, security attributes, quotas and metadata checksums.</p>
+
+<p> The developers also improved, tidied up and corrected Ext4 in <a href="http://thread.gmane.org/gmane.comp.file-systems.ext4/10925" rel="external">many</a> minor ways â some of the changes have even been integrated into the 2.6.27 and 2.6.28 stable kernel series. In addition, the Ext4 developers adapted the <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8e1a4857cd92e32e642b3e7184c7f6bf85c96e2e" rel="external">documentation for activating</a> write barriers, which had recently sparked prolonged discussions (see also the related <a href="http://lwn.net/Articles/283161/" rel="external">LWN article</a>). <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=30773840c19cea60dcef39545960d541b1ac1cf8" rel="external">Several changes</a> were made to the Fsync algorithm to marginally improve performance.</p>
+
+<p>Thanks to several changes introduced by Google developers, Ext4 file systems can now be run without journaling to <a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=0390131ba84fd3f726f9e24fc4553828125700bb" rel="external">further improve their speed</a> â until now, some users still stuck with Ext2 to avoid the journaling overhead. A recent <a href="http://thunk.org/tytso/blog/2009/03/01/ssds-journaling-and-noatimerelatime/" rel="external">blog entry by Theodore Ts&#39;o</a> contains a few test results detailing the impact journaling has on performance and some thoughts about using Ext file systems on SSDs. Those who are interested in Ext4 can find a lot of additional background information in a recently published <a href="http://www.ibm.com/developerworks/linux/library/l-anatomy-ext4/index.html" rel="external">article on IBM&#39;s developerworks</a>.</p>
+
+<p>The support of online defragmentation (&quot;online defrag&quot;) in Ext4 has not yet been integrated in 2.6.29; at the end of January, a <a href="http://thread.gmane.org/gmane.comp.file-systems.ext4/11294" rel="external">new version was released</a> which also incorporates changes to some of the previously criticised code segments (see also the related <a href="http://lwn.net/Articles/317787/" rel="external">LWN article</a>).</p>
+
+<h3 class="subheading">Many other changes</h3>
+
+<p>As well as the changes we&#39;ve already discussed, 2.6.29 also supports many other important new file system features for the Linux kernel:</p>
+
+<p><em>Btrfs</em></p>
+
+ <ul> <li>There are too many commits to list, but these Git pull requests offer an overview (<a href="http://thread.gmane.org/gmane.linux.kernel/791186" rel="external">1</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/794355" rel="external">2</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/797450" rel="external">3</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/799929" rel="external">4</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/799930" rel="external">5</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/804374" rel="external">6</a>) as well as <a href="http://git.kernel.org/?p=linux%2Fkernel%2Fgit%2Ftorvalds%2Flinux-2.6.git&amp;a=search&amp;h=HEAD&amp;st=commit&amp;s=btrfs" rel="external">the Git web interface</a> at kernel.org.</li> </ul> 
+
+<p><em>CIFS</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=13a6e42af8d90e2e8eb7fa50adf862a525b70518" rel="external">CIFS: add mount option to send mandatory rather than advisory locks</a></li> </ul> 
+
+<p><em>Ext[234]</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=5e1f8c9e20a92743eefc9a82c2db835213905e26" rel="external">ext3: Add support for non-native signed/unsigned htree hash algorithms</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=ba80b1019aa722b24506db1ee755e0bb2f513022" rel="external">ext4: Add markers for better debuggability</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=b3881f74b31b7d47d0f1c4d89ac3e7f0b9c05e3e" rel="external">ext4: Add mount option to set kjournald&#39;s I/O priority</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=4ec110281379826c5cf6ed14735e47027c3c5765" rel="external">ext4: Add sanity checks for the superblock before mounting the filesystem</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=f99b25897a86fcfff9140396a97261ae65fed872" rel="external">ext4: Add support for non-native signed/unsigned htree hash algorithms</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=c31910672376dfb8d020e32afa7249763bcd924a" rel="external">ext4: Remove code to create the journal inode</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=83982b6f47201c4c7767210d24d7d8c99567a0b3" rel="external">ext4: Remove &quot;extents&quot; mount option</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8e1a4857cd92e32e642b3e7184c7f6bf85c96e2e" rel="external">Update Documentation/file systems/ext4.txt</a></li> </ul> 
+
+<p><em>Fuse</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=59efec7b903987dcb60b9ebc85c7acd4443a11a1" rel="external">fuse: implement ioctl support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=95668a69a4bb862063c4d28a746e55107dee7b98" rel="external">fuse: implement poll support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8599396b5062bf6bd2a0b433503849e2322df1c2" rel="external">fuse: implement unsolicited notification</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=1f55ed06cf0c361b293b32e5947d35d173eff2aa" rel="external">fuse: update interface version</a></li> </ul> 
+
+<p><em>OCFS2</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=a68979b857283daf4acc405e476dcc8812a3ff2b" rel="external">ocfs2: add mount option and Kconfig option for acl</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=929fb014e041c6572c5e8c3686f1e32742b5b953" rel="external">ocfs2: add POSIX ACL API</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=a90714c150e3ce677c57a9dac3ab1ec342c75a95" rel="external">ocfs2: Add quota calls for allocation and freeing of inodes and space</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=923f7f3102b80403152e05aee3d55ecfce240440" rel="external">ocfs2: add security xattr API</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=ab552d54673f262d7f70014003d3928d29270f22" rel="external">ocfs2: Add the on-disk structures for metadata checksums.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=70ad1ba7b48364d758a112df0823edc5ca6632aa" rel="external">ocfs2: Add the underlying blockcheck code.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=1a224ad11eeb190da4a123e156601aad1bb67f24" rel="external">ocfs2: Assign feature bits and system inodes to quota feature and quota files</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=19ece546a418997226bd91552fbc41abcb05cea6" rel="external">ocfs2: Enable quota accounting on mount, disable on umount</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=9e33d69f553aaf11377307e8d6f82deb3385e351" rel="external">ocfs2: Implementation of local and global quota file handling</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=2205363dce7447b8e85f1ead14387664c1a98753" rel="external">ocfs2: Implement quota recovery</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=171bf93ce11f4c9929fdce6ce63df8da2f3c4475" rel="external">ocfs2: Periodic quota syncing</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=53ef99cad9878f02f27bb30bc304fc42af8bdd6e" rel="external">ocfs2: Remove JBD compatibility layer</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=85db90e77806d48a19fda77dabe8897d369a1710" rel="external">ocfs2/xattr: Merge xattr set transaction.</a></li> </ul> 
+
+<p><em>SquashFS</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=fc55584175589b70f4c30cb594f09f4bd6ad5d40" rel="external">MAINTAINERS: squashfs entry</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e2780ab159ac60ef5bfc083081f44f8ff58579dc" rel="external">Squashfs: block operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=f400e12656ab518be107febfe2315fb1eab5a342" rel="external">Squashfs: cache operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=c88da2c979369e6bf8d2c0c80fad2f90c35e64ce" rel="external">Squashfs: directory lookup operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=07972dde75c321162d076a925e3464ba259e73d7" rel="external">Squashfs: directory readdir operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=9eb425c046f4129f1dafce7c04e949652e69fb01" rel="external">Squashfs: documentation</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=122601408d20c77704268f1dea9f9ce4abf997c2" rel="external">Squashfs: export operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=122edd1514aaaa90fd894663ecfcb4135063c63d" rel="external">Squashfs: fragment block operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=ffae2cd73a9e828b1a188f83c5dedce16f7c0c68" rel="external">Squashfs: header files</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=b8fed87d3265d21d6f90e34934d93f70cb1e5cc1" rel="external">Squashfs: initrd support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=6545b246a2c815a8fcd07d58240effb6ec3481b1" rel="external">Squashfs: inode operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=6ab5c1ca71ea8e04e97cd8ed473bd04e636850fd" rel="external">Squashfs: Kconfig entry</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=fcef6fb6c5cf54927e1ca86b86a991e7aa9391f5" rel="external">Squashfs: Makefiles</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=1701aecb6849cc69bd54890532bcf92eedb00b74" rel="external">Squashfs: regular file operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=0aa666190509ffab81c202c5095a166be23961ac" rel="external">Squashfs: super block operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=1dc4bba39dd29c6d6f77ca7bf63cd3adeb6fc162" rel="external">Squashfs: symlink operations</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8256c8f631937bb08b3881c380c42ff6874a82f0" rel="external">Squashfs: uid/gid lookup operations</a></li> </ul> 
+
+<p><em>UBIFS</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=552ff3179d1e93a3e982357544c059f3e9a5516e" rel="external">UBIFS: add debugfs support</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=553dea4dd531562688ba01c641c7f8fc7abaaf8c" rel="external">UBIFS: introduce compression mount options</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=27ad27993313312a4ad0047d0a944c425cd511a5" rel="external">UBIFS: remove fast unmounting</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=17c2f9f85c896b48a5d74a9155d99ec5b241a0e6" rel="external">UBIFS: separate debugging fields out</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=062e4fee4400f283307cf8ac1b7931c939010229" rel="external">UBIFS: slight compression optimisation</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=a1dc080c27ec8ea7ca1c8a9b499362a71ebff792" rel="external">UBIFS: use bit-fields to store compression type</a></li> </ul> 
+
+<p><em>XFS</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=de227dd9604934d2a6d33cd332d1be431719c93e" rel="external">XFS: add generic btree types</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=854929f05831d3a290a802815ee955b96c740c61" rel="external">XFS: add new btree statistics</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8df4da4a0a642d3a016028c0d922bcb4d5a4a6d7" rel="external">XFS: implement generic xfs_btree_decrement</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=91cca5df9bc85efdabfa645f51d54259ed09f4bf" rel="external">XFS: implement generic xfs_btree_delete/delrec</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=637aa50f461b8ea6b1e8bf9877b0d13d00085043" rel="external">XFS: implement generic xfs_btree_increment</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=4b22a57188d87e873346b73c227607715be96399" rel="external">XFS: implement generic xfs_btree_insert/insrec</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=fe033cc848489851f0c7de48f0b1bab5d744ad8a" rel="external">XFS: implement generic xfs_btree_lookup</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=9eaead51bed957af0070a277d945744a76df0c8b" rel="external">XFS: implement generic xfs_btree_rshift</a></li> <li><a href="http://git.kernel.org/git/?p=3Dlinux/kernel/git/torvalds/li=" rel="external">XFS: implement generic xfs_btree_split</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8186e517fab1854554c48955cdbcbb6710e7baef" rel="external">XFS: make btree root in inode support generic</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8c4ed633e65d0bd0a25d45aad9b4646e3236cad7" rel="external">XFS: make btree tracing generic</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=b524bfeee2152fa64b6210f28ced80489b9d2439" rel="external">XFS: refactor xfs_btree_readahead</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=847fff5ca881670ca8ec617afeb943950f0c804b" rel="external">XFS: Sync up kernel and user-space headers</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=0335cb76aa3fa913a2164bc9b669e5aef9d56fa3" rel="external">XFS: Update maintainers</a></li> </ul> 
+
+<p><em>VFS, other file systems</em></p>
+
+ <ul> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=67ec7d3ab779ad9001ef57a6b4cfdf80ac9f9acc" rel="external">fs: use menuconfig to control the Misc. file systems menu</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=272eb01485dda98e3b8910c7c1a53d597616b0a0" rel="external">filesystem notification: create fs/notify to contain all fs notification</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=fd659fd6275d3426d7967da1f0e3638bbbd2fedb" rel="external">fix f_count description in Documentation/file systems/files.txt</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=be6d3e56a6b9b3a4ee44a0685e39e595073c6f0d" rel="external">introduce new LSM hooks where vfsmount is available.</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=6badd79bd002788aaec27b50a74ab69ef65ab8ee" rel="external">kill -&gt;dir_notify()</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=548eaca46b3cf4419b6c2be839a106d8641ffb70" rel="external">nfsd: document new filehandle fsid types</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=262a09823bb07c6aafb6c1d312cde613d0b90c85" rel="external">NFSD: Add documenting comments for nfsctl interface</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e9079cce201784632aed4b1a3121ee38c1ced0b6" rel="external">GFS2: Support for FIEMAP ioctl</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=97cc1025b1a91c52e84f12478dcf0f853abc6564" rel="external">GFS2: Kill two daemons with one patch</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=f55abc0fb9c3189de3da829adf3220322c0da43e" rel="external">quota: Allow to separately enable quota accounting and enforcing limits</a></li> <li><a href="http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=5f820f648c92a5ecc771a96b3c29aa6e90013bba" rel="external">poll: allow f_op-&gt;poll to sleep</a></li> </ul> 
+
+<p><em>Further background and information about developments in the Linux kernel and its environment can also be found in previous issues of the kernel log at The H Open Source:</em></p>
+
+ <ul> <li><a href="/news/item/Kernel-Log-Morton-questions-acceptance-of-Xen-Dom0-code-file-systems-for-SSDs-740375.html">Kernel Log: Morton questions acceptance of Xen Dom0 code; file systems for SSDs</a></li> <li><a href="/news/item/Kernel-Log-Stable-series-development-is-speeding-up-X-Server-1-6-available-soon-740203.html" title="Kernel Log: Stable series development is speeding up, X Server 1.6 available soon â 23 February 2009, 10:46">Kernel Log: Stable series development is speeding up, X Server 1.6 available soon</a></li> <li><a href="/news/item/Kernel-Log-What-s-new-in-2-6-29-Part-4-ACPI-PCI-PM-notebooks-and-power-saving-improvements-739889.html" title="Kernel Log: What&#39;s new in 2.6.29 - Part 4: ACPI, PCI, PM – notebooks and power saving improvements â 31 January 2009, 15:01">Kernel Log: What&#39;s new in 2.6.29 - Part 4: ACPI, PCI, PM â notebooks and power saving improvements</a></li> <li><a href="/news/item/Kernel-Log-New-stable-kernels-AMD-3D-documentation-and-Mesa-7-3-released-739845.html" title="Kernel Log: New stable kernels, AMD 3D documentation and Mesa 7.3 released â 28 January 2009, 11:41">Kernel Log: New stable kernels, AMD 3D documentation and Mesa 7.3 released</a></li> <li><a href="/news/item/Kernel-Log-What-s-new-in-2-6-29-Part-3-Kernel-controlled-graphics-modes-739697.html" title="Kernel Log: What&#39;s new in 2.6.29 - Part 3: Kernel controlled graphics modes â 17 January 2009, 07:36">Kernel Log: What&#39;s new in 2.6.29 - Part 3: Kernel controlled graphics modes</a></li> <li><a href="/news/item/Kernel-Log-main-development-phase-for-2-6-29-ends-new-X-org-drivers-739633.html" title="Kernel Log: main development phase for 2.6.29 ends, new X.org drivers â 12 January 2009, 17:09">Kernel Log: main development phase for 2.6.29 ends, new X.org drivers</a></li> <li><a href="/news/item/Kernel-Log-What-s-new-in-2-6-29-Part-2-WiMAX-739621.html" title="Kernel Log: What&#39;s new in 2.6.29 - Part 2: WiMAX â 12 January 2009, 10:19">Kernel Log: What&#39;s new in 2.6.29 - Part 2: WiMax</a></li> <li><a href="/news/item/Kernel-Log-What-s-new-in-2-6-29-Part-1-Dodgy-Wifi-drivers-and-AP-support-739619.html" title="Kernel Log: What&#39;s new in 2.6.29 - Part 1: Dodgy Wifi drivers and AP support â 11 January 2009, 16:08">Kernel Log: What&#39;s new in 2.6.29 - Part 1: Dodgy Wifi drivers and AP support</a></li> </ul> 
+
+<p><em>Older Kernel logs can be found in <a href="/open/news/archive/" rel="external">the archives</a> or by using <a href="/search/?rm=search;perpage=5999;filter_t1=1;q=kernel-log" rel="external">the search function</a> at <a href="/open/" rel="external">The H Open Source</a>.</em> (<a href="mailto:mailto%3Athl@ct.heise.de">thl</a>/c&#39;t)</p>
+			<p>(<!--googleoff: index--><a class="noline" href="mailto:djwm@h-online.com" title="Dj Walker-Morgan">djwm</a>)</p>		</div>
+
+		<div class="clear"></div>
+        
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/Debian-Project-updates-Package-Policy-740511.html"><span class="laquo">Â«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/OLPC-XO-2-may-use-ARM-based-processors-740513.html">next <span class="laquo">Â»</span></a>
+		
+		</div>
+	
+
+		<div class="news_option">Print Version | Send by email
+		 | Permalink: http://h-online.com/-740499
+		</div>
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Ext4-bug-patched-1741014.html/from/related" title="Ext4 bug patched">Ext4 bug patched</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Btrfs-inventor-Chris-Mason-leaves-Oracle-1612793.html/from/related" title="Btrfs inventor Chris Mason leaves Oracle">Btrfs inventor Chris Mason leaves Oracle</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Linux-Foundation-publishes-slides-and-video-from-2012-Collaboration-Summit-1526290.html/from/related" title="Linux Foundation publishes slides and video from 2012 Collaboration Summit">Linux Foundation publishes slides and video from 2012 Collaboration Summit</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Coming-in-3-0-Part-2-Filesystems-1263681.html/from/related" title="Kernel Log: Coming in 3.0 (Part 2) - Filesystems">Kernel Log: Coming in 3.0 (Part 2) - Filesystems</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Linux-2-6-29-released-740733.html/from/related" title="Linux 2.6.29 released">Linux 2.6.29 released</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Btrfs-and-Squashfs-merged-into-Linux-kernel-739613.html/from/related" title="Btrfs and Squashfs merged into Linux kernel">Btrfs and Squashfs merged into Linux kernel</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi"> </div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img alt="The H Open Headlines" height="24" src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196">
+        <ul>
+        
+            <li>
+            <a class="top" href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H&#39;s Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power">Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public">GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla&#39;s Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers">NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android&#39;s signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen">Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics">One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94">
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple&#39;s infrared receiver <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img alt="Business Source artwork" height="80" src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img alt="Whatever happened to Google?" height="80" src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July&#39;s Community Calendar"><img alt="July&#39;s Community Calendar" height="35" src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" width="280"></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116">
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">What&#39;s new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3"><img alt="What&#39;s new in SUSE Linux Enterprise 11 SP3" height="80" src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">What&#39;s new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19"><img alt="What&#39;s new in Fedora 19" height="80" src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">What&#39;s new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10"><img alt="What&#39;s new in Linux 3.10" height="80" src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">A second SSD caching framework and support for the new Radeons&#39; video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img alt="Free Software post-PRISM" height="80" src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130">
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img alt="Content Security Policy halts XSS in its tracks" height="80" src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Skype&#39;s ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation"><img alt="Skype Listening In graphic" height="80" src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Our associate&#39;s discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img alt="Password protection for everyone" height="80" src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img alt="Two clicks for more privacy" height="80" src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145">
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img alt="Java EE 7 at a glance" height="80" src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img alt="Continuous database migration with Liquibase and Flyway" height="80" src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application&#39;s version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img alt="Unit testing with Node.js" height="80" src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img alt="Ruby 2.0 at 20" height="80" src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120">
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img alt="Linux Mint 15" height="80" src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">What&#39;s new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9"><img alt="What&#39;s new in Linux 3.8" height="80" src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img alt="Replacing Google Reader" height="80" src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H&#39;s Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img alt="Attacking TrueCrypt" height="80" src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more Â»</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright Â© 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: inline;"><img alt="" height="1" id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/news/item/Kernel-Log-What-s-new-in-2-6-29-Part-5-Filesystems-Btrfs-SquashFS-Ext4-without-journaling-740499.html" width="1"></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+
+
+<!-- etracker PARAMETER 3.0 -->
+
+<!-- etracker PARAMETER END -->
+
+
+
+<!-- etracker CODE NOSCRIPT 3.0 -->
+
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 366931, iBID: 366932, CID: 740499, iCID: 740500 -->
+<!-- Link: $(LB366931:Linktext)$ $(LC740499:Linktext)$ -->
+<!-- Generiert: 2012-10-30 15:34:35 -->
+
+
+

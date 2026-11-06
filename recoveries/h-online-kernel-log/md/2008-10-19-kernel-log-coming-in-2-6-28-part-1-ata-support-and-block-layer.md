@@ -1,0 +1,44 @@
+---
+title: "Kernel Log: Coming in 2.6.28 - Part 1: ATA support and block layer"
+date: 2008-10-19
+author: "Dj Walker-Morgan"
+source: http://www.h-online.com/open/news/item/Kernel-Log-Coming-in-2-6-28-Part-1-ATA-support-and-block-layer-737699.html
+pages: 1
+---
+
+# Kernel Log: Coming in 2.6.28 - Part 1: ATA support and block layer
+
+**Dj Walker-Morgan**
+
+![](../site/imgs/43/3/6/4/4/7/0/93e8ea3d0acdf147.jpg) In the week since the publication of Linux 2.6.27, the kernel developers have already integrated more than 4000 patches into the main development tree of Linux, from which kernel version 2.6.28 will emerge in late December or early January ([Linux 2.6.27](../site/open/features/Kernel-Log-Linux-2-6-27-Released-746496.html "Kernel Log: Linux 2.6.27 Released – 10 October 2008, 08:38")). A single kernel log that attempted to describe all these changes would quickly exceed the time available to most readers, so we will deal with the changes made to the various domains of the Linux kernel during this development cycle.
+
+In the case of the IDE subsystem, for example, that is essentially matched to parallel ATA, there have again already been many large changes in previous kernel versions ([1](http://thread.gmane.org/gmane.linux.ide/35060), [2](http://thread.gmane.org/gmane.linux.ide/35136)), although all current ATA controllers supported by the drivers of the IDE subsystem have already long been able to respond to the new Libata drivers. As the developers can't agree on a framework, however, the older IDE subsystem will probably keep on being maintained in the near future, even [though Libata should originally have replaced it](http://thread.gmane.org/gmane.linux.ide/35132/focus%3D35154).
+
+The developers have implemented support for "Disk Shock Protection" for both subsystems ([Libata](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=45fabbb77bd95adff7a80bde1c7a0ace1075fde6), [Ide](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=4abdc6ee7c47a1a6e12f95717e461baeebee5df7), [documentation](http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/laptops/disk-shock-protection.txt;h=0e6ba2663834a925123e97b788b028e8e576f1f4;hb=9c6102d446985bca9c426cb2d9b478ed21d2b024)) – in conjunction with data from acceleration sensors, a [userspace application](http://www.thinkwiki.org/wiki/HDAPS#Applications) can will be able to instruct the kernel to park the read/write heads of the hard disks as quickly as possible and keep them parked for a defined period, in order to protect the hard disk from damage due to shocks. IBM introduced such an "Active Protection System (APS)" years ago on Thinkpad notebooks running under Windows. This functionality can already be [used under Linux](http://www.thinkwiki.org/wiki/HDAPS) to some extent, using some Thinkpad-specific drivers or the precursors of the now integrated code.
+
+There have also been [big changes](http://thread.gmane.org/gmane.linux.kernel/736531) to the block layer, which supplies various basic functions for reading and writing to storage media. [Libata](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8bff7c6b0f63c7ee9c5e3a076338d74125b8debb) can now report to the overlaying [block layer](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=a68bbddba486020c9c74825ce90c4c1ec463e0e8) whether a data medium is an SSD (solid-state drive); [using this information](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=f7d7b7a7a3db6526a84ea755c1c54a051e9a52de), the IO schedulers CFQ or AS associated with the block layer can treat the data flow appropriately and, in the case of SSDs, then no longer need to take access times for the positioning of the read/write heads into consideration, as they have to do for hard disks. Using the new [Discard function](http://lwn.net/Articles/293658/)), file systems can now notify the block layer that specific areas (blocks) of the data medium are no longer in use – this is important for SSDs too, so that their wear-leveling unit knows which blocks are occupied.
+
+On multicore or multiprocessor systems, [IO CPU Affinity](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=c7c22e4d5c1fdebfac4dba76de7d0338c2b0d832) is intended to increase data throughput and reduce CPU loading. To achieve this, the block layer attempts to keep processing data using the processor on which the data request was made, since the data is often still available in the CPU cache. The block layer now also supports size changes of block devices at runtime and allows Xen guests access to [more than 16 virtual block devices (xvd)](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=9246b5f06deeea541e7c62437c2ad19a0b1172c0) via the blkfront driver. A number of small block layer patches by Libata developer Tejun Heo further removes the limitation of a maximum of 15 hard drive partitions on data media driven via Libata.
+
+Further Commits from the ATA and block layer domain:
+
+- [block: unify request timeout handling](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=242f9dcb8ba6f68fcd217a119a7648a4f69290e9)
+- [block: add fault injection mechanism for faking request timeouts](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=581d4e28d9195aa8b2231383dbabc288988d615e)
+- [ide: add proper PCI PM support (v2)](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=feb22b7f8e62b1b987a3a1dbad95af767a1df832)
+- [ide: /proc/ide/hd\*/settings rework](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=8185d5aa93e0a5c111adc4952a5b87193a68ae5b)
+- [ide-generic: handle probing of legacy io-ports v5](http://git.kernel.org/git/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=20df429dd6671804999493baf2952f82582869fa)
+
+*Further background and information about developments in the Linux kernel and its environment can also be found in previous issues of the kernel log at heise open:*
+
+- [Kernel Log: new Catalyst drivers, 2.6.27.1 resolves cause of e1000e problem](../site/news/item/Kernel-Log-new-Catalyst-drivers-2-6-27-1-resolves-cause-of-e1000e-problem-737701.html "Kernel Log: new Catalyst drivers, 2.6.27.1 resolves cause of e1000e problem – 18 October 2008, 08:02")
+- [Kernel Log: Ext4 completes development phase as interim step to btrfs](../site/news/item/Kernel-Log-Ext4-completes-development-phase-as-interim-step-to-btrfs-737697.html "Kernel Log: Ext4 completes development phase as interim step to btrfs – 17 October 2008, 09:52")
+- [Kernel Log: Linux 2.6.27 Released](../site/open/features/Kernel-Log-Linux-2-6-27-Released-746496.html "Kernel Log: Linux 2.6.27 Released – 10 October 2008, 08:38")
+- [Kernel Log: problem with e1000e bypassed, Morton praises Btrfs](../site/news/item/Kernel-Log-problem-with-e1000e-bypassed-Morton-praises-Btrfs-737561.html "Kernel Log: problem with e1000e bypassed, Morton praises Btrfs – 07 October 2008, 08:47")
+- [Kernel Log: 2.6.27 nearing completion; Btrfs to be added to the kernel?](../site/news/item/Kernel-Log-2-6-27-nearing-completion-Btrfs-to-be-added-to-the-kernel-737489.html "Kernel Log: 2.6.27 nearing completion; Btrfs to be added to the kernel? – 01 October 2008, 09:23")
+- [Kernel Log: Kernel Summit info; Plumbers keynote online; the latest on the e1000e problem](../site/news/item/Kernel-Log-Kernel-Summit-info-Plumbers-keynote-online-the-latest-on-the-e1000e-problem-737443.html "Kernel Log: Kernel Summit info; Plumbers keynote online; the latest on the e1000e problem – 26 September 2008, 10:59")
+- [Kernel Log: The second day of Kernel Summit 2008; criticism of Ubuntu at the opening of the Linux Plumbers Conference](../site/news/item/Kernel-Log-The-second-day-of-Kernel-Summit-2008-criticism-of-Ubuntu-at-the-opening-of-the-Linux-Plumbers-Conference-737379.html "Kernel Log: The second day of Kernel Summit 2008; criticism of Ubuntu at the opening of the Linux Plumbers Conference – 19 September 2008, 15:58")
+- [Kernel Log: Hard core Linux developers discuss the future of Linux at the Kernel Summit](../site/news/item/Kernel-Log-Hard-core-Linux-developers-discuss-the-future-of-Linux-at-the-Kernel-Summit-737327.html "Kernel-Log: Hard core Linux developers discuss the future of Linux at the Kernel Summit – 17 September 2008, 11:48")
+
+*Older Kernel logs can be found in [the archives](http://www.heise-online.co.uk/open/news/archive/) or by using [the search function](http://www.heise-online.co.uk/search/?rm=search;perpage=5999;filter_t1=1;q=kernel-log) at [heise open](http://www.heise-online.co.uk/open/).* ([thl](mailto:mailto%3Athl@ct.heise.de)/c't)
+
+([djwm](mailto:djwm@h-online.com "Dj Walker-Morgan"))

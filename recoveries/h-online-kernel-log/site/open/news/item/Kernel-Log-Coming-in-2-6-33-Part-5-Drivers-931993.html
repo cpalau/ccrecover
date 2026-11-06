@@ -1,0 +1,1080 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head>
+
+
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type">
+<link href="/Contact-273335.html" rel="copyright" title="Copyright">
+<link href="mailto:editors%40h-online.com?subject=The%20H%20Open" rel="author" title="Contact">
+
+<link href="http://www.h-online.com/open/atom.xml" rel="alternate" title="All The H open news and features" type="application/atom+xml">
+
+<link href="/favicon_open.ico" rel="shortcut icon">
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css">
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css">
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+<title>Kernel Log: Coming in 2.6.33 (Part 5) - Drivers - The H Open: News and Features</title>
+
+<link href="/open/icons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
+<link href="/open/icons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="/open/icons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+
+
+<meta content="Kernel Log: Coming in 2.6.33 (Part 5) - Drivers" name="keywords">
+
+<meta content="Enhancements to the ALSA code for HD audio codecs, a V4L/DVB driver for the Mantis TV chip, drivers for MSI laptops and drivers for newer AMD CPUs are just some of the improvements to Linux hardware support. Android drivers have now been escorted from the staging area, while Ramzswap (formerly Compcache) framework for compressing RAM has been added" name="description">
+<meta content="2010-02-17T16:26:00+00:00" name="date">
+<meta content="Kernel Log: Coming in 2.6.33 (Part 5) - Drivers" name="fulltitle">
+
+
+
+<meta content="" name="kill_switch">
+
+
+
+
+<meta content="Heise Media UK Ltd." name="copyright">
+<meta content="en" http-equiv="Content-Language">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="InterRed V14.0, http://www.interred.de/, InterRed GmbH" name="generator">
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img alt="The H Open" height="70" src="/open/icons/open_logo_theH.gif" width="110"></a></div>
+
+            <ul class="no-touch" id="navigation">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form accept-charset="utf-8" action="/open/search/" method="get">
+        			<fieldset id="inputs">
+        				<input name="rm" type="hidden" value="search">
+        				<input class="searchfield" name="q" placeholder="Search The H Open" size="10" type="text" value=""> <input class="submit" name="search_submit" size="4" type="submit" value="Search">
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+
+	<div id="item">
+
+		<!--googleoff: index-->
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/NetBeans-6-9-to-require-Java-6-933317.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/Top-25-Programming-Errors-list-updated-933535.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="date">17 February 2010, 16:26</div>
+		<div class="clear"></div>
+		<!--googleon: index-->
+		<h1>Kernel Log: Coming in 2.6.33 (Part 5) - Drivers</h1>
+						
+
+
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20Coming%20in%202.6.33%20Part%205%20-%20Drivers%20http%3A%2F%2Fh-online.com%2F-931993%20%23theh%20%23open"><img alt="Twitter" height="14" src="/icons/syndication/twitter16x14.gif" title="Twitter" width="16"></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-33-Part-5-Drivers-931993.html"><img alt="Facebook" height="14" src="/icons/syndication/facebook16x14.gif" title="Facebook" width="16"></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-33-Part-5-Drivers-931993.html&amp;title=Kernel%20Log%20Coming%20in%202.6.33%20Part%205%20-%20Drivers&amp;tags=security&amp;notes=Enhancements%20to%20the%20ALSA%20code%20for%20HD%20audio%20codecs%20a%20V4LDVB%20driver%20for%20the%20Mantis%20TV%20chip%20drivers%20for%20MSI%20laptops%20and%20drivers%20for%20newer%20AMD%20CPUs%20are%20just%20some%20of%20the%20improvements%20to%20Linux%20hardware%20support.%20Android%20drivers%20have%20now%20been%20escorted%20from%20the%20staging%20area%20while%20Ramzswap%20formerly%20Compcache%20framework%20for%20compressing%20RAM%20has%20been%20added"><img alt="submit to slashdot" height="14" src="/icons/syndication/slashdot16x14.gif" title="submit to slashdot" width="16"></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-33-Part-5-Drivers-931993.html&amp;title=Kernel%20Log%20Coming%20in%202.6.33%20Part%205%20-%20Drivers"><img alt="StumbleUpon" height="14" src="/icons/syndication/stumble16x14.gif" title="StumbleUpon" width="16"></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Fnews%2Fitem%2FKernel-Log-Coming-in-2-6-33-Part-5-Drivers-931993.html&amp;title=Kernel%20Log%20Coming%20in%202.6.33%20Part%205%20-%20Drivers"><img alt="submit to reddit" height="14" src="/icons/syndication/reddit16x14.gif" title="submit to reddit" width="16"></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+		<div class="item_wrapper">
+			<h4 class="author">	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:151px;">
+		<img alt="Kernel Log Logo" height="200" src="/imgs/43/4/8/2/2/4/1/KL.jpg-1f663d67fe8a53b0.jpeg" width="151">
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+by Thorsten Leemhuis</h4>
+<p><strong>Enhancements to the ALSA code for HD audio codecs, a V4L/DVB driver for the Mantis TV chip, drivers for MSI laptops and drivers for newer AMD CPUs are just some of the improvements to Linux hardware support. Android drivers have now been escorted from the staging area, while Ramzswap (formerly Compcache) framework for compressing RAM has been added.</strong></p>
+<p>Linux Torvalds, as of the end of last week, has now <a href="http://thread.gmane.org/gmane.linux.kernel/949447" rel="external">released</a> Linux 2.6.33-rc8, the eighth pre-release version of Linux kernel 2.6.33. The release announcement indicates that he expects it to be the last pre-release version, suggesting that the next kernel version from the main development tree is likely to see the light of day late this week or early next. It is not, however, unknown for Torvalds to slip out another version despite pronouncements to the contrary, pushing back the final kernel release by three to seven days.</p>
+<p>The description of drivers and driver infrastructure-related changes which follows completes our reporting on the major changes in Linux 2.6.33 in our &quot;Coming in 2.6.33&quot; series. Parts <a href="/news/item/Kernel-Log-Coming-in-2-6-33-Part-1-Networking-898841.html" title="Kernel Log: Coming in 2.6.33 (Part 1) - Networking – 08 January 2010, 11:01">one</a>, <a href="/news/item/Kernel-Log-Coming-in-2-6-33-Part-2-Storage-914669.html" title="Kernel Log: Coming in 2.6.33 (Part 2) - Storage – 27 January 2010, 18:01">two</a>, <a href="/news/item/Kernel-Log-Coming-in-2-6-33-Part-3-Graphics-922495.html" title="Kernel Log: Coming in 2.6.33 (Part 3) - Graphics – 05 February 2010, 14:14">three</a> and <a href="/news/item/Kernel-Log-Coming-in-2-6-33-Part-4-Architecture-and-virtualisation-929402.html" title="Kernel Log: Coming in 2.6.33 (Part 4) - Architecture and virtualisation – 12 February 2010, 15:51">four</a> of the series looked at changes in network support, file systems, the storage subsystem, graphics hardware, architecture, tracing and virtualisation and the drivers residing in these areas of the kernel.</p>
+<h3 class="subheading">Audio and video</h3>
+<p>According to <a href="http://thread.gmane.org/gmane.linux.alsa.devel/69051" rel="external">an e-mail from Takashi Iwai</a> in which he summarises the most important changes in 2.6.33, this time round the number of changes was not quite as high as in 2.6.31 or 2.6.32. He highlights the code for supporting HD audio codecs, which is now stabilising, although this has nonetheless seen a number of changes. He also considers support for Intel HDMI audio codecs and code for addressing numerous VIA HD audio codecs worthy of mention – codec names and links to these and other commits can be found in the &#39;Minor Gems&#39; section in the second half of this article. The latter also lists a number of system-specific quirks, for various motherboards either sold separately or used in PCs and laptops, which have been merged by kernel developers. The kernel hackers have <a href="http://git.kernel.org/linus/b7d5d946e50116f4150542f881ac90ac74c28165" rel="external">removed</a> the OSS audio drivers for Ensoniq SoundScape hardware.</p>
+<p>Of the more than ten thousand commits undertaken in the main development tree since the release of Linux 2.6.32, more than 330 are located in the audio subsystem. While the V4L/DVB subsystem easily beats this, with more than 600 major or minor changes. Subsystem maintainer Mauro Carvalho Chehab highlights some of the key changes in <a href="http://thread.gmane.org/gmane.linux.drivers.video-input-infrastructure/13610" rel="external">his main git pull request</a>. New drivers include the new <a href="http://git.kernel.org/linus/1408b8472910e894b290205b4baed5b14b8f45af" rel="external">pac7302</a> and <a href="http://git.kernel.org/linus/21f1b932dbcc5ed18444e6995aeb856e583804ae" rel="external">stv0680</a> Gscpa sub-drivers for webcam chips from a range of manufacturers. The infrastructure for addressing infra-red receivers for remote controls has seen some major changes. The <a href="http://thread.gmane.org/gmane.linux.kernel/939183" rel="external">Mantis driver</a>, which supports a chip-set used in various TV cards, was merged just prior to the release of the fifth pre-release version.</p>
+<h3 class="subheading">Laptops, input devices and hardware monitoring</h3>
+<p><a href="http://git.kernel.org/linus/d12d8baff927a31b7e13b72ed9549be6f296a6ef" rel="external">The msi-wmi driver</a>, which should allow the function keys for changing sound volume and brightness on some MSI laptops to work under Linux, has been merged into the kernel. <a href="http://git.kernel.org/linus/529aa8cb0a59367d08883f818e8c47028e819d0d" rel="external">The classmate-laptop driver</a> for Intel&#39;s Classmate PCs is another new arrival. Kernel hackers have also revamped various audio support-related components of the driver for IBM and Lenovo Thinkpad laptops (<a href="http://git.kernel.org/linus/329e4e18dfdc552f36b0642a3de5ebfa96063666" rel="external">1</a>, <a href="http://git.kernel.org/linus/0d204c34e85d1d63e5fdd3e3192747daf0ee7ec1" rel="external">2</a>, <a href="http://git.kernel.org/linus/a112ceee673629afc204bf6b4a4828a6143a083f" rel="external">3</a>).</p>
+<p>Kernel developers have <a href="http://git.kernel.org/linus/ec67bbedcf290ef182a897017f65a2707106c7f8" rel="external">added support</a> for Wacom&#39;s single and multi touch LCD ISDv4 tablets with ID codes 9F, E2 and E3 to the Wacom driver. Developers have <a href="http://git.kernel.org/linus/1d9f26262aef6d63ff65eba0fd5f1583f342b69b" rel="external">improved</a> support for devices such as Dell Latitude E6x00 series laptops, which include both touchpads and trackpoints from ALPS. The ALPS driver code now offers better support for the touchpads with <a href="http://git.kernel.org/linus/71bb21b677e89a2b438b804231f92b779beda5d7" rel="external">4-directional buttons</a>, occasionally found on Acer laptops.</p>
+<p>The <a href="http://git.kernel.org/linus/3c57e89b467d1db6fda74d5c97112c8b9466dd97" rel="external">k10temp driver</a>, newly merged into the kernel, is able to read temperature sensors in various recent AMD chips. Because many CPUs deliver erroneous figures, the code only works after entering a special parameter given <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=blob;f=Documentation/hwmon/k10temp;hb=HEAD" rel="external">in the documentation</a>. The <a href="http://git.kernel.org/linus/70c38772aef27b01dc236fb4016261c3828df6aa" rel="external">via-cputemp driver is another new arrival</a> and returns temperature sensor data from recent VIA CPUs.</p>
+<h3 class="subheading">USB and FireWire</h3>
+<p>A driver, developed largely by Nokia, for the OMAP 34xx processor&#39;s USB EHCI controller has been merged into the USB subsystem. Various additional changes in the USB subsystem can be found in the links listed in the second half of this article and in the USB subsystem maintainer&#39;s <a href="http://thread.gmane.org/gmane.linux.kernel/926152" rel="external">git pull request</a>.</p>
+<p>Via <a href="http://thread.gmane.org/gmane.linux.kernel/923184/focus%3D933306" rel="external">a git pull request</a> and <a href="http://git.kernel.org/linus/5d7db0499e5bb13381a7fbfdd0d913b966545e75" rel="external">changes in the help text displayed during kernel configuration</a>, Stefan Richter, maintainer of the Linux FireWire code, is advising distributions to move to the new Juju FireWire stack. Details on the required steps can be found in the <a href="http://ieee1394.wiki.kernel.org/index.php/Juju_Migration" rel="external">Linux FireWire developer wiki</a>, which also <a href="http://ieee1394.wiki.kernel.org/index.php/Release_Notes#Linux_2.6.33" rel="external">lists</a> a number of further corrections and enhancements to the Linux 2.6.33 FireWire code.</p>
+<h3 class="subheading">Staging</h3>
+<p>As <a href="/news/item/Kernel-Log-Coming-in-2-6-33-Part-1-Networking-898841.html" title="Kernel Log: Coming in 2.6.33 (Part 1) - Networking – 08 January 2010, 11:01">mentioned in the first part of the &quot;Coming in 2.6.33&quot; series</a>, kernel developers have merged the rtl8192u driver (easily confused with the rtl8192e and rtl8192su drivers incorporated in earlier kernel versions into the staging area for unfinished and &#39;dodgy&#39; drivers) <a href="http://git.kernel.org/linus/8fc8598e61f6f384f3eaf1d9b09500c12af47b37" rel="external">into the staging area</a>. The rtl8187se driver has been <a href="http://git.kernel.org/linus/ad988ba5c024ef5c96eed0387ff37e63b8c9f7e0" rel="external">renamed</a> to make way for a future fit and proper Linux driver with the same name.</p>
+<p>There have also been big changes to the staging drivers for newer Ralink WLAN chips, with, for example, the rt3090 driver <a href="http://git.kernel.org/linus/e20aea64e160d5873c2aaf62cc255ea81ce000eb" rel="external">removed</a> due to the fact that its functionality is now <a href="http://git.kernel.org/linus/e44fd1cfded0e42c681ad5419b1ceea600ead29d" rel="external">fulfilled</a> by the rt2860 staging driver. The latter is based on a driver developed by Ralink itself and released under the GPL, which the company has recently updated. A number of the recent changes have now been <a href="http://git.kernel.org/linus/ca97b8388838ee9ea4b4bad04948f8f7f8a607a3" rel="external">incorporated</a> into the staging driver.</p>
+<p>The Ramzswap framework (formerly Compcache) has also <a href="http://git.kernel.org/linus/306b0c957f3f0e7da6551652abbfe17b560173ce" rel="external">found its way</a> into the staging area. This stores data stored on a virtual swap device in compressed form in RAM for greater efficiency. Background information on the technology can be found in the Ramzswap <a href="http://git.kernel.org/linus/47f9afb38f0de2f153deea34bf1ef5c778815f2e" rel="external">documentation</a> and in an <a href="http://lwn.net/Articles/334649/" rel="external">LWN.net article</a> from last May. Also new is <a href="http://git.kernel.org/linus/5beef3c9bf7f967a4a70ddb0108fd3e459fed133" rel="external">code to support</a> the B.A.T.M.A.N. (Better Approach To Mobile Ad-Hoc Networking) protocol, which enables the creation of ad-hoc mesh networks. Details can be found at <a href="http://www.open-mesh.org/" rel="external">open-mesh.org</a>.</p>
+<p>As anticipated, code for <a href="http://git.kernel.org/linus/29d249ed80c80b479df78e456e6809223c648505" rel="external">distributed storage (DST)</a> and <a href="http://git.kernel.org/linus/b0a0ccfad85b3657fe999805df65f5cfe634ab8a" rel="external">various drivers for Google&#39;s Android</a> have been removed from the staging area, as no-one has been looking after the code. <a href="/news/item/Android-code-removed-from-Linux-kernel-920688.html" title="Android code removed from Linux kernel – 03 February 2010, 09:33">As previously reported</a>, staging maintainer Greg Kroah-Hartman has commented on the Android drivers situation in a blog post </p>
+<p><a href="http://www.kroah.com/log/linux/staging-status-12-2009.html" rel="external">A second blog entry</a> by Kroah-Hartman gives an overview and background of further changes in the staging area and threatens other drivers with impending ejection. The latter include drivers for supporting Hyper-V, due to the fact that &quot;<em>The developers again seem to have disappeared, this is getting old</em>&quot;. Kroah-Hartman previously <a href="http://thread.gmane.org/gmane.linux.kernel/884983" rel="external">threatened</a> to eject these drivers for the very same reason back in September, but the developers then reappeared. <a href="http://thread.gmane.org/gmane.linux.kernel/949084" rel="external">History looks to be repeating itself</a> and the risk of ejection appears to have receded for now at least.</p>
+<h3 class="subheading">Minor gems</h3>
+<p>Many further minor, but by no means insignificant, changes can be found in the list below, which contains the commit headers referring to the respective change. Like many of the references in the text above, the links point to the relevant commit in the <a href="http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git&amp;a=summary" rel="external">web front end</a> of the Git branch for the kernel sources maintained by Linus Torvalds at kernel.org. The commit comments and the patches themselves provide extensive further information on the respective changes.</p>
+<p><strong>Audio</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/c68db7175f4dcb3d5789bb50bea6376fb81f87fe" rel="external">ALSA: ac97: add AC97 STMicroelectronics&#39; codecs</a></li><li><a href="http://git.kernel.org/linus/af9a75dd1a1f8a9aa406466cc8bb16208120488a" rel="external">ALSA: ac97: Add Dell Dimension 2400 to Headphone/Line Jack Sense blacklist</a></li><li><a href="http://git.kernel.org/linus/42cfa276aebd28e5cc4350ff6c7d75f1cb84dd98" rel="external">ALSA: ak4113 support</a></li><li><a href="http://git.kernel.org/linus/8f34692f63d66805b51ff408f4067748d3c1c3fd" rel="external">ALSA: ak4620 support, codec regs listed in proc</a></li><li><a href="http://git.kernel.org/linus/4b28dca86066596721a6243c94611dab41970079" rel="external">ALSA: cs4236: add dB scale for all volume controls</a></li><li><a href="http://git.kernel.org/linus/3c55494670745e523f69b56edb66ca0b50a470c2" rel="external">ALSA: cs5535audio: free OLPC quirks from reliance on MGEODE_LX cpu optimization</a></li><li><a href="http://git.kernel.org/linus/11caa3bfdf565455ad3079855729ea7112b0d28f" rel="external">ALSA: document: Add direct git link to grub hda-analyzer</a></li><li><a href="http://git.kernel.org/linus/274693f37090ada2cadd09944ab883f05ea6ebe6" rel="external">ALSA: hda - Add ALC661/259, ALC892/888VD support</a></li><li><a href="http://git.kernel.org/linus/8ce28d6abff34886d3797b25324c940471b99164" rel="external">ALSA: hda - Add an ASUS mobo to MSI blacklist</a></li><li><a href="http://git.kernel.org/linus/cfc9b06f0befe50ef02253f72b76946363549031" rel="external">ALSA: hda - Add a pin-fix for FSC Amilo Pi1505</a></li><li><a href="http://git.kernel.org/linus/45d4ebf1a6255f2234a041685789cbecac3453f1" rel="external">ALSA: hda - Add a position_fix quirk for MSI Wind U115</a></li><li><a href="http://git.kernel.org/linus/2dca0bba70ce3c233be152e384580c134935332d" rel="external">ALSA: hda - add beep_mode module parameter</a></li><li><a href="http://git.kernel.org/linus/d019361a0802924e2dbcd7313fa3dcfc960222a7" rel="external">ALSA: hda - Add description of beep_mode in ALSA-Configuration.txt</a></li><li><a href="http://git.kernel.org/linus/23033b2bce4361f2859ee0331f97c9056dae7091" rel="external">ALSA: hda - Add missing Line-Out and PCM switches as slave</a></li><li><a href="http://git.kernel.org/linus/9dc8398bab52931435fce403ce2eaf5822f28e58" rel="external">ALSA: hda - Add MSI blacklist</a></li><li><a href="http://git.kernel.org/linus/6dd7dc767e35cfbb38f8c63a50b1c27acad25920" rel="external">ALSA: hda - Add PCI IDs for Nvidia G2xx-series</a></li><li><a href="http://git.kernel.org/linus/2f703e7a2ea5f6d5ea14a7b2cd0d31be07839ac6" rel="external">ALSA: hda - Add position_fix quirk for HP dv3</a></li><li><a href="http://git.kernel.org/linus/973b8cb0ead3e0b1dd3ee7b2df52e4dff1ffc707" rel="external">ALSA: hda - add possibility to choose speakers configuration for 4930g</a></li><li><a href="http://git.kernel.org/linus/a2f6309e8392e2c14c04594fca8b4876c8c9bc36" rel="external">ALSA: hda - Add power on/off counter</a></li><li><a href="http://git.kernel.org/linus/f5de24b06aa46427500d0fdbe8616b73a71d8c28" rel="external">ALSA: HDA: add powersaving hook for Realtek</a></li><li><a href="http://git.kernel.org/linus/fb8d1a344dbe963f16249d07eee8415e93f9f3c2" rel="external">ALSA: hda - Add reboot notifier to each codec</a></li><li><a href="http://git.kernel.org/linus/95e70e87533f9d117d369495ee633cb7d18dc802" rel="external">ALSA: hda - Add STAC9205 PCI_QUIRK for Dell Vostro 1700</a></li><li><a href="http://git.kernel.org/linus/1a5ba2e9fc7999b8de2a71c7e7b9f58d752c05e4" rel="external">ALSA: hda - Add support for the new 27 inch IMacs</a></li><li><a href="http://git.kernel.org/linus/92608badc519a8c1f65d93743396517aaa582b53" rel="external">ALSA: hda - allow up to 4 HDMI devices</a></li><li><a href="http://git.kernel.org/linus/f2624791a0c2a2d7664b12d75ca327917141fd3b" rel="external">ALSA: hda - Change quirk for Acer Aspire 5930G</a></li><li><a href="http://git.kernel.org/linus/c5b5165ce28099484d5fa733abeae48540680440" rel="external">ALSA: hda - Disable default quirk for Sony VAIO with ALC262 codec</a></li><li><a href="http://git.kernel.org/linus/71623855e20c3febebb5fa60528cde2592678bd5" rel="external">ALSA: hda - Enable MSI as default</a></li><li><a href="http://git.kernel.org/linus/8af3aeb498197f6fdf5acc913ffe8a392cb921c9" rel="external">ALSA: hda - Fix detection of dual headphones</a></li><li><a href="http://git.kernel.org/linus/c357aab02ee8de1f833579861ebd1e5683d2e806" rel="external">ALSA: hda - Fix LED GPIO setup for HP laptops with IDT codecs</a></li><li><a href="http://git.kernel.org/linus/0b587fc4d35afb1bc0fc3d890084bb14c78372dc" rel="external">ALSA: hda: Fix max PCM level to 0 dB for Fujitsu-Siemens laptops using CX20549 (Venice)</a></li><li><a href="http://git.kernel.org/linus/c7a8eb103248a110cdbe0530d8c5ce987f099eee" rel="external">ALSA: hda - Fix missing capture mixer for ALC861/660 codecs</a></li><li><a href="http://git.kernel.org/linus/b4e818768d50a5b7aa1635676839682bcf0691b6" rel="external">ALSA: hda - Fix mute-LED sync on HP laptops with IDT92HD83xxx codecs</a></li><li><a href="http://git.kernel.org/linus/2fef62c825f09e29d2f52dc187ddf6f99e28c7f1" rel="external">ALSA: hda - Fix quirk for Maxdata obook4-1</a></li><li><a href="http://git.kernel.org/linus/4dee8baa18d611b6dc854e1cc193550ff6f687be" rel="external">ALSA: hda - Fix Toshiba NB20x quirk entry</a></li><li><a href="http://git.kernel.org/linus/ef18beded8ddbaafdf4914bab209f77e60ae3a18" rel="external">ALSA: hda - HDMI sticky stream tag support</a></li><li><a href="http://git.kernel.org/linus/4b7e180335d23296170a5fa8c1f074722f94b253" rel="external">ALSA: hda - iMac 9,1 sound patch.</a></li><li><a href="http://git.kernel.org/linus/a76221d47ef2b73ff16c0fef00a784026308ea02" rel="external">ALSA: hda - Improved MacBook (Pro) 5,1 / 5,2 support</a></li><li><a href="http://git.kernel.org/linus/123c07aeddd71fbb295842a8c19866e780b9a100" rel="external">ALSA: hda_intel: Digital PC Beep - change behaviour for input layer</a></li><li><a href="http://git.kernel.org/linus/95a618bdac29c7b0f1a516aec9fc37626dec1af9" rel="external">ALSA: hda - Make Dell Vostro 1015n mic and speaker switching work</a></li><li><a href="http://git.kernel.org/linus/c0f8faf0c7cd497ec7c1d61e1e9424f4384c1f68" rel="external">ALSA: hda - Make use of beep device found in Dell Vostro 1015n</a></li><li><a href="http://git.kernel.org/linus/ebb83eeb6469bedda83b4dc6f23ddf93eb32b347" rel="external">ALSA: hda - More ALC663 fixes and support of compatible chips</a></li><li><a href="http://git.kernel.org/linus/4d02d1b638af580ae3d69367248539a8b3893064" rel="external">ALSA: hda - proc - add support for dynamic controls to mixer&lt;-&gt;NID mapping</a></li><li><a href="http://git.kernel.org/linus/3911a4c19e927738766003839aa447becbdbaa27" rel="external">ALSA: hda - proc - introduce Control: lines to show mixer&lt;-&gt;NID assignment</a></li><li><a href="http://git.kernel.org/linus/7aee67466536bbf8bb44a95712c848a61c5a0acd" rel="external">ALSA: hda/realtek: quirk for D945GCLF2 mainboard</a></li><li><a href="http://git.kernel.org/linus/739b47f1e5aa3b36eadd7906cc6b41f0175c6ed1" rel="external">ALSA: hda - select IbexPeak handler for Calpella</a></li><li><a href="http://git.kernel.org/linus/e2595322a3a353a59cecd7f57e7aa421ecb02d12" rel="external">ALSA: hda: Set Front Mic to input vref 50% for Lenovo 3000 Y410</a></li><li><a href="http://git.kernel.org/linus/f62faedbed546f4e0c1ba204999e7c206059f305" rel="external">ALSA: hda - Set mixer name after codec patch</a></li><li><a href="http://git.kernel.org/linus/b923528ed29dc2d12832f76b1b9e05848d9de853" rel="external">ALSA: hda - show HBR(High Bit Rate) pin cap in procfs</a></li><li><a href="http://git.kernel.org/linus/d5191e50b251594bdde10d4839a952ff1646ef62" rel="external">ALSA: hda - Update / add kerneldoc comments to exported functions</a></li><li><a href="http://git.kernel.org/linus/950200e2ff11daae1c5d9426703bdd494603f38b" rel="external">ALSA: hda: Use ALC260_WILL quirk for another Acer model (0x1025007f)</a></li><li><a href="http://git.kernel.org/linus/1f2e99febd5dd0c91f0d0752674029a4376649e5" rel="external">ALSA: HDA VIA: Add Jack detect feature for VT1708.</a></li><li><a href="http://git.kernel.org/linus/173143791068ac9f155c378a591d0b3d6c4a45ca" rel="external">ALSA: HDA VIA: Add low current mode for power saving.</a></li><li><a href="http://git.kernel.org/linus/1564b2878f5cf160f60af99d4dbca1dd7809ee8a" rel="external">ALSA: HDA VIA: Add smart5.1 function.</a></li><li><a href="http://git.kernel.org/linus/f5271101faf1655d862849f42518c2a88ef394fb" rel="external">ALSA HDA VIA: Add VIA_CTL_WIDGET_ANALOG_MUTE control type</a></li><li><a href="http://git.kernel.org/linus/518bf3ba753ad93644e7c6cf95c043c918d9429b" rel="external">ALSA: HDA VIA: Add VT1708B-CE codec support.</a></li><li><a href="http://git.kernel.org/linus/f3db423df84570c9950754a5771ad26f0111235f" rel="external">ALSA: HDA VIA: Add VT1716S support.</a></li><li><a href="http://git.kernel.org/linus/eb7188cafcb7aa1419b8889494cdbd4e6a01da1c" rel="external">ALSA: HDA VIA: Add VT1718S support.</a></li><li><a href="http://git.kernel.org/linus/ab6734e7ea32e9f9cbe0f55eeddf4aa629ed1c3d" rel="external">ALSA: HDA VIA: Add VT1812 support.</a></li><li><a href="http://git.kernel.org/linus/bb3c6bfc3f7a5416d85c5dbc312e2d47fc672eef" rel="external">ALSA: HDA VIA: Add VT1828S and VT2020 support.</a></li><li><a href="http://git.kernel.org/linus/25eaba2f8a6877ba6f58197c4723c2433a316e09" rel="external">ALSA: HDA VIA: Add VT2002P support.</a></li><li><a href="http://git.kernel.org/linus/d2ed82a3e7d1f63b2da3f1aa5763667dd17919ac" rel="external">ALSA: HDA VIA: Remove 48k sample rate limit for S/PDIF</a></li><li><a href="http://git.kernel.org/linus/6ef80706184be792499a4485a7957f2660b6a076" rel="external">ALSA: ice1724 - Infrasonic Quartet support</a></li><li><a href="http://git.kernel.org/linus/1ff97cb9dd9f53b33ce6710a4f861f43e70e8ca4" rel="external">ALSA: ice1724 - Support for multiple external clock types</a></li><li><a href="http://git.kernel.org/linus/bbb3c644bd9967753ce8c214c5e64b27c361d2a4" rel="external">ALSA: intel8x0: Mute External Amplifier by default for Gateway 4525GZ</a></li><li><a href="http://git.kernel.org/linus/728765b30a052317b6cb6111d4c4e66aba5c0099" rel="external">ALSA: intelhdmi - accept DisplayPort pin</a></li><li><a href="http://git.kernel.org/linus/b14224bb74e19072c34617c501bceab94ebf579f" rel="external">ALSA: intelhdmi - add channel mapping for typical configurations</a></li><li><a href="http://git.kernel.org/linus/306ecee926cf79f1b3b5f6035be09ef3d83f1b76" rel="external">ALSA: opti-miro: add PnP detection</a></li><li><a href="http://git.kernel.org/linus/d355c82a0191d5a3e971bd5af96cc81fe3ed25b9" rel="external">ALSA: rename &quot;PC Speaker&quot; and &quot;PC Beep&quot; controls to &quot;Beep&quot;</a></li><li><a href="http://git.kernel.org/linus/ad1cd745060ae2f24026b3b3d09da3426df6ab36" rel="external">ALSA: rename &quot;PC Speaker&quot; controls to &quot;Speaker&quot;</a></li><li><a href="http://git.kernel.org/linus/9dcaa7b25f2c8f6a0485854cd3641f585a154072" rel="external">ALSA: sh: add SuperH DAC audio driver for ALSA V4</a></li><li><a href="http://git.kernel.org/linus/bcc2c6b7cb320d10c7fcccd87dce87f4384b4332" rel="external">ALSA: snd-pcsp: add nopcm mode</a></li><li><a href="http://git.kernel.org/linus/4f272341c7a42a71586523f196b242bccde3be8c" rel="external">ALSA: snd-usb-us122l: add support for US-144</a></li><li><a href="http://git.kernel.org/linus/f0968e3f7a8ea30728d2580d3043a30ea9994ec6" rel="external">ALSA: sscape: add supoort for SPEA Media FX/Reveal SC-600</a></li><li><a href="http://git.kernel.org/linus/acd47100914b2896d0699febefd077f85c4dd272" rel="external">ALSA: sscape: convert to firmware loader framework</a></li><li><a href="http://git.kernel.org/linus/1cb0fdebae08f6daaac81197d8dde1746e0a1d96" rel="external">ALSA: sscape: force AD1848 codec mode on old Soundscape</a></li><li><a href="http://git.kernel.org/linus/36dd5c4afff825fca1b6ccde678f51d6933a6850" rel="external">ALSA: VIA HDA: Add support for VT1818S.</a></li><li><a href="http://git.kernel.org/linus/0287d970652027d5e299e0215578f228660a0e4e" rel="external">intelhdmi - dont power off HDA link</a></li><li><a href="http://git.kernel.org/linus/8366fc390865bfb1497fe19a518fe5713f96ba3b" rel="external">media/radio: New driver for the radio FM module on Miro PCM20 sound card</a></li><li><a href="http://git.kernel.org/linus/4852ad02476ab2bbc874f6f8fda9e677e0f09c87" rel="external">sound: oxygen: add digital filter control</a></li><li><a href="http://git.kernel.org/linus/1ff048869eb8e8408856e23b3dc6af094491f837" rel="external">sound: oxygen: add high-pass filter control</a></li><li><a href="http://git.kernel.org/linus/3d8bb454c4fbe18cea1adfd4183a4a9ef5f0ef04" rel="external">sound: oxygen: add stereo upmixing to center/LFE channels</a></li><li><a href="http://git.kernel.org/linus/d867bba94513cf149cb8462a6e006848acb91d38" rel="external">sound: usb-audio: add Roland UA-1G support</a></li><li><a href="http://git.kernel.org/linus/d82af9f9aab69e82b86450272588c861364f8879" rel="external">sound: usb: make the USB MIDI module more independent</a></li><li><a href="http://git.kernel.org/linus/a361e247b4e36c567b44fef354ab595458422d44" rel="external">sound: virtuoso: add headphone impedance control</a></li><li><a href="http://git.kernel.org/linus/973dca93a3d46cca7e4743300f8a510b779906af" rel="external">sound: virtuoso: add PCM1796 oversampling control</a></li><li><a href="http://git.kernel.org/linus/268304f4c4f0b8677d67400f04ad4e0271ec3742" rel="external">sound: virtuoso: fix Xonar Essence ST support</a></li></ul>
+<p><em>Asoc</em></p>
+<ul><li><a href="http://git.kernel.org/linus/357a1db94ecc5b3d605574b164d288cd7dbf8dbd" rel="external">ASoC: Added the CPU driver for PCM controllers</a></li><li><a href="http://git.kernel.org/linus/89e9abe78151de4d62fefe3976f6ef9f1f086e53" rel="external">ASoC: Adding OMAP3517 / AM3517 EVM support in ASOC</a></li><li><a href="http://git.kernel.org/linus/7dea7c01dac9b74faa9afa93fc9bb5f2d37521dc" rel="external">ASoC: Add regulator support for WM8731</a></li><li><a href="http://git.kernel.org/linus/08aff8cd7a8568588d460c4bf8875a492d430314" rel="external">ASoC: Add SPI support to WM8711</a></li><li><a href="http://git.kernel.org/linus/b2a2236d1f5e7c09c8e74b61f13d8ba%3D" rel="external">ASoC: Add support for IGEP v2</a></li><li><a href="http://git.kernel.org/linus/88439ac793934a47f47ad285656b63d09f5937c8" rel="external">ASoC: add support for multiple cards/codecs in debugfs</a></li><li><a href="http://git.kernel.org/linus/89933dee5b17c09f2673c2bfd853625a848f91f5" rel="external">ASoC: Add support for the WM8727 DAC.</a></li><li><a href="http://git.kernel.org/linus/bd6d417743d941c3e5eabb21abbcac9737f11061" rel="external">ASoC: Add WM8711 CODEC driver</a></li><li><a href="http://git.kernel.org/linus/2dcf9fb99d4ecadecb2685a9eb82e6b85511c960" rel="external">ASoC: ADS117x ADC driver</a></li><li><a href="http://git.kernel.org/linus/2312fd8f6b252b7d3c1d74b20c75b7bff98bab65" rel="external">ASoC: AK4671: add ak4671 codec driver</a></li><li><a href="http://git.kernel.org/linus/c8bf93f0fe8c5a509a29e30f3bac823fa0f6d96e" rel="external">ASoC: Codec driver for Texas Instruments tlv320dac33 codec</a></li><li><a href="http://git.kernel.org/linus/9b95b166789d3ec57cea8cca0d42e602b8643ab0" rel="external">ASoC: Davinci: Add audio codec support for DM365 EVM</a></li><li><a href="http://git.kernel.org/linus/640fb39e386a0dac9014e5b8a512de0950e30288" rel="external">ASoC: finally enable support for eXeda and CM-X300</a></li><li><a href="http://git.kernel.org/linus/67e646cd7b51e1d5847fb506d4419d436ea25fda" rel="external">ASoC: Modifying Kconfig/Makefile for AM3517 EVM</a></li><li><a href="http://git.kernel.org/linus/8df89bc35c188e389295eaf7917653f13c83ce70" rel="external">ASoC: OMAP: enable Overo driver for CM-T35</a></li><li><a href="http://git.kernel.org/linus/5f63ef9909c187581c7f2c28fbc93866a0d59f7f" rel="external">ASoC: omap-mcbsp - add support for upto 16 channels.</a></li><li><a href="http://git.kernel.org/linus/d0f5fa17aa63262685e43b798ca0830d89786235" rel="external">ASoC: Support WM8580 based audio subsystem on SMDK64xx machines</a></li><li><a href="http://git.kernel.org/linus/493b67efffc462703d583389aca96f850c18d3b3" rel="external">ASoC: TPA6130A2 amplifier driver</a></li></ul>
+<p><strong>FireWire</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/281e20323ab72180137824a298ee9e21e6f9acf6" rel="external">firewire: core: fix use-after-free regression in FCP handler</a></li><li><a href="http://git.kernel.org/linus/db5d247ae811f49185a71e703b65acad845e4b18" rel="external">firewire: fix use of multiple AV/C devices, allow multiple FCP listeners</a></li><li><a href="http://git.kernel.org/linus/090699c0530ae5380a9b8511d76f656cc437bb6e" rel="external">firewire: ohci: always use packet-per-buffer mode for isochronous reception</a></li></ul>
+<p><strong>EDAC/HW-Monitoring/I2C</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/6b4c0bdeb00f35cad2d3e0dc0d97bb4950a8f86e" rel="external">amd64_edac: detect DDR3 memory type</a></li><li><a href="http://git.kernel.org/linus/bbead2104e912571c3afb2aafe5ece1b446b56d9" rel="external">edac: i5100 add 6 ranks per channel</a></li><li><a href="http://git.kernel.org/linus/295439f2a341f2742fa11d143eda0940c5d4acfa" rel="external">edac: i5100 add scrubbing</a></li><li><a href="http://git.kernel.org/linus/93ee0a75f6e4b2c7ec20fd8f4ace87f88ba785b9" rel="external">hwmon: Add Freescale MC13783 ADC driver</a></li><li><a href="http://git.kernel.org/linus/b180d0508475c5c55085839d22f454c69379eacc" rel="external">hwmon: (adt7475) Add support for the ADT7473</a></li><li><a href="http://git.kernel.org/linus/d8d2ee073274ab666282d1942d08f1bb454d715b" rel="external">hwmon: (adt7475) Add support for the ADT7476</a></li><li><a href="http://git.kernel.org/linus/3d849981711741e76e501e4b9e3e7b792f2b0fd5" rel="external">hwmon: (adt7475) Add support for the ADT7490</a></li><li><a href="http://git.kernel.org/linus/54fe4671aa5853ca88da72d67e969a3d8de6dcf6" rel="external">hwmon: (adt7475) Add VID support for the ADT7476</a></li><li><a href="http://git.kernel.org/linus/f890c6a3b6c3ed06719e696fed9267cc6b40aabd" rel="external">hwmon: (adt7475) New documentation</a></li><li><a href="http://git.kernel.org/linus/7e5eab1128a05b99b8c81c01ff6515a3ca25e5aa" rel="external">hwmon: (asus_atk0110) Add debugfs interface</a></li><li><a href="http://git.kernel.org/linus/f7290e24e3ce8a0b4b39a74800fd341b6b7a6f47" rel="external">hwmon: Clarify autopwm trip points documentation</a></li><li><a href="http://git.kernel.org/linus/1fe63ab47a617ee95f562eaa7ddbbc59981ff8c6" rel="external">hwmon: (coretemp) Fix TjMax for Atom N450/D410/D510 CPUs</a></li><li><a href="http://git.kernel.org/linus/b5430a04e995081a308b4419bd0940f2badc6e6b" rel="external">hwmon: driver for Texas Instruments amc6821 chip</a></li><li><a href="http://git.kernel.org/linus/7669896f499e1bce5cfb38f2685ff583ecdb24dd" rel="external">hwmon: (f71882fg) Add support for the f71889fg (version 2)</a></li><li><a href="http://git.kernel.org/linus/312ea07bf067d41b339473e696f9199245d762f3" rel="external">hwmon: I2C bus support for lis3lv02d and variant accelerometer chips</a></li><li><a href="http://git.kernel.org/linus/895ff267686663afa894314b749d23ac2867434a" rel="external">hwmon: (it87) Verify the VID pin usage</a></li><li><a href="http://git.kernel.org/linus/c5114a1cd6d84b2b3144c1c3e093c80ca6c30f47" rel="external">hwmon: (k10temp) Blacklist more family 10h processors</a></li><li><a href="http://git.kernel.org/linus/4e233cbed249ea94d989b8be08eac0414dbdc44b" rel="external">hwmon: New driver for the National Semiconductor LM73</a></li><li><a href="http://git.kernel.org/linus/41e9a062361de204d3710038925ae7f356ebb40d" rel="external">hwmon: w83627ehf updates</a></li><li><a href="http://git.kernel.org/linus/8918023d40ebb2c086e77368810763975761cb1b" rel="external">hwmon: (w83627hf) Drop the force_addr module parameter</a></li><li><a href="http://git.kernel.org/linus/dddc66ffa048fbc842f5de385031f1826649ffc2" rel="external">i2c/chips: Move ds1682 to drivers/misc</a></li><li><a href="http://git.kernel.org/linus/54067ee20645a4ee12a9546aeb3b048b4c44cf60" rel="external">i2c-core: i2c bus should support PM entries in struct dev_pm_ops</a></li><li><a href="http://git.kernel.org/linus/c7b25a9e96dc89954ae8d8f473f56fae62030f84" rel="external">i2c: Drop probe, ignore and force module parameters</a></li><li><a href="http://git.kernel.org/linus/ef871432e1334dea4c79f9875f4db87cee7b9b50" rel="external">i2c-omap: OMAP3: PM: (re)init for every transfer to support off-mode</a></li><li><a href="http://git.kernel.org/linus/194684e596af4bdaebb424166d94a8aa528edfda" rel="external">i2c: Prevent priority inversion on top of bus lock</a></li><li><a href="http://git.kernel.org/linus/38f41f282f1f88b4038f019de51cb95984e569d5" rel="external">i2c-stub: Allow user to disable some commands</a></li><li><a href="http://git.kernel.org/linus/6471b68982d3bb1a593c3e183c804ecf830125d3" rel="external">i2c-stub: Documentation update</a></li><li><a href="http://git.kernel.org/linus/4710317891e4824ce1510a6b5066abbd3e917750" rel="external">i2c-stub: Implement I2C block support</a></li><li><a href="http://git.kernel.org/linus/a0c11cdd6a1975fd8d6d186f2e2865a82f3e9bbf" rel="external">i2c-voodoo3: Delete</a></li><li><a href="http://git.kernel.org/linus/2db4a76d5f3554e9e5632c8f91828313318579c8" rel="external">lis3: selftest support</a></li><li><a href="http://git.kernel.org/linus/bc62c1471773fc32adcfc05100abd16fa2b6e126" rel="external">lis3: update documentation and comments</a></li><li><a href="http://git.kernel.org/linus/e956e6b77054f91580deb81ba6389cc8c8ce67ef" rel="external">lis3: update documentation to match latest changes</a></li><li><a href="http://git.kernel.org/linus/047f4ec29453ad8a785ccab7d8098f28149828e2" rel="external">MAINTAINERS: Add missing hwmon files</a></li><li><a href="http://git.kernel.org/linus/e02f838eedef1533f7a1bcf21fe724c3c93093f9" rel="external">WATCHDOG: CPUFREQ: S3C24XX Watchdog frequency scaling support.</a></li><li><a href="http://git.kernel.org/linus/3c9d8eccd8687f0e770e4d89fd0d73d4f81a985a" rel="external">WATCHDOG: iTCO_wdt: Add Intel Cougar Point and PCH DeviceIDs</a></li><li><a href="http://git.kernel.org/linus/4946f8353da9d3038e2a9d0295d5dfeee4cee5c5" rel="external">WATCHDOG: iTCO_wdt: add PCI ID for the Intel EP80579 (Tolapai) SoC</a></li><li><a href="http://git.kernel.org/linus/79e8941dda254505bb8af37b3a009165dfb7e98a" rel="external">WATCHDOG: iTCO_wdt: Add support for Intel Ibex Peak</a></li></ul>
+<p><strong>Input</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/23aeb61e7e1f02fb0f3b8f9e798e75537ca1731d" rel="external">HID: add device IDs for new model of Apple Wireless Keyboard</a></li><li><a href="http://git.kernel.org/linus/9db630b48a99adb4156e205b812fba8959644280" rel="external">HID: add multi-input quirk for NextWindow Touchscreen.</a></li><li><a href="http://git.kernel.org/linus/73cdcf567aaa4b348a1150c85ac5917c32f3c7f9" rel="external">HID: add NOGET quirk for another device from CH Products</a></li><li><a href="http://git.kernel.org/linus/e8d0eab4d9eda9f5e97852f780f020bfb134f9f0" rel="external">HID: add support for Acan FG-8100 barcode reader</a></li><li><a href="http://git.kernel.org/linus/eb8141ccd32d422fa11c6e2108cae4c40456d811" rel="external">HID: blacklist Acer Ferrari 4005 optical mouse</a></li><li><a href="http://git.kernel.org/linus/66d61bec697e99476c2fb095f9a6ead3be2e1c21" rel="external">HID: make Media key on Logitech DiNovo Mini work</a></li><li><a href="http://git.kernel.org/linus/3975bc56305256af7689bcce62284fc62e09fc8f" rel="external">HID: Support 171 byte variant of Samsung USB IR receiver</a></li><li><a href="http://git.kernel.org/linus/24985cf68612a5617d396b0b188cec807641cde1" rel="external">HID: support Logitech/3DConnexion SpaceTraveler and SpaceNavigator</a></li><li><a href="http://git.kernel.org/linus/ec51b7f538c440bfa5a4d538133c659071c02155" rel="external">Input: ad7879 - support auxiliary GPIOs via gpiolib</a></li><li><a href="http://git.kernel.org/linus/15e184afa83a45cf8bafdb9dc906b97a8fbc974f" rel="external">Input: add compat support for sysfs and /proc capabilities output</a></li><li><a href="http://git.kernel.org/linus/bc09dcadc1a3da87d58aa70ebc8e9441205be75c" rel="external">Input: add DaVinci Keypad Driver</a></li><li><a href="http://git.kernel.org/linus/fb5bbee0dd033db7c31fe6cb78d2ce2b6588fd42" rel="external">Input: add driver for Altera PS/2 controller</a></li><li><a href="http://git.kernel.org/linus/a5f523bc0cdee2a163a034344ebf1163799b3c5d" rel="external">Input: add driver for Dynapro serial touchscreen</a></li><li><a href="http://git.kernel.org/linus/36203c4f3d091b5f6c082663bd1f74273798043a" rel="external">Input: add generic support for sparse keymaps</a></li><li><a href="http://git.kernel.org/linus/d201fd5dfb22801b6b012bb9f58cd186e4690d98" rel="external">Input: add mc13783 touchscreen driver</a></li><li><a href="http://git.kernel.org/linus/765af10de6d93820def9978c53ed828e4d3bd4f4" rel="external">Input: add new keycodes useful in mobile devices</a></li><li><a href="http://git.kernel.org/linus/76b5c84f77c3abc92a3c4e185e7b78f17a0ed204" rel="external">Input: add new keycodes useful in mobile devices</a></li><li><a href="http://git.kernel.org/linus/b0aba1e66c38d64be2c7dbf4b08c71857031ab67" rel="external">Input: add open and close methods for polled devices</a></li><li><a href="http://git.kernel.org/linus/f5f96b93e745dd054110d511779e7ec5cfdfdfe6" rel="external">Input: add S3C24XX touchscreen driver</a></li><li><a href="http://git.kernel.org/linus/cb6ecf6f7afece066265e243657b0ac28150a7b2" rel="external">Input: add the ABS_MT_PRESSURE event</a></li><li><a href="http://git.kernel.org/linus/60214f058f44cfaa38db2abf0b42d4436c31aa58" rel="external">Input: ep93xx_keypad - update driver to new core support</a></li><li><a href="http://git.kernel.org/linus/e6edbdc52bc0755cbfe0721ca91d4fd87649bc13" rel="external">Input: i8042 - add Dritek quirk for Acer Aspire 5610.</a></li><li><a href="http://git.kernel.org/linus/a61cd03827eceefcec19eefc6e1173703fdc5e5d" rel="external">Input: i8042 - add Gigabyte M1022M to the noloop list</a></li><li><a href="http://git.kernel.org/linus/dad725d089b94bce8bbc769b7471dcfba3fbda0e" rel="external">Input: input-polldev - add sysfs interface for controlling poll interval</a></li><li><a href="http://git.kernel.org/linus/d69249f4b6857c0b23ceca270ae591381b16bba9" rel="external">Input: input-polldev, matrix-keypad - include in kernel doc</a></li><li><a href="http://git.kernel.org/linus/fba65fe0ededc538771e47f6d099d7c853f4776e" rel="external">input/keyboard: new driver for ADP5520 MFD PMICs</a></li><li><a href="http://git.kernel.org/linus/57b5e2ae5b5f6b687ef2c644b1cb06bd217cdbe7" rel="external">Input: lifebook - add another Lifebook DMI signature</a></li><li><a href="http://git.kernel.org/linus/0cc1770b66ddc2524ab5f0ed6ba5f2df19d6414a" rel="external">Input: lifebook - do not advertise unsupported buttons</a></li><li><a href="http://git.kernel.org/linus/7d3fadd148cbba1bc1836dd5a5d2d4b67788ffd5" rel="external">Input: lkkbd - change formatting style to match the rest of the kernel</a></li><li><a href="http://git.kernel.org/linus/4a299bf591bc5bef3bde8316e603b9eaec5a7696" rel="external">Input: speed up suspend/shutdown for PS/2 mice and keyboards</a></li><li><a href="http://git.kernel.org/linus/21f25573fbd1b459d5401f2b72160f745013fc34" rel="external">Input: touchkit_ps2 - do not advertise unsupported buttons</a></li><li><a href="http://git.kernel.org/linus/f6bdc2303da6786cc22a7d24b6790e9f75b4cfdc" rel="external">Input: update multi-touch protocol documentation</a></li><li><a href="http://git.kernel.org/linus/dbe1420b4ba398feef035f7cd8181ec2e492228b" rel="external">Input: usbtouchscreen - add support for ET&amp;T TC5UH touchscreen controller</a></li><li><a href="http://git.kernel.org/linus/2330ed18b27a8f4f10e48e0a1c65ede56e03825c" rel="external">Input: usbtouchscreen - add support for Zytronic capacitive touchscreen</a></li><li><a href="http://git.kernel.org/linus/ee54500d7b960984df125bdd0cd2105d6150e8f1" rel="external">Input: wacom - add defines for packet lengths of various devices</a></li><li><a href="http://git.kernel.org/linus/dadaae3777cbc1d747d5fd97c3eac94eb9f1a85b" rel="external">Input: xpad - add two new Xbox 360 devices</a></li></ul>
+<p><strong>Notebooks</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/360657463679dee44f0b167ffa61f563b4fee101" rel="external">acerhdf: add new BIOS versions</a></li><li><a href="http://git.kernel.org/linus/94219d798e65dff1dac5f8f36f03a9bdb3105f91" rel="external">acerhdf: add new BIOS versions</a></li><li><a href="http://git.kernel.org/linus/14f8af311e7d3e4198cbaade84a34f86505dcb37" rel="external">asus-laptop: add Lenovo SL hotkey support</a></li><li><a href="http://git.kernel.org/linus/1f0233eee9b385d78fda78626136c43e045082f7" rel="external">asus-laptop: Add wlan switch found on V6V</a></li><li><a href="http://git.kernel.org/linus/d951d4cc84e8b5ddb8e0ab81cf6a72c%3D" rel="external">asus-laptop: change light sens default values.</a></li><li><a href="http://git.kernel.org/linus/728900f6fa7142e07a67d10d862bcb774d7a3493" rel="external">asus-laptop: schedule display_get and lcd_switch for removal</a></li><li><a href="http://git.kernel.org/linus/6baddba4a40b4f4e37db051e84ac5e7cc454a19c" rel="external">backlight/thinkpad-acpi: issue backlight class events</a></li><li><a href="http://git.kernel.org/linus/e1fbf346c7c56d6b2f9d835d297bcb088baaff3a" rel="external">dell-laptop: Fix rfkill state queries</a></li><li><a href="http://git.kernel.org/linus/5ea2559726b786283236835dc2905c23b36ac91c" rel="external">dell-wmi: Add support for new Dell systems</a></li><li><a href="http://git.kernel.org/linus/322a1356be96bcc4b97e8e370f6468c821330077" rel="external">eeepc-laptop: add hotplug_disable parameter</a></li><li><a href="http://git.kernel.org/linus/3c0eb510697dbbb53674c72544350624a04ab5b4" rel="external">eeepc-laptop: add touchpad led</a></li><li><a href="http://git.kernel.org/linus/da8ba01deb98f3dc0558b1f5a37e64f40bba7904" rel="external">eeepc-laptop: disable cpu speed control on EeePC 701</a></li><li><a href="http://git.kernel.org/linus/e5fbba85a7acc2626d4fe14501816811d702f3e9" rel="external">hp-wmi: improve rfkill support</a></li><li><a href="http://git.kernel.org/linus/4f924ba5b5aaf1477daafeae779495d39549186d" rel="external">sony-laptop: add AVMode key mapping</a></li><li><a href="http://git.kernel.org/linus/d5a664a311c1957a75bec1808cae0f10d606c378" rel="external">sony-laptop: rfkill support for newer models</a></li><li><a href="http://git.kernel.org/linus/5d2eb14d36723eba0b31ae208bc346835751e944" rel="external">thinkpad-acpi: bump version to 0.24</a></li><li><a href="http://git.kernel.org/linus/c7ac6291ea7ebc568a1fce16fed87d102898f264" rel="external">thinkpad-acpi: disable volume control</a></li><li><a href="http://git.kernel.org/linus/ead510cebcdf41c92fce2a909f342255b028a33d" rel="external">thinkpad-acpi: don&#39;t take the first ALSA slot by default</a></li><li><a href="http://git.kernel.org/linus/a9f8eacca4e9e8693de9b896c1fa7aadaa9402e8" rel="external">thinkpad-acpi: fix default brightness_mode for R50e/R51</a></li><li><a href="http://git.kernel.org/linus/6e5b08ee941af38cfc6456158e7e04c1bc49306f" rel="external">thinkpad-acpi: improve Kconfig help text</a></li><li><a href="http://git.kernel.org/linus/347a26860e2293b1347996876d3550499c7bb31f" rel="external">thinkpad-acpi: issue backlight class events</a></li><li><a href="http://git.kernel.org/linus/ff850c339a1a6a7724537160c73cdc09a483fc5d" rel="external">thinkpad-acpi: make volume subdriver optional</a></li><li><a href="http://git.kernel.org/linus/169220f88f0f26f4450ac0bc8ff0f807b453ec58" rel="external">thinkpad-acpi: update volume subdriver documentation</a></li><li><a href="http://git.kernel.org/linus/42b4e9ee3d1d3b691bcae37f217f08740320c58c" rel="external">Toshiba Bluetooth Enabling driver (RFKill handler v3)</a></li><li><a href="http://git.kernel.org/linus/1caab3c1a90be3aa4ec3599409d8fe044b077478" rel="external">wmi: Add support for module autoloading</a></li></ul>
+<p><strong>USB</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/ec157937d9799cf30c9a19bd18be33721242c64f" rel="external">hso: Add Vendor/Product ID&#39;s for new devices</a></li><li><a href="http://git.kernel.org/linus/253e05724f9230910344357b1142ad8642ff9f5a" rel="external">USB: add a &quot;remove hardware&quot; sysfs attribute</a></li><li><a href="http://git.kernel.org/linus/4b372072b554723b508e53249dd1b594ad93fbc2" rel="external">USB: add device ID for Apple Cinema Display 23in 2007</a></li><li><a href="http://git.kernel.org/linus/9af23624ae2c7978313b46e58fdc4ca5d8b799f5" rel="external">USB: add devpath sysfs attribute</a></li><li><a href="http://git.kernel.org/linus/7e8d5cd93fac4d3720d8f780b350c9421e8997d4" rel="external">USB: Add EHCI support for MX27 and MX31 based boards</a></li><li><a href="http://git.kernel.org/linus/afe2dab4f6d32d5650aaba42f2c7ec9c0622f4dd" rel="external">USB: add hex/bcd detection to usb modalias generation</a></li><li><a href="http://git.kernel.org/linus/0c7a2b72746a96f999fd2728520d03d94879be69" rel="external">USB: add remove_id sysfs attr for usb drivers</a></li><li><a href="http://git.kernel.org/linus/b375e1169d8ecc9e9db3ecba8147d484b5510833" rel="external">USB: add scatter-gather support to usbmon</a></li><li><a href="http://git.kernel.org/linus/08d3c18e6674c5d46e4333a462b1e2e4c4ded1d4" rel="external">USB: Add support for Xilinx USB host controller</a></li><li><a href="http://git.kernel.org/linus/149fc791a452df5e8fa155f553b3027a874adf62" rel="external">USB: ark3116: Setup some basic infrastructure for new ark3116 driver.</a></li><li><a href="http://git.kernel.org/linus/40f8db8f8f5af2cafeb976ae15e11aca641a931d" rel="external">USB: EHCI: add native scatter-gather support</a></li><li><a href="http://git.kernel.org/linus/796c8c78801ebf1bdebddda06a43276355ff91eb" rel="external">USB: ehci: Allow EHCI to be built on OMAP3</a></li><li><a href="http://git.kernel.org/linus/c1479a92cf0a7792298d364e44a781550621cb58" rel="external">USB: Exposing second ACM channel as tty for Nokia S60 phones.</a></li><li><a href="http://git.kernel.org/linus/a8cbd90a0410096e152f68a4e114a8b5c7abb49b" rel="external">USB: ftdi_sio: add USB device ID&#39;s for B&amp;B Electronics line</a></li><li><a href="http://git.kernel.org/linus/f176a5d81214864904d285912da02c4bc0e9041a" rel="external">USB: g_multi: Multifunction Composite Gadget added</a></li><li><a href="http://git.kernel.org/linus/54ab2b02ef6a454b4cca969f546d0dd43fec7308" rel="external">USB: host: ehci: introduce omap ehci-hcd driver</a></li><li><a href="http://git.kernel.org/linus/b97503ffa79f0a4aa13c7cd8b449b98d3077c78f" rel="external">USB: Interface Association Descriptors added to CDC RNDIS</a></li><li><a href="http://git.kernel.org/linus/acf509ae28301d78b022c534c26b1e4765c18f2b" rel="external">USB: mos7840: add device IDs for B&amp;B electronics devices</a></li><li><a href="http://git.kernel.org/linus/69ee472f2706371ca639de49b06df91615c07d8d" rel="external">usbnet &amp; cdc-ether: Autosuspend for online devices</a></li><li><a href="http://git.kernel.org/linus/8d87cacda7c8db5c131bfcaaa1d90bfe918c2ebc" rel="external">USB: option: add pid for ZTE</a></li><li><a href="http://git.kernel.org/linus/54a8e144acad6506920f385f4ef2779664f05b21" rel="external">USB: option.c: add support for D-Link DWM-162-U5</a></li><li><a href="http://git.kernel.org/linus/c983202bd03eb82394ef1dce5906702fcbc7bb80" rel="external">USB: option: support hi speed for modem Haier CE100</a></li><li><a href="http://git.kernel.org/linus/2d57a95f09cf71c4c642e5be15f8b700d17ee90c" rel="external">USB OTG: Add generic driver for ULPI OTG transceiver</a></li><li><a href="http://git.kernel.org/linus/91c8a5a9985d5bf9c55f6f82f183f57b050b2a3a" rel="external">USB OTG: add support for ulpi connected external transceivers</a></li><li><a href="http://git.kernel.org/linus/baf67741bf52b985e318bed3c4acadcda5351e08" rel="external">USB: power management documentation update</a></li><li><a href="http://git.kernel.org/linus/8e4ceb38eb5bbaef22fc00abe9bc11e26bea2ab5" rel="external">USB: prepare for changover to Runtime PM framework</a></li><li><a href="http://git.kernel.org/linus/7f4e985448e82fe4a1cc0ae4fcecaf7e0301c07b" rel="external">usbtest: make module param pattern writeable</a></li><li><a href="http://git.kernel.org/linus/a0bb108112a872c0b0c4b3ef4974f95fb75b155d" rel="external">USB: usb-storage: add BAD_SENSE flag</a></li><li><a href="http://git.kernel.org/linus/c3f22d92a1249665d4cd87a68a4078a56002c3ab" rel="external">USB: wusb: add wusb_phy_rate sysfs file to host controllers</a></li><li><a href="http://git.kernel.org/linus/6648f29d3be2972a74ef8e29aa5d425ab4f1fc48" rel="external">USB: xhci: Add tests for TRB address translation.</a></li></ul>
+<p><strong>Staging:</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/d189164a2426a5169117cfe154186c2f999ada87" rel="external">Staging: add Samsung Laptop driver</a></li><li><a href="http://git.kernel.org/linus/7e9bdd0af0fe0b940ff59f4b57c463d63969852b" rel="external">Staging: dream: add TODO file</a></li><li><a href="http://git.kernel.org/linus/ff933693a4749a20662dee92f5fe8c8484ec3153" rel="external">Staging: dream: make it independant from CONFIG_ANDROID</a></li><li><a href="http://git.kernel.org/linus/b7fa31849c237b0bbcc03cd65536f0060ee6117d" rel="external">Staging: dream: mark as BROKEN</a></li><li><a href="http://git.kernel.org/linus/4fbdf811bca06f2ebb374ebc763aea6c2b83f14e" rel="external">Staging: et131x: first pass RX cleanup</a></li><li><a href="http://git.kernel.org/linus/dbd5d239e4b24c17ec50bef38aec9bba0e54e1ee" rel="external">Staging: IIO: Add tsl2560-2 support to tsl2563 driver.</a></li><li><a href="http://git.kernel.org/linus/eaacdd9b31b9dd6b342b569711b69e47dbba19b2" rel="external">Staging: IIO: Remove tsl2561 driver. Support merged with tsl2563.</a></li><li><a href="http://git.kernel.org/linus/ee1f1fa4071416b130fd0771d1f26ea3f41e1fc3" rel="external">Staging: iio: tsl2563 ambient light sensor driver</a></li><li><a href="http://git.kernel.org/linus/f6ed1b3b3579db5c8c3aaf6fd3010c706973a35d" rel="external">Staging: octeon-ethernet: Convert to use PHY Abstraction Layer.</a></li><li><a href="http://git.kernel.org/linus/dad1740133ffe49ae44044f97e4cbfcb42f037b1" rel="external">Staging: poch: Parameter to enable loopback</a></li><li><a href="http://git.kernel.org/linus/16fbf4cba0880c31445d6414abbd7a1c51466b1f" rel="external">Staging: poch: Parameter to enable synthetic counter</a></li><li><a href="http://git.kernel.org/linus/224f0ef4e20327ab108e6a11ebc3a92f337c5e85" rel="external">Staging: ramzswap: add TODO file</a></li><li><a href="http://git.kernel.org/linus/9f548a2a3dd8feca99f7301df474f983c1e815f3" rel="external">Staging: rt28x0: fix comments in *.c files</a></li><li><a href="http://git.kernel.org/linus/ec278fa259e48c89b206ccd9e1bee06277077263" rel="external">Staging: rt28x0: fix comments in common/*.c files</a></li><li><a href="http://git.kernel.org/linus/cc27706961cbe2de1b2b1d1b498efa7b6f04a822" rel="external">Staging: rt28x0: fix comments in *.h files</a></li><li><a href="http://git.kernel.org/linus/4c96e89320b6327e8967c31761cc0730cace8b4c" rel="external">Staging: rt28x0: remove private WEXT handlers</a></li><li><a href="http://git.kernel.org/linus/62eb734b490c3851deb5cdba99e477f102549b68" rel="external">Staging: rt28x0: remove typedefs (part three)</a></li><li><a href="http://git.kernel.org/linus/66cd8d6ec97bbfac53b5e67df9ef4668c3f96085" rel="external">Staging: rt28x0: run *.c files through Lindent</a></li><li><a href="http://git.kernel.org/linus/52b81c89e564cdde8f2b4ccd0e314f04f8f23ab9" rel="external">Staging: rt28x0: run *.h files through Lindent</a></li><li><a href="http://git.kernel.org/linus/488d3749620779ab2668c0dba2962836e51e3cd6" rel="external">staging: rtl8192su: add USB VID/PID for HWNUm-300</a></li><li><a href="http://git.kernel.org/linus/e406322b4b963e622f41d76193d8ca9e5435adb8" rel="external">Staging: rtl8192u: remove bad whitespaces</a></li><li><a href="http://git.kernel.org/linus/50a09b3b099ebc8326b85b4f508fb47655e1fed3" rel="external">Staging: rtl8192u: remove dead code</a></li><li><a href="http://git.kernel.org/linus/7f1f6e72e26c9e0f5d1b9b7766e174da4057a72d" rel="external">Staging: samsung-laptop: add TODO file</a></li><li><a href="http://git.kernel.org/linus/d7edf47947f9d921be6ca5fc8e83049124466f98" rel="external">Staging: sm7xx: add a new framebuffer driver</a></li><li><a href="http://git.kernel.org/linus/c813f592a5e65cfd9321f51c95a6977e9518dde6" rel="external">Staging: vme: Pull common VME interrupt handling into core code</a></li><li><a href="http://git.kernel.org/linus/68c0bdff7ac903421f224e080499c51cd5287f97" rel="external">Staging: wlags49_h2: add Agere driver for HERMES II and HERMES II.5 chipsets</a></li><li><a href="http://git.kernel.org/linus/a6f95b6ee60e4e0f8768419c15e625b5bef44cb6" rel="external">Staging: wlags49_h2: add TODO files</a></li></ul>
+<p><strong>V4L/DVB</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/1ca31892e3af05ad3a72769e3c922cca3cde4f9d" rel="external">em28xx: em2800 chips support max width of 640</a></li><li><a href="http://git.kernel.org/linus/ceafe1d2fe33e92691bfdbd5a93ed259c3da7b60" rel="external">feature-removal-schedule: Add v4l1 drivers obsoleted by gspca sub drivers</a></li><li><a href="http://git.kernel.org/linus/8d64827172ae680d34d0611a1e865b546e6a5f08" rel="external">V4L/DVB (13040): V4L2: Add a v4l2-subdev (soc-camera) driver for OmniVision OV9640 sensor</a></li><li><a href="http://git.kernel.org/linus/aa15c0a347be6d5d16c557ed5b6b72345be48bdd" rel="external">V4L/DVB (13042): Add NEC protocol to firmware v1.2 handler</a></li><li><a href="http://git.kernel.org/linus/4c5128b30dc079d625bd109a94d5937d14f93ece" rel="external">V4L/DVB (13043): Add support for Pixelview SBTVD IR</a></li><li><a href="http://git.kernel.org/linus/8a378e8543f044b3e54ddbbb03c349bf054fcedf" rel="external">V4L/DVB (13052): DiB0700: EvolutePC TvWay+ USB ISDB-Tb fullseg device support</a></li><li><a href="http://git.kernel.org/linus/486ba12b7ae1edd5549494ae1cbfaa4794d1af5a" rel="external">V4L/DVB (13054): af9015: add USB ID for KWorld PlusTV DVB-T PCI Pro Card (DVB-T PC160-T)</a></li><li><a href="http://git.kernel.org/linus/641342dde7f9cbfcc6b9f6c890c90f99edcae6ca" rel="external">V4L/DVB (13056): af9015: add LeadTek Y04G0051 remote buttons</a></li><li><a href="http://git.kernel.org/linus/e1a7ff84a4c26893ffca19c1c35d008caa89bfde" rel="external">V4L/DVB (13057): af9015: add MSI DIGIVOX mini III remote</a></li><li><a href="http://git.kernel.org/linus/d7009cdc286d7c9714b357b0e85b3fcbbf9e03a4" rel="external">V4L/DVB (13075): xc5000: add FM radio support</a></li><li><a href="http://git.kernel.org/linus/f91cb65b94114f30cf43738ff923f272e4f2ae13" rel="external">V4L/DVB (13077): em28xx: Add support for new variant of KWorld 2800d</a></li><li><a href="http://git.kernel.org/linus/ec994d0505fc3dde5f46203602c76b5%3D" rel="external">V4L/DVB (13078): em28xx: fix support for Terratec Cinergy T XS (005e)</a></li><li><a href="http://git.kernel.org/linus/2930992c40ad9c665e2e6e2b8870d3f56428a83d" rel="external">V4L/DVB (13080): saa7134: add support for the digital side of the Behold X7</a></li><li><a href="http://git.kernel.org/linus/f56db93cef5d368b4fa5db49b68bc4ab0b20c4fd" rel="external">V4L/DVB (13084): v4l2-chip-ident: Add ID&#39;s needed for the cx23885 and cx25840 modules</a></li><li><a href="http://git.kernel.org/linus/74618244003a5a9e11240af8c5795ae747d9a2e0" rel="external">V4L/DVB (13085): cx23885: Fix support for v4l2-dbg access to CX2388[578] and CX23417 regs</a></li><li><a href="http://git.kernel.org/linus/29f8a0a50ac32ac4bc1937dcfdf8de6c406a5f10" rel="external">V4L/DVB (13086): cx23885: Add skeleton v4l2_subdev for the CX23888 integrated IR controller</a></li><li><a href="http://git.kernel.org/linus/c6b7053bbc3b1ec556780327cef0d0463e1537ea" rel="external">V4L/DVB (13091): cx23885: Enable HVR-1850 CX23888 A/V core to get VID_CLK running for IR</a></li><li><a href="http://git.kernel.org/linus/1a0b9d89c62ddf0aed12798686fe452e7e97de42" rel="external">V4L/DVB (13097): cx23885: Complete CX23888 IR subdev implementation for Rx Gitweb: http://git.kernel.org/linus/1a0b9d89c62ddf0aed12798686fe452e7e97de42 almost for Tx</a></li><li><a href="http://git.kernel.org/linus/dbda8f701abb0e4693a30e9bef4a2301d1c8ea80" rel="external">V4L/DVB (13100): cx23885: Add IR input keypress handling and enable for the HVR-1850</a></li><li><a href="http://git.kernel.org/linus/b450b92e162a454b82fea6373c83e447e28ce4d6" rel="external">V4L/DVB (13108): tda8290: enable deemphasis_50 module parameter</a></li><li><a href="http://git.kernel.org/linus/518c8df77c21b7d1690dd8b96eb0e54c4ec1c9c1" rel="external">V4L/DVB (13116): gspca - ov519: Webcam 041e:4067 added.</a></li><li><a href="http://git.kernel.org/linus/8f37cf25badd0ba9de7cd05c3f1d5362607c1bf9" rel="external">V4L/DVB (13130): soc-camera: add a new driver for the RJ54N1CB0C camera sensor from Sharp</a></li><li><a href="http://git.kernel.org/linus/d8d8622552088ca94fab4e4997f948514d0bdc27" rel="external">V4L/DVB (13134): Add support for TBS-likes remotes</a></li><li><a href="http://git.kernel.org/linus/9d2ba7ad802300d6a1830df9268d8ba478c66a18" rel="external">V4L/DVB (13135): Add support for TeVii remotes</a></li><li><a href="http://git.kernel.org/linus/930bf78c20187f3cbbf0775cd317616c6b681a8a" rel="external">V4L/DVB (13137): gspca_mr97310a: Add controls for vga cams with sensor type 0</a></li><li><a href="http://git.kernel.org/linus/635118d5b19c4ad562d425a3f3491c7%3D" rel="external">V4L/DVB (13144): gspca_ov519: Add support for OV2610 and OV3610 sensors</a></li><li><a href="http://git.kernel.org/linus/b46aaa02648cd8c1ebc20191304e2f6a2382d04c" rel="external">V4L/DVB (13145): gscpa_ov519: add support for the ovfx2 bridge</a></li><li><a href="http://git.kernel.org/linus/663a419203cc9690d16502be509ffb8acc40552a" rel="external">V4L/DVB (13149): uvcvideo: Add a new UVC_TRACE_VIDEO trace level</a></li><li><a href="http://git.kernel.org/linus/b232a012adfea9f535702e8296ea6b76e691f436" rel="external">V4L/DVB (13155): uvcvideo: Add a module parameter to set the streaming control timeout</a></li><li><a href="http://git.kernel.org/linus/6dea3830d8a596345c9d498e346e2bde1546d0ac" rel="external">V4L/DVB (13159): DocBook/frontend: use cross references for ioctls</a></li><li><a href="http://git.kernel.org/linus/9ca2bdaa765a88fa151172aa30a133b0745915ba" rel="external">V4L/DVB (13160): DocBook/Makefile: add linux/dvb/frontend.h header file</a></li><li><a href="http://git.kernel.org/linus/603c0d80b4ff59487af33477e2ac7be113538161" rel="external">V4L/DVB (13162): Docbook/dvb: add missing specs for FE_DISHNETWORK_SEND_LEGACY_CMD ioctl</a></li><li><a href="http://git.kernel.org/linus/131db3a1acbd947a9c3257b95ee860a58ce0dffa" rel="external">V4L/DVB (13164): DocBook/dvb: Starts documenting DVBS2API ioctls</a></li><li><a href="http://git.kernel.org/linus/e3c6e1aaa5db7822524f5b1355960fd732910068" rel="external">V4L/DVB (13168): Add support for Asus Europa Hybrid DVB-T card (SAA7134 SubVendor ID: 0x1043 Device ID: 0x4847)</a></li><li><a href="http://git.kernel.org/linus/d31242943a73aba0e5cfd0ea674b5e6%3D" rel="external">V4L/DVB (13173): adv7180: Support for getting input status</a></li><li><a href="http://git.kernel.org/linus/c277b60a08fe9e201656528b3f5cd35%3D" rel="external">V4L/DVB (13174): adv7180: Support for setting input status</a></li><li><a href="http://git.kernel.org/linus/42752f7a3f4afbabb513d5769c590e9%3D" rel="external">V4L/DVB (13176): adv7180: Support checking standard via interrupts</a></li><li><a href="http://git.kernel.org/linus/eea85b0a629970d462481a80e1d45f4%3D" rel="external">V4L/DVB (13177): radio: Add support for TEF6862 tuner</a></li><li><a href="http://git.kernel.org/linus/a511ba947600ae263f8c29c86020ba66a901d3e5" rel="external">V4L/DVB (13178): gspca: Add support for Winbond W9967CF and W9968CF camera&#39;s</a></li><li><a href="http://git.kernel.org/linus/79b359025d57969decb465973f7c0ea195009007" rel="external">V4L/DVB (13181): gspca w9968cf: Add support for JPEG compression</a></li><li><a href="http://git.kernel.org/linus/21f1b932dbcc5ed18444e6995aeb856e583804ae" rel="external">V4L/DVB (13183): gspca: add stv0680 subdriver</a></li><li><a href="http://git.kernel.org/linus/36a91879d85396ea6470d3a5bde8287e40b5a0e9" rel="external">V4L/DVB (13187): au8522: add support for saturation and hue controls</a></li><li><a href="http://git.kernel.org/linus/fdd1dd1d246e14dacd8fb0bf842828b03bed2481" rel="external">V4L/DVB (13196): gspca - gl860: add flip/mirror for OV2640</a></li><li><a href="http://git.kernel.org/linus/184e769f93e734ced24c948ea02e3d541c45c766" rel="external">V4L/DVB (13204): saa7134: add support for the Leadtek DTV1000S</a></li><li><a href="http://git.kernel.org/linus/fb29ab96982baba57b03636e2a894c0d0acd197e" rel="external">V4L/DVB (13206): cx25840: add component support</a></li><li><a href="http://git.kernel.org/linus/dac65fa169ebf9fb1bd488385c62b5dd0c71771c" rel="external">V4L/DVB (13207): cx23885: add component input type</a></li><li><a href="http://git.kernel.org/linus/bc1548adbee02899c7db5cd045bb0d799b220dce" rel="external">V4L/DVB (13209): cx23885: card mygica x8506 add analog video input support</a></li><li><a href="http://git.kernel.org/linus/6f0d8c020ecff4acb959627109d3b81ded211b70" rel="external">V4L/DVB (13211): cx23885: card Mygica X8506 analog TV support</a></li><li><a href="http://git.kernel.org/linus/065b6f7a34ec5628e0b1243bfc4214cb5f53d429" rel="external">V4L/DVB (13242): gspca_mr97310a: Add minimum clock divider control</a></li><li><a href="http://git.kernel.org/linus/8ac246cb8fc880cb8f438ab7ded454207cc8170d" rel="external">V4L/DVB (13243): gscpa_mr97310a: Add Trust Spyc@m 100 USB ID</a></li><li><a href="http://git.kernel.org/linus/56e93ed9cff06e258cff8815fde31cd61d0a6d5a" rel="external">V4L/DVB (13249): gspca - pac7311: Webcam 093a:2628 added.</a></li><li><a href="http://git.kernel.org/linus/721ecbcbea61df76490b3ba03c7dded7134e628c" rel="external">V4L/DVB (13250): gspca - zc3xx: Add some delays and warn on i2c errors.</a></li><li><a href="http://git.kernel.org/linus/0700adec9efec3136fa44d90f064c9227817f37b" rel="external">V4L/DVB (13260): saa7134: add support for Leadtek Winfast DTV-1000S remote control</a></li><li><a href="http://git.kernel.org/linus/26b9d6c0b0e91c84b4713da5abd16baef3963d33" rel="external">V4L/DVB (13271): TS speed check. Logging transport stream speed in Kbits per second</a></li><li><a href="http://git.kernel.org/linus/c86c82b74f800486ede57fdd5a4fa77d86368861" rel="external">V4L/DVB (13297): dib0700_devices: EvolutePC TvWay+ USB ISDB-Tb remote control support</a></li><li><a href="http://git.kernel.org/linus/3bc766ad374d04349ba09bd93f51980ad29d11c3" rel="external">V4L/DVB (13308): uvcvideo: Add support for MSI StarCam 370i webcams</a></li><li><a href="http://git.kernel.org/linus/56205cc0dd703be70b4ea1138a7e774e058d79fa" rel="external">V4L/DVB (13323): gspca - zc3xx: Adjust the exchanges of sensors mi0360soc and pb0330.</a></li><li><a href="http://git.kernel.org/linus/f57b17c3956f2e1e70f63dd2ed8088b582f3915e" rel="external">V4L/DVB (13328): em28xx: Add chip ID for em2800</a></li><li><a href="http://git.kernel.org/linus/873688cd30294412e185ba39f8487e3eed0f692d" rel="external">V4L/DVB (13334): stv6110: add configurable gain</a></li><li><a href="http://git.kernel.org/linus/46960eea9c0f7abb3a0a65276939762b97eac337" rel="external">V4L/DVB (13338): stv0900: big rework to support cut 3.0.</a></li><li><a href="http://git.kernel.org/linus/ab7134f1bd26a547a51c36dd44c55b15b3e15a6f" rel="external">V4L/DVB (13339): stv0900: big rework to support cut 3.0.</a></li><li><a href="http://git.kernel.org/linus/1e0c397d5ee261b4d855bf38c1e9987caf0e37ca" rel="external">V4L/DVB (13340): stv0900: big rework to support cut 3.0.</a></li><li><a href="http://git.kernel.org/linus/a3a4f7e167e77066b0b98b8f056efcda2d302f97" rel="external">V4L/DVB (13341): stv0900: big rework to support cut 3.0.</a></li><li><a href="http://git.kernel.org/linus/aee0b24c05f6e9615115748a8ea5042d8ee0e6a0" rel="external">V4L/DVB (13347): cx23885: add digital television support for Hauppauge WinTV-HVR1290</a></li><li><a href="http://git.kernel.org/linus/7fec6fee56def62a53e3bc4db5baf6bca12c3474" rel="external">V4L/DVB (13349): cx23885: Enable IR input keypress handling for the Hauppauge WinTV HVR-1290</a></li><li><a href="http://git.kernel.org/linus/a15c7b42b2b8eda719920e93b81be031f2e0b01b" rel="external">V4L/DVB (13363): ec100: add new driver for E3C EC100 DVB-T demodulator</a></li><li><a href="http://git.kernel.org/linus/2bf290be4f3ef11889026d750244cc3bd1164974" rel="external">V4L/DVB (13364): ec168: add new driver for E3C EC168 DVB USB</a></li><li><a href="http://git.kernel.org/linus/5232263a7daa1247fe4a30579c296ddccfeeb7e6" rel="external">V4L/DVB (13368): af9015: support for Sveon STV20 Tuner USB DVB-T HDTV</a></li><li><a href="http://git.kernel.org/linus/95963cbcd0ee00026cc34ba84906ee4aa2029f4d" rel="external">V4L/DVB (13373): Maxium MAX2165 silicon tuner</a></li><li><a href="http://git.kernel.org/linus/ec27b6aafb1796a09aad401143f70ad079421ca4" rel="external">V4L/DVB (13374): AltoBeam ATBM8830 GB20600-2006(DMB-TH) demodulator</a></li><li><a href="http://git.kernel.org/linus/ea5697fe9ed6a1d534de436eff3138041e3c8aa9" rel="external">V4L/DVB (13375): cx23885: Add support for Mygica X8558Pro DMB-TH</a></li><li><a href="http://git.kernel.org/linus/b18bd1d8806c0982c7835dcb58a27c4e9005e4fb" rel="external">V4L/DVB (13376): cx-usb: add Mygica D689 DMB-TH USB support</a></li><li><a href="http://git.kernel.org/linus/265a8098e75e156985abfaac250ee4f%3D" rel="external">V4L/DVB (13385): gspca - pac7302: Add red and blue balance control.</a></li><li><a href="http://git.kernel.org/linus/23fbee6f88d59b4edca0855242d55e5b7cfc2401" rel="external">V4L/DVB (13388): gspca - pac7302: Add white balance control.</a></li><li><a href="http://git.kernel.org/linus/87918334792a4d8a73b0511466b77bd6aa055db3" rel="external">V4L/DVB (13400): firedtv: port to new firewire core</a></li><li><a href="http://git.kernel.org/linus/b699c2712b1ddcc3ef4491adde00a47a880fde97" rel="external">V4L/DVB (13407): Add Prof 7301 PCI DVB-S2 card</a></li><li><a href="http://git.kernel.org/linus/89b3d78d153a049924eb0da92caf55dc1e0f5d75" rel="external">V4L/DVB (13420): gspca - doc: Change the name of some webcams.</a></li><li><a href="http://git.kernel.org/linus/189d92af707ead6aa4a3e14511662462e8e956e2" rel="external">V4L/DVB (13422): gspca - ov534: ov772x changes from Richard Kaswy.</a></li><li><a href="http://git.kernel.org/linus/9018f6c3a22ef2d7413da17813312d781163d950" rel="external">V4L/DVB (13438): zr364xx: add support for Trust Powerc@m 910Z</a></li><li><a href="http://git.kernel.org/linus/23bff27aaf81f58a042ee2c9c58c1881635703c3" rel="external">V4L/DVB (13440): ivtv: Update the cards definitions to add another AVerMedia M113 variant</a></li><li><a href="http://git.kernel.org/linus/e45e8f5cee75b0559ce1ca7007b4963b91910fa8" rel="external">V4L/DVB (13441): ivtv: Added FM radio support to Avermedia AVerTV MCE 116 Plus card</a></li><li><a href="http://git.kernel.org/linus/f412d36a8c9f8e40e057b71e80d534ac388e903e" rel="external">V4L/DVB (13442): ivtv: Add module parameter to adjust I2C SCL clock period per board</a></li><li><a href="http://git.kernel.org/linus/ad2fe2d48812029b0b674594f297d0723f7c6e8f" rel="external">V4L/DVB (13444): ivtv: Add explicit IR controller initialization for the AVerTV M116</a></li><li><a href="http://git.kernel.org/linus/7ce5c41db3672c8b4419b16d9b3ac1ccf11a1445" rel="external">V4L/DVB (13446): ivtv: Add more explicit detection of known IR devices for Hauppauge cards</a></li><li><a href="http://git.kernel.org/linus/47a50307982b4a3de2d7270c28527c3a360269bf" rel="external">V4L/DVB (13460): v4l2-spec: add missing V4L2-PIX-FMT-STV0680 description.</a></li><li><a href="http://git.kernel.org/linus/e53a70b4725f0a5e10e659c8352696548b9b9478" rel="external">V4L/DVB (13464): Davinci VPFE Capture: add i2c adapter id in platform data</a></li><li><a href="http://git.kernel.org/linus/85213630731605503c8fd4df9bf06beefb2cc7c4" rel="external">V4L/DVB (13467): V4L2: Added CID&#39;s V4L2_CID_ROTATE/BG_COLOR</a></li><li><a href="http://git.kernel.org/linus/d73bfc5fe625f6962d0ced84066e201249f14e53" rel="external">V4L/DVB (13469): Davinci VPFE Capture: Add support for Control ioctls</a></li><li><a href="http://git.kernel.org/linus/d8008562379b927758ca08eded1508c68d9beb4e" rel="external">V4L/DVB (13470): V4L2: Add Capability and Flag field for Chroma Key</a></li><li><a href="http://git.kernel.org/linus/a4834cef185fbe73f26c864fe38badc4f890afb7" rel="external">V4L/DVB (13471): v4l2 doc: Added FBUF_CAP_SRC_CHROMAKEY/FLAG_SRC_CHROMAKEY</a></li><li><a href="http://git.kernel.org/linus/b8c8a5bf833db5ad80266a6a9e5ad496ab01d434" rel="external">V4L/DVB (13489): gspca - sonixj: Add the sensor po1030.</a></li><li><a href="http://git.kernel.org/linus/c22c4a20a6ac7b10e43eab6963f941795c5e92aa" rel="external">V4L/DVB (13490): gspca - ov534: Add controls for sensor ov965x.</a></li><li><a href="http://git.kernel.org/linus/09ea33e5c696958e8b1ae6d5ab184476b16592f1" rel="external">V4L/DVB (13493): TeVii S470 and TBS 6920 fixes</a></li><li><a href="http://git.kernel.org/linus/bce039c099e97b07534518b5f3c0ce31b1606ff6" rel="external">V4L/DVB (13502): uvcvideo: Add support for Genius eFace 2025 webcams</a></li><li><a href="http://git.kernel.org/linus/694a101e6acb865f5405a95c358eea43c813cf24" rel="external">V4L/DVB (13528): em28xx: add support for em2800 VC211A card</a></li><li><a href="http://git.kernel.org/linus/ef53a1159dfcdc1fecf5adb5b8d26803f194c09b" rel="external">V4L/DVB (13532): ir-common: Add infrastructure to use a dynamic keycode table</a></li><li><a href="http://git.kernel.org/linus/35d1988c6e19db3d4240e2a60c71b3a13abf0781" rel="external">V4L/DVB (13535): ir-common: Add a hauppauge new table with the complete RC5 code</a></li><li><a href="http://git.kernel.org/linus/f6fc50494027e913ff0159e43c593cd75f35ec7a" rel="external">V4L/DVB (13538): ir-common: Use a dynamic keycode table</a></li><li><a href="http://git.kernel.org/linus/7fee03e487e87a196deb5602ee3c7676511995c9" rel="external">V4L/DVB (13540): ir-common: Cleanup get key evdev code</a></li><li><a href="http://git.kernel.org/linus/e97f4677961f68e29bd906022ebf60a6df7f530a" rel="external">V4L/DVB (13542): ir-keytable: Allow dynamic table change</a></li><li><a href="http://git.kernel.org/linus/d30a3fe89635324397c9cf5802f18f11a49ace17" rel="external">V4L/DVB (13543): ir-common: Associate a table with a given protocol type</a></li><li><a href="http://git.kernel.org/linus/4039ff28a501cf6b9fc2b6a2c2b28476d7fa14cd" rel="external">V4L/DVB (13544): ir-keymaps: mark the new rc5 hauppauge with IR_TYPE_RC5</a></li><li><a href="http://git.kernel.org/linus/1bad429e81f9a9ffa01c4158e6d1b1a3e06d9886" rel="external">V4L/DVB (13545): em28xx: properly select IR protocol based on the IR table</a></li><li><a href="http://git.kernel.org/linus/cda4303f555316930a219cd7c03a1925526145f0" rel="external">V4L/DVB (13546): ir-keymaps: Add table for Terratec Cinergy XS FM</a></li><li><a href="http://git.kernel.org/linus/eac8ea536aded07004bde917f05a2329902c64b0" rel="external">V4L/DVB (13549): v4l: Add video_device_node_name function</a></li><li><a href="http://git.kernel.org/linus/fe2b6032513099b82cd19ef8da5050f02a18d3ec" rel="external">V4L/DVB (13559): gspca - pac7302: Some webcams are upside-down by default.</a></li><li><a href="http://git.kernel.org/linus/116dc5c50aff62064bfcceaa15abf44e9277578a" rel="external">V4L/DVB (13562): gspca - doc: Update webcam list.</a></li><li><a href="http://git.kernel.org/linus/20d15a200d34cfb7141fb4558895d7d5233db84b" rel="external">V4L/DVB (13569): smsusb: add autodetection support for five additional Hauppauge USB IDs</a></li><li><a href="http://git.kernel.org/linus/007701e2c4de94109864c8e85e39b6d8fc474170" rel="external">V4L/DVB (13572): v4l2-spec: Digital Video Timings API documentation</a></li><li><a href="http://git.kernel.org/linus/b33f5f8af3fabe6a080c9d06f8f3184a4de3f3c2" rel="external">V4L/DVB (13573): v4l2-spec: updated revision history, updated version to 2.6.33.</a></li><li><a href="http://git.kernel.org/linus/4bf2c5c30eb50e4d9d9afb4565829ed0e0582d91" rel="external">V4L/DVB (13579): PATCH: better support for INTUIX DVB stick boot</a></li><li><a href="http://git.kernel.org/linus/e414753c8ce5fb0bd81155406efaefe57f374571" rel="external">V4L/DVB (13580): Add support for PCTV 74e (Pinnacle) + fix USB vendor IDs</a></li><li><a href="http://git.kernel.org/linus/03245a5ee69a5faa99b020fe1aca9bafe10c46a9" rel="external">V4L/DVB (13583): DiB8090: Add the DiB0090 tuner driver and STK8096GP-board</a></li><li><a href="http://git.kernel.org/linus/acc5c9ee393952c00eb7fab8bdd529d45226f6ed" rel="external">V4L/DVB (13586): DiB0700: Add parameter to change the buffer size</a></li><li><a href="http://git.kernel.org/linus/d995a18733a683c1c086a4d48315976f8c25d89b" rel="external">V4L/DVB (13591): add support for IR on FlyDVB Trio (saa7134)</a></li><li><a href="http://git.kernel.org/linus/fe2137dd4e6e4b2f5e758765d5305e8dbb0d931c" rel="external">V4L/DVB (13600): radio-si470x: support RDS on si470x i2c driver</a></li><li><a href="http://git.kernel.org/linus/d1471f02dfb5b3424ee3afb6459d8cb97730af76" rel="external">V4L/DVB (13601): radio-si470x: support PM functions</a></li><li><a href="http://git.kernel.org/linus/0a25f3b292c5c70de80d2b1f1cf3f5b9aae91b86" rel="external">V4L/DVB (13602): bttv: fix MODULE_PARM_DESC for i2c_debug and i2c_hw</a></li><li><a href="http://git.kernel.org/linus/4b8303747474033d6d73828607eafab77c620d96" rel="external">V4L/DVB (13608): radio-sf16fmi: fix mute, add SF16-FMP to texts</a></li><li><a href="http://git.kernel.org/linus/67cabf503cd0ad7473cf1856f9c9bb6320098be6" rel="external">V4L/DVB (13609): radio-sf16fmi: add autoprobing</a></li><li><a href="http://git.kernel.org/linus/e27d38112eb727df189a9ebf560aa104cb102253" rel="external">V4L/DVB (13612): IR: Move common IR code to drivers/media/IR</a></li><li><a href="http://git.kernel.org/linus/446e4a64d2f6efddc63a47169ba3c8037b620307" rel="external">V4L/DVB (13613): IR: create ir-core module</a></li><li><a href="http://git.kernel.org/linus/422eaac5d5367bab71fa2cc33393b2ea894498fe" rel="external">V4L/DVB (13619): v4l2-spec: Adds EBUSY error code for S_STD and QUERYSTD ioctls</a></li><li><a href="http://git.kernel.org/linus/35b23b522696118b5ec5b84ba6846ee96aa2743e" rel="external">V4L/DVB (13651): sh_mobile_ceu_camera: document the scaling and cropping algorithm</a></li><li><a href="http://git.kernel.org/linus/6d74e5f361bdacfdcfe14220868d562368aaadc2" rel="external">V4L/DVB (13652): tw9910: Add revision control</a></li><li><a href="http://git.kernel.org/linus/607e5ad8d596495341fa0a13e0a23121ee6053b6" rel="external">V4L/DVB (13655): tw9910: Add power control</a></li><li><a href="http://git.kernel.org/linus/faa582610d87edf3ae1d07710a8f7e11c105686c" rel="external">V4L/DVB (13657): tw9910: Add revision control to tw9910_set_hsync</a></li><li><a href="http://git.kernel.org/linus/9a74251d8bee7a25fee89a0be3ccea73e01c1a05" rel="external">V4L/DVB (13658): v4l: add a media-bus API for configuring v4l2 subdev pixel and frame formats</a></li><li><a href="http://git.kernel.org/linus/a6b5f2008a3d54b5f5350a01121b718dd6bfead7" rel="external">V4L/DVB (13661): rj54n1cb0c: Add cropping, auto white balance, restrict sizes, add platform data</a></li><li><a href="http://git.kernel.org/linus/70da92e5740a6ab8bfe0db826c345c85e795f109" rel="external">V4L/DVB (13669): tw9910: Add sync polarity support</a></li><li><a href="http://git.kernel.org/linus/858424b998ae112b2e04f4584bcdc6b0362a714a" rel="external">V4L/DVB (13670): soc-camera: Add mt9t112 camera driver</a></li><li><a href="http://git.kernel.org/linus/141cc35e2d2941fcf4cfc78a75c75f7fc083d25f" rel="external">V4L/DVB (13678): Add support for yet another DvbWorld, TeVii and Prof USB devices</a></li><li><a href="http://git.kernel.org/linus/49b14650ba5bf80234cb1984fd8396aff03430ce" rel="external">V4L/DVB (13680a): DocBook/media: copy images after building HTML</a></li><li><a href="http://git.kernel.org/linus/5bf583473813530c1bf82051a35fac8d5045f4f7" rel="external">V4L/DVB (13680b): DocBook/media: create links for included sources</a></li><li><a href="http://git.kernel.org/linus/41e840b13e111ba18b138d055ddd250bd5ad5e39" rel="external">V4L/DVB (13699): [Mantis, MB86A16] Initial checkin: Mantis, MB86A16</a></li><li><a href="http://git.kernel.org/linus/51d20db8bb9c5a14ac2320664289f13bd52625c6" rel="external">V4L/DVB (13720): [Mantis/Terratec Cinergy C] Add support for the Terratec Cinergy C PCI</a></li><li><a href="http://git.kernel.org/linus/b2eb1312faa26703e71b7b3945c8773213e9ee49" rel="external">V4L/DVB (13723): [Mantis/VP-2040, Terratec Cinergy C] Add support for the Cinergy C, VP-2040 clone</a></li><li><a href="http://git.kernel.org/linus/873c8c25ebca50bd60e21784c4d442c4fecb8658" rel="external">V4L/DVB (13724): [Mantis/VP-1041] Initial support for Mantis VP-1041</a></li><li><a href="http://git.kernel.org/linus/35afca912ffb8ea5a060ff53a59266ccaa769c98" rel="external">V4L/DVB (13726): [Mantis/Skystar HD2] Add support for the Technisat Skystar HD2</a></li><li><a href="http://git.kernel.org/linus/ea30d81a9634cb4c13bbef46877f0d7730c57552" rel="external">V4L/DVB (13748): [Mantis/VP-2040] Add support for VP-2040 (TDA10023 frontend based)</a></li><li><a href="http://git.kernel.org/linus/f5701b67767c6b81a035c9e2b539025f91d1e84d" rel="external">V4L/DVB (13783): [Mantis/Technisat Cablestar HD2] Add support for the Technisat Cablestar HD2</a></li><li><a href="http://git.kernel.org/linus/b3b961448f702339444036f94252ff2ba7a99feb" rel="external">V4L/DVB (13795): [Mantis/Hopper] Code overhaul, add Hopper devices into the PCI ID list</a></li><li><a href="http://git.kernel.org/linus/3e978a8284080d801d20cda377d9cf7c12fe68b9" rel="external">V4L/DVB (13797): [Mantis/Hopper/TDA665x] Large overhaul,</a></li><li><a href="http://git.kernel.org/linus/5cc60d61432f30b2d0777a15d050f6c0613887f5" rel="external">V4L/DVB (13880): gspca - m5602-s5k4aa: Add vflip quirk for the Amilo Xi 2428</a></li><li><a href="http://git.kernel.org/linus/19f8a6c37eead7e93660813c8873ab3e387ccb63" rel="external">V4L/DVB (13887): tda8290: add autodetection support for TDA8295c2</a></li></ul>
+<p><strong>Various Drivers</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/4eb174bee6f8623fed1af0072f1bebfc3b513a52" rel="external">ad525x_dpot: new driver for AD525x digital potentiometers</a></li><li><a href="http://git.kernel.org/linus/35c9049b27040d09461bc90928ad770be7ddf661" rel="external">Add OMAP spi100k driver</a></li><li><a href="http://git.kernel.org/linus/afd49a7e92851239c3edffae730cc27080bfab78" rel="external">ARM: NUC900: add RTC driver support for nuc910 and nuc920</a></li><li><a href="http://git.kernel.org/linus/30eaed053c9bced7a23624e4bab5602e5b85124f" rel="external">ARM: NUC900: Add spi driver support for nuc900</a></li><li><a href="http://git.kernel.org/linus/c30d7d2b9987e189bc6d5ec6635785b91a6ee81e" rel="external">cs5535: add a generic clock event MFGPT driver</a></li><li><a href="http://git.kernel.org/linus/5f0a96b044d8edaee20f4a32ef6c393599ca55f8" rel="external">cs5535-gpio: add AMD CS5535/CS5536 GPIO driver support</a></li><li><a href="http://git.kernel.org/linus/1ea3fa7bbfbe81cfbdcc35748a57c35f9b32c5d6" rel="external">cs5535-gpio: request function, mask &amp; names added</a></li><li><a href="http://git.kernel.org/linus/5327b9b83a9c45a3fcbcda224a2b02d9eea9f6bb" rel="external">Doc: use misc-devices/ dir for drivers</a></li><li><a href="http://git.kernel.org/linus/4d00928c1f02defc81afcc5cc6198581c4bd03e8" rel="external">drivers/misc: add driver for Texas Instruments DAC7512</a></li><li><a href="http://git.kernel.org/linus/80884094e34456887ecdbd107d40e72c4a40f9c9" rel="external">gpio: adp5588-gpio: new driver for ADP5588 GPIO expanders</a></li><li><a href="http://git.kernel.org/linus/0769746183caff9d4334be48c7b0e7d2ec8716c4" rel="external">gpiolib: add support for changing value polarity in sysfs</a></li><li><a href="http://git.kernel.org/linus/563447d7eb04c9b382f90a132be126a21a635647" rel="external">gru: add additional GRU statistics</a></li><li><a href="http://git.kernel.org/linus/b8229bedd1f39799dc83d5c0dad0bd9cd3e5f44c" rel="external">gru: add debug option for cache flushing</a></li><li><a href="http://git.kernel.org/linus/74ccd09526a0254c362adcc6c862354d724aa803" rel="external">gru: add hugepage support</a></li><li><a href="http://git.kernel.org/linus/6c9620c64be3920487c0533e0ab6724dad565d59" rel="external">gru: support 64-bit GRU addresses</a></li><li><a href="http://git.kernel.org/linus/ed4a10b47ff1e4059157f33248a62d9551ced786" rel="external">leds: Add driver for ADP5520/ADP5501 MFD PMICs</a></li><li><a href="http://git.kernel.org/linus/a8dd18feb68ef0c5d3ec02f7d198740ddd7e8fd3" rel="external">leds: Add driver for LT3593 controlled LEDs</a></li><li><a href="http://git.kernel.org/linus/d4cc6a2eee98faebf2c7d3ebc4b35541c1d47d21" rel="external">leds: Add LED class driver for regulator driven LEDs.</a></li><li><a href="http://git.kernel.org/linus/a328e95b82c1b8483ae5ab2f809140664d7f6c92" rel="external">leds: LED driver for Intel NAS SS4200 series (v5)</a></li><li><a href="http://git.kernel.org/linus/d33c861e71c57dd69d39d88b84a672adf86a2144" rel="external">MAINTAINERS: add SPI co-maintainer.</a></li><li><a href="http://git.kernel.org/linus/b8d4e2ce60b63294e3408d1c5211b8a8dc4af095" rel="external">mpc52xx_spi: add gpio chipselect</a></li><li><a href="http://git.kernel.org/linus/7677f33f0a813e98612dce97d5342c1f5046878a" rel="external">pcf50633: Add ac power supply class to the charger</a></li><li><a href="http://git.kernel.org/linus/be0e2d3e802908e2a3ca620ba8f49ecab87982b2" rel="external">regulator: add 88PM8607 PMIC driver</a></li><li><a href="http://git.kernel.org/linus/27f37e4bfed803be338dcc78845d4a67eefb40a0" rel="external">regulator: add driver for MAX8660/8661</a></li><li><a href="http://git.kernel.org/linus/441a450554dada1c59fc06fdf068cb0eeba53c6d" rel="external">regulator: Add support for twl6030 regulators</a></li><li><a href="http://git.kernel.org/linus/4f9b9bba1dd1489909f4cb339233ced979663297" rel="external">rtc: Add an RTC driver for the Oki MSM6242</a></li><li><a href="http://git.kernel.org/linus/4f672ce298e1b53a2f16571ef87810d0f73bfb1f" rel="external">rtc: Add an RTC driver for the Ricoh RP5C01</a></li><li><a href="http://git.kernel.org/linus/1ce7c83fa91d27bd0e195e8b2ff10d3a1caeb0d6" rel="external">rtc: add driver for BQ32000 I2C RTC</a></li><li><a href="http://git.kernel.org/linus/43299f285937c907abcdd987c670c755194943cc" rel="external">rtc: add Freescale MC13783 RTC driver</a></li><li><a href="http://git.kernel.org/linus/a6b49ffd2d4bba53ad172b1e78ee51fe15ab195e" rel="external">rtc: Add twl6030 RTC support</a></li><li><a href="http://git.kernel.org/linus/8cfde8c1df31724f881de1a37f878ccbba4f178f" rel="external">rtc: make rtc-omap driver ioremap its register space</a></li><li><a href="http://git.kernel.org/linus/aeedacaeaf9c02dddfeb6af87bef80c96f9050cb" rel="external">rtc-mv: add support for Alarm</a></li><li><a href="http://git.kernel.org/linus/230d42d422e7b69fc9b270f41c69e63b54572e26" rel="external">spi: Add s3c64xx SPI Controller driver</a></li><li><a href="http://git.kernel.org/linus/e24c745272072fd2abe55209f1949b7b7ee602a7" rel="external">spi: controller driver for Designware SPI core</a></li><li><a href="http://git.kernel.org/linus/87f673e9ca468b98da5677cf43abdd09945f449d" rel="external">spi-imx: Add mx25 support</a></li><li><a href="http://git.kernel.org/linus/4c1fba442960cfa2fd6333b9fec7d5b85c5fa29f" rel="external">spi_mpc8xxx: Add support for QE DMA mode and CPM1/CPM2 chips</a></li><li><a href="http://git.kernel.org/linus/bec0806cfec6ded1a7e097bb95279e521a796129" rel="external">spi_s3c24xx: add FIQ pseudo-DMA support</a></li><li><a href="http://git.kernel.org/linus/8051effcbced8478119167b93b0e9554cb82d28e" rel="external">spi: SuperH MSIOF SPI Master driver V2</a></li><li><a href="http://git.kernel.org/linus/7e11a0fb3b7ab83871b7a56c7a67c603283ec4b9" rel="external">tty: docs: serial/tty, add to ldisc methods</a></li><li><a href="http://git.kernel.org/linus/f53a2ade0bb9f2a81f473e6469155172a96b7c38" rel="external">tty: esp: remove broken driver</a></li><li><a href="http://git.kernel.org/linus/771669349e6cec0e29a18dc0b5a108e81b85d58c" rel="external">xilinx_spi: add a platform driver using the xilinx_spi common module.</a></li><li><a href="http://git.kernel.org/linus/c9da2e125588677d74324df5088149063d578e8f" rel="external">xilinx_spi: add support for the DS570 IP.</a></li></ul>
+<h3 class="subheading">Latecomers</h3>
+<p>The previous five parts of the Kernel Log mini series have already given a detailed overview of the many changes in of the Linux kernel. All of the major enhancements have already been mentioned there, as they entered the main development branch during the first phase of the development cycle. But some small, usually not quite as important changes that fall in the &quot;minor gems&quot; section, were late entries to the kernel – for completeness, we have included these changes in the following list.</p>
+<p>One of the latecomers was the &quot;Firmware download driver&quot; <a href="http://git.kernel.org/linus/9670d80a9a6e24725c4111bef5d6cc7786ad0dc5" rel="external">ath3k</a> for Atheros Bluetooth chips. Some others – including TCP_NODELAY-Support for CIFS, a new Mount Option for BTRFS and performance improvements for CFQ – can be found via following list:</p>
+<p><strong>Filesystems</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/a555f810af6d63ea5960abaed88e150ad95c3011" rel="external">Btrfs: Add mount -o compress-force</a> </li><li><a href="http://git.kernel.org/linus/6a5fa2362b628ee950080bef8895a6fb62f58ab4" rel="external">CIFS: Add support for TCP_NODELAY</a> </li></ul>
+<p><strong>Graphics</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/a32ed69d7bb3cd259d813d71281d62993b9a70fd" rel="external">drm/nouveau: Add module options to disable acceleration.</a></li></ul>
+<p><strong>Network</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/b81124696e6a47d5db02b2b3561d66d1392b0f2f" rel="external">wimax/i2400m: Add support for more i6x50 SKUs</a> </li><li><a href="http://git.kernel.org/linus/ad580db50ee8dccd069ffcd76d6f70fa6d4a62a8" rel="external">zd1211rw: adding 0409:0248 to supported device list</a></li><li><a href="http://git.kernel.org/linus/174b24963eaf96dc5e093502ee09639aed13eb2f" rel="external">rtl8187: Add new device ID</a></li></ul>
+<p><strong>Storage</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/1efe8fe1c2240acc476bed77740883df63373862" rel="external">cfq-iosched: Do not idle on async queues</a></li></ul>
+<p><strong>USB</strong></p>
+<ul><li><a href="http://git.kernel.org/linus/65e1ec6751b3eefee6d94161185e78736366126f" rel="external">USB: ftdi_sio: add device IDs (several ELV, one Mindstorms NXT)</a></li><li><a href="http://git.kernel.org/linus/bbcb8bbad52b8795912e8f02c2b319092b96078e" rel="external">USB: SIS USB2VGA DRIVER: support KAIREN&#39;s USB VGA adaptor USB20SVGA-MB-PLUS</a></li><li><a href="http://git.kernel.org/linus/1ebca9dad5abe8b2ed4dbd186cd657fb47c1f321" rel="external">USB: serial: add usbid for dell wwan card to sierra.c</a></li></ul>
+<h3 class="subheading">Latecomers(2)</h3>
+<p><a href="/news/item/Kernel-Log-Coming-in-2-6-33-Part-4-Architecture-and-virtualisation-929402.html" title="Kernel Log: Coming in 2.6.33 (Part 4) - Architecture and virtualisation – 12 February 2010, 15:51">Part four</a> of the &quot;Coming in 2.6.33&quot; Kernel Log mini series on architecture and virtualisation was missing a few links in the &quot;Minor gems&quot; section:</p>
+<ul><li><a href="http://git.kernel.org/linus/38938c879eb0c39edf85d5164aa0cffe2874304c" rel="external">Add support for GCC-4.5&#39;s __builtin_unreachable() to compiler.h (v2)</a></li><li><a href="http://git.kernel.org/linus/f01eb3640308c005d31b29d0a8bc2b7acb4e3f75" rel="external">[BKL] add &#39;might_sleep()&#39; to the outermost lock taker</a></li><li><a href="http://git.kernel.org/linus/d192c47f25daa98996c7eae543d8a27e41247ec2" rel="external">clockevents: Make tick_device_lock static</a></li><li><a href="http://git.kernel.org/linus/456b565cc52fbcdaa2e19ffdf40d9dd3b726d603" rel="external">core: Add kernel message dumper to call on oopses and panics</a></li><li><a href="http://git.kernel.org/linus/4251417484a1775ba5cbfe38c67e6d5af9615de4" rel="external">cpumask: don&#39;t recommend set_cpus_allowed hack in Documentation/cpu-hotplug.txt</a></li><li><a href="http://git.kernel.org/linus/aef9cb05247df3d7615773737beb4f83d78577bb" rel="external">debugobjects: Convert to raw_spinlocks</a></li><li><a href="http://git.kernel.org/linus/d75757abd01672608289dbed2755bdcf822fb592" rel="external">doc: Add documentation for bootloader_{type,version}</a></li><li><a href="http://git.kernel.org/linus/e3cc2226e99cfadbf300dde892c4a16d742a0856" rel="external">Doc: better explanation of procs_running</a></li><li><a href="http://git.kernel.org/linus/cb5a8b2c92febbed57126e1b8416dfd7607ff03d" rel="external">docs: large update to ioctl-number.txt</a></li><li><a href="http://git.kernel.org/linus/8e9b9362266dd16255473c080d846b13e27247bf" rel="external">Doc/stable rules: add new cherry-pick logic</a></li><li><a href="http://git.kernel.org/linus/8e9b9362266dd16255473c080d846b13e27247bf" rel="external">Doc/stable rules: add new cherry-pick logic</a></li><li><a href="http://git.kernel.org/linus/7de3369c14b67fe77d8b5f65171bb3a3b4f371ba" rel="external">doc: SubmitChecklist, add ioctls, remove OSDL reference</a></li><li><a href="http://git.kernel.org/linus/fb0bbb92d42d5bd0ab224605444efdfed06d6934" rel="external">Documentation: rw_lock lessons learned</a></li><li><a href="http://git.kernel.org/linus/006b4298f26984d514546fe4e53371761f66b643" rel="external">Documentation: update ring-buffer-design.txt</a></li><li><a href="http://git.kernel.org/linus/603c4ba96be998a8dd7a6f9b23681c49acdf4b64" rel="external">err.h: add helper function to simplify pointer error checking</a></li><li><a href="http://git.kernel.org/linus/239007b8440abff689632f50cdf0f2b9e895b534" rel="external">genirq: Convert irq_desc.lock to raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/8629ea2eaba8ca0de2e38ce1b4a825e16255976e" rel="external">hrtimer: Fix /proc/timer_list regression</a></li><li><a href="http://git.kernel.org/linus/ecb49d1a639acbacfc3771cae5ec07bed5df3847" rel="external">hrtimers: Convert to raw_spinlocks</a></li><li><a href="http://git.kernel.org/linus/b97e820ffffbf49e94ed60c9c26f1a54bccae924" rel="external">ipc/sem.c: add a per-semaphore pending list</a></li><li><a href="http://git.kernel.org/linus/d4212093dca95c1f52197017d969cc66d5d962aa" rel="external">ipc/sem.c: sem preempt improve</a></li><li><a href="http://git.kernel.org/linus/948c1e2521979c332b21b623414cf258150f214e" rel="external">kallsyms: remove deprecated print_fn_descriptor_symbol()</a></li><li><a href="http://git.kernel.org/linus/8a64f336bc1d4aa203b138d29d5a9c414a9fbb47" rel="external">kernel.h: add printk_ratelimited and pr_&lt;level&gt;_rl</a></li><li><a href="http://git.kernel.org/linus/06a7f711246b081afc21fff859f1003f1f2a0fbc" rel="external">kexec: premit reduction of the reserved memory size</a></li><li><a href="http://git.kernel.org/linus/86d4880313603810901f639ccb5c88ff13d4ad3c" rel="external">kfifo: add record handling functions</a></li><li><a href="http://git.kernel.org/linus/c1e13f25674ed564948ecb7dfe5f83e578892896" rel="external">kfifo: move out spinlock</a></li><li><a href="http://git.kernel.org/linus/45465487897a1c6d508b14b904dc5777f7ec7e04" rel="external">kfifo: move struct kfifo in place</a></li><li><a href="http://git.kernel.org/linus/7acd72eb85f1c7a15e8b5eb554994949241737f1" rel="external">kfifo: rename kfifo_put... into kfifo_in... and kfifo_get... into kfifo_out...</a></li><li><a href="http://git.kernel.org/linus/9ac6e44ee5caa5f0babfc87f2613e1296d2c2d11" rel="external">lib/vsprintf.c: add %pU to print UUID/GUIDs</a></li><li><a href="http://git.kernel.org/linus/9c1721aa4994f6625decbd915241f3a94ee2fe67" rel="external">locking: Cleanup the name space completely</a></li><li><a href="http://git.kernel.org/linus/e5931943d02bf751b1ec849c0d2ade23d76a8d41" rel="external">locking: Convert raw_rwlock functions to arch_rwlock</a></li><li><a href="http://git.kernel.org/linus/fb3a6bbc912b12347614e5742c7c61416cdb0ca0" rel="external">locking: Convert raw_rwlock to arch_rwlock</a></li><li><a href="http://git.kernel.org/linus/0199c4e68d1f02894bdefe4b5d9e9ee4aedd8d62" rel="external">locking: Convert __raw_spinfunctions to arch_spin*</a></li><li><a href="http://git.kernel.org/linus/445c89514be242b1b0080056d50bdc1b72adeb5c" rel="external">locking: Convert raw_spinlock to arch_spinlock</a></li><li><a href="http://git.kernel.org/linus/9828ea9d75c38fe3dce05d00566eed61c85732e6" rel="external">locking: Further name space cleanups</a></li><li><a href="http://git.kernel.org/linus/c2f21ce2e31286a0a32f8da0a7856e9ca1122ef3" rel="external">locking: Implement new raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/6beb000923882f6204ea2cfcd932e568e900803f" rel="external">locking: Make inlining decision Kconfig based</a></li><li><a href="http://git.kernel.org/linus/edc35bd72e2079b25f99c5da7d7a65dbbffc4a26" rel="external">locking: Rename __RAW_SPIN_LOCK_UNLOCKED to __ARCH_SPIN_LOCK_UNLOCKED</a></li><li><a href="http://git.kernel.org/linus/b7b40ade58e621851896aa261452df99d4e9d99b" rel="external">locking: Reorder functions in spinlock.c</a></li><li><a href="http://git.kernel.org/linus/6b6b4792f89346e47437682c7ba3438e6681c0f9" rel="external">locking: Separate rwlock api from spinlock api</a></li><li><a href="http://git.kernel.org/linus/ef12f10994281e2e44526fa0abf23fdd7d5bd87f" rel="external">locking: Split rwlock from spinlock headers</a></li><li><a href="http://git.kernel.org/linus/f5754bfd107b08edddaf871d676ec6fe0792d07a" rel="external">lockstat: Add usage info to Documentation/lockstat.txt</a></li><li><a href="http://git.kernel.org/linus/5ce45962b26ae867e98e60177f62f9695b49a936" rel="external">MAINTAINERS: new kbuild maintainer</a></li><li><a href="http://git.kernel.org/linus/cdec2e4265dfa09490601b00aeabd8a8d4af30f0" rel="external">memcg: coalesce charging via percpu storage</a></li><li><a href="http://git.kernel.org/linus/569b846df54ffb2827b83ce3244c5f032394cba4" rel="external">memcg: coalesce uncharge during unmap/truncate</a></li><li><a href="http://git.kernel.org/linus/9e1b9b80721661bd63b3662453767b22cd614fe7" rel="external">module: make MODULE_SYMBOL_PREFIX into a CONFIG option</a></li><li><a href="http://git.kernel.org/linus/97813f2fe77804a4464564c75ba8d8826377feea" rel="external">nohz: Allow 32-bit machines to sleep for more than 2.15 seconds</a></li><li><a href="http://git.kernel.org/linus/23fb064bb96f001ecb8682129f7ee1bc1ca691bc" rel="external">percpu: kill legacy percpu allocator</a></li><li><a href="http://git.kernel.org/linus/e625cce1b73fb38b74e5387226534f7bcbfc36fe" rel="external">perf_event: Convert to raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/1a6deaea3584fd7af1cad492b1fe0867060b45db" rel="external">pm_qos: clean up racy global &quot;name&quot; variable</a></li><li><a href="http://git.kernel.org/linus/e6fe07a014c7a3466dcd1a387a9ac04d84c2703c" rel="external">pm_qos: remove BKL</a></li><li><a href="http://git.kernel.org/linus/d9a3da0699b24a589b27a61e1a5b5bd30d9db669" rel="external">rcu: Add expedited grace-period support for preemptible RCU</a></li><li><a href="http://git.kernel.org/linus/64179861cb801eac4f00c79f39a29ea5ac9470d7" rel="external">rcu: Add synchronize_srcu_expedited() to the documentation</a></li><li><a href="http://git.kernel.org/linus/8bfb2f8e655b9d0c45fde679fcd5fd97e34513db" rel="external">rcu: Make RCU&#39;s CPU-stall detector be default</a></li><li><a href="http://git.kernel.org/linus/9b1d82fa1611706fa7ee1505f290160a18caf95d" rel="external">rcu: &quot;Tiny RCU&quot;, The Bloatwatch Edition</a></li><li><a href="http://git.kernel.org/linus/0edf1a683e499191b27a067956ae9f5fa6e046c6" rel="external">rcu: Update trace.txt documentation for blocked-tasks lists</a></li><li><a href="http://git.kernel.org/linus/bd58b430039435e4c981cf802b5b11d511d73abd" rel="external">rcu: Update trace.txt documentation to reflect recent changes</a></li><li><a href="http://git.kernel.org/linus/d209d74d52ab39dc071656533cac095294f70de7" rel="external">rtmutes: Convert rtmutex.lock to raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/fe841226bd954fba4fd79f037a876053fe9c3217" rel="external">sched: Convert cpupri lock to raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/1d615482547584b9a8bb6316a58fed6ce90dd9ff" rel="external">sched: Convert pi_lock to raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/0986b11b12ad2baed338385f79fd0dec58a23fc6" rel="external">sched: Convert rt_runtime_lock to raw_spinlock</a></li><li><a href="http://git.kernel.org/linus/3c7385b81f721f0e7648d5134afb2088b28f8c69" rel="external">scripts/get_maintainer.pl: add --roles and --rolestats</a></li><li><a href="http://git.kernel.org/linus/60db31ac11e2fa35b1c343e7182fb59452c4e52e" rel="external">scripts/get_maintainer.pl: support multiple VCSs - add mercurial</a></li><li><a href="http://git.kernel.org/linus/05ba4488a51edde95df3f89987fdcdbca7c3cebb" rel="external">scripts/package: add KBUILD_PKG_ROOTCMD variable</a></li><li><a href="http://git.kernel.org/linus/f84d49b218b7d4c6cba2e0b41f24bd4045403962" rel="external">signal: Print warning message when dropping signals</a></li><li><a href="http://git.kernel.org/linus/9f5a5621e78cf48d86682a71ceb3fcdbde38b222" rel="external">smp: Convert smplocks to raw_spinlocks</a></li><li><a href="http://git.kernel.org/linus/4c2aedc2543248c3fdc8c06c662b589d36c93bbb" rel="external">spi: Remove BKL from spidev_open</a></li><li><a href="http://git.kernel.org/linus/8a74770353d540d9b7641d22ea0401966f14cf2a" rel="external">sysctl: add missing comments</a></li><li><a href="http://git.kernel.org/linus/894d2491153a9f8270dbed21175d06fde4eba6c7" rel="external">sysctl drivers: Remove dead binary sysctl support</a></li><li><a href="http://git.kernel.org/linus/ab09203e302b6e526f6930f3e460064b0f253ae9" rel="external">sysctl fs: Remove dead binary sysctl support</a></li><li><a href="http://git.kernel.org/linus/da3f6f9b3e0d1e73975ca81ae124406bf1587d40" rel="external">sysctl: Introduce a generic compat sysctl sysctl</a></li><li><a href="http://git.kernel.org/linus/2bc4657c15e4a33d9a192579c7627a397dbcbebc" rel="external">sysctl ipc: Remove dead binary sysctl support code.</a></li><li><a href="http://git.kernel.org/linus/56992309ccbe71f4321ddd50ee2f76f91b412c1a" rel="external">sysctl kernel: Remove binary sysctl logic</a></li><li><a href="http://git.kernel.org/linus/a965cf946d38b0ff164a054477a91df70b0dd997" rel="external">sysctl: Neuter the generic sysctl strategy routines.</a></li><li><a href="http://git.kernel.org/linus/26a7034b40ba80f82f64fa251a2cbf49f9971c6a" rel="external">sysctl: Reduce sys_sysctl to a compatibility wrapper around /proc/sys</a></li><li><a href="http://git.kernel.org/linus/83ac201b4f06eb8aeb7ac93cf162651ba30e0b28" rel="external">sysctl: Remove dead code from sysctl_check</a></li><li><a href="http://git.kernel.org/linus/9e9868a7372afc60615e8e11db246a91a121654d" rel="external">sysfs: deprecated features are to help old tools not to confuse them</a></li><li><a href="http://git.kernel.org/linus/6f15fa50087c8317e353145319466afbeb27a75d" rel="external">sys: Remove BKL from sys_reboot</a></li><li><a href="http://git.kernel.org/linus/30ed1a79f5bf271d33e782afee3323582dcc621e" rel="external">this_cpu: Implement X86 optimized this_cpu operations</a></li><li><a href="http://git.kernel.org/linus/af901ca181d92aac3a7dc265144a9081a86d8f39" rel="external">tree-wide: fix assorted typos all over the place</a></li><li><a href="http://git.kernel.org/linus/c91d3376e5f4277173a22f0ef9989125c318bacb" rel="external">vsprintf: add %pR support for IRQ and DMA resources</a></li><li><a href="http://git.kernel.org/linus/fd95541e23e2c9acb1e38cd41fc0c7cc37fceb53" rel="external">vsprintf: add %pRt, %pRf to print struct resource details</a></li></ul>
+<p><em>For other articles on 2.6.33 and links to the rest of the &quot;Coming in 2.6.33 &quot; series, see </em><a href="/open/features/Linux-Kernel-2-6-33-tracking-890639.html" title="Linux Kernel 2.6.33 tracking – 21 December 2009, 10:18">The H&#39;s Kernel Log - 2.6.33 Tracking page</a><em>. New editions of Kernel Logs are also mentioned on </em><a href="http://identi.ca/kernellog2" rel="external">Identi.ca</a><em> and </em><a href="http://twitter.com/kernellog2" rel="external">Twitter</a><em> via &quot;@kernellog2&quot;. The Kernel Log author also posts updates about various topics on </em><a href="http://identi.ca/kernellogauthor" rel="external">Identi.ca</a><em> and </em><a href="http://twitter.com/kernellogauthor" rel="external">Twitter</a><em> via &quot;@kernellogauthor&quot;.</em></p>
+<p>(<a href="mailto:thl@ct.heise.de">thl</a>)</p>
+			<p>(<!--googleoff: index--><a class="noline" href="mailto:crve@h-online.com" title="Chris von Eitzen ">crve</a>)</p>		</div>
+
+		<div class="clear"></div>
+        
+	
+		<div class="prev_next">
+		
+			<a href="/open/news/item/NetBeans-6-9-to-require-Java-6-933317.html"><span class="laquo">«</span> previous</a><span class="pipe"> | </span>
+		
+		
+			<a href="/open/news/item/Top-25-Programming-Errors-list-updated-933535.html">next <span class="laquo">»</span></a>
+		
+		</div>
+	
+
+		<div class="news_option">Print Version | Send by email
+		 | Permalink: http://h-online.com/-931993
+		</div>
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-3-Tracking-1440083.html/from/related" title="Linux Kernel 3.3 Tracking">Linux Kernel 3.3 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-comment-The-obstacle-course-of-cooperation-1340020.html/from/related" title="Kernel comment: The obstacle course of cooperation">Kernel comment: The obstacle course of cooperation</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-2-6-39-Tracking-1219728.html/from/related" title="Linux Kernel 2.6.39 Tracking">Linux Kernel 2.6.39 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-updated-Radeon-drivers-mdadm-and-ALSA-1185791.html/from/related" title="Kernel Log: updated Radeon drivers, mdadm and ALSA">Kernel Log: updated Radeon drivers, mdadm and ALSA</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Broadcom-releases-open-source-wireless-driver-for-Linux-1076567.html/from/related" title="Broadcom releases open source wireless driver for Linux">Broadcom releases open source wireless driver for Linux</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/news/item/Kernel-Log-What-s-coming-in-2-6-28-Part-3-Dodgy-drivers-737747.html/from/related" title="Kernel Log: What&#39;s coming in 2.6.28 - Part 3: Dodgy drivers">Kernel Log: What&#39;s coming in 2.6.28 - Part 3: Dodgy drivers</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi"> </div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img alt="The H Open Headlines" height="24" src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196">
+        <ul>
+        
+            <li>
+            <a class="top" href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H&#39;s Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power">Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public">GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla&#39;s Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers">NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android&#39;s signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen">Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics">One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94">
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple&#39;s infrared receiver <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img alt="Business Source artwork" height="80" src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img alt="Whatever happened to Google?" height="80" src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July&#39;s Community Calendar"><img alt="July&#39;s Community Calendar" height="35" src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" width="280"></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116">
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">What&#39;s new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3"><img alt="What&#39;s new in SUSE Linux Enterprise 11 SP3" height="80" src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">What&#39;s new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19"><img alt="What&#39;s new in Fedora 19" height="80" src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">What&#39;s new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10"><img alt="What&#39;s new in Linux 3.10" height="80" src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">A second SSD caching framework and support for the new Radeons&#39; video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img alt="Free Software post-PRISM" height="80" src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130">
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img alt="Content Security Policy halts XSS in its tracks" height="80" src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Skype&#39;s ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation"><img alt="Skype Listening In graphic" height="80" src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Our associate&#39;s discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img alt="Password protection for everyone" height="80" src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img alt="Two clicks for more privacy" height="80" src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145">
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img alt="Java EE 7 at a glance" height="80" src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img alt="Continuous database migration with Liquibase and Flyway" height="80" src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application&#39;s version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img alt="Unit testing with Node.js" height="80" src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img alt="Ruby 2.0 at 20" height="80" src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120">
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img alt="Linux Mint 15" height="80" src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">What&#39;s new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9"><img alt="What&#39;s new in Linux 3.8" height="80" src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img alt="Replacing Google Reader" height="80" src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H&#39;s Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img alt="Attacking TrueCrypt" height="80" src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright © 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: inline;"><img alt="" height="1" id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/news/item/Kernel-Log-Coming-in-2-6-33-Part-5-Drivers-931993.html" width="1"></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+
+
+<!-- etracker PARAMETER 3.0 -->
+
+<!-- etracker PARAMETER END -->
+
+
+
+<!-- etracker CODE NOSCRIPT 3.0 -->
+
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 482241, iBID: 483143, CID: 931993, iCID: 933542 -->
+<!-- Link: $(LB482241:Linktext)$ $(LC931993:Linktext)$ -->
+<!-- Generiert: 2012-10-30 16:34:49 -->
+
+
+

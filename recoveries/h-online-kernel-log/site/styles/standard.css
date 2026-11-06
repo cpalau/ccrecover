@@ -1,0 +1,2440 @@
+/* ****************************** global****************************** \*/
+html, body {
+    height: 100%;
+}
+body {
+    background: #6e6a6a;
+    color: #fff;
+    font-size: 100.1%;
+}
+* html body {
+    font-size: 16px;
+}
+body,
+td {
+    font-family: Helvetica, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+table,
+img,
+fieldset {
+    border: 0;
+}
+caption {
+	caption-side:bottom;
+	margin-top:6px;
+	font-size:.9em;
+	font-weight:bold; 
+	font-style:italic;
+	text-align:left
+}
+option {
+    padding-right: 5px;
+}
+p {
+    line-height: 120%;
+    font-size: 0.85em;
+    color: #000;
+}
+h1 {
+    font-size: 1.2em;
+    color: #999;
+}
+h2 {
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #999;
+}
+h3 {
+    font-size: 0.9em;
+}
+.clear {
+    clear: both;
+}
+.clear_bottom {
+    clear: both;
+    height: 10px;
+}
+.laquo {
+    font-size: 1.1em;
+    font-family: verdana, sans-serif;
+    color: #5f8ed5;
+}
+.pipe {
+    color: #ccc;
+    padding: 0px 2px 0px 2px;
+}
+hr {
+    height: 1px;
+    color: #000;
+    background-color: #000;
+    border: none;
+}
+.note {
+    margin: 30px;
+    border: 1px solid #ccc;
+    font-size: 1.0em;
+    font-weight: bold;
+    padding: 30px;
+}
+.vertical_rule {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/grey_pix.gif) 50% 0 repeat-y;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+img.category {
+    margin-right: 5px;
+}
+.article {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/article.jpg) bottom left no-repeat;
+    margin-bottom: 10px !important;
+}
+.alert {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/alert.jpg) bottom left no-repeat;
+    /*margin-bottom: 10px !important;*/
+}
+.tx_red {
+color:#c00;
+}
+.tx_green {
+color:#0c0;
+}
+.tx_blue {
+color:#00c;
+}
+.tx_cyan {
+color:#0cc;
+}
+.tx_magenta {
+color:#c0c;
+}
+.tx_smaller {
+font-size: 80%;
+}
+.tx_larger {
+font-size: 120%;
+}
+.tx_caps {
+font-variant: small-caps;
+}
+p.indent {
+margin-left: 25px;
+margin-right: 25px;
+}
+p.leadtext {
+font-weight: bold;
+}
+p.indent,
+#feature p.indent,
+#item p.indent {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+/* ****************************** links ****************************** \*/
+a {
+    color: #039;
+}
+a:visited {
+    color: #666;
+}
+a:hover {
+    text-decoration: none;
+}
+h2 a,
+h3 a,
+h4 a,
+a.noline,
+#zoom a  {
+    text-decoration: none;
+}
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+a.noline:hover,
+#zoom a:hover  {
+    text-decoration: underline;
+}
+a.zoom_icon {
+    float: right;
+    margin-top: 5px;
+}
+a.readmore,
+#overview a.readmore,
+a span.readmore {
+    font-weight: bold;
+    color: #cb1419;
+    text-decoration: none;
+}
+a:visited span.readmore {
+    color: #666;
+}
+/* ****************************** color ****************************** \*/
+.red_text {
+    color: red;
+}
+.blue_text {
+    color: #012469;
+}
+.error {
+    color: #c00;
+    font-size: 0.8em;
+}
+/* ****************************** layout ****************************** \*/
+#container {
+    margin: 0 auto;
+    position: relative;
+	width: 64em;
+	min-width: 960px;
+}
+#header_wrapper {
+    float: left;
+    margin-top: 100px;
+}
+#wrapper {
+    float: left;
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/bg_645_355.gif) 64.5% 0 repeat-y;
+}
+#content_wrapper {
+    float: left;
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/border_left.gif) left top repeat-y;	
+}
+#wrapper,
+#content_wrapper,
+#header_wrapper {
+	width: 60em;
+	min-width: 960px;
+}
+#content {
+    background: #74b4cd url(/web/20131210004451im_/http://www.h-online.com/icons/frame.jpg) left top repeat-x;
+    float: left;
+    width: 64.5%;
+}
+#frame_bottom {
+    height: 10px;
+    background: #74b4cd;
+    clear: both;
+    width: 64.5%;
+}
+#softwareverzeichnis #content,
+#softwareverzeichnis #frame_bottom {
+	width: 100%;
+}
+#right_col {
+    float: right;
+	width: 35.5%;
+    min-height: 480px;
+    background: #f3f3f3 url(/web/20131210004451im_/http://www.h-online.com/icons/bg_rightcol.jpg) top right repeat-x;
+}
+/* ****************************** advertisement ****************************** \*/
+.cadv {
+    display: none;
+}
+#bannerzone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 0 0 5px;
+    padding: 0;
+    height: 90px;
+	width: 60em;
+	min-width: 960px;
+}
+#leaderboard {
+    position: relative;
+    top: 5px;
+    left: 0;
+    text-align: center;
+}
+#heiseadvert {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+#skyscraper {
+    position: absolute;
+    left: 100%;
+    top: 120px;
+}
+.bcadv {
+    margin: 0 auto;
+    clear: both;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.item_wrapper .bcadv {
+    margin: 20px 20px 20px 0px;
+}
+div.adbottom {
+    padding: 2px 15px;
+    clear: both;
+    background: #fff;
+    margin: 0 10px;
+}
+.adbottom_text {
+    max-width: 400px;
+    border: 1px solid #06c;
+}
+.adbottom_text h4 a {
+    text-decoration: none;
+    color: #fff;
+}
+.adbottom_text h4 {
+    background: #06c;
+    color: #def;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+    margin: 0em;
+    font-size: 0.8em;
+}
+.adbottom_text a {
+    font-weight: bold;
+    text-decoration: none;
+}
+.adbottom_text a:hover {
+    text-decoration: underline;
+}
+.adbottom_text p {
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    margin-right: 1em;
+    margin-bottom: 0em;
+    padding-left: 1em;
+}
+.adbottom_text ul {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    list-style: circle;
+    margin-top: 0em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+}
+.contentbanner {
+    margin: 20px;
+    clear: both;
+}
+/* ****************************** header ****************************** \*/
+#newsheader {
+    height: 5.375em;
+    min-height: 86px;
+    background: #97d1e4 url(/web/20131210004451im_/http://www.h-online.com/icons/header_bg.png) left top repeat-x;
+    margin: 0 15px 0 27px;
+    position: relative;
+}
+#newsheader_left {
+    float: left;
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/header_bg_left.png) no-repeat top left;
+    height: 5.375em;
+    min-height: 86px;
+    width: 27px;
+}
+#newsheader_right {
+    float: right;
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/header_bg_right.png) no-repeat top right;
+    height: 5.375em;
+    min-height: 86px;
+    width: 15px;
+}
+/* --------- 3px-bug IE6 ------------------------- */
+* html #newsheader_left {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/header_bg_left.gif) no-repeat top left;
+    margin-right: -3px;
+}
+* html #newsheader_right {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/header_bg_right.gif) no-repeat top right;
+    margin-left: -3px;
+}
+* html #newsheader {
+    margin: 0;
+}
+/* ----------------------------------------------- */
+#newsheader #logo {
+   float: left;
+   padding: 10px 12px 0;
+}
+ul#tab_navi {
+    list-style: none;
+    font-size: 0.8em;
+    float: left;
+    margin-left: 20px;
+    position: absolute;
+    left: 114px;
+    bottom: 0;
+}
+ul#tab_navi li {
+    float: left;
+    margin: 0 5px 0 0;
+}
+ul#tab_navi li a {
+    background-color: #46768a;
+    color: #fff;
+    text-decoration: none;
+    padding: .4em .5em .3em;
+    font-weight: bold;
+    float: left;
+    display: block;
+}
+ul#tab_navi li a:visited {
+    color: #fff;
+}
+ul#tab_navi li a.active {
+    background: #fff;
+    color: #039;
+}
+ul#tab_navi li a.active:visited {
+    color: #039;
+}
+/* ****************************** drop-down navigation ****************************** \*/
+#newsheader {
+	z-index: 999; /* needed in order to fix IE < 8 bug */
+}
+#newsheader #navigation {
+	background: #dedfe0; /* Old browsers */
+	background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif');
+    background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif'), -webkit-gradient(linear, left top, left bottom, from(#f1f0f0), to(#c9ced0)); /* Saf4+, Chrome */
+    background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif'), -webkit-linear-gradient(top, #f1f0f0, #c9ced0); /* Chrome 10+, Saf5.1+ */
+    background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif'), -moz-linear-gradient(top, #f1f0f0, #c9ced0); /* FF3.6 */
+    background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif'), -ms-linear-gradient(top, #f1f0f0, #c9ced0); /* IE10 */
+    background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif'), -o-linear-gradient(top, #f1f0f0, #c9ced0); /* Opera 11.10+ */
+    background-image: url('/web/20131210004451im_/http://www.h-online.com/icons/icon_dropdown.gif'), linear-gradient(top, #f1f0f0, #c9ced0); /* W3C */
+	background-position: right center;
+	background-repeat: no-repeat;
+    border: 1px solid #999;
+	border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    color: #000;
+    float: left;
+	height: 28px;
+    margin: 30px 0 0 10px;	
+	opacity: 1;
+    position: relative;
+    width: 12.5em;
+}
+#newsheader #navigation,
+#newsheader #navigation ul {
+	list-style: none;	
+}
+#newsheader #navigation li#whereami {
+	font-weight: bold;
+	padding: 0 8px;
+}
+#newsheader #navigation li#whereami a {
+	line-height: 28px;
+}
+#newsheader #subnavi {
+	background-color: #fff;
+	border: 1px solid #999;
+	border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-box-shadow: 2px 2px 6px #666;
+    -webkit-box-shadow: 2px 2px 6px #666;
+    box-shadow: 2px 2px 1px #ccc;
+	color: #666;	
+	display: none;	
+	left: -1px;	
+	opacity: 1;
+	padding: 10px 0 8px;
+	position: absolute;
+	top: 28px;	
+	width: 19.5em;
+    z-index: 999;
+}
+#newsheader #navigation.no-touch:hover #subnavi,
+#newsheader #navigation.active #subnavi {
+	display: block;
+}
+#newsheader #whereami a {
+	color: #000;
+	text-decoration: none;
+}
+#newsheader #subnavi h5 {
+	color: #333;
+	font-size: 65%;
+	font-weight: normal;
+	letter-spacing: 0.05em;
+	margin-left: 15px;
+	padding-bottom: 8px;
+	text-transform: uppercase;
+}
+#newsheader #subnavi li,
+#newsheader #subnavi li a {
+	display: block;
+}
+#newsheader #subnavi li a {
+	color: #039;
+	font-weight: bold;
+	text-decoration: none;
+}
+#newsheader #subnavi li#subnavi_channels,
+#newsheader #subnavi li#subnavi_services {
+	display: inline;
+	float: left;
+	width: 50%;
+}
+#newsheader #subnavi ul li {
+	border-bottom: 1px solid #e3e3e3;
+	padding: 7px 5px 7px 15px;
+	margin-right: 13px;
+}
+#newsheader #subnavi ul li.last {
+	border-bottom: none;
+}
+#newsheader #subnavi ul li.ho a,
+#newsheader #subnavi ul li.open a,
+#newsheader #subnavi ul li.security a,
+#newsheader #subnavi ul li.developer a {
+	padding-left: 20px;
+}
+#newsheader #subnavi ul li.ho a {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_ho.gif') left center no-repeat;
+}
+#newsheader #subnavi ul li.open a {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_open.gif') left center no-repeat;
+}
+#newsheader #subnavi ul li.security a {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_security.gif') left center no-repeat;
+}
+#newsheader #subnavi ul li.developer a {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_developer.gif') left center no-repeat;
+}
+/* ****************************** search ****************************** \*/
+#search {
+    float: right;
+    height: 5.375em;
+    padding: 0;
+    position: relative;
+    width: 14em;
+}
+#search form {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: right;
+}
+#search form fieldset#inputs {
+	background: #fff;	
+	border: 1px solid #70a3b4;
+	border-radius: 14px;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    -moz-box-shadow: 0 4px 8px #ddd inset;
+    -webkit-box-shadow: 0 4px 8px #ddd inset;
+    box-shadow: 0 4px 8px #ddd inset;	
+	right: 0;
+	margin: 0;
+	padding: 2px;
+	position: absolute;
+	top: 25px;
+}
+#search form input.submit {
+	background: #000;	
+	background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#000)); /* Saf4+, Chrome */
+    background: -webkit-linear-gradient(top, #555, #000); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(top, #555, #000); /* FF3.6 */
+    background: -ms-linear-gradient(top, #555, #000); /* IE10 */
+    background: -o-linear-gradient(top, #555, #000); /* Opera 11.10+ */
+    background: linear-gradient(top, #555, #000); /* W3C */
+    border: none;
+	border-radius: 14px;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+	color: #fff;
+    font-size: 0.65em;
+	font-weight: bold;
+	height: 2em;
+    padding: 3px 6px;
+	width: 5em;
+}
+#search form input.searchfield {
+	background: none;
+    border: none;
+	border-radius: 14px;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    color: #000;
+    font-size: 0.75em;
+    margin-left: 2px;
+    padding-left: 2px;
+    width: 13em;
+}
+#search form fieldset#options {
+	bottom: 12px;
+	font-size: 0.8em;
+	padding: 0;
+	position: absolute;
+	right: 5px;
+}
+#search form fieldset#options a,
+#search form fieldset#options a:visited {
+	color: #002f4c;
+	text-decoration: none;
+}
+#search form fieldset#options a:active,
+#search form fieldset#options a:hover {
+	text-decoration: underline;
+}
+/* ****************************** login / association ****************************** \*/
+#login_association {
+	float: left;
+	height: 5.375em;
+	margin: 0 0 0 100px;
+	position: relative;
+}
+#login {
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #333;
+	margin-top: 33px;
+    padding: 0;
+    text-align: left;
+}
+#login .logged {
+    color: #000;
+}
+#login a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+#login a:hover {
+    text-decoration: underline;
+}
+#login .dot {
+    padding: 0 3px 0 2px;
+}
+p#association {
+	color: #fff;
+    font-size: 0.75em;
+    /* position: absolute; */
+    margin-top: 3em;
+    /* bottom: 25px; */
+    left: 0;
+    font-weight: bold;
+	white-space: nowrap;
+}
+p#association a,
+p#association a:link,
+p#association a:visited {
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+p#association a:hover,
+p#association a:active {
+    color: #fff;
+    outline: none;
+    text-decoration: underline;
+}
+/* ****************************** navigation ****************************** \*/
+#navi_news {
+    list-style: none;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    float: left;
+    padding-left: 16px;
+}
+* html #navi_news {
+    width: 34em;
+}
+#navi_news li {
+    white-space: nowrap;
+    padding: 6px 2px 4px 12px;
+    float: left;
+}
+#navi_news li a {
+    text-decoration: none;
+    color: #039;
+    float: left;
+    display: block;
+}
+#navi_news li a:hover {
+    text-decoration: underline;
+}
+#navi_news li a:visited {
+    color: #039;
+}
+/* ****************************** right col ****************************** \*/
+div.teaser,
+div.newest_news_teaser,
+.feature_navi,
+#fora_list,
+#latest_posts,
+#topnews {
+    padding: 10px;
+}
+div.teaser a,
+div.newest_news_teaser a {
+    text-decoration: none;
+}
+div.teaser li:hover {
+   background: #dedede;
+}
+div.teaser img,
+div.newest_news_teaser img {
+    display: block;
+}
+div.teaser h4 {
+    margin: 0 10px;
+    color: #012469;
+}
+div.newest_news_teaser h4 {
+    font-size: .9em;
+    color: #333;
+}
+div.teaser h5 a {
+    color: #039;
+}
+div.teaser h5 {
+    padding: 2px;
+    color: #000;
+    font-size: 1.0em;
+    line-height: 1.2em;
+}
+div.teaser ul,
+div.newest_news_teaser ul,
+.feature_navi ul,
+#fora_list ul,
+#latest_posts ul,
+#topnews ul {
+    margin-top: 4px;
+    padding: 0;
+    list-style: none;
+}
+div.teaser li {
+    margin: 0 0 3px;
+    font-size: 0.8em;
+    color: #000;
+    padding: 9px;
+}
+div.newest_news_teaser li {
+    margin: 5px 0 0px;
+    font-size: 0.8em;
+	font-weight: bold;
+	padding: 0 9px;
+	line-height: 1.2;
+	color: #000;
+}
+div.teaser li p {
+    font-size: inherit;
+}
+div.teaser li a {
+    color: #039;
+}
+div.teaser li p {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+}
+div.teaser li p a {
+    color: #000;
+}
+div.teaser_imgbox {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 5px;
+}
+div.teaser_imgbox img {
+    margin: 5px auto;
+}
+.feature_navi h4,
+#fora_list h4,
+#latest_posts h4,
+#topnews h4 {
+    padding-left: 10px;
+    color: #012469;
+}
+.feature_navi h4 a,
+#fora_list h4 a,
+#latest_posts h4 a {
+    color: #012469;
+}
+.feature_navi li,
+#fora_list li,
+#latest_posts li,
+#topnews li {
+    margin: 4px 4px 6px 2px;
+    font-size: 0.8em;
+}
+.feature_navi li,
+#latest_posts li,
+#topnews li {
+    line-height: 1.1em;
+}
+.feature_navi li a,
+#fora_list li a,
+#latest_posts li a,
+#topnews li a {
+    text-decoration: none;
+}
+#latest_posts li a .timestamp {
+    color: #666;
+    display: block;
+    font-size: 90%;
+}
+#fora_list li a {
+    font-weight: bold;
+    color: #039;
+}
+.feature_navi li a:hover,
+#fora_list li a:hover,
+#latest_posts li a:hover,
+#topnews li a:hover {
+    text-decoration: underline;
+}
+.split {
+    background: #74b4cd;
+    color: #74b4cd;
+    height: 2px;
+    clear: both;
+}
+
+#right_col_navi {
+    background: #74b4cd url(/web/20131210004451im_/http://www.h-online.com/icons/frame.jpg) left top repeat-x;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    padding: 6px 2px 4px 12px;
+    border-bottom: 1px solid #ccc;
+}
+#right_col_navi a {
+    text-decoration: none;
+    color: #039;
+}
+#right_col_navi a:hover {
+    text-decoration: underline;
+}
+#right_col_navi a:visited {
+    color: #039;
+}
+#right_col_navi a img {
+	position: relative; 
+	top: 1px; 
+	vertical-align: baseline;
+}
+/* ---------- Teaser Priceinsight ---------- */
+.teaser_priceinsight {
+    font-size: 90%;
+    margin: 1em auto;
+    width: 95%;
+    background: #fff;
+    border: 1px solid #bac1ce;
+}
+.teaser_priceinsight h4 {
+    background: #E1E8F0;
+    border-bottom: 1px solid #bac1ce;
+    margin: 0;
+    padding: 2px 0.8em;
+}
+.teaser_priceinsight a {
+    color: #039;
+    text-decoration: none;
+}
+.teaser_priceinsight ol {
+    padding: 0 0 0 1.5em;
+    margin: 0.3em 0 0.3em 1.2em;
+    color: #151515;
+    list-style-type: decimal-leading-zero;
+}
+.teaser_priceinsight li {
+    padding: 0.3em 0;
+    margin: 0;
+    font-size: 90%;
+    line-height: 120%;
+}
+.teaser_priceinsight form {
+    background: #E1E8F0;
+    padding: 4px 0.8em;
+    border-top: 1px solid #bac1ce;
+}
+.teaser_priceinsight form input,
+.teaser_priceinsight form select {
+    border: 1px solid #999;
+    width: 9em;
+}
+* html .teaser_priceinsight form input,
+* html .teaser_priceinsight form select {
+    font-size: 90%;
+    width: 8em;
+}
+.teaser_priceinsight form .submit {
+    background: #039;
+    color: #fff;
+    font-weight: bold;
+    width: 5em;
+}
+.price_insight_link {
+    background: #74B4CD;
+    padding: 0.2em 10px;
+    font-size: 90%;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.price_insight_link a {
+    text-decoration: none;
+    color: #f6f6f6;
+}
+.price_insight_link a:hover {
+    text-decoration: underline;
+}
+/* ****************************** searchbox ****************************** 
+form#searchbox {
+    border: 2px solid #f0f0f0;
+    margin: 16px;
+    }
+#searchbox .filters,
+#searchbox .fields {
+    padding: 18px 12px;
+    background-color: #fffef9;
+    border: 2px solid #f0f0f0;
+    color: #333;
+    }
+#searchbox img {
+    float: right;
+    vertical-align: middle;
+    margin-top: 2px;
+    }
+#searchbox .filters input {
+    vertical-align: top;
+    }
+#searchbox input {
+	margin-right: 4px;
+	background-color: #fffef8;
+    }
+#searchbox input.search_submit {
+    background-color: #999;
+	font-size: 0.7em;
+	color: #fff;
+	border-right: 1px solid #717171;
+	border-bottom: 1px solid #717171;
+	border-left: 1px solid #999;
+	border-top: 1px solid #999;
+	margin: 0 20px 0 0;
+	padding: 0 2px;
+    }
+#searchbox label {
+    padding: 5px 14px 5px 2px;
+    font-size: 0.8em;
+    }
+h4.search_title {
+    margin: 10px 10px 2px 30px;
+    }
+#searchbox input.textfield {
+	background-color: #fff;
+	font-size: 0.9em;
+	color: #000;
+	width: 15em;
+	border: 1px solid #ccc;
+}
+/* ****************************** content-divs ****************************** \*/
+#contact,
+#error,
+#feature,
+#features_archive,
+#gallery,
+#global_search,
+#item,
+#item_list,
+#news_archive,
+#newsletter,
+#overview,
+#privacy,
+#rdf,
+#registration,
+#syndication,
+#services,
+#tools,
+#forum,
+#features_overview,
+#mitte_text {
+    margin: 5px 10px 0;
+    clear: both;
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #ccc;
+}
+#contact,
+#feature,
+#gallery,
+#item,
+#item_list,
+#newsletter,
+#privacy,
+#forum,
+#features_archive,
+#features_overview,
+#zoom {
+    padding: 15px;
+}
+/* **************************** navigation for topcycleteaser ***************************** \*/
+#topcycleteaser .topcycleentry {
+    display: none;
+}
+#content #topcycleteasernav {
+	font-size: 85%;
+	min-height: 1.5em;
+	list-style: none;
+	padding: 15px 0 10px;
+	text-align: center;
+}
+#content #topcycleteasernav li {
+	display: inline;
+	margin: 0 8px;
+}
+#content #topcycleteasernav li.ho {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_ho.gif') 2px top no-repeat;
+}
+#content #topcycleteasernav li.open {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_open.gif') 2px top no-repeat;
+}
+#content #topcycleteasernav li.security {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_security.gif') 2px top no-repeat;
+}
+#content #topcycleteasernav li.developer {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_developer.gif') 2px top no-repeat;
+}
+#content #topcycleteasernav li span {
+	padding: 1px 0 1px 19px;
+}
+#content #topcycleteasernav li span:hover {
+	cursor: default;
+}
+#content #topcycleteasernav li.active span {
+	background: url('/web/20131210004451im_/http://www.h-online.com/icons/bullet_active.gif') left top no-repeat;
+	font-weight: bold;
+}
+/* ****************************** navigation for cycleteaser ****************************** \*/
+ul.cycleteaser_navi {
+	text-align: center;
+}
+ul.cycleteaser_navi li {
+    display: inline;
+	padding: 2px 6px;
+    margin: 0px 2px;
+    border-radius: 10px;
+}
+ul.cycleteaser_navi li.active {
+    background: #dedede;
+}
+/* ****************************** contact ****************************** \*/
+#contact h1,
+#contact h2 {
+    margin-bottom: 10px;
+}
+#contact h1 {
+    font-size: 1.2em;
+    color: #000;
+    font-weight: normal;
+}
+#contact p {
+    margin: 5px 10px 12px 0;
+    line-height: 1.3em;
+}
+#contact pre {
+    margin-bottom: 12px;
+    margin-left: 0px;
+    font-size: 10px;
+}
+#contact .subheading {
+    font-size: 1em;
+    color: #012469;
+}
+#contact div.author {
+    margin: 10px 10px 0 0;
+    font-size: 0.9em;
+    color: #2274e4;
+    font-weight: normal;
+    padding-bottom: 1em;
+}
+#contact h5 {
+	color: #012469;
+	font-size: .9em;
+	margin: 5px 0;
+}
+#contact ul,
+#contact ol {
+    margin: 5px 30px 20px 20px;
+    line-height: 1.2em;
+    font-size: 0.85em;
+}
+#contact ol {
+    margin-left: 20px;
+}
+/* ****************************** errors ****************************** \*/
+#error {
+    padding: 20px;
+}
+#error ul {
+    margin-left: 50px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+#error h1 {
+    color: #c00;
+    margin-bottom: 10px;
+}
+#error .errorbox {
+    background: #ebfdfe url(/web/20131210004451im_/http://www.h-online.com/icons/error.gif) 25px center no-repeat;
+    border: 1px solid #feafaf;
+    margin: 10px 20px;
+    min-height: 3em;
+}
+#error .errorbox p {
+    color: #c00;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 20px 25px;
+}
+/* ************************** feature and item ************************* \*/
+#feature .date,
+#item .date,
+#feature .forum_link,
+#item .forum_link {
+    float: left;
+    margin: 12px 0;
+}
+#feature .page_navi,
+#item .prev_next {
+    float: right;
+    margin: 12px 0;
+}
+/* ****************************** feature ****************************** \*/
+#feature .toc {
+    float: right;
+    width: 12em;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    margin: 25px 20px 12px;
+}
+#feature pre {
+    margin-bottom: 12px;
+    margin-left: 0px;
+    font-size: 10px;
+}
+#feature .title,
+#feature h1,
+#features_overview h1.author {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #012469;
+}
+#feature .subtitle,
+#feature h2 {
+    font-size: 1em;
+    color: #2274e4;
+    margin: 6px 10px 12px 0;
+}
+#feature .subheading {
+    font-size: 1em;
+    color: #012469;
+}
+#feature h4.author,
+#feature div.author {
+    margin: 10px 10px 0 0;
+    font-size: 0.9em;
+    color: #2274e4;
+    font-weight: normal;
+    padding-bottom: 1em;
+}
+#feature h5 {
+	color: #012469;
+	font-size: .9em;
+	margin: 5px 0;
+}
+#feature p {
+    margin: 5px 10px 12px 0;
+    line-height: 1.3em;
+}
+#feature ul,
+#feature ol {
+    margin: 5px 30px 20px 20px;
+    line-height: 1.2em;
+    font-size: 0.85em;
+}
+#feature ol {
+    margin-left: 20px;
+}
+#feature p b {
+    font-size: 1em;
+    color: #333;
+}
+#feature .date {
+    color: #617f9d;
+    font-size: 0.8em;
+}
+#feature .print {
+    clear: both;
+    font-size: 0.8em;
+}
+#feature .print a {
+    text-decoration: none;
+    color: #666;
+    background-color: #faf9ef;
+    padding: 3px;
+    margin-left: 10px;
+}
+#feature .print a:hover {
+    text-decoration: underline;
+}
+#feature .table_scroll {
+    width: 508px;
+    overflow: scroll;
+}
+/* ****************************** features_archive ****************************** \*/
+#features_archive h1 {
+    font-size: 1.2em;
+    color: #000;
+    margin: 5px 0 15px;
+    font-weight: normal;
+}
+#features_archive ul {
+    list-style-type: none;
+    padding: 5px 0;
+    line-height: 1.4em;
+}
+#features_archive a {
+    text-decoration: none;
+    color: #012469;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+#features_archive a:hover {
+    text-decoration: underline;
+}
+.rubric {
+    color: #333;
+    padding: 0px 10px;
+    font-weight: normal;
+    font-size: 90%;
+}
+#features_archive .date {
+    color: #999;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+/* ****************************** features_overview ****************************** \*/
+#features_overview h1 {
+    color: #000;
+    font-size: 1.2em;
+    margin: 5px 0 15px;
+    font-weight: normal;
+}
+#features_overview h1.author {
+    font-weight: bold;
+}
+#features_overview h3 {
+    margin: 12px 10px 0 0;
+    line-height: 1.2em;
+    color: #012469;
+    padding-bottom: 5px;
+}
+#features_overview h3 .date {
+    color: #666;
+    font-size: 80%;
+    font-weight: normal
+}
+/* ****************************** news item ****************************** \*/
+#item h1 {
+    color: #012469;
+    margin: 10px 0;
+}
+#item h3.subheading {
+    font-size: 0.9em;
+    color: #012469;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+#item p {
+    line-height: 1.3em;
+    margin: 20px 0 2px;
+}
+#item p img {
+    vertical-align: bottom;
+}
+#item ul,
+#item ol {
+    line-height: 1.3em;
+    margin: 5px 15px;
+    font-size: 0.85em;
+    padding-left: 1em;
+}
+#item ol {
+    margin-left: 20px;
+}
+#item .date {
+    color: #999;
+    font-size: 0.8em;
+}
+#item .mail_print {
+    clear: both;
+    font-size: 0.8em;
+}
+#item .prev_next {
+    font-size: 0.8em;
+    text-align: right;
+    padding-right: 12px;
+    color: #ccc;
+}
+#item .mail_print a,
+#item .prev_next a {
+    text-decoration: none;
+    color: #666;
+}
+#item .mail_print a {
+    background-color: #faf9ef;
+    padding: 3px;
+}
+#item .mail_print a:hover,
+#item .prev_next a:hover {
+    text-decoration: underline;
+}
+#item .item_wrapper {
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+#item .news_promo {
+    padding: 10px 6px;
+    border: 1px solid #ccc;
+    margin-top:10px;
+    margin-left: -5px;
+}
+#item .news_promo p {
+    margin:0;
+}
+/* ****************************** 7days news ****************************** \*/
+#item_list h1 {
+    color: #000;
+    font-size: 1.2em;
+    margin: 5px 10px 15px;
+    font-weight: normal;
+}
+#item_list h4 {
+    margin: 10px 10px 4px;
+    font-size: 0.9em;
+    color: #333;
+}
+#item_list h3.date_separator {
+    margin: 10px 10px 4px;
+}
+#item_list p {
+    margin: 10px 10px 10px;
+}
+#item_list ul {
+    margin-bottom: 12px;
+    margin-left: 10px;
+    line-height: 1.5em;
+    list-style-type: none;
+    font-size: 0.85em;
+}
+#item_list ul a {
+    text-decoration: none;
+}
+#item_list ul a:hover {
+    text-decoration: underline;
+}
+/* ****************************** archive calendar ****************************** \*/
+#news_archive h1 {
+    color: #000;
+    font-size: 1.2em;
+    margin: 5px 10px 15px;
+    font-weight: normal;
+    padding: 16px 0 0 16px;
+}
+#news_archive p {
+    margin: 10px 10px 0 30px;
+    padding-bottom: 10px;
+}
+#news_archive table {
+    margin-left: 20px;
+}
+#news_archive table td {
+    padding: 5px 10px 5px 10px;
+}
+#news_archive pre {
+    margin-top: 10px;
+    font-size: 11px;
+}
+a.news_archiv,
+a.news_archiv span.sunday {
+    text-decoration: underline;
+}
+a.news_archiv:hover,
+a.news_archiv:hover span.sunday {
+    text-decoration: none;
+}
+span.weekday {
+    background: #eee;
+    padding: 1px;
+}
+span.sunday {
+    background: #def;
+    padding: 1px;
+}
+/* ****************************** newsletter ****************************** \*/
+#newsletter h1 {    
+    color: #000;
+    font-size: 1.2em;
+    padding: 16px 0 0 16px;
+    margin: 5px 10px 15px;
+    font-weight: normal;
+}
+#newsletter h2 {
+    color: #999;
+    font-size: 1.2em;
+    margin-left: 30px;
+}
+#newsletter h4 {
+    margin: 20px 30px;
+}
+#newsletter p.description {
+    margin: 20px 30px;
+}
+#newsletter p {
+    margin: 10px 0;
+    font-size: 0.85em;
+}
+#newsletter .errorbox {
+    background: #ebfdfe url(/web/20131210004451im_/http://www.h-online.com/icons/error.gif) 25px center no-repeat;
+    border: 1px solid #feafaf;
+    margin: 10px 30px;
+    min-height: 3em;
+}
+#newsletter .errorbox p {
+    color: #c00;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 20px 45px;
+}
+#newsletter .newsletter_info {
+    color: #333;
+    padding: 10px 20px;
+    background-color: #fefdf6;
+    border: 1px solid #a3b2d0;
+    margin: 10px 30px;
+}
+#newsletter .newsletter_info h2 {
+    margin-left: 0;
+}
+#newsletter .bg_box {
+    background-color: #f4f4f4;
+    padding: 15px 20px;
+    margin: 20px 30px;
+}
+#newsletter .bg_box h3 {
+    margin: 10px 0;
+    color: #012469;
+}
+#newsletter .bg_box input,
+#newsletter .newsletter_info #confirm-subscription input {
+    background-color: #039;
+    color: white;
+    padding: 1px 2px;
+}
+#newsletter .bg_box label {
+    color: #535353;
+    font-size: 0.9em;
+}
+#newsletter .bg_box label .error {
+    color: #c00;
+    font-size: inherit;
+    font-weight: bold;
+}
+#newsletter .bg_box label input {
+    background-color: #fffdf6;
+    margin-top: 4px;
+    color: #000;
+}
+#newsletter .privacy h3 {
+    font-size: 0.9em;
+    margin: 30px 30px 5px;
+    color: #012469;
+}
+#newsletter .privacy p {
+    margin: 5px 30px;
+}
+#newsletter .footer {
+    font-size: 0.8em;
+    margin: 10px 0 0 30px;
+    padding-bottom: 30px;
+}
+/* ****************************** overview ****************************** \*/
+#overview h2 {
+    font-size: 0.8em;
+    margin: 5px 10px 10px 0;
+    font-weight: normal;
+}
+#overview h3 {
+    margin: 12px 10px 0 0;
+    line-height: 1.2em;
+    color: #012469;
+    padding-bottom: 5px;
+}
+#overview h3.alert {
+    margin-bottom: 10px;
+} 
+#overview h3 .date {
+    color: #666;
+    font-size: 80%;
+    font-weight: normal
+}
+#overview p,
+#features_overview p {
+    color: #222;
+}
+#overview p + h2 {
+    padding-top: 20px;
+}
+#overview a {
+    text-decoration: none;
+    color: #012469;
+}
+#overview a:hover {
+    text-decoration: underline;
+}
+#overview a:visited {
+    color: #666;
+}
+#overview ul {
+    list-style-type: none;
+    padding: 15px 10px 5px 0px;
+    line-height: 1.5em;
+}
+#overview ul li a {
+    font-weight: bold;
+}
+#overview .topteaser {
+    float: left;
+    width: 50%;
+}
+* html 	#overview .topteaser {
+    width: 15.3em;
+}
+#overview .topteaser h2,
+#overview .topteaser h3,
+#overview .topteaser p {
+    margin-left: 16px;
+    margin-right: 10px;
+}
+#overview .topteaser h2 {
+	margin-bottom: 0;
+}
+#overview .topteaser h3 {
+	margin-top: 7px;
+}
+#overview h3.date_separator,
+#item_list h3.date_separator {
+	color: #888;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 0.8em;
+	font-weight: normal;
+	padding-bottom: 3px;
+}
+#overview h3.date_separator {
+	margin: 15px 0 0 0;
+}
+#overview .teaserlist {
+    margin: 5px 16px 0;
+    border-top: 1px solid #dedede;
+    clear: both;
+}
+#overview .teaserlist img.rss {
+    float: right;
+    margin: 20px 10px 10px;
+}
+#overview img.mark {
+    float: none;
+    margin: 0;
+    padding: 0;	
+}
+#overview .teaserlist h2 {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+/* ****************************** privacy policy ****************************** \*/
+#privacy p {
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+#privacy h1 {
+    font-size: 1.2em;
+    color: #000;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+#privacy h2 {
+    font-size: 1.0em;
+    color: #012469;
+    margin-bottom: 6px;
+    margin-top: 16px;
+}
+/* ****************************** mail form ****************************** */
+#mailform,
+.mailsent  {
+    background-color: #f4f4f4;
+    padding: 15px 20px;
+    margin: 20px 0 45px;
+}
+#mailform p {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+#mailform fieldset p {
+    margin-left: 0;
+}
+#mailform legend {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+#mailform input {
+    margin-right: 7px;
+}
+#mailform textarea,
+#mailform img {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+#mailform label {
+    display: block;
+    color: #535353;
+    font-size: 0.9em;
+    margin: 10px 0 16px 0;
+}
+#mailform .captcha {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #535353;
+}
+#mailform .captcha label {
+    margin-top: 16px;
+    font-size: inherit;
+}
+#mailform .captcha label input {
+    display: block;
+    margin: 5px 0;
+}
+#mailform input {
+    background-color: #039;
+    color: white;
+    padding: 1px 2px;
+    margin-top: 12px;
+    margin-right: 6px;
+}
+#mailform textarea,
+#mailform label input {
+    background-color: #fffdf6;
+    margin-top: 4px;
+    color: #000;
+}
+/* ****************************** rss-feeds ****************************** \*/
+#rdf h1 {
+    color: #000;
+    font-size: 1.2em;
+    padding: 16px 0 0 16px;
+    margin: 5px 10px 10px;
+    font-weight: normal;
+}
+#rdf h2 {
+    margin: 4px 30px;
+}
+#rdf p,
+#rdf h3 {
+    margin: 5px 30px 0;
+}
+#rdf div {
+    border: 1px solid #ccc;
+    padding: 5px 10px 10px;
+    margin: 20px;
+}
+#rdf img {
+    margin-left: 5px;
+}
+#rdf ol,
+#rdf ul {
+    margin: 10px 30px 0 50px;
+    line-height: 1.2em;
+    font-size: 0.85em;
+    padding-bottom: 15px;
+}
+/* ****************************** registration ****************************** \*/
+#registration,
+#mitte_text {
+    padding: 16px;
+}
+#registration p,
+#mitte_text p {
+    font-size: 0.85em;
+}
+#registration h2,
+#registration form legend,
+#mitte_text h2,
+#mitte_text form legend {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+#registration .password legend,
+#mitte_text .password legend {
+    font-size: 1.0em;
+    margin-bottom: 10px;
+}
+#registration form,
+#mitte_text form {
+    background-color: #f4f4f4;
+    padding: 15px 20px;
+    margin: 20px 30px;
+}
+#registration form h2,
+#registration form p,
+#mitte_text form h2,
+#mitte_text form p {
+    margin: 0;
+}
+#registration p.data,
+#mitte_text p.data {
+    margin: 2px 0 6px;
+}
+#registration p.data strong,
+#mitte_text p.data strong {
+    display: block;
+    margin-bottom: 2px;
+}
+#registration fieldset,
+#mitte_text fieldset {
+    margin-bottom: 10px;
+}
+#registration form label,
+#mitte_text form label {
+    color: #535353;
+    font-size: 0.9em;
+    display: block;
+}
+#registration .left,
+#mitte_text .left {
+	float:left;
+}
+#registration input,
+#mitte_text input {
+    background-color: #fffdf6;
+    margin-top: 4px;
+    color: #000;
+    margin-right: 6px;
+    padding: 1px 2px;
+    margin-bottom: 6px;
+}
+#registration form input[type="submit"],
+#registration form input[type="reset"],
+#mitte_text form input[type="submit"],
+#mitte_text form input[type="reset"] {
+    background-color: #039;
+    color: white;   
+    margin-top: 12px;    
+}
+#registration .login label.check,
+#registration .note,
+#registration .label_top,
+#mitte_text .login label.check,
+#mitte_text .note,
+#mitte_text .label_top {
+    color: #333;
+    font-weight: bold;
+    margin-top: 12px;
+    display: block;
+}
+#registration div.label_top,
+#mitte_text div.label_top {
+    font-size: 0.9em;
+}
+#registration .note,
+#mitte_text .note {
+    font-size: 0.9em;
+}
+#registration .register label.check,
+#mitte_text .register label.check {
+    font-size: 0.85em;
+    margin-top:4px;
+}
+#registration label.check input,
+#mitte_text label.check input {
+    margin-right: 4px;
+    vertical-align: middle;
+    margin-top:0;
+}
+.regnavi h4 {
+    font-size: 0.9em;
+    color: #333;
+    margin: 10px 12px 4px;
+}
+.regnavi h4 a {
+    color: #333;
+}
+.regnavi p {
+    font-size: 0.8em;
+    color: #039;
+    margin: 10px 12px 4px;
+}
+.regnavi p a {
+    color: #039;
+    text-decoration: none;
+}
+.regnavi p a:hover {
+    text-decoration: underline;
+}
+.regnavi p.contact {
+    color: #333;
+}
+/* ****************************** global_search****************************** \*/
+#searchresult h2 {
+    margin: 20px 4px 4px 30px;
+}
+#searchresult h4 {
+    margin: 4px 4px 18px 30px;
+    font-size: 1.0em;
+    color: #666;
+    font-weight: normal;
+}
+#searchresult h4 b {
+    color: #f00;
+}
+#searchresult h4.result {
+    color: #333;
+    font-size: 0.9em;
+    line-height: 1.3em;
+}
+#searchresult ol {
+    margin: 10px 10px 15px 35px;
+    line-height: 1.2em;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+#searchresult ol li {
+    padding-bottom: 10px;
+}
+#searchresult ol li p {
+    margin-left: 0;
+}
+#searchresult ol li h5 {
+    font-size: 1.1em;
+}
+#searchresult ol li a {
+    text-decoration: none;
+}
+#searchresult ol li a:hover {
+    text-decoration: underline;
+}
+#searchresult ol li .date {
+    font-weight: normal;
+    color: #999;
+    font-size: 0.85em;
+}
+#searchresult li .extrainfo {
+    font-size: 0.9em;
+    font-weight: normal;
+}
+#searchresult li .extrainfo .type {
+    padding-right: 6px;
+    font-weight: bold;
+}
+#searchresult li .extrainfo .date {
+    color: #666;
+}
+#searchresult ol li .description {
+    font-weight: normal;
+    margin-left: 0;
+}
+#searchresult .searchterm {
+    color: #f00;
+}
+#search_help {
+    padding: 16px;
+}
+#search_help ul {
+    margin: 15px 30px 15px 20px;
+    list-style: url(/web/20131210004451im_/http://www.h-online.com/icons/bullet.gif);
+    font-size: 0.9em;
+    line-height: 1.2em;
+}
+#search_help .raquo {
+    font-size: 1.1em;
+    font-family: verdana, sans-serif;
+    color: #f60;
+}
+/* ****************************** sitemap ****************************** \*/
+#sitemap_navi {
+    border-top: 1px solid #a5a2a2;
+    border-bottom: 1px solid #a5a2a2;
+    background-color: #a5a2a2;
+	width: 60em;
+	min-width: 960px;
+    float: left;
+}
+#sitemap_navi a {
+    text-decoration: none;
+    color: #fff;
+}
+#sitemap_navi a:hover {
+    text-decoration: underline;
+}
+#sitemap_navi h4 a {
+    font-size: 0.7em;
+    color: #111;
+    font-weight: normal;
+}
+#sitemap_navi ul {
+    list-style: none;
+    margin: 0 0 5px 0;
+    font-size: 0.7em;
+    line-height: 1.1;
+}
+#sitemap_navi div {
+    padding: 15px 10px 10px 15px;
+    float: left;
+    width: 7em;
+}
+/* ****************************** footer ****************************** \*/
+#footer {
+    color: #000;
+	width: 60em;
+	min-width: 960px;
+    white-space: nowrap;
+    border-top: 1px solid #999;
+    background-color: #c1c1c1;
+    float: left;
+}
+#footer a {
+    color: #000;
+    text-decoration: none;
+}
+#footer a:hover {
+    text-decoration: underline;
+}
+#footer .left {
+    float: left;
+    font-size: 0.8em;
+    padding: 5px;
+}
+#footer .right {
+    float: right;
+    font-size: 0.8em;
+    padding: 5px;
+}
+#footer .right a {
+    margin-right: 1em;
+}
+/* ****************************** more link ****************************** \*/
+div.more {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/morenews.jpg) top right repeat-y;
+    padding: 8px 0;
+    text-align: right;
+    font-style: italic;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+div.more p {
+    padding: 5px 15px 4px;
+    background-color: #fff;
+    margin: 0;
+}
+#overview div.more p {
+    margin: 0;
+}
+#overview div.more a,
+#overview div.info a {
+    color: #2659e4;
+}
+div.more a,
+div.info a,
+div.more_features a,
+div.more_link a {
+    color: #2659e4;
+    text-decoration: none;
+}
+div.more a:hover,
+div.info a:hover,
+div.more_features a:hover,
+div.more_link a:hover {
+    text-decoration: underline;
+}
+div.info {
+    text-align: right;
+    padding: 12px 10px;
+    font-style: italic;
+    font-size: 0.8em;
+    margin-right: 20px;
+}
+div.more_features,
+div.more_link {
+    background: url(/web/20131210004451im_/http://www.h-online.com/icons/morearticles.jpg) top right no-repeat;
+    padding: 0.18em 15px 4px;
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 16px;
+    margin-right: 20px;
+}
+#item_list div.more_features a,
+#overview div.more_link a,
+#features_overview div.more_features a {
+    color: #2659e4;
+    font-size: 0.8em;
+}
+#features_overview div.more_features {
+    margin-top: 20px;
+    clear: both;
+}
+/* ****************************** paging & navi tocs ****************************** \*/
+
+/*
+#feature .page_navi a,
+#services .page_navi a {
+    text-decoration: none;
+    padding: 3px 2px 1px 2px;
+    margin: 0px 1px;
+}
+#feature .page_navi b {
+    color: #333;
+    background-color: #ddd;
+    padding: 3px 5px 1px 5px;
+}
+#feature div.page_navi a:hover,
+#services div.page_navi a:hover {
+    text-decoration: underline;
+}
+#feature .page_navi a.laquo,
+#services .page_navi a.laquo {
+    font-size: 1.1em;
+    font-family: verdana, sans-serif;
+    color: #5f8ed5;
+}
+#feature div.page_navi a.laquo:hover,
+#services div.page_navi a.laquo:hover {
+    color: #5f8ed5;
+}
+
+*/
+
+.page_navi {
+    font-size: 0.7em;
+    text-align: right;
+    padding-right: 30px;
+    color: #333;
+}
+#features_overview .page_navi {
+    margin-top: 50px;
+}
+.page_navi a {
+    text-decoration: none;
+    padding: 3px 2px 1px 2px;
+    margin: 0px 1px;
+}
+.page_navi b,
+#searchresult .page_navi .aktiv {
+    color: #333;
+    background-color: #ddd;
+    padding: 3px 5px 1px 5px;
+}
+#searchresult .page_navi {
+    text-align: center;
+    padding: 0 12px 12px 0;
+}
+#searchresult .page_navi a:hover {
+    background-color: #012469;
+    color: #fff;
+    text-decoration: none;
+}
+#searchresult .page_navi .laquo {
+    font-size: 1.1em;
+    font-family: verdana, sans-serif;
+    color: #ddd;
+}
+#searchresult .page_navi .laquo a {
+    font-size: 1.1em;
+    font-family: verdana, sans-serif;
+    color: #5f8ed5;
+    background-color: transparent;
+}
+#searchresult .page_navi .laquo a:hover {
+    background-color: transparent;
+    color: #5f8ed5;
+}
+
+#feature .navi_toc,
+#services .navi_toc {
+    float: right;
+    clear: right;
+    width: 210px;
+    line-height: 1.2em;
+    margin: 25px 0 15px 20px;
+}
+#feature .navi_toc ol,
+#services .navi_toc ol {
+    list-style: none;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+#feature .kicker_toc,
+#services .kicker_toc {
+    float: right;
+    margin: 0 0 5px 15px;
+}
+#feature .kicker_toc .navi_toc,
+#services .kicker_toc .navi_toc {
+    float: none;
+	margin: 10px 10px 5px 0;
+}
+/* ****************************** news- and feature-options ****************************** \*/
+.news_option,
+.feature_option {
+    background: #faf9ef;
+    padding: 4px 6px;
+    clear: both;
+    font-size: 0.8em;
+    margin-left: -5px;
+}
+.news_option a,
+.feature_option a {
+    text-decoration:none;
+}
+/* ****************************** forum-link ****************************** \*/
+.forum_link {
+    font-size: 0.9em;
+}
+#item .forum_link p,
+#feature .forum_link p {
+    margin: 0;
+}
+.forum_link a {
+    text-decoration: none;
+}
+.forum_link a:hover {
+    text-decoration: underline;
+}
+/* ****************************** bookmarks ****************************** \*/
+#social_bookmarks {
+    font-size: 0.8em;
+    color: #333;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px 10px 15px;
+    clear: both;
+    margin: 0 10px;
+    background-color: #fff;
+}
+#social_bookmarks  ul {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+#social_bookmarks  li {
+    display: inline;
+    list-style: none;
+    margin-right: 10px;
+}
+/* ****************************** teaser-pics ****************************** \*/
+.teaser_pic_left,
+.teaser_pic_right {
+	clear:both;
+    overflow:auto;
+    padding:5px 0;
+}
+.teaser_pic_left img {
+    float: left;
+    margin-right: 15px;
+    padding-bottom: 5px;	
+}
+.teaser_pic_right img {
+    float: right;
+    margin: 0 5px 0 10px;
+    padding-bottom: 5px;	
+}
+.teaser_pic_left img.category,
+.teaser_pic_right img.category {
+    margin-right: 5px;
+    padding-bottom: 0;
+    float: none;
+}
+.teaser_pic_left p,
+.teaser_pic_right p {
+    margin-bottom:  0;		
+}
+/* ****************************** rubric-table and box ****************************** \*/
+#contact table,
+#feature table {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#contact td,
+#feature td,
+#item td,
+#printview td {
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    padding: 4px 6px 4px 6px;
+}
+.heise-table-title {
+    background-color: #ccc;
+    text-align: center;
+    font-weight: bold;
+    color: #111;
+}
+.heise-table-subtitle {
+    background-color: #eee;
+}
+.heise-table-header {
+    font-weight:bold;
+}
+.heise-table-emph {
+    color: #09f;
+}
+.heisebox,
+.heisebox_left,
+.heisebox_right {
+    background-color: #ececec;
+}
+.heisebox {
+    margin: 1.5em 0;
+}
+.heisebox_left,
+.heisebox_right {
+    width: 42%;
+}
+.heisebox_left {
+    float: left;
+    margin: 0.5em 1.2em 0.5em 0;
+}
+.heisebox_right {
+    float: right;
+    margin: 0.5em 0 0.5em 1.2em;
+}
+.heisebox h4,
+.heisebox_left h4,
+.heisebox_right h4 {
+    font-size: 1em;
+    margin: 0;
+    padding: 0.3em 0.75em;
+    color: #333;
+    background-color: #ddd;
+}
+#content .heisebox pre,
+#content .heisebox_left pre,
+#content .heisebox_right pre,
+#content .heisebox p,
+#content .heisebox_left p,
+#content .heisebox_right p {
+    font-size: 0.8em;
+    margin: 0.75em;
+}
+/* ****************************** pics ****************************** \*/
+.pic_left {
+    float:left;
+    line-height:105%;
+    margin:12px 1.4em 12px 0;
+}
+.pic_right {
+    float:right;
+    line-height:105%;
+    margin:12px 0 12px 1em;
+    text-align:right;
+}
+.pic_center {
+    clear:both;
+    line-height:105%;
+    margin:.2em auto;
+    text-align:center;
+}
+span.pic_left,
+span.pic_right,
+span.pic_center {
+    display:block;
+}
+.source {
+    color:#666;
+    font-size:80%;
+}
+.pic_caption {
+	font-size: 80%;
+}
+.pic_caption img {
+    vertical-align: middle;
+}
+/* ****************************** gallery preview ****************************** \*/
+#gallery_preview {
+    width: 385px;
+    margin: 5px auto;
+    background: #eee;
+    padding: 5px 5px 5px 10px;
+    clear: both;
+}
+#gallery_preview a {
+    text-decoration: none;
+}
+#gallery_preview a:hover {
+    text-decoration: underline;
+}
+#gallery_preview .pics {
+    margin: 5px 0;
+}
+#gallery_preview .pics img {
+    margin-right: 5px;
+}
+#gallery_preview p {
+    font-size: 0.8em;
+}
+/* ****************************** printview ****************************** \*/
+#printview #logo {
+   margin: 10px;
+}
+#printview {
+   background: white;
+    color: black;
+    padding: 20px;
+}
+#printview h1,
+#printview h2 {
+   font-size: 1.4em;
+   color: #000;
+   margin: 5px 0;
+}
+#printview .subtitle {
+    margin: 6px 0 12px;
+}
+#printview ul {
+    margin-left: 20px;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+    line-height: 1.3em;
+}
+#printview table {
+    margin: 10px 0 12px;
+}
+#printview h4.author,
+#printview div.author {
+    margin: 10px 0 0;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: normal;
+}
+#printview .date {
+    color: #333;
+    font-size: 0.8em;
+}
+#printview hr {
+    clear: both;
+}
+#printview pre {
+    margin-left: 0;
+}
+/* ****************************** zoom ****************************** \*/
+#zoom h1 {
+    margin: 10px 0;
+    color:#000;
+}
+#zoom .pic_caption,
+#zoom .source {
+    display: block;
+    color:#000;
+}
+.zoom_navi {
+	margin: 10px 0;
+}
+/* ****************************** preview ****************************** \*/
+.preview {
+    background-color: #f3f3f3;
+}
+/* ******************* related items ******************* */
+.related_items a {
+    text-decoration: none;
+}
+.related_items a:hover {
+    text-decoration: underline;
+}
+.related_items {
+    margin-bottom: 2em;
+    line-height: 120%;
+}
+* html .related_items {
+    padding-top: 20px;
+}
+*+html .related_items {
+    padding-top: 20px;
+}
+.related_items ul {
+    list-style: none;
+    font-size: 80%;
+}
+#item .related_items ul, #feature .related_items ul {
+    margin: 5px 0;
+}
+.related_items h4 {
+    margin-bottom: 0;
+    padding-top: 15px;
+    font-size: 80%;
+}
+/* ******************* cookie warning ******************* */
+.cookie_warning {
+    background: #ffffbb;
+    border: 4px solid #eeaa88;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 12px 12px 4px;
+}
+.cookie_warning p {
+    margin: 0 0 8px;
+}
+.cookie_warning button {
+    background-color: #666666;
+    border: medium none;
+    color: #FFFFFF;
+    padding: 1px 2px;
+}
+.cookie_warning button:hover {
+    background-color: #888888;
+}
+#cookie_warning {
+    width: 400px;
+    display: none;
+}
+#cookie_warning_small {
+    width: 200px;
+}
+
+/*
+     FILE ARCHIVED ON 00:44:51 Dec 10, 2013 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:46:49 Nov 06, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.646
+  exclusion.robots: 0.092
+  exclusion.robots.policy: 0.08
+  esindex: 0.007
+  cdx.remote: 10.712
+  LoadShardBlock: 4288.75 (3)
+  PetaboxLoader3.datanode: 138.863 (4)
+  PetaboxLoader3.resolve: 143.579 (3)
+  load_resource: 168.017
+*/

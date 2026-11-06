@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head>
+
+
+
+<meta content="text/html;charset=utf-8" http-equiv="content-type">
+<link href="/Contact-273335.html" rel="copyright" title="Copyright">
+<link href="mailto:editors%40h-online.com?subject=The%20H%20Open" rel="author" title="Contact">
+
+<link href="http://www.h-online.com/open/atom.xml" rel="alternate" title="All The H open news and features" type="application/atom+xml">
+
+<link href="/favicon_open.ico" rel="shortcut icon">
+
+<link href="/styles/standard.css?version=2" rel="stylesheet" type="text/css">
+<link href="/styles/open/standard.css" rel="stylesheet" type="text/css">
+<link href="/styles/socialshareprivacy.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/styles/print.css" media="print" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+<title>Kernel Log: Coming in 3.10 (Part 3) - Infrastructure - The H Open: News and Features</title>
+
+<link href="/open/icons/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon-precomposed">
+<link href="/open/icons/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="/open/icons/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+
+
+<meta content="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure" name="keywords">
+
+<meta content="Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors" name="description">
+<meta content="2013-06-26T16:16:00+01:00" name="date">
+<meta content="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure - Page 1/3" name="fulltitle">
+
+
+
+
+
+
+<meta content="Heise Media UK Ltd." name="copyright">
+<meta content="en" http-equiv="Content-Language">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="InterRed V14.0, http://www.interred.de/, InterRed GmbH" name="generator">
+
+</head>
+<body>
+
+
+
+
+
+
+
+<!--googleoff: index-->
+
+<div id="container">
+	<div id="header_wrapper">
+		<div id="newsheader_left"></div>
+		<div id="newsheader_right"></div>
+
+		<div id="newsheader">
+			<div id="logo"><a href="/open/"><img alt="The H Open" height="70" src="/open/icons/open_logo_theH.gif" width="110"></a></div>
+
+            <ul class="no-touch" id="navigation">
+                <li id="whereami"><a href="#" id="navigation_selector" title="The H navigation">Open</a>
+                    <ul id="subnavi">
+                    
+                        <li id="subnavi_channels"><h5>Channels</h5>
+                            <ul>
+                            
+                                <li class="ho"><a href="/">Home</a></li>                                
+                            
+                                <li class="open"><a href="/open/">Open</a></li>                                
+                            
+                                <li class="security"><a href="/security/">Security</a></li>                                
+                            
+                                <li class="developer last"><a href="/developer/">Developer</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                        <li id="subnavi_services"><h5>Services</h5>
+                            <ul>
+                            
+                                <li class=""><a href="/security/services/Internet-Toolkit-747773.html">Internet Toolkit</a></li>                                
+                            
+                                <li class=" last"><a href="/security/services/The-H-Update-Check-880736.html">Update Check</a></li>                                
+                            
+                            </ul>
+                        </li>
+                    
+                    </ul>
+                </li>
+            </ul>
+
+			<div id="login_association">
+        		<p id="association">In association with heise online</p>
+        	</div>
+
+        	<div id="search">
+        		<form accept-charset="utf-8" action="/open/search/" method="get">
+        			<fieldset id="inputs">
+        				<input name="rm" type="hidden" value="search">
+        				<input class="searchfield" name="q" placeholder="Search The H Open" size="10" type="text" value=""> <input class="submit" name="search_submit" size="4" type="submit" value="Search">
+        			</fieldset>
+        		</form>
+        	</div>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+		<div id="content_wrapper">
+			<div id="content">
+				<ul id="navi_news">
+			
+				
+			
+				
+					<li><a href="/open/news/" title="Last 7 days">Last 7 days</a></li>
+				
+			
+				
+					<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				
+			
+				
+					<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			
+				</ul>
+
+				<!--googleon: index-->
+
+
+
+
+<!--googleoff: index-->
+	<div id="feature">
+
+	
+
+	<p class="page_navi">
+		<span class="navi_bar">
+		
+			<span class="pagination">
+		
+			
+				<b>1</b>
+			
+		
+			
+				<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=2">2</a>
+			
+		
+			
+				<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=3">3</a>
+			
+		
+			</span>
+		
+			<span class="right"><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=2" title="next">next »</a></span>
+		
+		</span>
+	</p>
+
+
+	
+
+	
+		<div class="date">
+			26 June 2013, 16:16
+		</div>
+	
+
+		<div class="clear"></div>
+
+	<div class="kicker_toc">
+<img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/open/imgs/45/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" width="220">
+
+	
+
+	<div class="navi_toc">
+		<ol>
+		
+			<li><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html">Tickless, Virtualisation and Tracing</a></li>
+		
+			<li><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=2">Minor gems - Infrastructure</a></li>
+		
+			<li><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=3">Minor gems - Platform code</a></li>
+		
+		</ol>
+	</div>
+
+
+	
+
+	</div>
+
+		<!--googleon: index-->
+		<h1>Kernel Log: Coming in 3.10 (Part 3)</h1>
+<h2>Infrastructure</h2>
+<h4 class="author">by Thorsten Leemhuis</h4>
+<p><strong>Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors.</strong></p>
+<p>	<!-- RSPEAK_STOP -->
+	<span class="pic_right" style="width:151px;">
+		<img alt="Kernel Log penguin" height="200" src="/open/imgs/45/1/0/4/2/3/2/3/4677d3004996dcc3.jpeg" width="151">
+	
+	
+	</span>
+	<!-- RSPEAK_START -->
+For Linux 3.10, the kernel developers have <a href="http://git.kernel.org/linus/f8b8404337de4e2466e2e1139ea68b1f8295974f" rel="external" target="_blank">modified code</a> designed to protect <a href="/news/item/UEFI-on-Samsung-notebooks-Half-full-is-almost-broken-1827493.html" title="UEFI on Samsung notebooks: Half full is almost broken – 21 March 2013">Samsung laptops from faults</a> caused by a problem with garbage collection in the UEFI firmware. The changes mean that the previously sometimes over-eager protection feature, which had occasionally blocked machines from other manufacturers from setting or modifying UEFI variables, will swing into action less frequently. A recent test by c&#39;t magazine, for example, found that several test machines were missing UEFI entries for booting the installed Linux OS following UEFI Linux installation, due to UEFI entry creation having been blocked by this feature. Users can solve situations like this by using efibootmgr on a LiveCD Linux, such as Fedora 18 or Ubuntu 12.10, that doesn&#39;t contain the code to protect Samsung notebooks and manually create a UEFI boot entry; obviously this option should not be used with a Samsung device. Details of the approach adopted by the revised protection feature can be found <a href="http://mjg59.dreamwidth.org/25091.html" rel="external" target="_blank">in a blog entry</a> by kernel developer Matthew Garrett.</p>
+<h3 class="subheading">Tickless</h3>
+<p>Linux can now slow the timer interrupt for individual CPU cores, which normally fires 100, 250 or 1000 times per second, to just one interrupt per second. <a href="http://thread.gmane.org/gmane.linux.kernel/1485210/" rel="external" target="_blank">This should</a> prevent response time jitter on real-time systems and provide a small performance boost for high performance computing setups (<a href="http://git.kernel.org/linus/3451d0243c3cdfd729b36f9684a14659d4895ca3" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/a831881be220358a1d28c5d95d69449fb6d623ca" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/c5bfece2d6129131b4ade985e63bc35ddf5868d4" rel="external" target="_blank">3</a>, <a href="http://git.kernel.org/linus/d1e43fa5f8bb25f83a86a29f11fcfb57ed4d7566" rel="external" target="_blank">4</a>, <a href="http://git.kernel.org/linus/0453b435df0d69dd0d8c42eb9b3015aaf0d8a032" rel="external" target="_blank">5</a>, and others). Timer interrupts cannot, however, be slowed on the CPU core used during booting (boot strap processor/BSP/CPU#0). In addition, this feature only works on cores configured to run only a single process. The change, which has been several years in the making, will see further enhancements in future, including the ability to disable the timer interrupt completely. This and other planned enhancements being developed under the code names &#39;full dynamic ticks&#39; and &#39;nohz&#39; will also benefit desktop systems. More information can be found in <a href="http://git.kernel.org/linus/0c87f9b5ca5bdda1a868b0d7df4bec92e41a468d" rel="external" target="_blank">the documentation</a> and in <a href="https://lwn.net/Articles/549580/" rel="external" target="_blank">this LWN.net article</a>.</p>
+<p>The cpufreq subsystem, which controls changes to processor clock speed, now has <a href="http://git.kernel.org/linus/8a67f0ef2b684b34162d39e8f436fe39e9635a19" rel="external" target="_blank">basic support for ARM&#39;s big.LITTLE concept</a>. This involves processors containing both fast, power-hungry cores and much slower, more power efficient cores. Further details on Linux support for the concept can be found in three LWN.net articles (<a href="https://lwn.net/Articles/539082/" rel="external" target="_blank">1</a>, <a href="http://lwn.net/Articles/539840/" rel="external" target="_blank">2</a>, <a href="http://lwn.net/Articles/541005/" rel="external" target="_blank">3</a>). Full support for big.LITTLE will require some major revisions to areas such as <a href="https://lwn.net/Articles/552885/" rel="external" target="_blank">the kernel&#39;s process scheduler</a>. This will be delivered by the in-kernel switcher (IKS), <a href="http://thread.gmane.org/gmane.linux.linaro.devel/15635" rel="external" target="_blank">currently being developed by Linaro developers</a>.</p>
+<p>
+	</p><div class="heisebox_right">
+		<h4>Development status</h4>
+<p>Over the weekend, Linus Torvalds <a href="http://thread.gmane.org/gmane.linux.kernel/1513668" rel="external" target="_blank">released Linux 3.10-rc7</a>. He seemed confident that the seventh pre-release version should be the last, meaning that Linux 3.10 will probably be released at the turn of the month – though it&#39;s far from unheard of for such pronouncements to be derailed by the arrival of major problems, leading to a further RC and a further week of development.</p>
+	</div>
+
+<h3 class="subheading">Virtualisation</h3>
+<p>Linux now includes a <a href="http://git.kernel.org/linus/68a2d20b79b105f02dcbc52c211d7e62f98996b7" rel="external" target="_blank">framebuffer graphics driver for Hyper-V synthetic video</a>, which emulates virtualisation solutions in Microsoft&#39;s Windows Server. The kernel guest driver for Microsoft&#39;s Hyper-V hypervisor now supports <a href="http://git.kernel.org/linus/1cac8cd4d146b60a7c70d778b5be928281b3b551" rel="external" target="_blank">enlarging the amount of memory at run-time</a> (memory hot add). A new driver enables Windows hosts to instruct Linux guests to quickly get all filesystems <a href="http://git.kernel.org/linus/96dd86fa588169b745a71aedf2070e80f4943623" rel="external" target="_blank">into a consistent state</a> to allow the host to create a snapshot of disks used by the guest (host initiated backup).</p>
+<p>Changes to KVM <a href="http://article.gmane.org/gmane.linux.kernel/1485219" rel="external" target="_blank">include</a> improvements to nested virtualisation (where a VM runs inside another VM) on Intel processors (<a href="http://git.kernel.org/linus/908a7bdd6adba3dfd35d8a74a48aed90593de178" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/0238ea913c21a89387f93097acfbdfeebc9c9257" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/4607c2d7a2ee90707de2b3b37e4d9156e05cdf29" rel="external" target="_blank">3</a> and others). Support for Intel&#39;s APIC virtualisation and posted interrupts should reduce <a href="http://www.linux-kvm.org/wiki/images/7/70/2012-forum-nakajima_apicv.pdf" rel="external" target="_blank">overhead when processing</a><img alt="PDF" src="/icons/file-pdf.gif" title="PDF document"> interrupts intended for guest systems (<a href="http://git.kernel.org/linus/5a71785dde307f6ac80e83c0ad3fd694912010a1" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/d78f2664832f8d70e36422af9a10e44276dced48" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/a20ed54d6e470bf0d28921b7aadb6ca0da0ff0c3" rel="external" target="_blank">3</a>, <a href="http://git.kernel.org/linus/01e439be7753c163932538276f04f95cb1b66697" rel="external" target="_blank">4</a>, <a href="http://git.kernel.org/linus/44944d4d28948c71b110b09a2e924e505cd39e8b" rel="external" target="_blank">5</a>, <a href="http://git.kernel.org/linus/1fcc7890dbf32571c25278803ee19182c801c006" rel="external" target="_blank">6</a>). KVM can also now be used for virtualisation on some MIPS32 processors (<a href="http://git.kernel.org/linus/2235a54deaba06cd814f0f5815c98ad4dd5a6c4f" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/03a0331c8c715c73d877aba8c542a60b13f70ed0" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/9843b030cc951bce4a4d9bec38b5155c96eb1740" rel="external" target="_blank">3</a> and others). Xen on ARM <a href="http://git.kernel.org/linus/9a9ab3cc00dc0c338e3ab96f75a0e1a3c1aa3c27" rel="external" target="_blank">now supports SMP</a>. The <a href="http://git.kernel.org/linus/8b10acd74cdad9063c7a63468e31759d9ac877d9" rel="external" target="_blank">new pvpanic driver</a> enables qemu to tell the host when a guest has crashed. Qemu is used for KVM and Xen virtualisation.</p>
+<h3 class="subheading">Tracing</h3>
+<p><a href="http://article.gmane.org/gmane.linux.kernel/1482947" rel="external" target="_blank">Changes to the perf subsystem</a> include the addition of uretprobes, which allow the kernel to insert breakpoints into the return path for userspace code (<a href="http://git.kernel.org/linus/0dfd0eb8e4d72ded8b21f4fee74ba5547408cbe9" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/fec8898d86ad0fb4d2161fc89885fa52da1e8b72" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/ded49c55309a37129dc30a5f0e85b8a64e5c1716" rel="external" target="_blank">3</a>, <a href="http://git.kernel.org/linus/791eca10107f2886c1915d91c99a3b022a75909c" rel="external" target="_blank">4</a>, <a href="http://git.kernel.org/linus/f15706b79d6f71e016cd06afa21ee31500029067" rel="external" target="_blank">5</a>, <a href="http://git.kernel.org/linus/decc6bfb49d1eda6cec67d79b73a73fa3aaad6e5" rel="external" target="_blank">documentation</a>). This makes it easier for perf to determine when a specific program function was exited. The new perf subcommand &#39;mem&#39; and corresponding support for &#39;perf record&#39; and &#39;perf report&#39; enable memory access profiling on processors with PEBS (precise event based sampling) (<a href="http://git.kernel.org/linus/f20093eef5f7843a25adfc0512617d4b1ff1aa6e" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/98a3b32c99ada4bca8aaf4f91efd96fc906dd5c4" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/028f12ee6beff0961781c5ed3f740e5f3b56f781" rel="external" target="_blank">3</a>, <a href="http://git.kernel.org/linus/f4f7e28d0e813ddb997f49ae718ddf98db972292" rel="external" target="_blank">4</a>, <a href="http://git.kernel.org/linus/ccf49bfc6bb1025788637417780e9f1eeae9fc37" rel="external" target="_blank">5</a> and others).</p>
+<p>Function tracer ftrace now supports <a href="http://git.kernel.org/linus/277ba04461c2746cf935353474c0961161951b68" rel="external" target="_blank">multiple buffers</a>. This can be useful in situations in which otherwise rare events could be submerged in the flood of more frequently occurring events. Improvements have also been made to tracer triggers, which are now able to <a href="http://git.kernel.org/linus/3cd715de261182413b3487abfffe1b6af41b81b3" rel="external" target="_blank">enable or disable trace events</a> when a specific function is executed. Details of <a href="http://article.gmane.org/gmane.linux.kernel/1482388" rel="external" target="_blank">these and other changes</a> can be found in the <a href="http://git.kernel.org/linus/8d016091d10953e00f9d2c0125cc0ddd46c23a6a" rel="external" target="_blank">updated documentation</a>.</p>
+<h3 class="subheading">Resource control</h3>
+<p>A group of developers has <a href="http://article.gmane.org/gmane.linux.kernel.cgroups/7012" rel="external" target="_blank">further tidied and redesigned the control groups (cgroups) code</a> as part of efforts to slowly eliminate a number of <a href="https://lwn.net/Articles/484251/" rel="external" target="_blank">known problems</a> with the code. The code now offers <a href="http://git.kernel.org/linus/873fe09ea5df6ccf6bb34811d8c9992aacb67598" rel="external" target="_blank">a new mount option</a>, which can be used to force the code to behave in what is eventually intended to be the normal manner. In the wake of these changes, numerous changes aimed at giving the init system <a href="http://lists.freedesktop.org/archives/systemd-devel/2013-June/011521.html" rel="external" target="_blank">responsibility for controlling</a> cgroups have also been made to cgroup support in systemd. Other programs will be able to influence the configuration via a systemd API.</p>
+<p>The cgroup controller&#39;s <a href="http://git.kernel.org/linus/70ddf637eebe47e61fb2be08a59315581b6d2f38" rel="external" target="_blank">new &#39;memory.pressure_level events&#39;</a> memcg means that applications can now be notified when memory is running short. Details can be found in <a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/diff/Documentation/cgroups/memory.txt?id=70ddf637eebe47e61fb2be08a59315581b6d2f38" rel="external" target="_blank">the relevant documentation</a> and <a href="https://lwn.net/Articles/531077/" rel="external" target="_blank">this LWN.net article</a>.</p>
+<h3 class="subheading">Miscellaneous</h3>
+<p>Sarah Sharp has made <a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/log/REPORTING-BUGS" rel="external" target="_blank">major changes</a> to the <a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/plain/REPORTING-BUGS" rel="external" target="_blank">REPORTING BUGS</a> document, which provides information on how to report kernel bugs. The text file, which had long been left largely untouched, now contains step-by-step instructions and explains how to find the right person to report to.</p>
+<p>Changes to locking mechanism rwsem (reader-writer semaphore) should improve performance in specific cases (<a href="http://git.kernel.org/linus/fe6e674c6187d4f452a679ced7e95262bd517936" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/ed00f64346631dff035adfb9b0240daaa8b46c4e" rel="external" target="_blank">2</a>, <a href="http://git.kernel.org/linus/25c39325968bbcebe6cd2a1991228c9dfb48d655" rel="external" target="_blank">3</a>, <a href="http://git.kernel.org/linus/a31a369b07cf306ae1de0b2d4a52c3821a570bf6" rel="external" target="_blank">4</a>, <a href="http://git.kernel.org/linus/9607a85b67a9714290a78c1a56630ab1c9fa2c23" rel="external" target="_blank">5</a> and others). In one test setup, it resulted in <a href="http://git.kernel.org/linus/c8de2fa4dc2778ae3605925c127b3deac54b2b3a" rel="external" target="_blank">a doubling in speed</a> of PostgreSQL benchmark pgbench. There have also been changes to the mutex code which should significantly improve performance or scalability in certain cases (<a href="http://git.kernel.org/linus/0dc8c730c98a06a4d927f8d08bd0dd6de973b8dd" rel="external" target="_blank">1</a>, <a href="http://git.kernel.org/linus/2bd2c92cf07cc4a373bf316c75b78ac465fefd35" rel="external" target="_blank">2</a>).</p>
+<p>ARM platforms bcm2835, cns3xxx, sirf, nomadik, msx, spear, tegra and ux500 are now supported by a multi-platform kernel. The code for Samsung&#39;s Exynos should be converted in time for 3.11. ARM maintainer Arnd Bergmann details further plans for multi-platform support <a href="https://lwn.net/Articles/549805/" rel="external" target="_blank">in a comment on LWN.net</a>. A summary of other changes to the code for ARM SOCs can be found in the LKML threads covering the <a href="http://thread.gmane.org/gmane.linux.kernel/1483890" rel="external" target="_blank">first</a>, <a href="http://thread.gmane.org/gmane.linux.kernel/1485099" rel="external" target="_blank">second</a> and <a href="http://thread.gmane.org/gmane.linux.kernel/1486929/" rel="external" target="_blank">third</a> tranches of changes for this area.</p>
+<p>The kernel can now be <a href="http://git.kernel.org/linus/bce860833ab1e40113eb0efab34d0c8f3b0226b1" rel="external" target="_blank">compiled</a> for the microMIPS instruction set architecture (ISA). Kernel images thus created should be at least 20 per cent smaller than the corresponding image for the MIPS32R2 ISA.</p>
+<p>Kernels compiled for Tilera processors can now run at privilege level 2 under <a href="http://git.kernel.org/linus/c539914dcd9a68c63305e055b14115a6a19578a8" rel="external" target="_blank">Tilera hypervisors running at level 1</a>.</p>
+<p><strong><a href="?anchor=mginf">Next page: Minor gems – Infrastructure</a></strong> </p>
+		<!--googleoff: index-->
+		<div class="clear"></div>
+
+	
+
+	<p class="page_navi">
+		<span class="navi_bar">
+		
+			<span class="pagination">
+		
+			
+				<b>1</b>
+			
+		
+			
+				<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=2">2</a>
+			
+		
+			
+				<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=3">3</a>
+			
+		
+			</span>
+		
+			<span class="right"><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html?page=2" title="next">next »</a></span>
+		
+		</span>
+	</p>
+
+
+	
+		<div class="feature_option">Print Version
+		 | Permalink: http://h-online.com/-1897249
+		</div>
+
+        
+
+
+
+<div class="related_items">
+	<h4>Also on The H:</h4>
+	<ul>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Coming-in-3-6-Part-3-Architecture-1708541.html/from/related" title="Kernel Log - Coming in 3.6 (Part 3): Architecture">Kernel Log - Coming in 3.6 (Part 3): Architecture</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-6-Tracking-1672290.html/from/related" title="Linux Kernel 3.6 Tracking">Linux Kernel 3.6 Tracking</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Major-overhaul-of-Nouveau-1664869.html/from/related" title="Kernel Log: Major overhaul of Nouveau">Kernel Log: Major overhaul of Nouveau</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Coming-in-3-5-Part-3-Architecture-1634054.html/from/related" title="Kernel Log: Coming in 3.5 (Part 3) - Architecture">Kernel Log: Coming in 3.5 (Part 3) - Architecture</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Kernel-Log-Coming-in-3-4-Part-1-Infrastructure-1561840.html/from/related" title="Kernel Log: Coming in 3.4 (Part 1) - Infrastructure">Kernel Log: Coming in 3.4 (Part 1) - Infrastructure</a>
+        </li>
+	
+	    <li><a href="http://www.h-online.com/open/features/Linux-Kernel-3-3-Tracking-1440083.html/from/related" title="Linux Kernel 3.3 Tracking">Linux Kernel 3.3 Tracking</a>
+        </li>
+	
+	</ul>
+</div>
+
+
+
+
+
+<div id="social_bookmarks">
+    <ul class="other_bookmarks">
+        <li id="social_li_twitter"><a href="http://twitter.com/intent/tweet?text=Kernel%20Log%20Coming%20in%203.10%20Part%203%20-%20Infrastructure%20http%3A%2F%2Fh-online.com%2F-1897249%20%23theh%20%23open"><img alt="Twitter" height="14" src="/icons/syndication/twitter16x14.gif" title="Twitter" width="16"></a></li>
+        <li id="social_li_facebook"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Ffeatures%2FKernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html"><img alt="Facebook" height="14" src="/icons/syndication/facebook16x14.gif" title="Facebook" width="16"></a></li>
+        <li><a href="http://slashdot.org/slashdot-it.pl?op=basic&amp;url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Ffeatures%2FKernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html&amp;title=Kernel%20Log%20Coming%20in%203.10%20Part%203%20-%20Infrastructure&amp;tags=security&amp;notes=Kernel%20developers%20have%20toned%20down%20an%20over-eager%20feature%20for%20protecting%20against%20the%20Samsung%20UEFI%20bug%20and%20added%20a%20function%20for%20reducing%20timer%20interrupt%20overhead.%20Improvements%20have%20also%20been%20made%20to%20Hyper-V%20support%20and%20instructions%20for%20reporting%20errors"><img alt="submit to slashdot" height="14" src="/icons/syndication/slashdot16x14.gif" title="submit to slashdot" width="16"></a></li>
+        <li><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Ffeatures%2FKernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html&amp;title=Kernel%20Log%20Coming%20in%203.10%20Part%203%20-%20Infrastructure"><img alt="StumbleUpon" height="14" src="/icons/syndication/stumble16x14.gif" title="StumbleUpon" width="16"></a></li>
+        <li><a href="http://reddit.com/submit?url=http%3A%2F%2Fwww00.h-online.com%2Fopen%2Ffeatures%2FKernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html&amp;title=Kernel%20Log%20Coming%20in%203.10%20Part%203%20-%20Infrastructure"><img alt="submit to reddit" height="14" src="/icons/syndication/reddit16x14.gif" title="submit to reddit" width="16"></a></li>
+    </ul>
+<div id="social_bookmarks_counters" style="display: inline-block; width: 75%">
+
+</div>
+
+</div>
+
+
+			
+	</div>
+
+
+
+				<!--googleoff: index-->
+
+				<div class="adbottom">
+        <div id="azk12698_bottom"></div>
+ 
+
+
+</div>
+
+			</div>
+
+
+			<div id="right_col">
+								<div id="right_col_navi"> </div>
+
+				<div style="background: url(/open/icons/2pix.gif) bottom left repeat-x">
+                                 
+<div class="bcadv ISI_IGNORE"><div id="azk44180_rectangle"></div></div>
+ 
+
+
+
+				</div>
+			
+		
+			
+				
+
+	
+    <div class="newest_news_teaser">
+    <img alt="The H Open Headlines" height="24" src="/imgs/43/6/6/3/4/6/7/The-H_Open_Headlines-2e77592fe01d0695.gif" width="196">
+        <ul>
+        
+            <li>
+            <a class="top" href="/open/news/item/The-H-is-closing-down-1920027.html" title="The H is closing its doors four and a half years after heise online UK was redesigned as a open source and security news and features web destination">The H is closing down</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Hardware-Hacks-Fire-alarms-touchable-boards-and-NFC-rings-1918620.html" title="In this edition of The H&#39;s Hardware Hacks: A programmable NFC ring gets kickstarted, a touchscreen development board, an alarming Pi project and a Pi with real fire power">Hardware Hacks: Fire, alarms, touchable boards and NFC rings</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/GitHub-gets-smart-over-open-source-licences-1918463.html" title="GitHub has taken steps to make it easier to set a licence on a new project and to select an open source licence following criticisms that it was making it too easy to leave unlicensed, copyright code in public">GitHub gets smart over open source licences</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/NSS-3-15-1-brings-TLS-1-2-support-to-Firefox-1918133.html" title="Network Security Services (NSS), the collection of cryptographic libraries which is used, among others, by Mozilla&#39;s Firefox browser, now supports TLS 1.2. This enables the use of TLS with HMAC-SHA256 ciphers">NSS 3.15.1 brings TLS 1.2 support to Firefox</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/Second-Android-signature-attack-disclosed-1918061.html" title="A second hole in Android&#39;s signature validation has been disclosed, though there are greater limitations to the new technique. Google and CyanogenMod have patched the holes but how other vendors will handle it is to be seen">Second Android signature attack disclosed</a>
+            </li>
+        
+            <li>
+            <a href="/open/news/item/One-month-left-for-the-EclipseCon-Europe-2013-call-for-papers-1917935.html" title="The call for papers for EclipseCon Europe 2013, taking place in Ludwigsburg in October, will be open until 12 August. Interested users and developers can submit proposals for talks and tutorials on a number of topics">One month left for the EclipseCon Europe 2013 call for papers</a>
+            </li>
+        
+        </ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/5/9/open_teaserlogo-c4daa86e1d39dd37.gif" width="94">
+		<ul class="cycleteaser" id="cycle_right_2">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Kernel Log: Coming in 3.10 (Part 4) - Drivers</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/6/7/2/comingin310_4_kicker-4977194bfb0de0d7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-4-Drivers-1897675.html" title="Kernel Log: Coming in 3.10 (Part 4) - Drivers">Linux 3.10 will be able to use the video acceleration features offered by Radeon graphics cores. Systems with Intel graphics will wake from standby faster. Linux now has an input device driver for Apple&#39;s infrared receiver <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The trouble with &quot;Business Source&quot;</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;"><img alt="Business Source artwork" height="80" src="/imgs/43/1/0/3/5/3/8/0/business_source_220-3a0844989a78d734.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/The-trouble-with-Business-Source-1886354.html" title="The trouble with &quot;Business Source&quot;">The problem of creating funding in a new software business is a major one, and doubly so for open source based companies. Michael Widenius recently described his solution to the problem, &quot;Business Source&quot;, claiming it delivers &quot;most of the benefits of open source&quot;. The H took a look to see how that held up <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel Log: Coming in 3.10 (Part 3) - Infrastructure</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure"><img alt="Kernel Log: Coming in 3.10 (Part 3) [--] Infrastructure" height="80" src="/imgs/43/1/0/4/2/3/2/3/comingin310_3_kicker-151cd7b9e9660f05.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" title="Kernel Log: Coming in 3.10 (Part 3) - Infrastructure">Kernel developers have toned down an over-eager feature for protecting against the Samsung UEFI bug and added a function for reducing timer interrupt overhead. Improvements have also been made to Hyper-V support and instructions for reporting errors <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Whatever happened to Google?</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?"><img alt="Whatever happened to Google?" height="80" src="/imgs/43/1/0/3/2/1/8/4/google_kicker-a57bd6391d520d49.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Whatever-happened-to-Google-1875864.html" title="Whatever happened to Google?">Although Google continues to support a variety of open projects and people, Glyn Moody notes that, following recent changes to Google Code and Google Talk, concern is growing that something fundamental has changed <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_2_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		
+		<ul>
+		
+			<li>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/The-H-Community-Calendar-July-2013-Update-2-1895335.html" title="July&#39;s Community Calendar"><img alt="July&#39;s Community Calendar" height="35" src="/imgs/43/8/7/5/1/1/1/h_cc_07_jul-110ac047c092a538.png" width="280"></a>
+				</div>
+			
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/6/4/3/0/6/hot_on_theH-3db637ac9c827b9e.gif" width="116">
+		<ul class="cycleteaser" id="cycle_right_4">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">What&#39;s new in SUSE Linux Enterprise 11 SP3</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3"><img alt="What&#39;s new in SUSE Linux Enterprise 11 SP3" height="80" src="/imgs/43/1/0/4/7/7/3/4/WhatsNew_SUSE_LE_11_SP3_kicker-00a6e38b833ed20b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-SUSE-Linux-Enterprise-11-SP3-1914471.html" title="What&#39;s new in SUSE Linux Enterprise 11 SP3">Service Pack 3 includes numerous enhancements for virtualisation and, by adding Secure Boot support and new drivers, beefs up support for newer hardware. There are also numerous enhancements relating to server storage and networking <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">What&#39;s new in Fedora 19</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19"><img alt="What&#39;s new in Fedora 19" height="80" src="/imgs/43/1/0/4/5/1/0/0/f19_220-d9f86c63d4720ba7.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Fedora-19-1910304.html" title="What&#39;s new in Fedora 19">In a nod to fans of classic desktop interfaces, the new Fedora includes a MATE variant and classic mode for GNOME. Systemd now takes care of containers and assigning network names. New drivers support 3D acceleration in newer Radeon graphics cards <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">What&#39;s new in Linux 3.10</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10"><img alt="What&#39;s new in Linux 3.10" height="80" src="/imgs/43/1/0/4/3/2/4/0/WhatsNewIn_Linux310_kicker-ca825b2356a627aa.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-10-1902270.html" title="What&#39;s new in Linux 3.10">A second SSD caching framework and support for the new Radeons&#39; video decoder are two of the most important enhancements in Linux 3.10, which is now out. This version also includes several new and improved drivers and a change to the network stack to speed up HTTP connections <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">Free Software post-PRISM</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM"><img alt="Free Software post-PRISM" height="80" src="/imgs/43/1/0/4/1/6/5/9/post-PRISM-kicker-e12da2e633cff890.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Free-Software-post-PRISM-1896357.html" title="Free Software post-PRISM">The news has been full of talk of spying, whistleblowing and data mining. Glyn Moody looks at how open source has been used to threaten freedom and privacy and how it could be used to defend them <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_4_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/7/security_teaserlogo-636122bcad36f2a7.gif" width="130">
+		<ul class="cycleteaser" id="cycle_right_5">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Content Security Policy halts XSS in its tracks</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks"><img alt="Content Security Policy halts XSS in its tracks" height="80" src="/imgs/43/1/0/3/8/9/4/6/CSP_kicker-41fa163408fdf0fd.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Content-Security-Policy-halts-XSS-in-its-tracks-1892346.html" title="Content Security Policy halts XSS in its tracks">Cross-site scripting (XSS) is one of the biggest problems faced by webmasters. The new Content Security Policy standard should finally provide some relief <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Skype&#39;s ominous link checking: Facts and speculation</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation"><img alt="Skype Listening In graphic" height="80" src="/imgs/43/1/0/2/5/2/0/9/skypesnk_220-19a720b1fe06c456.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Skype-s-ominous-link-checking-Facts-and-speculation-1865629.html" title="Skype&#39;s ominous link checking: Facts and speculation">Our associate&#39;s discovery that URLs sent through Skype are then visited by Microsoft has caused quite a stir. A little more information has now emerged and leads to even more questions <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Password protection for everyone</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone"><img alt="Password protection for everyone" height="80" src="/imgs/43/9/7/7/7/8/4/passwordprotection_kicker-136f5ec21c52843b.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Password-protection-for-everyone-1795647.html" title="Password protection for everyone">Those who heed well-intentioned recommendations and use a separate password for every service either require a photographic memory or the right techniques to keep the multitude of passwords under control <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">Two clicks for more privacy</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy"><img alt="Two clicks for more privacy" height="80" src="/imgs/43/9/6/9/7/1/9/twoclicks_kicker-f4eee08a8b1c5b35.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/features/Two-clicks-for-more-privacy-1783256.html" title="Two clicks for more privacy">&quot;Like&quot; buttons for Facebook, Google+ and Twitter present a privacy problem. A 2-click concept developed by heise online addresses this problem <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_5_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="25" src="/imgs/43/8/8/4/3/6/5/The-H_Developer-d0875a1e2347a603.png" width="145">
+		<ul class="cycleteaser" id="cycle_right_6">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">Java EE 7 at a glance</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance"><img alt="Java EE 7 at a glance" height="80" src="/imgs/43/1/0/3/7/5/6/6/javaee7ataglance-b25be8fa3115f750.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Java-EE-7-at-a-glance-1889207.html" title="Java EE 7 at a glance">The next step for Java EE 6 was planned to be cloud support but the collapse of ambitious developer plans has meant Java EE 7 arrived with few fundamentally new aspects, representing more a consistent effort to round off existing features <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">Continuous database migration with Liquibase and Flyway</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway"><img alt="Continuous database migration with Liquibase and Flyway" height="80" src="/imgs/43/1/0/2/1/3/3/9/Liquibase_Flyway_kicker-12785335ab912b1a.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Continuous-database-migration-with-Liquibase-and-Flyway-1860080.html" title="Continuous database migration with Liquibase and Flyway">An application&#39;s version-controlled source code is stored in the repository. Why not that of the database? To reproduce arbitrary database states in development, test or production environments, two powerful Java libraries are at hand that can be seamlessly integrated into a build for an agile Continuous Delivery <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Unit testing with Node.js</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js"><img alt="Unit testing with Node.js" height="80" src="/imgs/43/1/0/0/1/1/1/3/unit_testing_kicker-1e0c6d0ef31cd807.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Unit-testing-with-Node-js-1829727.html" title="Unit testing with Node.js">Consistent unit testing is a basic quality requirement in modern software rdevelopment. Mocha is a framework for writing and executing such tests in Node.js <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">Ruby 2.0 - the 20th birthday present </a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present "><img alt="Ruby 2.0 at 20" height="80" src="/imgs/43/9/8/7/9/7/7/ruby20-0f7cf4be822e71eb.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/developer/features/Ruby-2-0-the-20th-birthday-present-1810233.html" title="Ruby 2.0 - the 20th birthday present ">On 24 February 2013, the Ruby community celebrated the 20th birthday of its programming language. Ruby 2.0, a new major release that includes various exciting new features, was released at the same time and The H looks at some of the major changes <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_6_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+	<div class="teaser">
+		<img alt="" height="24" src="/imgs/43/8/8/4/3/6/9/hits_of_theH-5f0b199d8fce0589.gif" width="120">
+		<ul class="cycleteaser" id="cycle_right_7">
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">Linux Mint 15: A better Ubuntu for the desktop</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop"><img alt="Linux Mint 15" height="80" src="/imgs/43/1/0/3/0/4/6/3/LinuxMint15_kicker-658be8558318e71c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Linux-Mint-15-A-better-Ubuntu-for-the-desktop-1873682.html" title="Linux Mint 15: A better Ubuntu for the desktop">The Linux Mint project has announced &quot;the most ambitious release since the start of the project&quot;. Linux Mint 15 promises a focus on the desktop that Ubuntu has been neglecting lately. The H investigates whether the release delivers on these ambitions <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">What&#39;s new in Linux 3.9</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9"><img alt="What&#39;s new in Linux 3.8" height="80" src="/imgs/43/1/0/1/2/2/0/9/WhatsNewIn_Linux39_kicker-914cd4254f05caf9.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/What-s-new-in-Linux-3-9-1845705.html" title="What&#39;s new in Linux 3.9">The Linux kernel is finally able to use SSDs as hard-disk cache. Changes to the network subsystem promise to improve the way server jobs are distributed across multiple processor cores. Linux 3.9 also includes drivers for new AMD graphics chips and soon-expected Wi-Fi components from Intel <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">Replacing Google Reader</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader"><img alt="Replacing Google Reader" height="80" src="/imgs/43/1/0/0/0/6/3/5/replacing_Reader_kicker-a1442215c6afd1ad.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/open/features/Replacing-Google-Reader-1829086.html" title="Replacing Google Reader">For a large number of internet users the current challenge is finding a replacement for Google Reader. The H&#39;s Fabian Scherschel has looked at the functionality that made Google Reader popular and the current best alternatives to the Reader experience <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+			<li class="cycleteaser_element">
+			
+				<h5><a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">Attacking TrueCrypt</a></h5>
+			
+			
+				<div class="teaser_imgbox">
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt"><img alt="Attacking TrueCrypt" height="80" src="/imgs/43/9/3/6/9/6/9/attacking-truecrypt220-9605f21f63ced97c.png" width="220"></a>
+				</div>
+			
+			
+				<p>
+					<a href="/security/features/Attacking-TrueCrypt-1735157.html" title="Attacking TrueCrypt">TrueCrypt is considered the software of choice for encrypting data. A small utility called TCHead systematically takes on this encryption <span class="readmore">more »</span></a>
+				</p>
+			
+			</li>
+
+			<!-- try the ad -->
+			
+		
+		</ul>
+        <ul class="cycleteaser_navi" id="cycle_right_7_navi"></ul>
+	</div>
+	
+
+
+
+
+				
+				<hr class="split">
+			
+				
+
+	
+
+
+
+
+				
+				
+			
+		
+				<div class="clear_bottom"></div>
+			</div>
+
+
+			<div id="frame_bottom"></div>
+		</div>
+	</div>
+
+	<div id="sitemap_navi">
+		<div class="sitemap_left">
+			<h4><a href="/" title="The H">The H</a></h4>
+			<ul>
+				<li><a href="/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/open/" title="The H Open">The H Open</a></h4>
+			<ul>
+				<li><a href="/open/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/open/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/open/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/security/" title="The H Security">The H Security</a></h4>
+			<ul>
+				<li><a href="/security/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/security/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/security/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+		<div>
+			<h4><a href="/developer/" title="The H Developer">The H Developer</a></h4>
+			<ul>
+				<li><a href="/developer/news/" title="Last 7 days news and features">Last 7 days</a></li>
+				<li><a href="/developer/news/archive/" title="News Archive">News Archive</a></li>
+				<li><a href="/developer/features/" title="Features">Features</a></li>
+				
+			</ul>
+		</div>
+	
+		<div>
+			<h4><a href="/security/services/Internet-Toolkit-747773.html">The H Internet Toolkit</a> </h4>
+		
+			<ul>
+				<li><a href="/security/services/The-H-Update-Check-Closed-until-further-notice-880736.html">Update Check</a> </li>
+<li><a href="/security/services/Anti-Virus-747579.html">Anti-Virus</a> </li>
+<li><a href="/security/services/Browsercheck-732895.html">Browsercheck</a> </li>
+<li><a href="/security/services/Emailcheck-747686.html">Emailcheck</a> </li>
+<li><a href="/nettools/tools/chksslkey">Test SSL certificates</a></li>
+<li><a href="/nettools/tools/whois-query">Whois query</a> </li>
+			</ul>
+		
+		</div>
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/tools/ip/">My IP address</a> </li>
+<li><a href="/nettools/tools/traceroute">Traceroute</a> </li>
+<li><a href="/nettools/tools/dns-query">DNS query</a> </li>
+<li><a href="/nettools/subnet-calculator.shtml">Subnet calculator</a> </li>
+<li><a href="/nettools/tools/mac-addresses">MAC addresses</a> </li>
+			</ul>
+		</div>
+		
+		
+		<div>
+			<ul style="margin-top: 1.5em">
+				<li><a href="/nettools/rfc/">RFCs</a> </li>
+<li><a href="/nettools/tools/ping">Ping</a> </li>
+<li><a href="/nettools/tools/bandwidth-calculator">Bandwidth calculator</a> </li>
+<li><a href="/nettools/tools/spam-list-query">Spam list query</a> </li>
+<li><a href="/security/services/Reserved-IPv4-addresses-732899.html">IP addresses</a> </li>
+			</ul>
+		</div>
+		
+	
+	</div>
+
+
+
+	<div id="footer">
+	
+		<span class="left">Copyright © 2013 <a href="/Contact-273335.html">Heise Media UK Ltd.</a> </span>
+	
+		<span class="right">
+        <a href="/Cookie-information-1582679.html">About Cookies</a> 
+		
+			<a href="/Privacy-Policy-of-h-online-com-273337.html">Privacy Policy</a> 
+		
+		
+			<a href="/Contact-273335.html">Contact us</a> 
+		
+		</span>
+	</div>
+
+
+
+    <div id="bannerzone">
+         
+        <div id="leaderboard"><div id="azk46801_leaderboard"></div></div>
+ 
+
+
+
+        <div id="heiseadvert"></div>
+         
+        <div id="skyscraper"><div id="azk37883_skyscraper"></div></div>
+ 
+
+
+
+        <div id="context_script"></div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: inline;"><img alt="" height="1" id="ivw_pixel_intern" src="/ivw-bin/ivw/CP/open/features/Kernel-Log-Coming-in-3-10-Part-3-Infrastructure-1897249.html" width="1"></div>
+
+<!-- Copyright (c) 2000-2011 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+
+<!-- BEGIN etracker Tracklet 3.0 -->
+
+
+<!-- etracker PARAMETER 3.0 -->
+
+<!-- etracker PARAMETER END -->
+
+
+
+<!-- etracker CODE NOSCRIPT 3.0 -->
+
+<!-- etracker CODE NOSCRIPT END-->
+<!-- etracker CODE END -->
+
+
+
+<!-- RL -->
+
+    
+
+<!-- /RL -->
+
+
+
+
+        <div id="azk35222_tracking"></div>
+
+
+
+
+</body>
+</html>
+<!-- Created with InterRed V13.0-x.x.x.x, http://www.interred.de/, by InterRed GmbH -->
+<!-- BID: 1042323, iBID: 1044177, CID: 1897249, iCID: 1909051 -->
+<!-- Link: $(LB1042323:Linktext)$ $(LC1897249:Linktext)$ -->
+<!-- Generiert: 2013-07-01 10:43:59 -->
+
+
+

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+data/cache/
+data/*.log
+data/missing-assets.txt
+public/
+resources/
+.hugo_build.lock
+.DS_Store
