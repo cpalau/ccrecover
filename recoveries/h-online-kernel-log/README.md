@@ -28,7 +28,7 @@ cd site && python3 -m http.server 8080
 - **114** articles by Thorsten Leemhuis, the main author of the column.
 - **100** articles span more than one page; the longest, *Linux 2.6.27
   Released*, has 9.
-- Common Crawl contributed **222** pages; the Wayback Machine filled **173**
+- Common Crawl contributed **246** pages; the Wayback Machine filled **173**
   pagination pages that the crawl missed, plus the CSS and images.
 
 ## Why this site
